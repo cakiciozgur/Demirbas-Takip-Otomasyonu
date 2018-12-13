@@ -8,3 +8,13 @@ c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\Demirbas
 c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.exe
 c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.pdb
 c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.UrunGiris.resources
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\DemirbasOtomasyon.exe.config
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.exe
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.pdb
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\DemirbasOtomasyon.exe
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\DemirbasOtomasyon.pdb
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.Properties.Resources.resources
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.UrunGiris.resources
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.UserControl.resources
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.csproj.GenerateResource.Cache
