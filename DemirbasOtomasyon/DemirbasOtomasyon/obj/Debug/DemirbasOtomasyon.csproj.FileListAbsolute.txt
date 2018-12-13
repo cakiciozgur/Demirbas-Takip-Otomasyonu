@@ -1,0 +1,9 @@
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\DemirbasOtomasyon.exe.config
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.csprojResolveAssemblyReference.cache
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.Properties.Resources.resources
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.UserControl.resources
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.csproj.GenerateResource.Cache
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\DemirbasOtomasyon.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\DemirbasOtomasyon.pdb
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.exe
+c:\users\lenovo\documents\visual studio 2013\Projects\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.pdb
