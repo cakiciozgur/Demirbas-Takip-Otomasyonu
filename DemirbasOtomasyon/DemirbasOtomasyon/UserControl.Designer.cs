@@ -29,92 +29,92 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.pbUser = new System.Windows.Forms.PictureBox();
+            this.pbLock = new System.Windows.Forms.PictureBox();
+            this.lblGiris = new System.Windows.Forms.Label();
+            this.pnlGiris1 = new System.Windows.Forms.Panel();
+            this.pnlGiris2 = new System.Windows.Forms.Panel();
             this.btnGiris = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLock)).BeginInit();
+            this.pnlGiris1.SuspendLayout();
+            this.pnlGiris2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(98, 103);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 50);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "ID Giriniz...";
+            this.txtID.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtID.ForeColor = System.Drawing.Color.Black;
+            this.txtID.Location = new System.Drawing.Point(98, 103);
+            this.txtID.Multiline = true;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(281, 50);
+            this.txtID.TabIndex = 0;
+            this.txtID.Text = "ID Giriniz...";
             // 
-            // textBox2
+            // txtSifre
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(98, 171);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(281, 50);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Şifre Giriniz...";
+            this.txtSifre.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.ForeColor = System.Drawing.Color.Black;
+            this.txtSifre.Location = new System.Drawing.Point(98, 171);
+            this.txtSifre.Multiline = true;
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(281, 50);
+            this.txtSifre.TabIndex = 1;
+            this.txtSifre.Text = "Şifre Giriniz...";
             // 
-            // pictureBox1
+            // pbUser
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(38, 101);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbUser.Image = ((System.Drawing.Image)(resources.GetObject("pbUser.Image")));
+            this.pbUser.Location = new System.Drawing.Point(38, 101);
+            this.pbUser.Name = "pbUser";
+            this.pbUser.Size = new System.Drawing.Size(54, 50);
+            this.pbUser.TabIndex = 2;
+            this.pbUser.TabStop = false;
             // 
-            // pictureBox2
+            // pbLock
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(38, 169);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.pbLock.Image = ((System.Drawing.Image)(resources.GetObject("pbLock.Image")));
+            this.pbLock.Location = new System.Drawing.Point(38, 169);
+            this.pbLock.Name = "pbLock";
+            this.pbLock.Size = new System.Drawing.Size(54, 50);
+            this.pbLock.TabIndex = 3;
+            this.pbLock.TabStop = false;
             // 
-            // label1
+            // lblGiris
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(137, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 28);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Kullanici Girişi";
+            this.lblGiris.AutoSize = true;
+            this.lblGiris.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGiris.ForeColor = System.Drawing.Color.Black;
+            this.lblGiris.Location = new System.Drawing.Point(156, 31);
+            this.lblGiris.Name = "lblGiris";
+            this.lblGiris.Size = new System.Drawing.Size(150, 28);
+            this.lblGiris.TabIndex = 4;
+            this.lblGiris.Text = "Kullanici Girişi";
             // 
-            // panel1
+            // pnlGiris1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 79);
-            this.panel1.TabIndex = 5;
+            this.pnlGiris1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlGiris1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlGiris1.Controls.Add(this.lblGiris);
+            this.pnlGiris1.ForeColor = System.Drawing.Color.Black;
+            this.pnlGiris1.Location = new System.Drawing.Point(0, 0);
+            this.pnlGiris1.Name = "pnlGiris1";
+            this.pnlGiris1.Size = new System.Drawing.Size(430, 78);
+            this.pnlGiris1.TabIndex = 5;
             // 
-            // panel2
+            // pnlGiris2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnGiris);
-            this.panel2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.panel2.Location = new System.Drawing.Point(0, 243);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(430, 115);
-            this.panel2.TabIndex = 6;
+            this.pnlGiris2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlGiris2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlGiris2.Controls.Add(this.btnGiris);
+            this.pnlGiris2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.pnlGiris2.Location = new System.Drawing.Point(0, 243);
+            this.pnlGiris2.Name = "pnlGiris2";
+            this.pnlGiris2.Size = new System.Drawing.Size(430, 115);
+            this.pnlGiris2.TabIndex = 6;
             // 
             // btnGiris
             // 
@@ -126,10 +126,10 @@
             this.btnGiris.Appearance.Options.UseFont = true;
             this.btnGiris.Appearance.Options.UseForeColor = true;
             this.btnGiris.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnGiris.Location = new System.Drawing.Point(137, 14);
+            this.btnGiris.Location = new System.Drawing.Point(144, 15);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(150, 45);
-            this.btnGiris.TabIndex = 0;
+            this.btnGiris.TabIndex = 4;
             this.btnGiris.Text = "Giriş Yap";
             // 
             // UserControl
@@ -138,20 +138,20 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(426, 354);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pnlGiris2);
+            this.Controls.Add(this.pnlGiris1);
+            this.Controls.Add(this.pbLock);
+            this.Controls.Add(this.pbUser);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "UserControl";
             this.Text = "UserControl";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLock)).EndInit();
+            this.pnlGiris1.ResumeLayout(false);
+            this.pnlGiris1.PerformLayout();
+            this.pnlGiris2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,13 +159,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.PictureBox pbUser;
+        private System.Windows.Forms.PictureBox pbLock;
+        private System.Windows.Forms.Label lblGiris;
+        private System.Windows.Forms.Panel pnlGiris1;
+        private System.Windows.Forms.Panel pnlGiris2;
         private DevExpress.XtraEditors.SimpleButton btnGiris;
     }
 }
