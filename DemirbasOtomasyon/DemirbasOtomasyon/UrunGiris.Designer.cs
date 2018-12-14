@@ -158,11 +158,22 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(377, 168);
+            this.btnEkle.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnEkle.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.btnEkle.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnEkle.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnEkle.Appearance.Options.UseBackColor = true;
+            this.btnEkle.Appearance.Options.UseBorderColor = true;
+            this.btnEkle.Appearance.Options.UseFont = true;
+            this.btnEkle.Appearance.Options.UseForeColor = true;
+            this.btnEkle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnEkle.Location = new System.Drawing.Point(381, 169);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(139, 42);
+            this.btnEkle.Size = new System.Drawing.Size(161, 41);
             this.btnEkle.TabIndex = 12;
             this.btnEkle.Text = "EKLE";
+            this.btnEkle.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
             // 
             // dgwUrun
             // 

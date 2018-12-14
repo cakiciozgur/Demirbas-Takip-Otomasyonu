@@ -37,6 +37,7 @@
             this.pnlGiris1 = new System.Windows.Forms.Panel();
             this.pnlGiris2 = new System.Windows.Forms.Panel();
             this.btnGiris = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLock)).BeginInit();
             this.pnlGiris1.SuspendLayout();
@@ -86,13 +87,13 @@
             // lblGiris
             // 
             this.lblGiris.AutoSize = true;
-            this.lblGiris.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGiris.Font = new System.Drawing.Font("Corbel", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGiris.ForeColor = System.Drawing.Color.Black;
-            this.lblGiris.Location = new System.Drawing.Point(139, 24);
+            this.lblGiris.Location = new System.Drawing.Point(117, 16);
             this.lblGiris.Name = "lblGiris";
-            this.lblGiris.Size = new System.Drawing.Size(156, 29);
+            this.lblGiris.Size = new System.Drawing.Size(250, 46);
             this.lblGiris.TabIndex = 4;
-            this.lblGiris.Text = "Kullanici Girişi";
+            this.lblGiris.Text = "Kullanıcı Girişi";
             // 
             // pnlGiris1
             // 
@@ -109,9 +110,10 @@
             // 
             this.pnlGiris2.BackColor = System.Drawing.Color.DodgerBlue;
             this.pnlGiris2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlGiris2.Controls.Add(this.btnTemizle);
             this.pnlGiris2.Controls.Add(this.btnGiris);
             this.pnlGiris2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.pnlGiris2.Location = new System.Drawing.Point(0, 243);
+            this.pnlGiris2.Location = new System.Drawing.Point(0, 241);
             this.pnlGiris2.Name = "pnlGiris2";
             this.pnlGiris2.Size = new System.Drawing.Size(430, 115);
             this.pnlGiris2.TabIndex = 6;
@@ -120,17 +122,33 @@
             // 
             this.btnGiris.Appearance.BackColor = System.Drawing.Color.White;
             this.btnGiris.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.btnGiris.Appearance.Font = new System.Drawing.Font("Corbel", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGiris.Appearance.Font = new System.Drawing.Font("Corbel", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGiris.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnGiris.Appearance.Options.UseBackColor = true;
             this.btnGiris.Appearance.Options.UseFont = true;
             this.btnGiris.Appearance.Options.UseForeColor = true;
             this.btnGiris.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnGiris.Location = new System.Drawing.Point(144, 15);
+            this.btnGiris.Location = new System.Drawing.Point(233, 16);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(150, 45);
+            this.btnGiris.Size = new System.Drawing.Size(145, 49);
             this.btnGiris.TabIndex = 4;
             this.btnGiris.Text = "Giriş Yap";
+            // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnTemizle.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.btnTemizle.Appearance.Font = new System.Drawing.Font("Corbel", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnTemizle.Appearance.Options.UseBackColor = true;
+            this.btnTemizle.Appearance.Options.UseFont = true;
+            this.btnTemizle.Appearance.Options.UseForeColor = true;
+            this.btnTemizle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnTemizle.Location = new System.Drawing.Point(82, 16);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(145, 49);
+            this.btnTemizle.TabIndex = 5;
+            this.btnTemizle.Text = "Vazgeç";
             // 
             // UserControl
             // 
@@ -167,5 +185,6 @@
         private System.Windows.Forms.Panel pnlGiris1;
         private System.Windows.Forms.Panel pnlGiris2;
         private DevExpress.XtraEditors.SimpleButton btnGiris;
+        private DevExpress.XtraEditors.SimpleButton btnTemizle;
     }
 }
