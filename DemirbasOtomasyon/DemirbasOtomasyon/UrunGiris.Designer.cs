@@ -28,41 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.grbUrunIslemleri = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlUrunGrs = new System.Windows.Forms.Label();
+            this.btnEkle = new DevExpress.XtraEditors.SimpleButton();
+            this.dgwUrun = new System.Windows.Forms.DataGridView();
+            this.grbUrunIslemleri.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUrun)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(218, 131);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 28);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(218, 181);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 28);
-            this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(218, 235);
+            this.textBox3.Location = new System.Drawing.Point(134, 43);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(200, 28);
             this.textBox3.TabIndex = 2;
@@ -70,7 +57,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.Location = new System.Drawing.Point(218, 334);
+            this.textBox5.Location = new System.Drawing.Point(134, 137);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(200, 28);
             this.textBox5.TabIndex = 4;
@@ -78,66 +65,36 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox6.Location = new System.Drawing.Point(218, 284);
+            this.textBox6.Location = new System.Drawing.Point(134, 87);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(200, 28);
             this.textBox6.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(116, 138);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Firma Adı:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(125, 188);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Kategori:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(125, 238);
+            this.label3.Location = new System.Drawing.Point(41, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 21);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Urun Adı:";
+            this.label3.Text = "Ürün Adı:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(152, 287);
+            this.label4.Location = new System.Drawing.Point(68, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "Adet:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(152, 337);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 21);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "label1";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(149, 395);
+            this.label6.Location = new System.Drawing.Point(65, 181);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 21);
             this.label6.TabIndex = 7;
@@ -147,7 +104,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(151, 341);
+            this.label7.Location = new System.Drawing.Point(67, 144);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 21);
             this.label7.TabIndex = 6;
@@ -155,51 +112,104 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(218, 395);
+            this.dateTimePicker1.Location = new System.Drawing.Point(134, 181);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 29);
             this.dateTimePicker1.TabIndex = 8;
+            // 
+            // grbUrunIslemleri
+            // 
+            this.grbUrunIslemleri.Controls.Add(this.btnEkle);
+            this.grbUrunIslemleri.Controls.Add(this.textBox3);
+            this.grbUrunIslemleri.Controls.Add(this.dateTimePicker1);
+            this.grbUrunIslemleri.Controls.Add(this.textBox6);
+            this.grbUrunIslemleri.Controls.Add(this.label6);
+            this.grbUrunIslemleri.Controls.Add(this.textBox5);
+            this.grbUrunIslemleri.Controls.Add(this.label4);
+            this.grbUrunIslemleri.Controls.Add(this.label3);
+            this.grbUrunIslemleri.Controls.Add(this.label7);
+            this.grbUrunIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grbUrunIslemleri.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.grbUrunIslemleri.Location = new System.Drawing.Point(61, 99);
+            this.grbUrunIslemleri.Name = "grbUrunIslemleri";
+            this.grbUrunIslemleri.Size = new System.Drawing.Size(1017, 224);
+            this.grbUrunIslemleri.TabIndex = 9;
+            this.grbUrunIslemleri.TabStop = false;
+            this.grbUrunIslemleri.Text = "Ürün Satın Alma İşlemleri";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.pnlUrunGrs);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1147, 78);
+            this.panel1.TabIndex = 10;
+            // 
+            // pnlUrunGrs
+            // 
+            this.pnlUrunGrs.AutoSize = true;
+            this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.pnlUrunGrs.Location = new System.Drawing.Point(435, 22);
+            this.pnlUrunGrs.Name = "pnlUrunGrs";
+            this.pnlUrunGrs.Size = new System.Drawing.Size(249, 37);
+            this.pnlUrunGrs.TabIndex = 0;
+            this.pnlUrunGrs.Text = "ÜRÜN İŞLEMLERİ";
+            // 
+            // btnEkle
+            // 
+            this.btnEkle.Location = new System.Drawing.Point(377, 168);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(139, 42);
+            this.btnEkle.TabIndex = 12;
+            this.btnEkle.Text = "EKLE";
+            // 
+            // dgwUrun
+            // 
+            this.dgwUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwUrun.Location = new System.Drawing.Point(61, 343);
+            this.dgwUrun.Name = "dgwUrun";
+            this.dgwUrun.RowTemplate.Height = 24;
+            this.dgwUrun.Size = new System.Drawing.Size(1017, 282);
+            this.dgwUrun.TabIndex = 1;
             // 
             // UrunGiris
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 637);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgwUrun);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.grbUrunIslemleri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "UrunGiris";
             this.Text = "Ürün Giriş";
+            this.Load += new System.EventHandler(this.UrunGiris_Load);
+            this.grbUrunIslemleri.ResumeLayout(false);
+            this.grbUrunIslemleri.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwUrun)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.GroupBox grbUrunIslemleri;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label pnlUrunGrs;
+        private DevExpress.XtraEditors.SimpleButton btnEkle;
+        private System.Windows.Forms.DataGridView dgwUrun;
     }
 }

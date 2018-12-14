@@ -45,7 +45,7 @@
             // 
             // txtID
             // 
-            this.txtID.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtID.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtID.ForeColor = System.Drawing.Color.Black;
             this.txtID.Location = new System.Drawing.Point(98, 103);
             this.txtID.Multiline = true;
@@ -56,7 +56,7 @@
             // 
             // txtSifre
             // 
-            this.txtSifre.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
             this.txtSifre.Location = new System.Drawing.Point(98, 171);
             this.txtSifre.Multiline = true;
@@ -86,17 +86,17 @@
             // lblGiris
             // 
             this.lblGiris.AutoSize = true;
-            this.lblGiris.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGiris.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGiris.ForeColor = System.Drawing.Color.Black;
-            this.lblGiris.Location = new System.Drawing.Point(156, 31);
+            this.lblGiris.Location = new System.Drawing.Point(139, 24);
             this.lblGiris.Name = "lblGiris";
-            this.lblGiris.Size = new System.Drawing.Size(150, 28);
+            this.lblGiris.Size = new System.Drawing.Size(156, 29);
             this.lblGiris.TabIndex = 4;
             this.lblGiris.Text = "Kullanici Girişi";
             // 
             // pnlGiris1
             // 
-            this.pnlGiris1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlGiris1.BackColor = System.Drawing.Color.DodgerBlue;
             this.pnlGiris1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlGiris1.Controls.Add(this.lblGiris);
             this.pnlGiris1.ForeColor = System.Drawing.Color.Black;
@@ -107,7 +107,7 @@
             // 
             // pnlGiris2
             // 
-            this.pnlGiris2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlGiris2.BackColor = System.Drawing.Color.DodgerBlue;
             this.pnlGiris2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlGiris2.Controls.Add(this.btnGiris);
             this.pnlGiris2.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -120,7 +120,7 @@
             // 
             this.btnGiris.Appearance.BackColor = System.Drawing.Color.White;
             this.btnGiris.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.btnGiris.Appearance.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGiris.Appearance.Font = new System.Drawing.Font("Corbel", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGiris.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnGiris.Appearance.Options.UseBackColor = true;
             this.btnGiris.Appearance.Options.UseFont = true;

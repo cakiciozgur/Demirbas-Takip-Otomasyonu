@@ -17,5 +17,10 @@ namespace DemirbasOtomasyon
         {
             InitializeComponent();
         }
+
+        private void UrunGiris_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
