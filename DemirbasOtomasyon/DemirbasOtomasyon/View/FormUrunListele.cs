@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+
+namespace DemirbasOtomasyon.View
+{
+    public partial class FormUrunListele : DevExpress.XtraEditors.XtraForm
+    {
+        public FormUrunListele()
+        {
+            InitializeComponent();
+        }
+
+        private void grbUrunIslemleri_Enter(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

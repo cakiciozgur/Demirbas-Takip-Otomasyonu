@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DemirbasOtomasyon.View;
 
 namespace DemirbasOtomasyon
 {
@@ -16,7 +17,7 @@ namespace DemirbasOtomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UrunGiris());
+            Application.Run(new FormUrunListele());
         }
     }
 }
