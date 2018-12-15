@@ -18,3 +18,7 @@ C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtom
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.UrunGiris.resources
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.UserControl.resources
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\EntityFramework.dll
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\EntityFramework.xml
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\EntityFramework.SqlServer.xml
