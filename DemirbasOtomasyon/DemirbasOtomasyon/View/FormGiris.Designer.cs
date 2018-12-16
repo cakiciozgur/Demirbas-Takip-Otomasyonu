@@ -71,7 +71,6 @@
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(281, 50);
             this.txtSifre.TabIndex = 8;
-            this.txtSifre.Text = "Şifre Giriniz...";
             // 
             // txtID
             // 
@@ -82,7 +81,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(281, 50);
             this.txtID.TabIndex = 7;
-            this.txtID.Text = "ID Giriniz...";
             // 
             // lblGiris
             // 
