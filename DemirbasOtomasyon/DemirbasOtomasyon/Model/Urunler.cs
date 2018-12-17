@@ -17,6 +17,7 @@ namespace DemirbasOtomasyon.Model
         public Urunler()
         {
             this.ZimmetDetay = new HashSet<ZimmetDetay>();
+            this.Zimmetler = new HashSet<Zimmetler>();
         }
     
         public int urunID { get; set; }
@@ -28,5 +29,6 @@ namespace DemirbasOtomasyon.Model
         public Nullable<bool> stokDurum { get; set; }
     
         public virtual ICollection<ZimmetDetay> ZimmetDetay { get; set; }
+        public virtual ICollection<Zimmetler> Zimmetler { get; set; }
     }
 }

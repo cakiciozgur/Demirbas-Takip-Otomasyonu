@@ -10,20 +10,14 @@
 namespace DemirbasOtomasyon.Model
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Departmanlar
+    public partial class sp_UrunListele_Result
     {
-        public Departmanlar()
-        {
-            this.Kisiler = new HashSet<Kisiler>();
-            this.Personeller = new HashSet<Personeller>();
-        }
-    
-        public int departmanID { get; set; }
-        public string departmanAdi { get; set; }
-    
-        public virtual ICollection<Kisiler> Kisiler { get; set; }
-        public virtual ICollection<Personeller> Personeller { get; set; }
+        public int urunID { get; set; }
+        public string urunAd { get; set; }
+        public Nullable<int> stokMiktari { get; set; }
+        public Nullable<decimal> fiyat { get; set; }
+        public Nullable<System.DateTime> satınAlınmaTarihi { get; set; }
+        public Nullable<bool> stokDurum { get; set; }
     }
 }

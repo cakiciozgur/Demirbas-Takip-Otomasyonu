@@ -12,6 +12,8 @@ namespace DemirbasOtomasyon.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DemirbasTakipEntities : DbContext
     {
@@ -34,5 +36,239 @@ namespace DemirbasOtomasyon.Model
         public virtual DbSet<ZimmetDetay> ZimmetDetay { get; set; }
         public virtual DbSet<Zimmetlenenler> Zimmetlenenler { get; set; }
         public virtual DbSet<Zimmetler> Zimmetler { get; set; }
+        public virtual DbSet<Personeller> Personeller { get; set; }
+    
+        public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_alterdiagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_creatediagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var versionParameter = version.HasValue ?
+                new ObjectParameter("version", version) :
+                new ObjectParameter("version", typeof(int));
+    
+            var definitionParameter = definition != null ?
+                new ObjectParameter("definition", definition) :
+                new ObjectParameter("definition", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
+        }
+    
+        public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_dropdiagram", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagramdefinition_Result> sp_helpdiagramdefinition(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagramdefinition_Result>("sp_helpdiagramdefinition", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_helpdiagrams_Result> sp_helpdiagrams(string diagramname, Nullable<int> owner_id)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_helpdiagrams_Result>("sp_helpdiagrams", diagramnameParameter, owner_idParameter);
+        }
+    
+        public virtual ObjectResult<sp_PersonelBul_Result> sp_PersonelBul(Nullable<int> personelID)
+        {
+            var personelIDParameter = personelID.HasValue ?
+                new ObjectParameter("personelID", personelID) :
+                new ObjectParameter("personelID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PersonelBul_Result>("sp_PersonelBul", personelIDParameter);
+        }
+    
+        public virtual int sp_PersonelEkle(string adi, string soyadi, string cepTelefonu, Nullable<int> departmanID)
+        {
+            var adiParameter = adi != null ?
+                new ObjectParameter("adi", adi) :
+                new ObjectParameter("adi", typeof(string));
+    
+            var soyadiParameter = soyadi != null ?
+                new ObjectParameter("soyadi", soyadi) :
+                new ObjectParameter("soyadi", typeof(string));
+    
+            var cepTelefonuParameter = cepTelefonu != null ?
+                new ObjectParameter("cepTelefonu", cepTelefonu) :
+                new ObjectParameter("cepTelefonu", typeof(string));
+    
+            var departmanIDParameter = departmanID.HasValue ?
+                new ObjectParameter("departmanID", departmanID) :
+                new ObjectParameter("departmanID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_PersonelEkle", adiParameter, soyadiParameter, cepTelefonuParameter, departmanIDParameter);
+        }
+    
+        public virtual ObjectResult<sp_PersonelListele_Result> sp_PersonelListele()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PersonelListele_Result>("sp_PersonelListele");
+        }
+    
+        public virtual int sp_renamediagram(string diagramname, Nullable<int> owner_id, string new_diagramname)
+        {
+            var diagramnameParameter = diagramname != null ?
+                new ObjectParameter("diagramname", diagramname) :
+                new ObjectParameter("diagramname", typeof(string));
+    
+            var owner_idParameter = owner_id.HasValue ?
+                new ObjectParameter("owner_id", owner_id) :
+                new ObjectParameter("owner_id", typeof(int));
+    
+            var new_diagramnameParameter = new_diagramname != null ?
+                new ObjectParameter("new_diagramname", new_diagramname) :
+                new ObjectParameter("new_diagramname", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_renamediagram", diagramnameParameter, owner_idParameter, new_diagramnameParameter);
+        }
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
+    
+        public virtual int sp_UrunEkle(string urunAdi, Nullable<decimal> fiyat, Nullable<int> stokMiktari, Nullable<System.DateTime> satinAlinmaTarihi)
+        {
+            var urunAdiParameter = urunAdi != null ?
+                new ObjectParameter("urunAdi", urunAdi) :
+                new ObjectParameter("urunAdi", typeof(string));
+    
+            var fiyatParameter = fiyat.HasValue ?
+                new ObjectParameter("fiyat", fiyat) :
+                new ObjectParameter("fiyat", typeof(decimal));
+    
+            var stokMiktariParameter = stokMiktari.HasValue ?
+                new ObjectParameter("stokMiktari", stokMiktari) :
+                new ObjectParameter("stokMiktari", typeof(int));
+    
+            var satinAlinmaTarihiParameter = satinAlinmaTarihi.HasValue ?
+                new ObjectParameter("satinAlinmaTarihi", satinAlinmaTarihi) :
+                new ObjectParameter("satinAlinmaTarihi", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_UrunEkle", urunAdiParameter, fiyatParameter, stokMiktariParameter, satinAlinmaTarihiParameter);
+        }
+    
+        public virtual int sp_UrunGuncelle(Nullable<int> urunID, string urunAdi, Nullable<decimal> fiyat, Nullable<int> stokMiktari, Nullable<System.DateTime> satinAlinmaTarihi)
+        {
+            var urunIDParameter = urunID.HasValue ?
+                new ObjectParameter("urunID", urunID) :
+                new ObjectParameter("urunID", typeof(int));
+    
+            var urunAdiParameter = urunAdi != null ?
+                new ObjectParameter("urunAdi", urunAdi) :
+                new ObjectParameter("urunAdi", typeof(string));
+    
+            var fiyatParameter = fiyat.HasValue ?
+                new ObjectParameter("fiyat", fiyat) :
+                new ObjectParameter("fiyat", typeof(decimal));
+    
+            var stokMiktariParameter = stokMiktari.HasValue ?
+                new ObjectParameter("stokMiktari", stokMiktari) :
+                new ObjectParameter("stokMiktari", typeof(int));
+    
+            var satinAlinmaTarihiParameter = satinAlinmaTarihi.HasValue ?
+                new ObjectParameter("satinAlinmaTarihi", satinAlinmaTarihi) :
+                new ObjectParameter("satinAlinmaTarihi", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_UrunGuncelle", urunIDParameter, urunAdiParameter, fiyatParameter, stokMiktariParameter, satinAlinmaTarihiParameter);
+        }
+    
+        public virtual ObjectResult<sp_UrunListele_Result> sp_UrunListele()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_UrunListele_Result>("sp_UrunListele");
+        }
+    
+        public virtual ObjectResult<sp_ZimmetBul_Result> sp_ZimmetBul(Nullable<int> zimmetID)
+        {
+            var zimmetIDParameter = zimmetID.HasValue ?
+                new ObjectParameter("zimmetID", zimmetID) :
+                new ObjectParameter("zimmetID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetBul_Result>("sp_ZimmetBul", zimmetIDParameter);
+        }
+    
+        public virtual int sp_ZimmetEkle(Nullable<int> urunID, Nullable<System.DateTime> zimmetTarihi, Nullable<int> personelID, Nullable<int> kullaniciID)
+        {
+            var urunIDParameter = urunID.HasValue ?
+                new ObjectParameter("urunID", urunID) :
+                new ObjectParameter("urunID", typeof(int));
+    
+            var zimmetTarihiParameter = zimmetTarihi.HasValue ?
+                new ObjectParameter("zimmetTarihi", zimmetTarihi) :
+                new ObjectParameter("zimmetTarihi", typeof(System.DateTime));
+    
+            var personelIDParameter = personelID.HasValue ?
+                new ObjectParameter("personelID", personelID) :
+                new ObjectParameter("personelID", typeof(int));
+    
+            var kullaniciIDParameter = kullaniciID.HasValue ?
+                new ObjectParameter("kullaniciID", kullaniciID) :
+                new ObjectParameter("kullaniciID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ZimmetEkle", urunIDParameter, zimmetTarihiParameter, personelIDParameter, kullaniciIDParameter);
+        }
+    
+        public virtual int sp_ZimmetKaldir(Nullable<int> zimmetID)
+        {
+            var zimmetIDParameter = zimmetID.HasValue ?
+                new ObjectParameter("zimmetID", zimmetID) :
+                new ObjectParameter("zimmetID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ZimmetKaldir", zimmetIDParameter);
+        }
+    
+        public virtual ObjectResult<sp_ZimmetListele_Result> sp_ZimmetListele()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetListele_Result>("sp_ZimmetListele");
+        }
     }
 }

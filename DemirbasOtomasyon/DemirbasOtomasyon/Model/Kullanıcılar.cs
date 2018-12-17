@@ -17,6 +17,7 @@ namespace DemirbasOtomasyon.Model
         public Kullanıcılar()
         {
             this.Kisiler = new HashSet<Kisiler>();
+            this.Zimmetler = new HashSet<Zimmetler>();
         }
     
         public int kullaniciID { get; set; }
@@ -26,5 +27,6 @@ namespace DemirbasOtomasyon.Model
     
         public virtual ICollection<Kisiler> Kisiler { get; set; }
         public virtual Roller Roller { get; set; }
+        public virtual ICollection<Zimmetler> Zimmetler { get; set; }
     }
 }

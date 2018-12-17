@@ -10,20 +10,10 @@
 namespace DemirbasOtomasyon.Model
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Departmanlar
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public Departmanlar()
-        {
-            this.Kisiler = new HashSet<Kisiler>();
-            this.Personeller = new HashSet<Personeller>();
-        }
-    
-        public int departmanID { get; set; }
-        public string departmanAdi { get; set; }
-    
-        public virtual ICollection<Kisiler> Kisiler { get; set; }
-        public virtual ICollection<Personeller> Personeller { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="DemirbasTakipModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DemirbasTakipModel.Urunler" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DemirbasTakipModel.ZimmetDetay" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DemirbasTakipModel.Zimmetlenenler" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DemirbasTakipModel.Zimmetler" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Kisiler_Departmanlar" ManuallyRouted="false" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Kisiler_Kullanıcılar" ManuallyRouted="false" />
@@ -20,6 +19,11 @@
         <AssociationConnector Association="DemirbasTakipModel.FK_Kullanıcılar_Roller" ManuallyRouted="false" />
         <AssociationConnector Association="DemirbasTakipModel.FK_ZimmetDetay_Urunler" ManuallyRouted="false" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_ZimmetDetay" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DemirbasTakipModel.Personeller" Width="1.5" PointX="7.5" PointY="8.375" />
+        <AssociationConnector Association="DemirbasTakipModel.FK_Personeller_Departmanlar" />
+        <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_Kullanıcılar" />
+        <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_Personeller" />
+        <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_Urunler" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

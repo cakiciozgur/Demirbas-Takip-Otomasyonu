@@ -12,18 +12,20 @@ namespace DemirbasOtomasyon.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Departmanlar
+    public partial class Personeller
     {
-        public Departmanlar()
+        public Personeller()
         {
-            this.Kisiler = new HashSet<Kisiler>();
-            this.Personeller = new HashSet<Personeller>();
+            this.Zimmetler = new HashSet<Zimmetler>();
         }
     
-        public int departmanID { get; set; }
-        public string departmanAdi { get; set; }
+        public int personelID { get; set; }
+        public string adi { get; set; }
+        public string soyadi { get; set; }
+        public string cepTelefonu { get; set; }
+        public Nullable<int> departmanID { get; set; }
     
-        public virtual ICollection<Kisiler> Kisiler { get; set; }
-        public virtual ICollection<Personeller> Personeller { get; set; }
+        public virtual Departmanlar Departmanlar { get; set; }
+        public virtual ICollection<Zimmetler> Zimmetler { get; set; }
     }
 }
