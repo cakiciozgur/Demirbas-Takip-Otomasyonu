@@ -57,74 +57,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\UrunController.cs" />
+    <Compile Include="Model\DemirbasModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemirbasModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DemirbasModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DemirbasModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemirbasModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Model\Departmanlar.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Kisiler.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Model\EDeleted.cs" />
+    <Compile Include="Model\eRoles.cs" />
+    <Compile Include="Model\KullaniciViewModel.cs" />
     <Compile Include="Model\Kullanıcılar.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Personeller.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sp_PersonelBul_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sp_PersonelListele_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sp_UrunListele_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sp_ZimmetBul_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sp_ZimmetListele_Result.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Model\PersonelViewModel.cs" />
+    <Compile Include="Model\UrunViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Roller.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Urunler.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ZimmetDetay.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Zimmetlenenler.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Zimmetler.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="View\FormGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +113,42 @@
     <Compile Include="View\FormZimmetEkle.Designer.cs">
       <DependentUpon>FormZimmetEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Roller.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagrams_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_PersonelBul_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_PersonelListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_UrunListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetBul_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Urunler.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ZimmetDetay.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Zimmetler.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -170,12 +170,12 @@
     <EmbeddedResource Include="View\FormZimmetEkle.resx">
       <DependentUpon>FormZimmetEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\Model1.edmx">
+    <EntityDeploy Include="Model\DemirbasModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>DemirbasModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Model\DemirbasModel.edmx.diagram">
+      <DependentUpon>DemirbasModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -192,23 +192,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\Model1.Context.tt">
+    <Content Include="Model\DemirbasModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>DemirbasModel.edmx</DependentUpon>
+      <LastGenOutput>DemirbasModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\Model1.tt">
+    <Content Include="Model\DemirbasModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>DemirbasModel.edmx</DependentUpon>
+      <LastGenOutput>DemirbasModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

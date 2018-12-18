@@ -16,16 +16,14 @@ namespace DemirbasOtomasyon.Model
     {
         public Kullanıcılar()
         {
-            this.Kisiler = new HashSet<Kisiler>();
             this.Zimmetler = new HashSet<Zimmetler>();
         }
     
         public int kullaniciID { get; set; }
-        public Nullable<int> kullaniciAdi { get; set; }
+        public string kullaniciAdi { get; set; }
         public Nullable<int> kullaniciSifre { get; set; }
         public Nullable<int> rolID { get; set; }
     
-        public virtual ICollection<Kisiler> Kisiler { get; set; }
         public virtual Roller Roller { get; set; }
         public virtual ICollection<Zimmetler> Zimmetler { get; set; }
     }

@@ -15,10 +15,10 @@ namespace DemirbasOtomasyon.Model
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class DemirbasTakipEntities : DbContext
+    public partial class DemirbasTakipEntitiess : DbContext
     {
-        public DemirbasTakipEntities()
-            : base("name=DemirbasTakipEntities")
+        public DemirbasTakipEntitiess()
+            : base("name=DemirbasTakipEntitiess")
         {
         }
     
@@ -28,15 +28,13 @@ namespace DemirbasOtomasyon.Model
         }
     
         public virtual DbSet<Departmanlar> Departmanlar { get; set; }
-        public virtual DbSet<Kisiler> Kisiler { get; set; }
         public virtual DbSet<Kullanıcılar> Kullanıcılar { get; set; }
+        public virtual DbSet<Personeller> Personeller { get; set; }
         public virtual DbSet<Roller> Roller { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Urunler> Urunler { get; set; }
         public virtual DbSet<ZimmetDetay> ZimmetDetay { get; set; }
-        public virtual DbSet<Zimmetlenenler> Zimmetlenenler { get; set; }
         public virtual DbSet<Zimmetler> Zimmetler { get; set; }
-        public virtual DbSet<Personeller> Personeller { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

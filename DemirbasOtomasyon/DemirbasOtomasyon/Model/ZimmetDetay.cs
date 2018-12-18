@@ -17,8 +17,5 @@ namespace DemirbasOtomasyon.Model
         public int zimmetID { get; set; }
         public Nullable<int> urunID { get; set; }
         public Nullable<int> miktar { get; set; }
-    
-        public virtual Urunler Urunler { get; set; }
-        public virtual Zimmetler Zimmetler { get; set; }
     }
 }

@@ -16,19 +16,16 @@ namespace DemirbasOtomasyon.Model
     {
         public Urunler()
         {
-            this.ZimmetDetay = new HashSet<ZimmetDetay>();
             this.Zimmetler = new HashSet<Zimmetler>();
         }
     
         public int urunID { get; set; }
         public string urunAd { get; set; }
         public Nullable<int> stokMiktari { get; set; }
-        public Nullable<int> stokAltLimit { get; set; }
         public Nullable<decimal> fiyat { get; set; }
         public Nullable<System.DateTime> satınAlınmaTarihi { get; set; }
         public Nullable<bool> stokDurum { get; set; }
     
-        public virtual ICollection<ZimmetDetay> ZimmetDetay { get; set; }
         public virtual ICollection<Zimmetler> Zimmetler { get; set; }
     }
 }

@@ -14,21 +14,13 @@ namespace DemirbasOtomasyon.Model
     
     public partial class Zimmetler
     {
-        public Zimmetler()
-        {
-            this.Kisiler = new HashSet<Kisiler>();
-        }
-    
         public int zimmetID { get; set; }
         public Nullable<System.DateTime> zimmetTarihi { get; set; }
         public Nullable<bool> zimmetDurum { get; set; }
-        public Nullable<int> zimmetlenenID { get; set; }
         public Nullable<int> personelID { get; set; }
         public Nullable<int> kullaniciID { get; set; }
         public Nullable<int> urunID { get; set; }
     
-        public virtual ICollection<Kisiler> Kisiler { get; set; }
-        public virtual ZimmetDetay ZimmetDetay { get; set; }
         public virtual Kullanıcılar Kullanıcılar { get; set; }
         public virtual Personeller Personeller { get; set; }
         public virtual Urunler Urunler { get; set; }

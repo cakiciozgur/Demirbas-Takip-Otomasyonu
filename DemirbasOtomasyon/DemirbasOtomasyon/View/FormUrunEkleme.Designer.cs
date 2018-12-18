@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.dtpAlimTarihi = new System.Windows.Forms.DateTimePicker();
             this.txtAdet = new System.Windows.Forms.TextBox();
@@ -57,6 +57,7 @@
             // 
             // dtpAlimTarihi
             // 
+            this.dtpAlimTarihi.CalendarForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtpAlimTarihi.Location = new System.Drawing.Point(134, 185);
             this.dtpAlimTarihi.Name = "dtpAlimTarihi";
             this.dtpAlimTarihi.Size = new System.Drawing.Size(200, 29);
@@ -156,6 +157,7 @@
             this.btnEkle.TabIndex = 12;
             this.btnEkle.Text = "EKLE";
             this.btnEkle.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // panel1
             // 
@@ -178,14 +180,14 @@
             // 
             // dgwUrun
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwUrun.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwUrun.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwUrun.Location = new System.Drawing.Point(61, 342);
             this.dgwUrun.Name = "dgwUrun";
