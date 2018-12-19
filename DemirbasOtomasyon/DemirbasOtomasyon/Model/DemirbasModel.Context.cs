@@ -33,7 +33,6 @@ namespace DemirbasOtomasyon.Model
         public virtual DbSet<Roller> Roller { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Urunler> Urunler { get; set; }
-        public virtual DbSet<ZimmetDetay> ZimmetDetay { get; set; }
         public virtual DbSet<Zimmetler> Zimmetler { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
@@ -234,7 +233,7 @@ namespace DemirbasOtomasyon.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetBul_Result>("sp_ZimmetBul", zimmetIDParameter);
         }
     
-        public virtual int sp_ZimmetEkle(Nullable<int> urunID, Nullable<System.DateTime> zimmetTarihi, Nullable<int> personelID, Nullable<int> kullaniciID)
+        public virtual int sp_ZimmetEkle(Nullable<int> urunID, Nullable<System.DateTime> zimmetTarihi, Nullable<int> zimmetAdet, Nullable<int> personelID, Nullable<int> kullaniciID)
         {
             var urunIDParameter = urunID.HasValue ?
                 new ObjectParameter("urunID", urunID) :
@@ -244,6 +243,10 @@ namespace DemirbasOtomasyon.Model
                 new ObjectParameter("zimmetTarihi", zimmetTarihi) :
                 new ObjectParameter("zimmetTarihi", typeof(System.DateTime));
     
+            var zimmetAdetParameter = zimmetAdet.HasValue ?
+                new ObjectParameter("zimmetAdet", zimmetAdet) :
+                new ObjectParameter("zimmetAdet", typeof(int));
+    
             var personelIDParameter = personelID.HasValue ?
                 new ObjectParameter("personelID", personelID) :
                 new ObjectParameter("personelID", typeof(int));
@@ -252,7 +255,7 @@ namespace DemirbasOtomasyon.Model
                 new ObjectParameter("kullaniciID", kullaniciID) :
                 new ObjectParameter("kullaniciID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ZimmetEkle", urunIDParameter, zimmetTarihiParameter, personelIDParameter, kullaniciIDParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ZimmetEkle", urunIDParameter, zimmetTarihiParameter, zimmetAdetParameter, personelIDParameter, kullaniciIDParameter);
         }
     
         public virtual int sp_ZimmetKaldir(Nullable<int> zimmetID)
@@ -276,6 +279,11 @@ namespace DemirbasOtomasyon.Model
                 new ObjectParameter("urunID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_UrunSil", urunIDParameter);
+        }
+    
+        public virtual ObjectResult<sp_ZimmetListele2_Result> sp_ZimmetListele2()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetListele2_Result>("sp_ZimmetListele2");
         }
     }
 }

@@ -10,12 +10,16 @@
 namespace DemirbasOtomasyon.Model
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ZimmetDetay
+    public partial class sp_ZimmetListele2_Result
     {
-        public int zimmetID { get; set; }
-        public Nullable<int> urunID { get; set; }
-        public Nullable<int> miktar { get; set; }
+        public int Ürün_ID { get; set; }
+        public int Zimmet_ID { get; set; }
+        public Nullable<int> Zimmet_Adet { get; set; }
+        public string Ürün_Adı { get; set; }
+        public string Personel_Adı { get; set; }
+        public string Departman { get; set; }
+        public Nullable<System.DateTime> Zimmet_Tarihi { get; set; }
+        public string Kullanıcı_Adı { get; set; }
     }
 }

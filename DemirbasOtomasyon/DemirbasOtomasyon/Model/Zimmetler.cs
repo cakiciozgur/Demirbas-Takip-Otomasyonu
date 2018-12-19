@@ -20,6 +20,7 @@ namespace DemirbasOtomasyon.Model
         public Nullable<int> personelID { get; set; }
         public Nullable<int> kullaniciID { get; set; }
         public Nullable<int> urunID { get; set; }
+        public Nullable<int> zimmetAdet { get; set; }
     
         public virtual Kullanıcılar Kullanıcılar { get; set; }
         public virtual Personeller Personeller { get; set; }

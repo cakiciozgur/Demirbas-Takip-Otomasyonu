@@ -190,7 +190,6 @@
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "FormUrunEkleme";
             this.Text = "Ürün Ekleme";
-            this.Load += new System.EventHandler(this.FormUrunEkleme_Load);
             this.grbUrunIslemleri.ResumeLayout(false);
             this.grbUrunIslemleri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).EndInit();

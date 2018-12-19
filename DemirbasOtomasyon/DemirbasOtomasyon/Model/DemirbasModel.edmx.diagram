@@ -11,7 +11,6 @@
         <EntityTypeShape EntityType="DemirbasTakipModel.Roller" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DemirbasTakipModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DemirbasTakipModel.Urunler" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DemirbasTakipModel.ZimmetDetay" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DemirbasTakipModel.Zimmetler" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Personeller_Departmanlar" ManuallyRouted="false" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Kullanıcılar_Roller" ManuallyRouted="false" />

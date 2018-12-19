@@ -20,10 +20,7 @@ namespace DemirbasOtomasyon.View
             InitializeComponent();
         }
 
-        private void FormUrunEkleme_Load(object sender, EventArgs e)
-        {
-        
-        }
+      
 
         private void btnEkle_Click(object sender, EventArgs e)
         {

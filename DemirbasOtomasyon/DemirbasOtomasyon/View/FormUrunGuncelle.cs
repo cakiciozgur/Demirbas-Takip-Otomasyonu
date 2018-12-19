@@ -29,11 +29,9 @@ namespace DemirbasOtomasyon.View
         private void urunListele()
         {
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
-            var data = (from d in db.Urunler select new { d.urunID,d.urunAd,d.stokMiktari,d.fiyat,d.satınAlınmaTarihi,d.stokDurum});
+            var data = (from d in db.sp_UrunListele() select new { d.urunID,d.urunAd,d.stokMiktari,d.fiyat,d.satınAlınmaTarihi,d.stokDurum} );
             dgwUrunListele.DataSource = data.ToList();
         }
-        
-
         private void FormUrunGuncelle_Load(object sender, EventArgs e)
         {
             urunListele();

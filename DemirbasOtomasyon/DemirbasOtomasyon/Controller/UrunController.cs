@@ -33,12 +33,5 @@ namespace DemirbasOtomasyon.Controller
                     context.sp_UrunSil(urunID);
                 }
             }
-            public static void urunListele()
-            {
-                using (var context = new DemirbasTakipEntitiess())
-                {
-                    context.sp_UrunListele();
-                }
-            }
     }
 }

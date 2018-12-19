@@ -28,71 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtUrunAd = new System.Windows.Forms.TextBox();
-            this.dtpAlimTarihi = new System.Windows.Forms.DateTimePicker();
-            this.txtAdet = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txtUrunID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtFiyat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.grbZimmetIslemleri = new System.Windows.Forms.GroupBox();
+            this.txtAdet = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbKullanici = new System.Windows.Forms.ComboBox();
+            this.cmbPersonel = new System.Windows.Forms.ComboBox();
+            this.txtUrunAd = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.calendarControl1 = new DevExpress.XtraEditors.Controls.CalendarControl();
             this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.dgwZimmetListesi = new System.Windows.Forms.DataGridView();
             this.grbZimmetIslemleri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwZimmetListesi)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtUrunAd
+            // txtUrunID
             // 
-            this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAd.Location = new System.Drawing.Point(134, 43);
-            this.txtUrunAd.Name = "txtUrunAd";
-            this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
-            this.txtUrunAd.TabIndex = 2;
-            // 
-            // dtpAlimTarihi
-            // 
-            this.dtpAlimTarihi.Location = new System.Drawing.Point(134, 186);
-            this.dtpAlimTarihi.Name = "dtpAlimTarihi";
-            this.dtpAlimTarihi.Size = new System.Drawing.Size(200, 29);
-            this.dtpAlimTarihi.TabIndex = 8;
-            // 
-            // txtAdet
-            // 
-            this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdet.Location = new System.Drawing.Point(134, 87);
-            this.txtAdet.Name = "txtAdet";
-            this.txtAdet.Size = new System.Drawing.Size(200, 28);
-            this.txtAdet.TabIndex = 3;
+            this.txtUrunID.Enabled = false;
+            this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunID.Location = new System.Drawing.Point(150, 41);
+            this.txtUrunID.Name = "txtUrunID";
+            this.txtUrunID.Size = new System.Drawing.Size(200, 28);
+            this.txtUrunID.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(69, 194);
+            this.label6.Location = new System.Drawing.Point(29, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 21);
             this.label6.TabIndex = 7;
             this.label6.Text = "Tarih:";
             // 
-            // txtFiyat
-            // 
-            this.txtFiyat.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtFiyat.Location = new System.Drawing.Point(134, 137);
-            this.txtFiyat.Name = "txtFiyat";
-            this.txtFiyat.Size = new System.Drawing.Size(200, 28);
-            this.txtFiyat.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(44, 87);
+            this.label4.Location = new System.Drawing.Point(39, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 21);
             this.label4.TabIndex = 7;
@@ -102,7 +85,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(49, 46);
+            this.label3.Location = new System.Drawing.Point(45, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 21);
             this.label3.TabIndex = 6;
@@ -112,7 +95,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(46, 137);
+            this.label7.Location = new System.Drawing.Point(39, 186);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 21);
             this.label7.TabIndex = 6;
@@ -120,23 +103,93 @@
             // 
             // grbZimmetIslemleri
             // 
-            this.grbZimmetIslemleri.Controls.Add(this.btnKaydet);
-            this.grbZimmetIslemleri.Controls.Add(this.txtUrunAd);
-            this.grbZimmetIslemleri.Controls.Add(this.dtpAlimTarihi);
             this.grbZimmetIslemleri.Controls.Add(this.txtAdet);
+            this.grbZimmetIslemleri.Controls.Add(this.label2);
+            this.grbZimmetIslemleri.Controls.Add(this.cmbKullanici);
+            this.grbZimmetIslemleri.Controls.Add(this.cmbPersonel);
+            this.grbZimmetIslemleri.Controls.Add(this.txtUrunAd);
+            this.grbZimmetIslemleri.Controls.Add(this.label1);
+            this.grbZimmetIslemleri.Controls.Add(this.calendarControl1);
+            this.grbZimmetIslemleri.Controls.Add(this.btnKaydet);
+            this.grbZimmetIslemleri.Controls.Add(this.txtUrunID);
             this.grbZimmetIslemleri.Controls.Add(this.label6);
-            this.grbZimmetIslemleri.Controls.Add(this.txtFiyat);
             this.grbZimmetIslemleri.Controls.Add(this.label4);
             this.grbZimmetIslemleri.Controls.Add(this.label3);
             this.grbZimmetIslemleri.Controls.Add(this.label7);
             this.grbZimmetIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbZimmetIslemleri.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grbZimmetIslemleri.Location = new System.Drawing.Point(61, 98);
+            this.grbZimmetIslemleri.Location = new System.Drawing.Point(12, 83);
             this.grbZimmetIslemleri.Name = "grbZimmetIslemleri";
-            this.grbZimmetIslemleri.Size = new System.Drawing.Size(1017, 224);
+            this.grbZimmetIslemleri.Size = new System.Drawing.Size(371, 585);
             this.grbZimmetIslemleri.TabIndex = 15;
             this.grbZimmetIslemleri.TabStop = false;
             this.grbZimmetIslemleri.Text = "Zimmetleme İşlemleri";
+            // 
+            // txtAdet
+            // 
+            this.txtAdet.Enabled = false;
+            this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdet.Location = new System.Drawing.Point(150, 110);
+            this.txtAdet.Name = "txtAdet";
+            this.txtAdet.Size = new System.Drawing.Size(200, 28);
+            this.txtAdet.TabIndex = 22;
+            this.txtAdet.Text = "1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(6, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 21);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Zimmet Adet:";
+            // 
+            // cmbKullanici
+            // 
+            this.cmbKullanici.FormattingEnabled = true;
+            this.cmbKullanici.Location = new System.Drawing.Point(150, 183);
+            this.cmbKullanici.Name = "cmbKullanici";
+            this.cmbKullanici.Size = new System.Drawing.Size(200, 30);
+            this.cmbKullanici.TabIndex = 21;
+            this.cmbKullanici.Text = "Kullanıcı Seçiniz...";
+            // 
+            // cmbPersonel
+            // 
+            this.cmbPersonel.FormattingEnabled = true;
+            this.cmbPersonel.Location = new System.Drawing.Point(150, 144);
+            this.cmbPersonel.Name = "cmbPersonel";
+            this.cmbPersonel.Size = new System.Drawing.Size(200, 30);
+            this.cmbPersonel.TabIndex = 20;
+            this.cmbPersonel.Text = "Personel Seçiniz...";
+            // 
+            // txtUrunAd
+            // 
+            this.txtUrunAd.Enabled = false;
+            this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunAd.Location = new System.Drawing.Point(150, 75);
+            this.txtUrunAd.Name = "txtUrunAd";
+            this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
+            this.txtUrunAd.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(39, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 21);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Ürün Adı:";
+            // 
+            // calendarControl1
+            // 
+            this.calendarControl1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calendarControl1.Location = new System.Drawing.Point(89, 232);
+            this.calendarControl1.Name = "calendarControl1";
+            this.calendarControl1.Size = new System.Drawing.Size(261, 261);
+            this.calendarControl1.TabIndex = 15;
             // 
             // btnKaydet
             // 
@@ -150,12 +203,13 @@
             this.btnKaydet.Appearance.Options.UseFont = true;
             this.btnKaydet.Appearance.Options.UseForeColor = true;
             this.btnKaydet.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnKaydet.Location = new System.Drawing.Point(381, 174);
+            this.btnKaydet.Location = new System.Drawing.Point(204, 522);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(161, 41);
             this.btnKaydet.TabIndex = 12;
             this.btnKaydet.Text = "KAYDET";
             this.btnKaydet.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // panel1
             // 
@@ -178,20 +232,21 @@
             // 
             // dgwZimmetListesi
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwZimmetListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwZimmetListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwZimmetListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwZimmetListesi.Location = new System.Drawing.Point(61, 328);
+            this.dgwZimmetListesi.Location = new System.Drawing.Point(399, 98);
             this.dgwZimmetListesi.Name = "dgwZimmetListesi";
             this.dgwZimmetListesi.RowTemplate.Height = 24;
-            this.dgwZimmetListesi.Size = new System.Drawing.Size(1017, 296);
+            this.dgwZimmetListesi.Size = new System.Drawing.Size(735, 570);
             this.dgwZimmetListesi.TabIndex = 14;
+            this.dgwZimmetListesi.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwZimmetListesi_CellMouseDoubleClick);
             // 
             // FormZimmetEkle
             // 
@@ -199,15 +254,17 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 637);
+            this.ClientSize = new System.Drawing.Size(1146, 680);
             this.Controls.Add(this.grbZimmetIslemleri);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgwZimmetListesi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormZimmetEkle";
             this.Text = "Zimmet Ekleme";
+            this.Load += new System.EventHandler(this.FormZimmetEkle_Load);
             this.grbZimmetIslemleri.ResumeLayout(false);
             this.grbZimmetIslemleri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwZimmetListesi)).EndInit();
@@ -217,11 +274,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUrunAd;
-        private System.Windows.Forms.DateTimePicker dtpAlimTarihi;
-        private System.Windows.Forms.TextBox txtAdet;
+        private System.Windows.Forms.TextBox txtUrunID;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtFiyat;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
@@ -230,5 +284,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
         private System.Windows.Forms.DataGridView dgwZimmetListesi;
+        private DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
+        private System.Windows.Forms.TextBox txtUrunAd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbPersonel;
+        private System.Windows.Forms.ComboBox cmbKullanici;
+        private System.Windows.Forms.TextBox txtAdet;
+        private System.Windows.Forms.Label label2;
     }
 }

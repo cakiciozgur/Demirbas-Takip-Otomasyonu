@@ -54,20 +54,13 @@
     <Property Name="satınAlınmaTarihi" Type="datetime" />
     <Property Name="stokDurum" Type="bit" />
   </EntityType>
-  <EntityType Name="ZimmetDetay">
-    <Key>
-      <PropertyRef Name="zimmetID" />
-    </Key>
-    <Property Name="zimmetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="urunID" Type="int" />
-    <Property Name="miktar" Type="int" />
-  </EntityType>
   <EntityType Name="Zimmetler">
     <Key>
       <PropertyRef Name="zimmetID" />
     </Key>
     <Property Name="zimmetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="zimmetTarihi" Type="datetime" />
+    <Property Name="zimmetAdet" Type="int" />
     <Property Name="zimmetDurum" Type="bit" />
     <Property Name="personelID" Type="int" />
     <Property Name="kullaniciID" Type="int" />
@@ -197,6 +190,7 @@
   <Function Name="sp_ZimmetEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="urunID" Type="int" Mode="In" />
     <Parameter Name="zimmetTarihi" Type="date" Mode="In" />
+    <Parameter Name="zimmetAdet" Type="int" Mode="In" />
     <Parameter Name="personelID" Type="int" Mode="In" />
     <Parameter Name="kullaniciID" Type="int" Mode="In" />
   </Function>
@@ -204,6 +198,7 @@
     <Parameter Name="zimmetID" Type="int" Mode="In" />
   </Function>
   <Function Name="sp_ZimmetListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ZimmetListele2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="DemirbasTakipModelStoreContainer">
     <EntitySet Name="Departmanlar" EntityType="Self.Departmanlar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Kullanıcılar" EntityType="Self.Kullanıcılar" Schema="dbo" store:Type="Tables" />
@@ -211,7 +206,6 @@
     <EntitySet Name="Roller" EntityType="Self.Roller" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ZimmetDetay" EntityType="Self.ZimmetDetay" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Zimmetler" EntityType="Self.Zimmetler" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Kullanıcılar_Roller" Association="Self.FK_Kullanıcılar_Roller">
       <End Role="Roller" EntitySet="Roller" />
