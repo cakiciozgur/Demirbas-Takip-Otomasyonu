@@ -101,6 +101,12 @@
     <Compile Include="View\FormUrunEkleme.Designer.cs">
       <DependentUpon>FormUrunEkleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormUrunGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormUrunGuncelle.Designer.cs">
+      <DependentUpon>FormUrunGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormUrunListele.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormUrunEkleme.resx">
       <DependentUpon>FormUrunEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormUrunGuncelle.resx">
+      <DependentUpon>FormUrunGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormUrunListele.resx">
       <DependentUpon>FormUrunListele.cs</DependentUpon>

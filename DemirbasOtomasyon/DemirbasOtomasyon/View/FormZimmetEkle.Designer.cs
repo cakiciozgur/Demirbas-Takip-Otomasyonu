@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.dtpAlimTarihi = new System.Windows.Forms.DateTimePicker();
             this.txtAdet = new System.Windows.Forms.TextBox();
@@ -178,19 +178,19 @@
             // 
             // dgwZimmetListesi
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwZimmetListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwZimmetListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwZimmetListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwZimmetListesi.Location = new System.Drawing.Point(61, 342);
+            this.dgwZimmetListesi.Location = new System.Drawing.Point(61, 328);
             this.dgwZimmetListesi.Name = "dgwZimmetListesi";
             this.dgwZimmetListesi.RowTemplate.Height = 24;
-            this.dgwZimmetListesi.Size = new System.Drawing.Size(1017, 282);
+            this.dgwZimmetListesi.Size = new System.Drawing.Size(1017, 296);
             this.dgwZimmetListesi.TabIndex = 14;
             // 
             // FormZimmetEkle

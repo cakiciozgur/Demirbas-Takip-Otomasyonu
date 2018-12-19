@@ -17,7 +17,7 @@ namespace DemirbasOtomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormUrunEkleme());
+            Application.Run(new FormUrunGuncelle());
         }
     }
 }

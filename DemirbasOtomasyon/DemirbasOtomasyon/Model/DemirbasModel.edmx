@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DemirbasTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DemirbasTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Departmanlar">
           <Key>
             <PropertyRef Name="departmanID" />
@@ -56,7 +56,7 @@
           <Property Name="urunAd" Type="nvarchar" MaxLength="50" />
           <Property Name="stokMiktari" Type="int" />
           <Property Name="fiyat" Type="money" />
-          <Property Name="satınAlınmaTarihi" Type="date" />
+          <Property Name="satınAlınmaTarihi" Type="datetime" />
           <Property Name="stokDurum" Type="bit" />
         </EntityType>
         <EntityType Name="ZimmetDetay">
@@ -72,7 +72,7 @@
             <PropertyRef Name="zimmetID" />
           </Key>
           <Property Name="zimmetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="zimmetTarihi" Type="date" />
+          <Property Name="zimmetTarihi" Type="datetime" />
           <Property Name="zimmetDurum" Type="bit" />
           <Property Name="personelID" Type="int" />
           <Property Name="kullaniciID" Type="int" />
@@ -193,6 +193,9 @@
           <Parameter Name="satinAlinmaTarihi" Type="date" Mode="In" />
         </Function>
         <Function Name="sp_UrunListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_UrunSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="urunID" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_ZimmetBul" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="zimmetID" Type="int" Mode="In" />
         </Function>
@@ -236,8 +239,7 @@
             <End Role="Zimmetler" EntitySet="Zimmetler" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DemirbasTakipModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -298,7 +300,7 @@
           <Property Name="urunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="stokMiktari" Type="Int32" />
           <Property Name="fiyat" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="satınAlınmaTarihi" Type="DateTime" Precision="0" />
+          <Property Name="satınAlınmaTarihi" Type="DateTime" Precision="3" />
           <Property Name="stokDurum" Type="Boolean" />
           <NavigationProperty Name="Zimmetler" Relationship="Self.FK_Zimmetler_Urunler" FromRole="Urunler" ToRole="Zimmetler" />
         </EntityType>
@@ -315,7 +317,7 @@
             <PropertyRef Name="zimmetID" />
           </Key>
           <Property Name="zimmetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="zimmetTarihi" Type="DateTime" Precision="0" />
+          <Property Name="zimmetTarihi" Type="DateTime" Precision="3" />
           <Property Name="zimmetDurum" Type="Boolean" />
           <Property Name="personelID" Type="Int32" />
           <Property Name="kullaniciID" Type="Int32" />
@@ -438,7 +440,7 @@
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_PersonelBul" ReturnType="Collection(DemirbasTakipModel.sp_PersonelBul_Result)">
-            <Parameter Name="personelID" Mode="In" Type="Int32" />
+          <Parameter Name="personelID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_PersonelEkle">
             <Parameter Name="adi" Mode="In" Type="String" />
@@ -468,7 +470,7 @@
           </FunctionImport>
           <FunctionImport Name="sp_UrunListele" ReturnType="Collection(DemirbasTakipModel.sp_UrunListele_Result)" />
           <FunctionImport Name="sp_ZimmetBul" ReturnType="Collection(DemirbasTakipModel.sp_ZimmetBul_Result)">
-            <Parameter Name="zimmetID" Mode="In" Type="Int32" />
+          <Parameter Name="zimmetID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ZimmetEkle">
             <Parameter Name="urunID" Mode="In" Type="Int32" />
@@ -477,9 +479,12 @@
             <Parameter Name="kullaniciID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ZimmetKaldir">
-            <Parameter Name="zimmetID" Mode="In" Type="Int32" />
+          <Parameter Name="zimmetID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ZimmetListele" ReturnType="Collection(DemirbasTakipModel.sp_ZimmetListele_Result)" />
+          <FunctionImport Name="sp_UrunSil">
+          <Parameter Name="urunID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -712,6 +717,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_UrunSil" FunctionName="DemirbasTakipModel.Store.sp_UrunSil" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -726,7 +732,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

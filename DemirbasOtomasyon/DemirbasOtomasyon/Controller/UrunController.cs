@@ -8,8 +8,8 @@ namespace DemirbasOtomasyon.Controller
 {
         public static class UrunController
     {
-        public static void UrunEkle(Urunler urun)
-        {
+            public static void UrunEkle(Urunler urun)
+            {
             if (urun==null)
             {
                 throw new Exception("HATA");
@@ -18,33 +18,26 @@ namespace DemirbasOtomasyon.Controller
             {
                 context.sp_UrunEkle(urun.urunAd, urun.fiyat, urun.stokMiktari, urun.satınAlınmaTarihi);
             }
-        }
+            }
             public static void urunDuzenle(Urunler urun)
-        {
+            {
             using (var context = new DemirbasTakipEntitiess())
             {
-                context.sp_UrunGuncelle(urun.urunID, urun.urunAd, urun.fiyat, urun.stokMiktari, urun.satınAlınmaTarihi);
+                context.sp_UrunGuncelle(urun.urunID,urun.urunAd, urun.fiyat, urun.stokMiktari, urun.satınAlınmaTarihi);
             }
-        }
-            /*public static void UrunSil(int urunId)
+            }
+            public static void UrunSil(int urunID)
             {
                 using (var context = new DemirbasTakipEntitiess())
                 {
-                    var result = context.Urunler.FirstOrDefault(x => x.urunID == urunId);
-                    context.Entry(result).State = EntityState.Deleted;
-                    context.SaveChanges();
+                    context.sp_UrunSil(urunID);
                 }
-            }*/
-            public static UrunViewModel UrunGetir(int urunId)
+            }
+            public static void urunListele()
             {
                 using (var context = new DemirbasTakipEntitiess())
                 {
-                    var result = from urun in context.Urunler
-                                 select new UrunViewModel
-                                 {
-                                     Urun=urun
-                                 };
-                    return result.FirstOrDefault(x => x.Urun.urunID == urunId);
+                    context.sp_UrunListele();
                 }
             }
     }

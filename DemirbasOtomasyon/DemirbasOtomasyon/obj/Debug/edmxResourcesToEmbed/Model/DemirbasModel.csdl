@@ -57,7 +57,7 @@
     <Property Name="urunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="stokMiktari" Type="Int32" />
     <Property Name="fiyat" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="satınAlınmaTarihi" Type="DateTime" Precision="0" />
+    <Property Name="satınAlınmaTarihi" Type="DateTime" Precision="3" />
     <Property Name="stokDurum" Type="Boolean" />
     <NavigationProperty Name="Zimmetler" Relationship="Self.FK_Zimmetler_Urunler" FromRole="Urunler" ToRole="Zimmetler" />
   </EntityType>
@@ -74,7 +74,7 @@
       <PropertyRef Name="zimmetID" />
     </Key>
     <Property Name="zimmetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="zimmetTarihi" Type="DateTime" Precision="0" />
+    <Property Name="zimmetTarihi" Type="DateTime" Precision="3" />
     <Property Name="zimmetDurum" Type="Boolean" />
     <Property Name="personelID" Type="Int32" />
     <Property Name="kullaniciID" Type="Int32" />
@@ -239,6 +239,9 @@
       <Parameter Name="zimmetID" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_ZimmetListele" ReturnType="Collection(DemirbasTakipModel.sp_ZimmetListele_Result)" />
+    <FunctionImport Name="sp_UrunSil">
+      <Parameter Name="urunID" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />

@@ -51,7 +51,7 @@
     <Property Name="urunAd" Type="nvarchar" MaxLength="50" />
     <Property Name="stokMiktari" Type="int" />
     <Property Name="fiyat" Type="money" />
-    <Property Name="satınAlınmaTarihi" Type="date" />
+    <Property Name="satınAlınmaTarihi" Type="datetime" />
     <Property Name="stokDurum" Type="bit" />
   </EntityType>
   <EntityType Name="ZimmetDetay">
@@ -67,7 +67,7 @@
       <PropertyRef Name="zimmetID" />
     </Key>
     <Property Name="zimmetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="zimmetTarihi" Type="date" />
+    <Property Name="zimmetTarihi" Type="datetime" />
     <Property Name="zimmetDurum" Type="bit" />
     <Property Name="personelID" Type="int" />
     <Property Name="kullaniciID" Type="int" />
@@ -188,6 +188,9 @@
     <Parameter Name="satinAlinmaTarihi" Type="date" Mode="In" />
   </Function>
   <Function Name="sp_UrunListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_UrunSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="urunID" Type="int" Mode="In" />
+  </Function>
   <Function Name="sp_ZimmetBul" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="zimmetID" Type="int" Mode="In" />
   </Function>

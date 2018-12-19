@@ -268,5 +268,14 @@ namespace DemirbasOtomasyon.Model
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetListele_Result>("sp_ZimmetListele");
         }
+    
+        public virtual int sp_UrunSil(Nullable<int> urunID)
+        {
+            var urunIDParameter = urunID.HasValue ?
+                new ObjectParameter("urunID", urunID) :
+                new ObjectParameter("urunID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_UrunSil", urunIDParameter);
+        }
     }
 }
