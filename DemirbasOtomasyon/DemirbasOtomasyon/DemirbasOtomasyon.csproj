@@ -120,6 +120,12 @@
     <Compile Include="View\FormPersonelGuncelleme.Designer.cs">
       <DependentUpon>FormPersonelGuncelleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormPersonelListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPersonelListele.Designer.cs">
+      <DependentUpon>FormPersonelListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormUrunEkleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormPersonelGuncelleme.resx">
       <DependentUpon>FormPersonelGuncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPersonelListele.resx">
+      <DependentUpon>FormPersonelListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormUrunEkleme.resx">
       <DependentUpon>FormUrunEkleme.cs</DependentUpon>
