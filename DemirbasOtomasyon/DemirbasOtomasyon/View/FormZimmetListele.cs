@@ -19,15 +19,47 @@ namespace DemirbasOtomasyon.View
         {
             InitializeComponent();
         }
-        private void urunListele()
+        private void UrunListele()
         {
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
             var data = db.sp_ZimmetListele2();
-            dgwZimmetListesi.DataSource = data.ToList();
+            dgwZimmetListele.DataSource = data.ToList();
+            ZimmetRenklendir();
+        }
+        private void ZimmetRenklendir()
+        {
+            try
+            {
+                for (int i = 0; i < dgwZimmetListele.Rows.Count; i++)
+                {
+                    Application.DoEvents();
+                    DataGridViewCellStyle rowColor = new DataGridViewCellStyle();
+                    if ((dgwZimmetListele.Rows[i].Cells[5].Value.ToString()) == "YAZILIM")
+                    {
+                        rowColor.BackColor = Color.LightSteelBlue;
+                        rowColor.ForeColor = Color.Black;
+                    }
+                    else if ((dgwZimmetListele.Rows[i].Cells[5].Value.ToString()) == "TEKNIK SERVIS")
+                    {
+                        rowColor.BackColor = Color.LightCoral;
+                        rowColor.ForeColor = Color.Black;
+                    }
+                    else if ((dgwZimmetListele.Rows[i].Cells[5].Value.ToString()) == "MUHASEBE")
+                    {
+                        rowColor.BackColor = Color.LightCyan;
+                        rowColor.ForeColor = Color.Black;
+                    }
+                    dgwZimmetListele.Rows[i].DefaultCellStyle = rowColor;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex);
+            }
         }
         private void FormZimmetListele_Load(object sender, EventArgs e)
         {
-            urunListele();
+            UrunListele();
         }
     }
 }

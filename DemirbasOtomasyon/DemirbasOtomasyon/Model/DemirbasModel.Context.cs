@@ -233,7 +233,7 @@ namespace DemirbasOtomasyon.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetBul_Result>("sp_ZimmetBul", zimmetIDParameter);
         }
     
-        public virtual int sp_ZimmetEkle(Nullable<int> urunID, Nullable<System.DateTime> zimmetTarihi, Nullable<int> zimmetAdet, Nullable<int> personelID, Nullable<int> kullaniciID)
+        public virtual int sp_ZimmetEkle(Nullable<int> urunID, Nullable<System.DateTime> zimmetTarihi, Nullable<int> zimmetAdet, Nullable<int> personelID, Nullable<int> kullaniciID, Nullable<int> adet)
         {
             var urunIDParameter = urunID.HasValue ?
                 new ObjectParameter("urunID", urunID) :
@@ -255,7 +255,11 @@ namespace DemirbasOtomasyon.Model
                 new ObjectParameter("kullaniciID", kullaniciID) :
                 new ObjectParameter("kullaniciID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ZimmetEkle", urunIDParameter, zimmetTarihiParameter, zimmetAdetParameter, personelIDParameter, kullaniciIDParameter);
+            var adetParameter = adet.HasValue ?
+                new ObjectParameter("adet", adet) :
+                new ObjectParameter("adet", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ZimmetEkle", urunIDParameter, zimmetTarihiParameter, zimmetAdetParameter, personelIDParameter, kullaniciIDParameter, adetParameter);
         }
     
         public virtual int sp_ZimmetKaldir(Nullable<int> zimmetID)

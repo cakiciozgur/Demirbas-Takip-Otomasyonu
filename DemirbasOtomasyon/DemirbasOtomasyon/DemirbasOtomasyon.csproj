@@ -108,6 +108,18 @@
     <Compile Include="View\FormGiris.Designer.cs">
       <DependentUpon>FormGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormPersonelEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPersonelEkleme.Designer.cs">
+      <DependentUpon>FormPersonelEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPersonelGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPersonelGuncelleme.Designer.cs">
+      <DependentUpon>FormPersonelGuncelleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormUrunEkleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,12 @@
     </Compile>
     <EmbeddedResource Include="View\FormGiris.resx">
       <DependentUpon>FormGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPersonelEkleme.resx">
+      <DependentUpon>FormPersonelEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPersonelGuncelleme.resx">
+      <DependentUpon>FormPersonelGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormUrunEkleme.resx">
       <DependentUpon>FormUrunEkleme.cs</DependentUpon>

@@ -41,13 +41,13 @@
             this.cmbPersonel = new System.Windows.Forms.ComboBox();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.calendarControl1 = new DevExpress.XtraEditors.Controls.CalendarControl();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.calendarControl = new DevExpress.XtraEditors.Controls.CalendarControl();
+            this.btnZimemetKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.dgwZimmetListesi = new System.Windows.Forms.DataGridView();
             this.grbZimmetIslemleri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarControl.CalendarTimeProperties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwZimmetListesi)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             // 
             this.txtUrunID.Enabled = false;
             this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunID.Location = new System.Drawing.Point(150, 41);
+            this.txtUrunID.Location = new System.Drawing.Point(141, 41);
             this.txtUrunID.Name = "txtUrunID";
             this.txtUrunID.Size = new System.Drawing.Size(200, 28);
             this.txtUrunID.TabIndex = 2;
@@ -109,8 +109,8 @@
             this.grbZimmetIslemleri.Controls.Add(this.cmbPersonel);
             this.grbZimmetIslemleri.Controls.Add(this.txtUrunAd);
             this.grbZimmetIslemleri.Controls.Add(this.label1);
-            this.grbZimmetIslemleri.Controls.Add(this.calendarControl1);
-            this.grbZimmetIslemleri.Controls.Add(this.btnKaydet);
+            this.grbZimmetIslemleri.Controls.Add(this.calendarControl);
+            this.grbZimmetIslemleri.Controls.Add(this.btnZimemetKaydet);
             this.grbZimmetIslemleri.Controls.Add(this.txtUrunID);
             this.grbZimmetIslemleri.Controls.Add(this.label6);
             this.grbZimmetIslemleri.Controls.Add(this.label4);
@@ -123,13 +123,12 @@
             this.grbZimmetIslemleri.Size = new System.Drawing.Size(371, 585);
             this.grbZimmetIslemleri.TabIndex = 15;
             this.grbZimmetIslemleri.TabStop = false;
-            this.grbZimmetIslemleri.Text = "Zimmetleme İşlemleri";
+            this.grbZimmetIslemleri.Text = "Zimmet Detayları";
             // 
             // txtAdet
             // 
-            this.txtAdet.Enabled = false;
             this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdet.Location = new System.Drawing.Point(150, 110);
+            this.txtAdet.Location = new System.Drawing.Point(142, 110);
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
             this.txtAdet.TabIndex = 22;
@@ -148,7 +147,7 @@
             // cmbKullanici
             // 
             this.cmbKullanici.FormattingEnabled = true;
-            this.cmbKullanici.Location = new System.Drawing.Point(150, 183);
+            this.cmbKullanici.Location = new System.Drawing.Point(142, 183);
             this.cmbKullanici.Name = "cmbKullanici";
             this.cmbKullanici.Size = new System.Drawing.Size(200, 30);
             this.cmbKullanici.TabIndex = 21;
@@ -157,7 +156,7 @@
             // cmbPersonel
             // 
             this.cmbPersonel.FormattingEnabled = true;
-            this.cmbPersonel.Location = new System.Drawing.Point(150, 144);
+            this.cmbPersonel.Location = new System.Drawing.Point(142, 144);
             this.cmbPersonel.Name = "cmbPersonel";
             this.cmbPersonel.Size = new System.Drawing.Size(200, 30);
             this.cmbPersonel.TabIndex = 20;
@@ -167,7 +166,7 @@
             // 
             this.txtUrunAd.Enabled = false;
             this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAd.Location = new System.Drawing.Point(150, 75);
+            this.txtUrunAd.Location = new System.Drawing.Point(142, 75);
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
             this.txtUrunAd.TabIndex = 16;
@@ -182,34 +181,33 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Ürün Adı:";
             // 
-            // calendarControl1
+            // calendarControl
             // 
-            this.calendarControl1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.calendarControl.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calendarControl1.Location = new System.Drawing.Point(89, 232);
-            this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(261, 261);
-            this.calendarControl1.TabIndex = 15;
+            this.calendarControl.Location = new System.Drawing.Point(89, 232);
+            this.calendarControl.Name = "calendarControl";
+            this.calendarControl.Size = new System.Drawing.Size(260, 261);
+            this.calendarControl.TabIndex = 15;
             // 
-            // btnKaydet
+            // btnZimemetKaydet
             // 
-            this.btnKaydet.Appearance.BackColor = System.Drawing.Color.White;
-            this.btnKaydet.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.btnKaydet.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnKaydet.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnKaydet.Appearance.Options.UseBackColor = true;
-            this.btnKaydet.Appearance.Options.UseBorderColor = true;
-            this.btnKaydet.Appearance.Options.UseFont = true;
-            this.btnKaydet.Appearance.Options.UseForeColor = true;
-            this.btnKaydet.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnKaydet.Location = new System.Drawing.Point(204, 522);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(161, 41);
-            this.btnKaydet.TabIndex = 12;
-            this.btnKaydet.Text = "KAYDET";
-            this.btnKaydet.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.btnZimemetKaydet.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnZimemetKaydet.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.btnZimemetKaydet.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnZimemetKaydet.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnZimemetKaydet.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnZimemetKaydet.Appearance.Options.UseBackColor = true;
+            this.btnZimemetKaydet.Appearance.Options.UseBorderColor = true;
+            this.btnZimemetKaydet.Appearance.Options.UseFont = true;
+            this.btnZimemetKaydet.Appearance.Options.UseForeColor = true;
+            this.btnZimemetKaydet.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnZimemetKaydet.Location = new System.Drawing.Point(204, 522);
+            this.btnZimemetKaydet.Name = "btnZimemetKaydet";
+            this.btnZimemetKaydet.Size = new System.Drawing.Size(161, 41);
+            this.btnZimemetKaydet.TabIndex = 12;
+            this.btnZimemetKaydet.Text = "KAYDET";
+            this.btnZimemetKaydet.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
             // 
             // panel1
             // 
@@ -264,7 +262,7 @@
             this.Load += new System.EventHandler(this.FormZimmetEkle_Load);
             this.grbZimmetIslemleri.ResumeLayout(false);
             this.grbZimmetIslemleri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarControl.CalendarTimeProperties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwZimmetListesi)).EndInit();
@@ -280,11 +278,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox grbZimmetIslemleri;
-        private DevExpress.XtraEditors.SimpleButton btnKaydet;
+        private DevExpress.XtraEditors.SimpleButton btnZimemetKaydet;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
         private System.Windows.Forms.DataGridView dgwZimmetListesi;
-        private DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
+        private DevExpress.XtraEditors.Controls.CalendarControl calendarControl;
         private System.Windows.Forms.TextBox txtUrunAd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbPersonel;

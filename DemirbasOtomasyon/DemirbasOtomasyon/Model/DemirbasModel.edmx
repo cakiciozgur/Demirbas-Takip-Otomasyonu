@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DemirbasTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DemirbasTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Departmanlar">
           <Key>
             <PropertyRef Name="departmanID" />
@@ -198,6 +198,7 @@
           <Parameter Name="zimmetAdet" Type="int" Mode="In" />
           <Parameter Name="personelID" Type="int" Mode="In" />
           <Parameter Name="kullaniciID" Type="int" Mode="In" />
+          <Parameter Name="adet" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_ZimmetKaldir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="zimmetID" Type="int" Mode="In" />
@@ -464,6 +465,7 @@
             <Parameter Name="zimmetAdet" Mode="In" Type="Int32" />
             <Parameter Name="personelID" Mode="In" Type="Int32" />
             <Parameter Name="kullaniciID" Mode="In" Type="Int32" />
+            <Parameter Name="adet" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ZimmetKaldir">
           <Parameter Name="zimmetID" Mode="In" Type="Int32" />

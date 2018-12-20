@@ -26,7 +26,7 @@ namespace DemirbasOtomasyon.View
         {
             InitializeComponent();
         }
-        private void urunListele()
+        private void UrunListele()
         {
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
             var data = (from d in db.sp_UrunListele() select new { d.urunID,d.urunAd,d.stokMiktari,d.fiyat,d.satınAlınmaTarihi,d.stokDurum} );
@@ -34,7 +34,40 @@ namespace DemirbasOtomasyon.View
         }
         private void FormUrunGuncelle_Load(object sender, EventArgs e)
         {
-            urunListele();
+            UrunListele();
+            UrunGuncelleRenklendir();
+        }
+        private void UrunGuncelleRenklendir()
+        {
+            try
+
+            {
+                for (int i = 0; i < dgwUrunListele.Rows.Count; i++)
+                {
+                    Application.DoEvents();
+                    DataGridViewCellStyle rowColor = new DataGridViewCellStyle();
+                    if (Convert.ToInt32(dgwUrunListele.Rows[i].Cells[2].Value) >= 6)
+                    {
+                        rowColor.BackColor = Color.LightCoral;
+                        rowColor.ForeColor = Color.Black;
+                    }
+                    else if (Convert.ToInt32(dgwUrunListele.Rows[i].Cells[2].Value) >= 3 && Convert.ToInt32(dgwUrunListele.Rows[i].Cells[2].Value) <= 5)
+                    {
+                        rowColor.BackColor = Color.LightSkyBlue;
+                        rowColor.ForeColor = Color.Black;
+                    }
+                    else if (Convert.ToInt32(dgwUrunListele.Rows[i].Cells[2].Value) < 3)
+                    {
+                        rowColor.BackColor = Color.LightSteelBlue;
+                        rowColor.ForeColor = Color.Black;
+                    }
+                    dgwUrunListele.Rows[i].DefaultCellStyle = rowColor;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata: " + ex);
+            }
         }
 
         private void dgwUrunListele_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -71,7 +104,7 @@ namespace DemirbasOtomasyon.View
                 urun.urunID = int.Parse(txtUrunID.Text);
                 UrunController.urunDuzenle(urun);
                 MessageBox.Show("Ürün Başarıyla Düzenlendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                urunListele();
+                UrunListele();
             }
             catch (Exception ex)
             {
@@ -91,7 +124,7 @@ namespace DemirbasOtomasyon.View
                 UrunController.UrunSil(int.Parse(txtUrunID.Text));
                 MessageBox.Show(txtUrunAd.Text + " İsimli Ürün Silindi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Thread.Sleep(500);
-                urunListele();
+                UrunListele();
             }
         }
 
