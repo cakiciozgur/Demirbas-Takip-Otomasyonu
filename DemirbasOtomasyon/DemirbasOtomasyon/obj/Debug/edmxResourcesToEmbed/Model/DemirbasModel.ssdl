@@ -25,6 +25,9 @@
     <Property Name="soyadi" Type="nvarchar" MaxLength="50" />
     <Property Name="cepTelefonu" Type="nvarchar" MaxLength="50" />
     <Property Name="departmanID" Type="int" />
+    <Property Name="iseGirisTarihi" Type="datetime" />
+    <Property Name="cikisTarihi" Type="datetime" />
+    <Property Name="calismaDurumu" Type="bit" />
   </EntityType>
   <EntityType Name="Roller">
     <Key>
@@ -159,8 +162,20 @@
     <Parameter Name="soyadi" Type="nvarchar" Mode="In" />
     <Parameter Name="cepTelefonu" Type="nvarchar" Mode="In" />
     <Parameter Name="departmanID" Type="int" Mode="In" />
+    <Parameter Name="iseGirisTarihi" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_PersonelGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="personelID" Type="int" Mode="In" />
+    <Parameter Name="personelAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="personelSoyadi" Type="nvarchar" Mode="In" />
+    <Parameter Name="cepTelefonu" Type="nvarchar" Mode="In" />
+    <Parameter Name="departmanID" Type="int" Mode="In" />
+    <Parameter Name="iseGirisTarihi" Type="datetime" Mode="In" />
   </Function>
   <Function Name="sp_PersonelListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_PersonelSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="personelID" Type="int" Mode="In" />
+  </Function>
   <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
     <Parameter Name="owner_id" Type="int" Mode="In" />

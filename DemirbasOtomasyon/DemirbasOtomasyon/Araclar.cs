@@ -35,6 +35,12 @@ namespace DemirbasOtomasyon
             cmb.DisplayMember = "adi";
             cmb.ValueMember = "personelID";
         }
+        public static void comboBoxDepartmanGetir(ComboBox cmb)
+        {
+            cmb.DataSource = DepartmanController.DepartmanlariGetir();
+            cmb.DisplayMember = "departmanAdi";
+            cmb.ValueMember = "departmanID";
+        }
 
 
     }

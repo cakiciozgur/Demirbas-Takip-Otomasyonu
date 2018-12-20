@@ -135,7 +135,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl1.Location = new System.Drawing.Point(108, 186);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(261, 261);
+            this.calendarControl1.Size = new System.Drawing.Size(260, 261);
             this.calendarControl1.TabIndex = 14;
             // 
             // btnEkle

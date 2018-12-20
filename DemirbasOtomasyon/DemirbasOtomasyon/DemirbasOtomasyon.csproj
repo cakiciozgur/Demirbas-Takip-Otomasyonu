@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Araclar.cs" />
+    <Compile Include="Controller\DepartmanController.cs" />
     <Compile Include="Controller\KullaniciController.cs" />
     <Compile Include="Controller\PersonelController.cs" />
     <Compile Include="Controller\UrunController.cs" />

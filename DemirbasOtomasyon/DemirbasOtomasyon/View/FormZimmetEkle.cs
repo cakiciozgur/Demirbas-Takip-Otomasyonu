@@ -31,7 +31,7 @@ namespace DemirbasOtomasyon.View
                     DataGridViewCellStyle rowColor = new DataGridViewCellStyle();
                     if (Convert.ToInt32(dgwZimmetListesi.Rows[i].Cells[2].Value) >=6)
                     {
-                        rowColor.BackColor = Color.LightCoral;
+                        rowColor.BackColor = Color.LightGreen;
                         rowColor.ForeColor = Color.Black;
                     }
                     else if(Convert.ToInt32(dgwZimmetListesi.Rows[i].Cells[2].Value) >=3 && Convert.ToInt32(dgwZimmetListesi.Rows[i].Cells[2].Value) <=5)
@@ -41,7 +41,7 @@ namespace DemirbasOtomasyon.View
                     }
                     else if(Convert.ToInt32(dgwZimmetListesi.Rows[i].Cells[2].Value) <3)
                     {
-                        rowColor.BackColor = Color.LightSteelBlue;                
+                        rowColor.BackColor = Color.LightCoral;                
                         rowColor.ForeColor = Color.Black;
                     }
                     dgwZimmetListesi.Rows[i].DefaultCellStyle = rowColor;   
@@ -70,15 +70,56 @@ namespace DemirbasOtomasyon.View
             ZimmetEkleRenklendir();
         }
 
-        private void dgwZimmetListesi_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DgwZimmetListesi_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             txtUrunID.Text = dgwZimmetListesi.CurrentRow.Cells[0].Value.ToString();
             txtUrunAd.Text = dgwZimmetListesi.CurrentRow.Cells[1].Value.ToString();
         }
 
-        private void btnZimemetKaydet_Click(object sender, EventArgs e)
+        private void BtnZimemetKaydet_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DateTime selectedDate = Convert.ToDateTime(calendarControl.SelectionStart.ToShortDateString());
+                if (string.IsNullOrEmpty(cmbKullanici.SelectedValue.ToString()))
+                {
+                    throw new Exception("Lütfen Kullanıcı Bilgilerini Kontrol Ediniz !");
 
+                }
+                if (string.IsNullOrEmpty(cmbKullanici.Text))
+                {
+                    throw new Exception("Lütfen Kullanıcı Seçiniz !");
+                }
+                if (string.IsNullOrEmpty(txtAdet.Text) || short.Parse(txtAdet.Text) == 0 || short.Parse(txtAdet.Text) < 0)
+                {
+                    throw new Exception("Lütfen Adet Bilgisini Kontrol Ediniz !");
+                }
+                /*if (short.Parse(txtAdet.Text) > int.Parse(adet))
+                {
+                    throw new Exception("Stok Miktarındakinden Fazla Ürün Zimmete Eklenemez ! !");
+                }*/
+                if (selectedDate > DateTime.Now)
+                {
+                    throw new Exception("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
+                }
+
+                Zimmetler zimmet = new Zimmetler
+                {
+                    urunID = int.Parse(txtUrunID.Text),
+                    zimmetAdet = int.Parse(txtAdet.Text),
+                    personelID = Convert.ToInt32(cmbPersonel.SelectedValue),
+                    kullaniciID = Convert.ToInt32(cmbKullanici.SelectedValue),
+                    zimmetTarihi = selectedDate
+                };
+
+                ZimmetController.ZimmetEkle(zimmet, int.Parse(txtAdet.Text));
+                MessageBox.Show("Zimmet Başarıyla Eklendi !", "Zimmet Eklendi !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ZimmetUrunListele();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Dikkat !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

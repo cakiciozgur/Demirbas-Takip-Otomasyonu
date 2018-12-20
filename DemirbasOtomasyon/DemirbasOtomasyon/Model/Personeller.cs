@@ -24,6 +24,9 @@ namespace DemirbasOtomasyon.Model
         public string soyadi { get; set; }
         public string cepTelefonu { get; set; }
         public Nullable<int> departmanID { get; set; }
+        public Nullable<System.DateTime> iseGirisTarihi { get; set; }
+        public Nullable<System.DateTime> cikisTarihi { get; set; }
+        public Nullable<bool> calismaDurumu { get; set; }
     
         public virtual Departmanlar Departmanlar { get; set; }
         public virtual ICollection<Zimmetler> Zimmetler { get; set; }

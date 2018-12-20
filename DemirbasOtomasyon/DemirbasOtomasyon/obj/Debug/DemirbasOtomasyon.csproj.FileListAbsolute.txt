@@ -128,3 +128,4 @@ C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtom
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.View.FormPersonelEkleme.resources
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.View.FormPersonelGuncelleme.resources
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.View.FormPersonelListele.resources

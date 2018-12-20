@@ -125,7 +125,7 @@ namespace DemirbasOtomasyon.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PersonelBul_Result>("sp_PersonelBul", personelIDParameter);
         }
     
-        public virtual int sp_PersonelEkle(string adi, string soyadi, string cepTelefonu, Nullable<int> departmanID)
+        public virtual int sp_PersonelEkle(string adi, string soyadi, string cepTelefonu, Nullable<int> departmanID, Nullable<System.DateTime> iseGirisTarihi)
         {
             var adiParameter = adi != null ?
                 new ObjectParameter("adi", adi) :
@@ -143,7 +143,11 @@ namespace DemirbasOtomasyon.Model
                 new ObjectParameter("departmanID", departmanID) :
                 new ObjectParameter("departmanID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_PersonelEkle", adiParameter, soyadiParameter, cepTelefonuParameter, departmanIDParameter);
+            var iseGirisTarihiParameter = iseGirisTarihi.HasValue ?
+                new ObjectParameter("iseGirisTarihi", iseGirisTarihi) :
+                new ObjectParameter("iseGirisTarihi", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_PersonelEkle", adiParameter, soyadiParameter, cepTelefonuParameter, departmanIDParameter, iseGirisTarihiParameter);
         }
     
         public virtual ObjectResult<sp_PersonelListele_Result> sp_PersonelListele()
@@ -288,6 +292,44 @@ namespace DemirbasOtomasyon.Model
         public virtual ObjectResult<sp_ZimmetListele2_Result> sp_ZimmetListele2()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetListele2_Result>("sp_ZimmetListele2");
+        }
+    
+        public virtual int sp_PersonelGuncelle(Nullable<int> personelID, string personelAdi, string personelSoyadi, string cepTelefonu, Nullable<int> departmanID, Nullable<System.DateTime> iseGirisTarihi)
+        {
+            var personelIDParameter = personelID.HasValue ?
+                new ObjectParameter("personelID", personelID) :
+                new ObjectParameter("personelID", typeof(int));
+    
+            var personelAdiParameter = personelAdi != null ?
+                new ObjectParameter("personelAdi", personelAdi) :
+                new ObjectParameter("personelAdi", typeof(string));
+    
+            var personelSoyadiParameter = personelSoyadi != null ?
+                new ObjectParameter("personelSoyadi", personelSoyadi) :
+                new ObjectParameter("personelSoyadi", typeof(string));
+    
+            var cepTelefonuParameter = cepTelefonu != null ?
+                new ObjectParameter("cepTelefonu", cepTelefonu) :
+                new ObjectParameter("cepTelefonu", typeof(string));
+    
+            var departmanIDParameter = departmanID.HasValue ?
+                new ObjectParameter("departmanID", departmanID) :
+                new ObjectParameter("departmanID", typeof(int));
+    
+            var iseGirisTarihiParameter = iseGirisTarihi.HasValue ?
+                new ObjectParameter("iseGirisTarihi", iseGirisTarihi) :
+                new ObjectParameter("iseGirisTarihi", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_PersonelGuncelle", personelIDParameter, personelAdiParameter, personelSoyadiParameter, cepTelefonuParameter, departmanIDParameter, iseGirisTarihiParameter);
+        }
+    
+        public virtual int sp_PersonelSil(Nullable<int> personelID)
+        {
+            var personelIDParameter = personelID.HasValue ?
+                new ObjectParameter("personelID", personelID) :
+                new ObjectParameter("personelID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_PersonelSil", personelIDParameter);
         }
     }
 }

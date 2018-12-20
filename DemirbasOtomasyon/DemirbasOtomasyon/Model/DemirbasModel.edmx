@@ -30,6 +30,9 @@
           <Property Name="soyadi" Type="nvarchar" MaxLength="50" />
           <Property Name="cepTelefonu" Type="nvarchar" MaxLength="50" />
           <Property Name="departmanID" Type="int" />
+          <Property Name="iseGirisTarihi" Type="datetime" />
+          <Property Name="cikisTarihi" Type="datetime" />
+          <Property Name="calismaDurumu" Type="bit" />
         </EntityType>
         <EntityType Name="Roller">
           <Key>
@@ -164,8 +167,20 @@
           <Parameter Name="soyadi" Type="nvarchar" Mode="In" />
           <Parameter Name="cepTelefonu" Type="nvarchar" Mode="In" />
           <Parameter Name="departmanID" Type="int" Mode="In" />
+          <Parameter Name="iseGirisTarihi" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="sp_PersonelGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="personelID" Type="int" Mode="In" />
+          <Parameter Name="personelAdi" Type="nvarchar" Mode="In" />
+          <Parameter Name="personelSoyadi" Type="nvarchar" Mode="In" />
+          <Parameter Name="cepTelefonu" Type="nvarchar" Mode="In" />
+          <Parameter Name="departmanID" Type="int" Mode="In" />
+          <Parameter Name="iseGirisTarihi" Type="datetime" Mode="In" />
         </Function>
         <Function Name="sp_PersonelListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_PersonelSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="personelID" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -268,6 +283,9 @@
           <Property Name="departmanID" Type="Int32" />
           <NavigationProperty Name="Departmanlar" Relationship="Self.FK_Personeller_Departmanlar" FromRole="Personeller" ToRole="Departmanlar" />
           <NavigationProperty Name="Zimmetler" Relationship="Self.FK_Zimmetler_Personeller" FromRole="Personeller" ToRole="Zimmetler" />
+          <Property Name="iseGirisTarihi" Type="DateTime" Precision="3" />
+          <Property Name="cikisTarihi" Type="DateTime" Precision="3" />
+          <Property Name="calismaDurumu" Type="Boolean" />
         </EntityType>
         <EntityType Name="Roller">
           <Key>
@@ -434,6 +452,7 @@
             <Parameter Name="soyadi" Mode="In" Type="String" />
             <Parameter Name="cepTelefonu" Mode="In" Type="String" />
             <Parameter Name="departmanID" Mode="In" Type="Int32" />
+            <Parameter Name="iseGirisTarihi" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_PersonelListele" ReturnType="Collection(DemirbasTakipModel.sp_PersonelListele_Result)" />
           <FunctionImport Name="sp_renamediagram">
@@ -475,6 +494,17 @@
           <Parameter Name="urunID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ZimmetListele2" ReturnType="Collection(DemirbasTakipModel.sp_ZimmetListele2_Result)" />
+          <FunctionImport Name="sp_PersonelGuncelle">
+            <Parameter Name="personelID" Mode="In" Type="Int32" />
+            <Parameter Name="personelAdi" Mode="In" Type="String" />
+            <Parameter Name="personelSoyadi" Mode="In" Type="String" />
+            <Parameter Name="cepTelefonu" Mode="In" Type="String" />
+            <Parameter Name="departmanID" Mode="In" Type="Int32" />
+            <Parameter Name="iseGirisTarihi" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="sp_PersonelSil">
+            <Parameter Name="personelID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -566,6 +596,9 @@
           <EntitySetMapping Name="Personeller">
             <EntityTypeMapping TypeName="DemirbasTakipModel.Personeller">
               <MappingFragment StoreEntitySet="Personeller">
+                <ScalarProperty Name="calismaDurumu" ColumnName="calismaDurumu" />
+                <ScalarProperty Name="cikisTarihi" ColumnName="cikisTarihi" />
+                <ScalarProperty Name="iseGirisTarihi" ColumnName="iseGirisTarihi" />
                 <ScalarProperty Name="personelID" ColumnName="personelID" />
                 <ScalarProperty Name="adi" ColumnName="adi" />
                 <ScalarProperty Name="soyadi" ColumnName="soyadi" />
@@ -724,6 +757,8 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_PersonelGuncelle" FunctionName="DemirbasTakipModel.Store.sp_PersonelGuncelle" />
+          <FunctionImportMapping FunctionImportName="sp_PersonelSil" FunctionName="DemirbasTakipModel.Store.sp_PersonelSil" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
