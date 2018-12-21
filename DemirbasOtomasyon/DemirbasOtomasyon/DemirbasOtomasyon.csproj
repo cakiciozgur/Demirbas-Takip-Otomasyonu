@@ -118,23 +118,35 @@
     <Compile Include="View\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Giris\FormAdminGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Giris\FormAdminGiris.Designer.cs">
+      <DependentUpon>FormAdminGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormBirimYetkilisi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormBirimYetkilisi.Designer.cs">
       <DependentUpon>FormBirimYetkilisi.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormGiris.cs">
+    <Compile Include="View\Giris\FormBYGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormGiris.Designer.cs">
-      <DependentUpon>FormGiris.cs</DependentUpon>
+    <Compile Include="View\Giris\FormBYGiris.Designer.cs">
+      <DependentUpon>FormBYGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormKullaniciSecim.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormKullaniciSecim.Designer.cs">
       <DependentUpon>FormKullaniciSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Giris\FormSAGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Giris\FormSAGiris.Designer.cs">
+      <DependentUpon>FormSAGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormSatınAlmaBirimi.cs">
       <SubType>Form</SubType>
@@ -242,14 +254,20 @@
     <EmbeddedResource Include="View\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Giris\FormAdminGiris.resx">
+      <DependentUpon>FormAdminGiris.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormBirimYetkilisi.resx">
       <DependentUpon>FormBirimYetkilisi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormGiris.resx">
-      <DependentUpon>FormGiris.cs</DependentUpon>
+    <EmbeddedResource Include="View\Giris\FormBYGiris.resx">
+      <DependentUpon>FormBYGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormKullaniciSecim.resx">
       <DependentUpon>FormKullaniciSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Giris\FormSAGiris.resx">
+      <DependentUpon>FormSAGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormSatınAlmaBirimi.resx">
       <DependentUpon>FormSatınAlmaBirimi.cs</DependentUpon>

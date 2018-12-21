@@ -32,10 +32,10 @@
             this.pbLock = new System.Windows.Forms.PictureBox();
             this.pbUser = new System.Windows.Forms.PictureBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.lblGiris = new System.Windows.Forms.Label();
             this.pnlGiris2 = new System.Windows.Forms.Panel();
-            this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.btnGiris = new DevExpress.XtraEditors.SimpleButton();
             this.pnlGiris1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbLock)).BeginInit();
@@ -72,15 +72,15 @@
             this.txtSifre.Size = new System.Drawing.Size(281, 50);
             this.txtSifre.TabIndex = 14;
             // 
-            // txtID
+            // txtKullaniciAdi
             // 
-            this.txtID.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtID.ForeColor = System.Drawing.Color.Black;
-            this.txtID.Location = new System.Drawing.Point(98, 102);
-            this.txtID.Multiline = true;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(281, 50);
-            this.txtID.TabIndex = 13;
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(98, 102);
+            this.txtKullaniciAdi.Multiline = true;
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(281, 50);
+            this.txtKullaniciAdi.TabIndex = 13;
             // 
             // lblGiris
             // 
@@ -97,7 +97,7 @@
             // 
             this.pnlGiris2.BackColor = System.Drawing.Color.DodgerBlue;
             this.pnlGiris2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlGiris2.Controls.Add(this.btnTemizle);
+            this.pnlGiris2.Controls.Add(this.btnVazgec);
             this.pnlGiris2.Controls.Add(this.btnGiris);
             this.pnlGiris2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.pnlGiris2.Location = new System.Drawing.Point(0, 240);
@@ -105,21 +105,22 @@
             this.pnlGiris2.Size = new System.Drawing.Size(430, 119);
             this.pnlGiris2.TabIndex = 18;
             // 
-            // btnTemizle
+            // btnVazgec
             // 
-            this.btnTemizle.Appearance.BackColor = System.Drawing.Color.White;
-            this.btnTemizle.Appearance.BackColor2 = System.Drawing.Color.White;
-            this.btnTemizle.Appearance.Font = new System.Drawing.Font("Corbel", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnTemizle.Appearance.Options.UseBackColor = true;
-            this.btnTemizle.Appearance.Options.UseFont = true;
-            this.btnTemizle.Appearance.Options.UseForeColor = true;
-            this.btnTemizle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.btnTemizle.Location = new System.Drawing.Point(82, 15);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(145, 49);
-            this.btnTemizle.TabIndex = 5;
-            this.btnTemizle.Text = "Vazgeç";
+            this.btnVazgec.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnVazgec.Appearance.BackColor2 = System.Drawing.Color.White;
+            this.btnVazgec.Appearance.Font = new System.Drawing.Font("Corbel", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnVazgec.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnVazgec.Appearance.Options.UseBackColor = true;
+            this.btnVazgec.Appearance.Options.UseFont = true;
+            this.btnVazgec.Appearance.Options.UseForeColor = true;
+            this.btnVazgec.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.btnVazgec.Location = new System.Drawing.Point(82, 15);
+            this.btnVazgec.Name = "btnVazgec";
+            this.btnVazgec.Size = new System.Drawing.Size(145, 49);
+            this.btnVazgec.TabIndex = 5;
+            this.btnVazgec.Text = "Vazgeç";
+            this.btnVazgec.Click += new System.EventHandler(this.BtnVazgec_Click);
             // 
             // btnGiris
             // 
@@ -136,6 +137,7 @@
             this.btnGiris.Size = new System.Drawing.Size(145, 49);
             this.btnGiris.TabIndex = 4;
             this.btnGiris.Text = "Giriş Yap";
+            this.btnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
             // 
             // pnlGiris1
             // 
@@ -156,7 +158,7 @@
             this.Controls.Add(this.pbLock);
             this.Controls.Add(this.pbUser);
             this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.pnlGiris2);
             this.Controls.Add(this.pnlGiris1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -176,10 +178,10 @@
         private System.Windows.Forms.PictureBox pbLock;
         private System.Windows.Forms.PictureBox pbUser;
         private System.Windows.Forms.TextBox txtSifre;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Label lblGiris;
         private System.Windows.Forms.Panel pnlGiris2;
-        private DevExpress.XtraEditors.SimpleButton btnTemizle;
+        private DevExpress.XtraEditors.SimpleButton btnVazgec;
         private DevExpress.XtraEditors.SimpleButton btnGiris;
         private System.Windows.Forms.Panel pnlGiris1;
     }

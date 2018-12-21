@@ -52,6 +52,7 @@
             this.btnSatinAlmaBirimi.Size = new System.Drawing.Size(291, 375);
             this.btnSatinAlmaBirimi.TabIndex = 2;
             this.btnSatinAlmaBirimi.Text = "SATIN ALMA BİRİMİ GİRİŞ";
+            this.btnSatinAlmaBirimi.Click += new System.EventHandler(this.BtnSatinAlmaBirimi_Click);
             // 
             // btnBirimYetkilisi
             // 
@@ -69,6 +70,7 @@
             this.btnBirimYetkilisi.Size = new System.Drawing.Size(310, 375);
             this.btnBirimYetkilisi.TabIndex = 3;
             this.btnBirimYetkilisi.Text = "BİRİM YETKİLİSİ GİRİŞİ";
+            this.btnBirimYetkilisi.Click += new System.EventHandler(this.BtnBirimYetkilisi_Click);
             // 
             // btnAdmin
             // 
@@ -86,6 +88,7 @@
             this.btnAdmin.Size = new System.Drawing.Size(296, 375);
             this.btnAdmin.TabIndex = 4;
             this.btnAdmin.Text = "ADMİN GİRİŞİ";
+            this.btnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 
             // panel1
             // 

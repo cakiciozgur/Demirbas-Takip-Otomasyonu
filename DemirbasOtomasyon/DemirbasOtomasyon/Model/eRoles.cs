@@ -3,6 +3,7 @@
     public enum eRoles
     {
         Admin=1,
-        Standart=2
+        BirimYetkilisi=2,
+        SatinAlmaBirimi=3
     }
 }
