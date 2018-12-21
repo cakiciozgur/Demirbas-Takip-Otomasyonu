@@ -1,6 +1,6 @@
 ﻿namespace DemirbasOtomasyon.View
 {
-    partial class FormGiris
+    partial class FormSAGiris
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGiris));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSAGiris));
             this.pbLock = new System.Windows.Forms.PictureBox();
             this.pbUser = new System.Windows.Forms.PictureBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
@@ -47,51 +47,51 @@
             // pbLock
             // 
             this.pbLock.Image = ((System.Drawing.Image)(resources.GetObject("pbLock.Image")));
-            this.pbLock.Location = new System.Drawing.Point(38, 169);
+            this.pbLock.Location = new System.Drawing.Point(37, 168);
             this.pbLock.Name = "pbLock";
             this.pbLock.Size = new System.Drawing.Size(54, 50);
-            this.pbLock.TabIndex = 10;
+            this.pbLock.TabIndex = 22;
             this.pbLock.TabStop = false;
             // 
             // pbUser
             // 
             this.pbUser.Image = ((System.Drawing.Image)(resources.GetObject("pbUser.Image")));
-            this.pbUser.Location = new System.Drawing.Point(38, 101);
+            this.pbUser.Location = new System.Drawing.Point(37, 100);
             this.pbUser.Name = "pbUser";
             this.pbUser.Size = new System.Drawing.Size(54, 50);
-            this.pbUser.TabIndex = 9;
+            this.pbUser.TabIndex = 21;
             this.pbUser.TabStop = false;
             // 
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
-            this.txtSifre.Location = new System.Drawing.Point(98, 171);
+            this.txtSifre.Location = new System.Drawing.Point(97, 170);
             this.txtSifre.Multiline = true;
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(281, 50);
-            this.txtSifre.TabIndex = 8;
+            this.txtSifre.TabIndex = 20;
             // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtID.ForeColor = System.Drawing.Color.Black;
-            this.txtID.Location = new System.Drawing.Point(98, 103);
+            this.txtID.Location = new System.Drawing.Point(97, 102);
             this.txtID.Multiline = true;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(281, 50);
-            this.txtID.TabIndex = 7;
+            this.txtID.TabIndex = 19;
             // 
             // lblGiris
             // 
             this.lblGiris.AutoSize = true;
             this.lblGiris.Font = new System.Drawing.Font("Corbel", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGiris.ForeColor = System.Drawing.Color.Black;
-            this.lblGiris.Location = new System.Drawing.Point(117, 15);
+            this.lblGiris.Location = new System.Drawing.Point(26, 19);
             this.lblGiris.Name = "lblGiris";
-            this.lblGiris.Size = new System.Drawing.Size(250, 46);
+            this.lblGiris.Size = new System.Drawing.Size(383, 46);
             this.lblGiris.TabIndex = 4;
-            this.lblGiris.Text = "Kullanıcı Girişi";
+            this.lblGiris.Text = "Satın Alma Birimi Giriş";
             // 
             // pnlGiris2
             // 
@@ -100,10 +100,10 @@
             this.pnlGiris2.Controls.Add(this.btnTemizle);
             this.pnlGiris2.Controls.Add(this.btnGiris);
             this.pnlGiris2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.pnlGiris2.Location = new System.Drawing.Point(0, 241);
+            this.pnlGiris2.Location = new System.Drawing.Point(-1, 240);
             this.pnlGiris2.Name = "pnlGiris2";
             this.pnlGiris2.Size = new System.Drawing.Size(430, 119);
-            this.pnlGiris2.TabIndex = 12;
+            this.pnlGiris2.TabIndex = 24;
             // 
             // btnTemizle
             // 
@@ -143,15 +143,13 @@
             this.pnlGiris1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlGiris1.Controls.Add(this.lblGiris);
             this.pnlGiris1.ForeColor = System.Drawing.Color.Black;
-            this.pnlGiris1.Location = new System.Drawing.Point(0, 0);
+            this.pnlGiris1.Location = new System.Drawing.Point(-1, -1);
             this.pnlGiris1.Name = "pnlGiris1";
             this.pnlGiris1.Size = new System.Drawing.Size(430, 78);
-            this.pnlGiris1.TabIndex = 11;
+            this.pnlGiris1.TabIndex = 23;
             // 
-            // FormGiris
+            // FormSAGiris
             // 
-            this.Appearance.BackColor = System.Drawing.Color.White;
-            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 358);
@@ -162,9 +160,7 @@
             this.Controls.Add(this.pnlGiris2);
             this.Controls.Add(this.pnlGiris1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "FormGiris";
-            this.Text = "Giriş";
-            this.Load += new System.EventHandler(this.FormGiris_Load);
+            this.Name = "FormSAGiris";
             ((System.ComponentModel.ISupportInitialize)(this.pbLock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             this.pnlGiris2.ResumeLayout(false);
@@ -186,6 +182,5 @@
         private DevExpress.XtraEditors.SimpleButton btnTemizle;
         private DevExpress.XtraEditors.SimpleButton btnGiris;
         private System.Windows.Forms.Panel pnlGiris1;
-
     }
 }

@@ -11,16 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace DemirbasOtomasyon.View
 {
-    public partial class FormGiris : DevExpress.XtraEditors.XtraForm
+    public partial class FormBYGiris : DevExpress.XtraEditors.XtraForm
     {
-        public FormGiris()
+        public FormBYGiris()
         {
             InitializeComponent();
-        }
-
-        private void FormGiris_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

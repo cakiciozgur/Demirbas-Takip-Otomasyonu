@@ -112,52 +112,76 @@
     <Compile Include="Model\UrunViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBirimYetkilisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBirimYetkilisi.Designer.cs">
+      <DependentUpon>FormBirimYetkilisi.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormGiris.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormGiris.Designer.cs">
       <DependentUpon>FormGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormPersonelEkleme.cs">
+    <Compile Include="View\FormKullaniciSecim.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormPersonelEkleme.Designer.cs">
+    <Compile Include="View\FormKullaniciSecim.Designer.cs">
+      <DependentUpon>FormKullaniciSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSatınAlmaBirimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSatınAlmaBirimi.Designer.cs">
+      <DependentUpon>FormSatınAlmaBirimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Personel\FormPersonelEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Personel\FormPersonelEkleme.Designer.cs">
       <DependentUpon>FormPersonelEkleme.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormPersonelGuncelleme.cs">
+    <Compile Include="View\Personel\FormPersonelGuncelleme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormPersonelGuncelleme.Designer.cs">
+    <Compile Include="View\Personel\FormPersonelGuncelleme.Designer.cs">
       <DependentUpon>FormPersonelGuncelleme.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormPersonelListele.cs">
+    <Compile Include="View\Personel\FormPersonelListele.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormPersonelListele.Designer.cs">
+    <Compile Include="View\Personel\FormPersonelListele.Designer.cs">
       <DependentUpon>FormPersonelListele.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormUrunEkleme.cs">
+    <Compile Include="View\Urun\FormUrunEkleme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormUrunEkleme.Designer.cs">
+    <Compile Include="View\Urun\FormUrunEkleme.Designer.cs">
       <DependentUpon>FormUrunEkleme.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormUrunGuncelle.cs">
+    <Compile Include="View\Urun\FormUrunGuncelle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormUrunGuncelle.Designer.cs">
+    <Compile Include="View\Urun\FormUrunGuncelle.Designer.cs">
       <DependentUpon>FormUrunGuncelle.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormUrunListele.cs">
+    <Compile Include="View\Urun\FormUrunListele.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormUrunListele.Designer.cs">
+    <Compile Include="View\Urun\FormUrunListele.Designer.cs">
       <DependentUpon>FormUrunListele.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormZimmetEkle.cs">
+    <Compile Include="View\Zimmet\FormZimmetEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormZimmetEkle.Designer.cs">
+    <Compile Include="View\Zimmet\FormZimmetEkle.Designer.cs">
       <DependentUpon>FormZimmetEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Roller.cs">
@@ -193,16 +217,16 @@
     <Compile Include="Model\Zimmetler.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\FormZimmetGuncelleme.cs">
+    <Compile Include="View\Zimmet\FormZimmetGuncelleme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormZimmetGuncelleme.Designer.cs">
+    <Compile Include="View\Zimmet\FormZimmetGuncelleme.Designer.cs">
       <DependentUpon>FormZimmetGuncelleme.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormZimmetListele.cs">
+    <Compile Include="View\Zimmet\FormZimmetListele.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormZimmetListele.Designer.cs">
+    <Compile Include="View\Zimmet\FormZimmetListele.Designer.cs">
       <DependentUpon>FormZimmetListele.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -215,34 +239,46 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBirimYetkilisi.resx">
+      <DependentUpon>FormBirimYetkilisi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormGiris.resx">
       <DependentUpon>FormGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormPersonelEkleme.resx">
+    <EmbeddedResource Include="View\FormKullaniciSecim.resx">
+      <DependentUpon>FormKullaniciSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSatınAlmaBirimi.resx">
+      <DependentUpon>FormSatınAlmaBirimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Personel\FormPersonelEkleme.resx">
       <DependentUpon>FormPersonelEkleme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormPersonelGuncelleme.resx">
+    <EmbeddedResource Include="View\Personel\FormPersonelGuncelleme.resx">
       <DependentUpon>FormPersonelGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormPersonelListele.resx">
+    <EmbeddedResource Include="View\Personel\FormPersonelListele.resx">
       <DependentUpon>FormPersonelListele.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormUrunEkleme.resx">
+    <EmbeddedResource Include="View\Urun\FormUrunEkleme.resx">
       <DependentUpon>FormUrunEkleme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormUrunGuncelle.resx">
+    <EmbeddedResource Include="View\Urun\FormUrunGuncelle.resx">
       <DependentUpon>FormUrunGuncelle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormUrunListele.resx">
+    <EmbeddedResource Include="View\Urun\FormUrunListele.resx">
       <DependentUpon>FormUrunListele.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormZimmetEkle.resx">
+    <EmbeddedResource Include="View\Zimmet\FormZimmetEkle.resx">
       <DependentUpon>FormZimmetEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormZimmetGuncelleme.resx">
+    <EmbeddedResource Include="View\Zimmet\FormZimmetGuncelleme.resx">
       <DependentUpon>FormZimmetGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormZimmetListele.resx">
+    <EmbeddedResource Include="View\Zimmet\FormZimmetListele.resx">
       <DependentUpon>FormZimmetListele.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\DemirbasModel.edmx">

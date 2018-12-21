@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.dgwUrunListesi = new System.Windows.Forms.DataGridView();
@@ -62,19 +62,19 @@
             // 
             // dgwUrunListesi
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwUrunListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwUrunListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwUrunListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwUrunListesi.Location = new System.Drawing.Point(58, 226);
+            this.dgwUrunListesi.Location = new System.Drawing.Point(58, 213);
             this.dgwUrunListesi.Name = "dgwUrunListesi";
             this.dgwUrunListesi.RowTemplate.Height = 24;
-            this.dgwUrunListesi.Size = new System.Drawing.Size(1017, 399);
+            this.dgwUrunListesi.Size = new System.Drawing.Size(1017, 412);
             this.dgwUrunListesi.TabIndex = 17;
             // 
             // label3
@@ -107,7 +107,6 @@
             this.grbUrunAramaIslemleri.Size = new System.Drawing.Size(1017, 110);
             this.grbUrunAramaIslemleri.TabIndex = 18;
             this.grbUrunAramaIslemleri.TabStop = false;
-            this.grbUrunAramaIslemleri.Text = "Arama İşlemleri";
             this.grbUrunAramaIslemleri.Enter += new System.EventHandler(this.grbUrunIslemleri_Enter);
             // 
             // btnUrunBul
@@ -141,7 +140,6 @@
             this.Controls.Add(this.dgwUrunListesi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormUrunListele";
-            this.Text = "Ürün Listele";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunListesi)).EndInit();
