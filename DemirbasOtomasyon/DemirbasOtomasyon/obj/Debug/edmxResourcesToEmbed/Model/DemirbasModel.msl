@@ -198,5 +198,25 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_PersonelSil2" FunctionName="DemirbasTakipModel.Store.sp_PersonelSil2" />
+    <FunctionImportMapping FunctionImportName="FN_UrunIDGetir" FunctionName="DemirbasTakipModel.Store.FN_UrunIDGetir">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DemirbasTakipModel.FN_UrunIDGetir_Result">
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="personelID" ColumnName="personelID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ZimmetGuncelle" FunctionName="DemirbasTakipModel.Store.sp_ZimmetGuncelle" />
+    <FunctionImportMapping FunctionImportName="sp_ZimmetListeleGuncelleme" FunctionName="DemirbasTakipModel.Store.sp_ZimmetListeleGuncelleme">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_ZimmetListeleGuncelleme_Result">
+          <ScalarProperty Name="Zimmet_ID" ColumnName="Zimmet ID" />
+          <ScalarProperty Name="Zimmet_Adet" ColumnName="Zimmet Adet" />
+          <ScalarProperty Name="Personel_Adı" ColumnName="Personel Adı" />
+          <ScalarProperty Name="Kullanıcı_Adı" ColumnName="Kullanıcı Adı" />
+          <ScalarProperty Name="Zimmet_Tarihi" ColumnName="Zimmet Tarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

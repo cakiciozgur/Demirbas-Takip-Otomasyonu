@@ -1,6 +1,6 @@
 ﻿namespace DemirbasOtomasyon.View
 {
-    partial class FormUrunGuncelle
+    partial class FormZimmetGuncelleme
     {
         /// <summary>
         /// Required designer variable.
@@ -30,86 +30,111 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
-            this.dgwUrunListele = new System.Windows.Forms.DataGridView();
             this.grbUrunIslemleri = new System.Windows.Forms.GroupBox();
+            this.cmbKullaniciGuncelle = new System.Windows.Forms.ComboBox();
+            this.cmbPersonelGuncelle = new System.Windows.Forms.ComboBox();
+            this.btnKaldır = new DevExpress.XtraEditors.SimpleButton();
             this.calendarControl1 = new DevExpress.XtraEditors.Controls.CalendarControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.txtUrunAd = new System.Windows.Forms.TextBox();
+            this.txtZimmetID = new System.Windows.Forms.TextBox();
             this.txtAdet = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtFiyat = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUrunID = new System.Windows.Forms.TextBox();
-            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
+            this.dgwZimmetGuncellemeListele = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUrunListele)).BeginInit();
             this.grbUrunIslemleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwZimmetGuncellemeListele)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.pnlUrunGrs);
-            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1265, 78);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 18;
             // 
             // pnlUrunGrs
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(435, 15);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(435, 14);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(249, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(276, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "ÜRÜN İŞLEMLERİ";
-            // 
-            // dgwUrunListele
-            // 
-            this.dgwUrunListele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwUrunListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwUrunListele.Location = new System.Drawing.Point(431, 99);
-            this.dgwUrunListele.Name = "dgwUrunListele";
-            this.dgwUrunListele.RowTemplate.Height = 24;
-            this.dgwUrunListele.Size = new System.Drawing.Size(821, 526);
-            this.dgwUrunListele.TabIndex = 16;
-            this.dgwUrunListele.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgwUrunListele_CellMouseDoubleClick);
+            this.pnlUrunGrs.Text = "ZİMMET İŞLEMLERİ";
             // 
             // grbUrunIslemleri
             // 
-            this.grbUrunIslemleri.Controls.Add(this.btnSil);
+            this.grbUrunIslemleri.Controls.Add(this.cmbKullaniciGuncelle);
+            this.grbUrunIslemleri.Controls.Add(this.cmbPersonelGuncelle);
+            this.grbUrunIslemleri.Controls.Add(this.btnKaldır);
             this.grbUrunIslemleri.Controls.Add(this.calendarControl1);
             this.grbUrunIslemleri.Controls.Add(this.btnGuncelle);
-            this.grbUrunIslemleri.Controls.Add(this.txtUrunID);
-            this.grbUrunIslemleri.Controls.Add(this.txtUrunAd);
+            this.grbUrunIslemleri.Controls.Add(this.txtZimmetID);
             this.grbUrunIslemleri.Controls.Add(this.txtAdet);
             this.grbUrunIslemleri.Controls.Add(this.label6);
-            this.grbUrunIslemleri.Controls.Add(this.txtFiyat);
             this.grbUrunIslemleri.Controls.Add(this.label1);
             this.grbUrunIslemleri.Controls.Add(this.label4);
             this.grbUrunIslemleri.Controls.Add(this.label3);
             this.grbUrunIslemleri.Controls.Add(this.label7);
             this.grbUrunIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbUrunIslemleri.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grbUrunIslemleri.Location = new System.Drawing.Point(12, 99);
+            this.grbUrunIslemleri.Location = new System.Drawing.Point(13, 90);
             this.grbUrunIslemleri.Name = "grbUrunIslemleri";
-            this.grbUrunIslemleri.Size = new System.Drawing.Size(413, 526);
-            this.grbUrunIslemleri.TabIndex = 17;
+            this.grbUrunIslemleri.Size = new System.Drawing.Size(413, 551);
+            this.grbUrunIslemleri.TabIndex = 20;
             this.grbUrunIslemleri.TabStop = false;
-            this.grbUrunIslemleri.Text = "Ürün Detayları";
+            this.grbUrunIslemleri.Text = "Zimmet Detayları";
+            // 
+            // cmbKullaniciGuncelle
+            // 
+            this.cmbKullaniciGuncelle.FormattingEnabled = true;
+            this.cmbKullaniciGuncelle.Location = new System.Drawing.Point(139, 162);
+            this.cmbKullaniciGuncelle.Name = "cmbKullaniciGuncelle";
+            this.cmbKullaniciGuncelle.Size = new System.Drawing.Size(200, 30);
+            this.cmbKullaniciGuncelle.TabIndex = 22;
+            // 
+            // cmbPersonelGuncelle
+            // 
+            this.cmbPersonelGuncelle.FormattingEnabled = true;
+            this.cmbPersonelGuncelle.Location = new System.Drawing.Point(139, 121);
+            this.cmbPersonelGuncelle.Name = "cmbPersonelGuncelle";
+            this.cmbPersonelGuncelle.Size = new System.Drawing.Size(200, 30);
+            this.cmbPersonelGuncelle.TabIndex = 21;
+            // 
+            // btnKaldır
+            // 
+            this.btnKaldır.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnKaldır.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.btnKaldır.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnKaldır.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaldır.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnKaldır.Appearance.Options.UseBackColor = true;
+            this.btnKaldır.Appearance.Options.UseBorderColor = true;
+            this.btnKaldır.Appearance.Options.UseFont = true;
+            this.btnKaldır.Appearance.Options.UseForeColor = true;
+            this.btnKaldır.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnKaldır.Location = new System.Drawing.Point(31, 495);
+            this.btnKaldır.Name = "btnKaldır";
+            this.btnKaldır.Size = new System.Drawing.Size(161, 41);
+            this.btnKaldır.TabIndex = 15;
+            this.btnKaldır.Text = "ZİMMET KALDIR";
+            this.btnKaldır.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.btnKaldır.Click += new System.EventHandler(this.BtnKaldır_Click);
             // 
             // calendarControl1
             // 
             this.calendarControl1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calendarControl1.Location = new System.Drawing.Point(108, 195);
+            this.calendarControl1.Location = new System.Drawing.Point(142, 207);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(261, 261);
+            this.calendarControl1.Size = new System.Drawing.Size(246, 261);
             this.calendarControl1.TabIndex = 14;
             // 
             // btnGuncelle
@@ -124,7 +149,7 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnGuncelle.Location = new System.Drawing.Point(208, 479);
+            this.btnGuncelle.Location = new System.Drawing.Point(227, 495);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(161, 41);
             this.btnGuncelle.TabIndex = 12;
@@ -132,128 +157,102 @@
             this.btnGuncelle.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
             this.btnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
-            // txtUrunAd
+            // txtZimmetID
             // 
-            this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAd.Location = new System.Drawing.Point(108, 81);
-            this.txtUrunAd.Name = "txtUrunAd";
-            this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
-            this.txtUrunAd.TabIndex = 2;
+            this.txtZimmetID.Enabled = false;
+            this.txtZimmetID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtZimmetID.Location = new System.Drawing.Point(139, 44);
+            this.txtZimmetID.Name = "txtZimmetID";
+            this.txtZimmetID.Size = new System.Drawing.Size(200, 28);
+            this.txtZimmetID.TabIndex = 2;
             // 
             // txtAdet
             // 
             this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdet.Location = new System.Drawing.Point(108, 122);
+            this.txtAdet.Location = new System.Drawing.Point(139, 81);
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
-            this.txtAdet.TabIndex = 3;
+            this.txtAdet.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(42, 205);
+            this.label6.Location = new System.Drawing.Point(13, 207);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 21);
+            this.label6.Size = new System.Drawing.Size(120, 21);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Tarih:";
-            // 
-            // txtFiyat
-            // 
-            this.txtFiyat.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtFiyat.Location = new System.Drawing.Point(108, 161);
-            this.txtFiyat.Name = "txtFiyat";
-            this.txtFiyat.Size = new System.Drawing.Size(200, 28);
-            this.txtFiyat.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(44, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 21);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Adet:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(16, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 21);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Ürün Adı:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(44, 164);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Fiyat:";
+            this.label6.Text = "Zimmet Tarihi:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(22, 48);
+            this.label1.Location = new System.Drawing.Point(37, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.Size = new System.Drawing.Size(96, 21);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Ürün ID:";
+            this.label1.Text = "Zimmet ID:";
             // 
-            // txtUrunID
+            // label4
             // 
-            this.txtUrunID.Enabled = false;
-            this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunID.Location = new System.Drawing.Point(108, 41);
-            this.txtUrunID.Name = "txtUrunID";
-            this.txtUrunID.Size = new System.Drawing.Size(200, 28);
-            this.txtUrunID.TabIndex = 2;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(56, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 21);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Personel:";
             // 
-            // btnSil
+            // label3
             // 
-            this.btnSil.Appearance.BackColor = System.Drawing.Color.White;
-            this.btnSil.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.btnSil.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnSil.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnSil.Appearance.Options.UseBackColor = true;
-            this.btnSil.Appearance.Options.UseBorderColor = true;
-            this.btnSil.Appearance.Options.UseFont = true;
-            this.btnSil.Appearance.Options.UseForeColor = true;
-            this.btnSil.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnSil.Location = new System.Drawing.Point(20, 479);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(161, 41);
-            this.btnSil.TabIndex = 15;
-            this.btnSil.Text = "SİL";
-            this.btnSil.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
-            this.btnSil.Click += new System.EventHandler(this.BtnSil_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(82, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 21);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Adet:";
             // 
-            // FormUrunGuncelle
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(56, 165);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 21);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Kullanıcı:";
+            // 
+            // dgwZimmetGuncellemeListele
+            // 
+            this.dgwZimmetGuncellemeListele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwZimmetGuncellemeListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwZimmetGuncellemeListele.Location = new System.Drawing.Point(432, 100);
+            this.dgwZimmetGuncellemeListele.Name = "dgwZimmetGuncellemeListele";
+            this.dgwZimmetGuncellemeListele.RowTemplate.Height = 24;
+            this.dgwZimmetGuncellemeListele.Size = new System.Drawing.Size(821, 541);
+            this.dgwZimmetGuncellemeListele.TabIndex = 19;
+            this.dgwZimmetGuncellemeListele.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgwZimmetGuncellemeListele_CellMouseDoubleClick);
+            // 
+            // FormZimmetGuncelleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 637);
-            this.Controls.Add(this.grbUrunIslemleri);
-            this.Controls.Add(this.dgwUrunListele);
+            this.ClientSize = new System.Drawing.Size(1264, 651);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.grbUrunIslemleri);
+            this.Controls.Add(this.dgwZimmetGuncellemeListele);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Name = "FormUrunGuncelle";
-            this.Text = "Ürün İşlemleri";
-            this.Load += new System.EventHandler(this.FormUrunGuncelle_Load);
+            this.Name = "FormZimmetGuncelleme";
+            this.Text = "Zimmet Güncelle";
+            this.Load += new System.EventHandler(this.FormZimmetGuncelleme_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUrunListele)).EndInit();
             this.grbUrunIslemleri.ResumeLayout(false);
             this.grbUrunIslemleri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwZimmetGuncellemeListele)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,19 +261,19 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
-        private System.Windows.Forms.DataGridView dgwUrunListele;
         private System.Windows.Forms.GroupBox grbUrunIslemleri;
+        private DevExpress.XtraEditors.SimpleButton btnKaldır;
         private DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
-        private System.Windows.Forms.TextBox txtUrunAd;
+        private System.Windows.Forms.TextBox txtZimmetID;
         private System.Windows.Forms.TextBox txtAdet;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtFiyat;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtUrunID;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.SimpleButton btnSil;
+        private System.Windows.Forms.DataGridView dgwZimmetGuncellemeListele;
+        private System.Windows.Forms.ComboBox cmbKullaniciGuncelle;
+        private System.Windows.Forms.ComboBox cmbPersonelGuncelle;
     }
 }

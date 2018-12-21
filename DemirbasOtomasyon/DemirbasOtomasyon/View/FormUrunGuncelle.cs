@@ -70,7 +70,7 @@ namespace DemirbasOtomasyon.View
             }
         }
 
-        private void dgwUrunListele_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DgwUrunListele_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             txtUrunID.Text = dgwUrunListele.CurrentRow.Cells[0].Value.ToString();
             txtUrunAd.Text = dgwUrunListele.CurrentRow.Cells[1].Value.ToString();
@@ -78,7 +78,7 @@ namespace DemirbasOtomasyon.View
             txtFiyat.Text = dgwUrunListele.CurrentRow.Cells[3].Value.ToString();
             calendarControl1.EditValue = dgwUrunListele.CurrentRow.Cells[4].Value;
         }
-        private void veriGuncelle()
+        private void VeriGuncelle()
         {
             try
             {
@@ -96,12 +96,14 @@ namespace DemirbasOtomasyon.View
                     throw new Exception("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
 
-                Urunler urun = new Urunler();
-                urun.urunID = int.Parse(txtUrunID.Text);
-                urun.urunAd = txtUrunAd.Text;
-                urun.fiyat = decimal.Parse(txtFiyat.Text);
-                urun.stokMiktari = int.Parse(txtAdet.Text);
-                urun.satınAlınmaTarihi = selectedDate;
+                Urunler urun = new Urunler
+                {
+                    urunID = int.Parse(txtUrunID.Text),
+                    urunAd = txtUrunAd.Text,
+                    fiyat = decimal.Parse(txtFiyat.Text),
+                    stokMiktari = int.Parse(txtAdet.Text),
+                    satınAlınmaTarihi = selectedDate
+                };
                 UrunController.urunDuzenle(urun);
                 MessageBox.Show("Ürün Başarıyla Düzenlendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UrunListele();
@@ -111,12 +113,12 @@ namespace DemirbasOtomasyon.View
                 MessageBox.Show(ex.Message, "Hata Meydana Geldi !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private void btnGuncelle_Click(object sender, EventArgs e)
+        private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            veriGuncelle();
+            VeriGuncelle();
         }
 
-        private void btnSil_Click(object sender, EventArgs e)
+        private void BtnSil_Click(object sender, EventArgs e)
         {
             DialogResult sonuc = MessageBox.Show(txtUrunAd.Text + " İsimli Ürün Silinsin Mi ?", "Karar ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (sonuc == DialogResult.Yes)

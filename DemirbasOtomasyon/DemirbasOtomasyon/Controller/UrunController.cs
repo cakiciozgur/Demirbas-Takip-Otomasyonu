@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DemirbasOtomasyon.Model;
 namespace DemirbasOtomasyon.Controller
 {
-        public static class UrunController
+    public static class UrunController
     {
         public static void UrunEkle(Urunler urun)
         {

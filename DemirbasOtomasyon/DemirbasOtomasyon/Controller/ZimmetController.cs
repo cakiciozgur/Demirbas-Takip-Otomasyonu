@@ -21,5 +21,21 @@ namespace DemirbasOtomasyon.Controller
                 context.SaveChanges();
             }
         }
+        public static void ZimmetGuncelle(Zimmetler zimmet)
+        {
+            using (var context = new DemirbasTakipEntitiess())
+            {
+                context.sp_ZimmetGuncelle(zimmet.zimmetID, zimmet.zimmetTarihi, zimmet.zimmetAdet, zimmet.personelID, zimmet.kullaniciID);
+                context.SaveChanges();
+            }
+        }
+        public static void ZimmetSil(int zimmetID)
+        {
+            using (var context = new DemirbasTakipEntitiess())
+            {
+                context.sp_ZimmetKaldir(zimmetID);
+                context.SaveChanges();
+            }
+        }
     }
 }

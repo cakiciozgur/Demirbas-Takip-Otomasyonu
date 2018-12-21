@@ -187,7 +187,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl.Location = new System.Drawing.Point(89, 232);
             this.calendarControl.Name = "calendarControl";
-            this.calendarControl.Size = new System.Drawing.Size(260, 261);
+            this.calendarControl.Size = new System.Drawing.Size(246, 261);
             this.calendarControl.TabIndex = 15;
             // 
             // btnZimemetKaydet

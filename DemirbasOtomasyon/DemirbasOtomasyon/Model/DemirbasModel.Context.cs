@@ -345,5 +345,45 @@ namespace DemirbasOtomasyon.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_PersonelSil2", personelIDParameter);
         }
+    
+        [DbFunction("DemirbasTakipEntitiess", "FN_UrunIDGetir")]
+        public virtual IQueryable<FN_UrunIDGetir_Result> FN_UrunIDGetir(Nullable<int> personelID)
+        {
+            var personelIDParameter = personelID.HasValue ?
+                new ObjectParameter("personelID", personelID) :
+                new ObjectParameter("personelID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<FN_UrunIDGetir_Result>("[DemirbasTakipEntitiess].[FN_UrunIDGetir](@personelID)", personelIDParameter);
+        }
+    
+        public virtual int sp_ZimmetGuncelle(Nullable<int> zimmetID, Nullable<System.DateTime> zimmetTarihi, Nullable<int> zimmetAdet, Nullable<int> personelID, Nullable<int> kullaniciID)
+        {
+            var zimmetIDParameter = zimmetID.HasValue ?
+                new ObjectParameter("zimmetID", zimmetID) :
+                new ObjectParameter("zimmetID", typeof(int));
+    
+            var zimmetTarihiParameter = zimmetTarihi.HasValue ?
+                new ObjectParameter("zimmetTarihi", zimmetTarihi) :
+                new ObjectParameter("zimmetTarihi", typeof(System.DateTime));
+    
+            var zimmetAdetParameter = zimmetAdet.HasValue ?
+                new ObjectParameter("zimmetAdet", zimmetAdet) :
+                new ObjectParameter("zimmetAdet", typeof(int));
+    
+            var personelIDParameter = personelID.HasValue ?
+                new ObjectParameter("personelID", personelID) :
+                new ObjectParameter("personelID", typeof(int));
+    
+            var kullaniciIDParameter = kullaniciID.HasValue ?
+                new ObjectParameter("kullaniciID", kullaniciID) :
+                new ObjectParameter("kullaniciID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ZimmetGuncelle", zimmetIDParameter, zimmetTarihiParameter, zimmetAdetParameter, personelIDParameter, kullaniciIDParameter);
+        }
+    
+        public virtual ObjectResult<sp_ZimmetListeleGuncelleme_Result> sp_ZimmetListeleGuncelleme()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetListeleGuncelleme_Result>("sp_ZimmetListeleGuncelleme");
+        }
     }
 }

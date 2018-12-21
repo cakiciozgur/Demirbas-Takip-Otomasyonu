@@ -32,6 +32,8 @@
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.dgwPersonelListele = new System.Windows.Forms.DataGridView();
             this.grbZimmetIslemleri = new System.Windows.Forms.GroupBox();
+            this.cmbDepartmanGuncelle = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnPersonelSil = new DevExpress.XtraEditors.SimpleButton();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbDepartmanGuncelle = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).BeginInit();
             this.grbZimmetIslemleri.SuspendLayout();
@@ -107,6 +107,24 @@
             this.grbZimmetIslemleri.TabStop = false;
             this.grbZimmetIslemleri.Text = "Personel Bilgileri";
             // 
+            // cmbDepartmanGuncelle
+            // 
+            this.cmbDepartmanGuncelle.FormattingEnabled = true;
+            this.cmbDepartmanGuncelle.Location = new System.Drawing.Point(149, 213);
+            this.cmbDepartmanGuncelle.Name = "cmbDepartmanGuncelle";
+            this.cmbDepartmanGuncelle.Size = new System.Drawing.Size(200, 30);
+            this.cmbDepartmanGuncelle.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(37, 216);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 21);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Departman:";
+            // 
             // btnPersonelSil
             // 
             this.btnPersonelSil.Appearance.BackColor = System.Drawing.Color.White;
@@ -123,7 +141,7 @@
             this.btnPersonelSil.Name = "btnPersonelSil";
             this.btnPersonelSil.Size = new System.Drawing.Size(161, 41);
             this.btnPersonelSil.TabIndex = 26;
-            this.btnPersonelSil.Text = "SİL";
+            this.btnPersonelSil.Text = "PERSONEL SİL";
             this.btnPersonelSil.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
             this.btnPersonelSil.Click += new System.EventHandler(this.btnPersonelSil_Click);
             // 
@@ -238,24 +256,6 @@
             this.label7.Size = new System.Drawing.Size(113, 21);
             this.label7.TabIndex = 6;
             this.label7.Text = "Cep Telefonu:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(37, 216);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 21);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Departman:";
-            // 
-            // cmbDepartmanGuncelle
-            // 
-            this.cmbDepartmanGuncelle.FormattingEnabled = true;
-            this.cmbDepartmanGuncelle.Location = new System.Drawing.Point(149, 213);
-            this.cmbDepartmanGuncelle.Name = "cmbDepartmanGuncelle";
-            this.cmbDepartmanGuncelle.Size = new System.Drawing.Size(200, 30);
-            this.cmbDepartmanGuncelle.TabIndex = 21;
             // 
             // FormPersonelGuncelleme
             // 

@@ -89,6 +89,9 @@
     </Compile>
     <Compile Include="Model\EDeleted.cs" />
     <Compile Include="Model\eRoles.cs" />
+    <Compile Include="Model\FN_UrunIDGetir_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\KullaniciViewModel.cs" />
     <Compile Include="Model\Kullanıcılar.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
@@ -101,6 +104,9 @@
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\sp_ZimmetListele2_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetListeleGuncelleme_Result.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\UrunViewModel.cs" />
@@ -187,6 +193,12 @@
     <Compile Include="Model\Zimmetler.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\FormZimmetGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormZimmetGuncelleme.Designer.cs">
+      <DependentUpon>FormZimmetGuncelleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormZimmetListele.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormZimmetEkle.resx">
       <DependentUpon>FormZimmetEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormZimmetGuncelleme.resx">
+      <DependentUpon>FormZimmetGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormZimmetListele.resx">
       <DependentUpon>FormZimmetListele.cs</DependentUpon>

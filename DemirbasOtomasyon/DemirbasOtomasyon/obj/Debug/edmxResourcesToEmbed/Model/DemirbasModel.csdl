@@ -256,6 +256,17 @@
     <FunctionImport Name="sp_PersonelSil2">
       <Parameter Name="personelID" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="FN_UrunIDGetir" IsComposable="true" ReturnType="Collection(DemirbasTakipModel.FN_UrunIDGetir_Result)">
+      <Parameter Name="personelID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ZimmetGuncelle">
+      <Parameter Name="zimmetID" Mode="In" Type="Int32" />
+      <Parameter Name="zimmetTarihi" Mode="In" Type="DateTime" />
+      <Parameter Name="zimmetAdet" Mode="In" Type="Int32" />
+      <Parameter Name="personelID" Mode="In" Type="Int32" />
+      <Parameter Name="kullaniciID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ZimmetListeleGuncelleme" ReturnType="Collection(DemirbasTakipModel.sp_ZimmetListeleGuncelleme_Result)" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -327,5 +338,16 @@
     <Property Type="String" Name="Cep_Telefonu" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="Departman" Nullable="true" MaxLength="20" />
     <Property Type="DateTime" Name="İşe_Giriş_Tarihi" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="FN_UrunIDGetir_Result">
+    <Property Type="Int32" Name="urunID" Nullable="true" />
+    <Property Type="Int32" Name="personelID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_ZimmetListeleGuncelleme_Result">
+    <Property Type="Int32" Name="Zimmet_ID" Nullable="false" />
+    <Property Type="Int32" Name="Zimmet_Adet" Nullable="true" />
+    <Property Type="String" Name="Personel_Adı" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Kullanıcı_Adı" Nullable="true" MaxLength="8" />
+    <Property Type="DateTime" Name="Zimmet_Tarihi" Nullable="true" Precision="23" />
   </ComplexType>
 </Schema>

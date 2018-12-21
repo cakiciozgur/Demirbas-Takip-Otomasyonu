@@ -115,6 +115,12 @@ namespace DemirbasOtomasyon.View
 
         private void btnPersonelSil_Click(object sender, EventArgs e)
         {
+            //List<Urunler> urunler = new List<Urunler>();
+            //urunler=UrunController.UrunleriGetir();
+            //foreach (Urunler urun in urunler)
+            //{
+            //    if()
+            //}
             DialogResult sonuc = MessageBox.Show(txtAdi.Text + " İsimli Personel Silinsin Mi ?", "Karar ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (sonuc == DialogResult.Yes)
             {
