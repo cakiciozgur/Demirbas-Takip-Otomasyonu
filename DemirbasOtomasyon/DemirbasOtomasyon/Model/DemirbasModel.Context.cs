@@ -336,5 +336,14 @@ namespace DemirbasOtomasyon.Model
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PersonelListele2_Result>("sp_PersonelListele2");
         }
+    
+        public virtual int sp_PersonelSil2(Nullable<int> personelID)
+        {
+            var personelIDParameter = personelID.HasValue ?
+                new ObjectParameter("personelID", personelID) :
+                new ObjectParameter("personelID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_PersonelSil2", personelIDParameter);
+        }
     }
 }

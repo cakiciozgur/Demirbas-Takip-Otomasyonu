@@ -251,9 +251,11 @@
     </FunctionImport>
     <FunctionImport Name="sp_PersonelSil">
       <Parameter Name="personelID" Mode="In" Type="Int32" />
-      <Parameter Name="urunID" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_PersonelListele2" ReturnType="Collection(DemirbasTakipModel.sp_PersonelListele2_Result)" />
+    <FunctionImport Name="sp_PersonelSil2">
+      <Parameter Name="personelID" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />

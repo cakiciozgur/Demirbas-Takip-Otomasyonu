@@ -35,11 +35,11 @@ namespace DemirbasOtomasyon.Controller
                 context.sp_PersonelGuncelle(personel.personelID, personel.adi, personel.soyadi, personel.cepTelefonu, personel.departmanID, personel.iseGirisTarihi);
             }
         }
-        public static void PersonelSil(int personelID,int urunID)
+        public static void PersonelSil(int personelID)
         {
             using (var context = new DemirbasTakipEntitiess())
             {
-                context.sp_PersonelSil(personelID,urunID);
+                context.sp_PersonelSil(personelID);
             }
         }
     }

@@ -182,6 +182,9 @@
         <Function Name="sp_PersonelSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="personelID" Type="int" Mode="In" />
         </Function>
+        <Function Name="sp_PersonelSil2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="personelID" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -504,9 +507,12 @@
             <Parameter Name="iseGirisTarihi" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_PersonelSil">
-            <Parameter Name="personelID" Mode="In" Type="Int32" />
+          <Parameter Name="personelID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_PersonelListele2" ReturnType="Collection(DemirbasTakipModel.sp_PersonelListele2_Result)" />
+          <FunctionImport Name="sp_PersonelSil2">
+          <Parameter Name="personelID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -781,6 +787,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_PersonelSil2" FunctionName="DemirbasTakipModel.Store.sp_PersonelSil2" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
