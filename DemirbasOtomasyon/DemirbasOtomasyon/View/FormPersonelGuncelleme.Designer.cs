@@ -30,22 +30,22 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
-            this.dgwUrunListele = new System.Windows.Forms.DataGridView();
+            this.dgwPersonelListele = new System.Windows.Forms.DataGridView();
             this.grbZimmetIslemleri = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnPersonelSil = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtAdet = new System.Windows.Forms.TextBox();
+            this.txtSoyadi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtUrunAd = new System.Windows.Forms.TextBox();
+            this.txtAdi = new System.Windows.Forms.TextBox();
             this.calendarControl = new DevExpress.XtraEditors.Controls.CalendarControl();
             this.btnPersonelGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.txtUrunID = new System.Windows.Forms.TextBox();
+            this.txtPersonelID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnPersonelSil = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUrunListele)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).BeginInit();
             this.grbZimmetIslemleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
@@ -69,27 +69,28 @@
             this.pnlUrunGrs.TabIndex = 0;
             this.pnlUrunGrs.Text = "PERSONEL İŞLEMLERİ";
             // 
-            // dgwUrunListele
+            // dgwPersonelListele
             // 
-            this.dgwUrunListele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwUrunListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwUrunListele.Location = new System.Drawing.Point(433, 96);
-            this.dgwUrunListele.Name = "dgwUrunListele";
-            this.dgwUrunListele.RowTemplate.Height = 24;
-            this.dgwUrunListele.Size = new System.Drawing.Size(885, 573);
-            this.dgwUrunListele.TabIndex = 19;
+            this.dgwPersonelListele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwPersonelListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwPersonelListele.Location = new System.Drawing.Point(433, 96);
+            this.dgwPersonelListele.Name = "dgwPersonelListele";
+            this.dgwPersonelListele.RowTemplate.Height = 24;
+            this.dgwPersonelListele.Size = new System.Drawing.Size(885, 573);
+            this.dgwPersonelListele.TabIndex = 19;
+            this.dgwPersonelListele.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwPersonelListele_CellMouseDoubleClick);
             // 
             // grbZimmetIslemleri
             // 
             this.grbZimmetIslemleri.Controls.Add(this.btnPersonelSil);
-            this.grbZimmetIslemleri.Controls.Add(this.textBox1);
+            this.grbZimmetIslemleri.Controls.Add(this.txtTelefon);
             this.grbZimmetIslemleri.Controls.Add(this.label5);
-            this.grbZimmetIslemleri.Controls.Add(this.txtAdet);
+            this.grbZimmetIslemleri.Controls.Add(this.txtSoyadi);
             this.grbZimmetIslemleri.Controls.Add(this.label2);
-            this.grbZimmetIslemleri.Controls.Add(this.txtUrunAd);
+            this.grbZimmetIslemleri.Controls.Add(this.txtAdi);
             this.grbZimmetIslemleri.Controls.Add(this.calendarControl);
             this.grbZimmetIslemleri.Controls.Add(this.btnPersonelGuncelle);
-            this.grbZimmetIslemleri.Controls.Add(this.txtUrunID);
+            this.grbZimmetIslemleri.Controls.Add(this.txtPersonelID);
             this.grbZimmetIslemleri.Controls.Add(this.label6);
             this.grbZimmetIslemleri.Controls.Add(this.label3);
             this.grbZimmetIslemleri.Controls.Add(this.label7);
@@ -102,13 +103,33 @@
             this.grbZimmetIslemleri.TabStop = false;
             this.grbZimmetIslemleri.Text = "Personel Bilgileri";
             // 
-            // textBox1
+            // btnPersonelSil
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(149, 176);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 28);
-            this.textBox1.TabIndex = 25;
+            this.btnPersonelSil.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnPersonelSil.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.btnPersonelSil.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnPersonelSil.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPersonelSil.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnPersonelSil.Appearance.Options.UseBackColor = true;
+            this.btnPersonelSil.Appearance.Options.UseBorderColor = true;
+            this.btnPersonelSil.Appearance.Options.UseFont = true;
+            this.btnPersonelSil.Appearance.Options.UseForeColor = true;
+            this.btnPersonelSil.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnPersonelSil.Location = new System.Drawing.Point(32, 531);
+            this.btnPersonelSil.Name = "btnPersonelSil";
+            this.btnPersonelSil.Size = new System.Drawing.Size(161, 41);
+            this.btnPersonelSil.TabIndex = 26;
+            this.btnPersonelSil.Text = "SİL";
+            this.btnPersonelSil.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.btnPersonelSil.Click += new System.EventHandler(this.btnPersonelSil_Click);
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTelefon.Location = new System.Drawing.Point(149, 176);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(200, 28);
+            this.txtTelefon.TabIndex = 25;
             // 
             // label5
             // 
@@ -120,13 +141,13 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Personel Soyadı:";
             // 
-            // txtAdet
+            // txtSoyadi
             // 
-            this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdet.Location = new System.Drawing.Point(149, 130);
-            this.txtAdet.Name = "txtAdet";
-            this.txtAdet.Size = new System.Drawing.Size(200, 28);
-            this.txtAdet.TabIndex = 22;
+            this.txtSoyadi.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSoyadi.Location = new System.Drawing.Point(149, 130);
+            this.txtSoyadi.Name = "txtSoyadi";
+            this.txtSoyadi.Size = new System.Drawing.Size(200, 28);
+            this.txtSoyadi.TabIndex = 22;
             // 
             // label2
             // 
@@ -138,13 +159,13 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Personel Adı:";
             // 
-            // txtUrunAd
+            // txtAdi
             // 
-            this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAd.Location = new System.Drawing.Point(149, 85);
-            this.txtUrunAd.Name = "txtUrunAd";
-            this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
-            this.txtUrunAd.TabIndex = 16;
+            this.txtAdi.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdi.Location = new System.Drawing.Point(149, 85);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.Size = new System.Drawing.Size(200, 28);
+            this.txtAdi.TabIndex = 16;
             // 
             // calendarControl
             // 
@@ -152,7 +173,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl.Location = new System.Drawing.Point(107, 244);
             this.calendarControl.Name = "calendarControl";
-            this.calendarControl.Size = new System.Drawing.Size(260, 261);
+            this.calendarControl.Size = new System.Drawing.Size(246, 261);
             this.calendarControl.TabIndex = 15;
             // 
             // btnPersonelGuncelle
@@ -173,15 +194,16 @@
             this.btnPersonelGuncelle.TabIndex = 12;
             this.btnPersonelGuncelle.Text = "GÜNCELLE";
             this.btnPersonelGuncelle.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.btnPersonelGuncelle.Click += new System.EventHandler(this.btnPersonelGuncelle_Click);
             // 
-            // txtUrunID
+            // txtPersonelID
             // 
-            this.txtUrunID.Enabled = false;
-            this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunID.Location = new System.Drawing.Point(149, 39);
-            this.txtUrunID.Name = "txtUrunID";
-            this.txtUrunID.Size = new System.Drawing.Size(200, 28);
-            this.txtUrunID.TabIndex = 2;
+            this.txtPersonelID.Enabled = false;
+            this.txtPersonelID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPersonelID.Location = new System.Drawing.Point(149, 39);
+            this.txtPersonelID.Name = "txtPersonelID";
+            this.txtPersonelID.Size = new System.Drawing.Size(200, 28);
+            this.txtPersonelID.TabIndex = 2;
             // 
             // label6
             // 
@@ -213,25 +235,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Cep Telefonu:";
             // 
-            // btnPersonelSil
-            // 
-            this.btnPersonelSil.Appearance.BackColor = System.Drawing.Color.White;
-            this.btnPersonelSil.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.btnPersonelSil.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnPersonelSil.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPersonelSil.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnPersonelSil.Appearance.Options.UseBackColor = true;
-            this.btnPersonelSil.Appearance.Options.UseBorderColor = true;
-            this.btnPersonelSil.Appearance.Options.UseFont = true;
-            this.btnPersonelSil.Appearance.Options.UseForeColor = true;
-            this.btnPersonelSil.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnPersonelSil.Location = new System.Drawing.Point(32, 531);
-            this.btnPersonelSil.Name = "btnPersonelSil";
-            this.btnPersonelSil.Size = new System.Drawing.Size(161, 41);
-            this.btnPersonelSil.TabIndex = 26;
-            this.btnPersonelSil.Text = "SİL";
-            this.btnPersonelSil.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
-            // 
             // FormPersonelGuncelleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -239,13 +242,14 @@
             this.ClientSize = new System.Drawing.Size(1336, 685);
             this.Controls.Add(this.grbZimmetIslemleri);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgwUrunListele);
+            this.Controls.Add(this.dgwPersonelListele);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormPersonelGuncelleme";
             this.Text = "Personel Güncelleme";
+            this.Load += new System.EventHandler(this.FormPersonelGuncelleme_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwUrunListele)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).EndInit();
             this.grbZimmetIslemleri.ResumeLayout(false);
             this.grbZimmetIslemleri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl.CalendarTimeProperties)).EndInit();
@@ -257,16 +261,16 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
-        private System.Windows.Forms.DataGridView dgwUrunListele;
+        private System.Windows.Forms.DataGridView dgwPersonelListele;
         private System.Windows.Forms.GroupBox grbZimmetIslemleri;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtAdet;
+        private System.Windows.Forms.TextBox txtSoyadi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUrunAd;
+        private System.Windows.Forms.TextBox txtAdi;
         private DevExpress.XtraEditors.Controls.CalendarControl calendarControl;
         private DevExpress.XtraEditors.SimpleButton btnPersonelGuncelle;
-        private System.Windows.Forms.TextBox txtUrunID;
+        private System.Windows.Forms.TextBox txtPersonelID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;

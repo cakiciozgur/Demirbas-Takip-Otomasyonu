@@ -97,6 +97,9 @@
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PersonelViewModel.cs" />
+    <Compile Include="Model\sp_PersonelListele2_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\sp_ZimmetListele2_Result.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>

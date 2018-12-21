@@ -97,11 +97,11 @@ namespace DemirbasOtomasyon.View
                 }
 
                 Urunler urun = new Urunler();
+                urun.urunID = int.Parse(txtUrunID.Text);
                 urun.urunAd = txtUrunAd.Text;
                 urun.fiyat = decimal.Parse(txtFiyat.Text);
                 urun.stokMiktari = int.Parse(txtAdet.Text);
                 urun.satınAlınmaTarihi = selectedDate;
-                urun.urunID = int.Parse(txtUrunID.Text);
                 UrunController.urunDuzenle(urun);
                 MessageBox.Show("Ürün Başarıyla Düzenlendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UrunListele();

@@ -251,7 +251,9 @@
     </FunctionImport>
     <FunctionImport Name="sp_PersonelSil">
       <Parameter Name="personelID" Mode="In" Type="Int32" />
+      <Parameter Name="urunID" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="sp_PersonelListele2" ReturnType="Collection(DemirbasTakipModel.sp_PersonelListele2_Result)" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -315,5 +317,13 @@
     <Property Type="String" Name="Departman" Nullable="true" MaxLength="20" />
     <Property Type="DateTime" Name="Zimmet_Tarihi" Nullable="true" Precision="23" />
     <Property Type="String" Name="Kullanıcı_Adı" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="sp_PersonelListele2_Result">
+    <Property Type="Int32" Name="Personel_ID" Nullable="false" />
+    <Property Type="String" Name="Adı" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Soyadı" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Cep_Telefonu" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Departman" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="İşe_Giriş_Tarihi" Nullable="true" Precision="23" />
   </ComplexType>
 </Schema>

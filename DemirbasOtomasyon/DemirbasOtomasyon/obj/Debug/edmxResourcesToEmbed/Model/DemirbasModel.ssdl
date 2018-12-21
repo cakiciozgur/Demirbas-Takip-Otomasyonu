@@ -4,14 +4,14 @@
     <Key>
       <PropertyRef Name="departmanID" />
     </Key>
-    <Property Name="departmanID" Type="int" Nullable="false" />
+    <Property Name="departmanID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="departmanAdi" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="Kullanıcılar">
     <Key>
       <PropertyRef Name="kullaniciID" />
     </Key>
-    <Property Name="kullaniciID" Type="int" Nullable="false" />
+    <Property Name="kullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="kullaniciAdi" Type="nvarchar" MaxLength="8" />
     <Property Name="kullaniciSifre" Type="int" />
     <Property Name="rolID" Type="int" />
@@ -33,7 +33,7 @@
     <Key>
       <PropertyRef Name="rolID" />
     </Key>
-    <Property Name="rolID" Type="int" Nullable="false" />
+    <Property Name="rolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="roller" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="sysdiagrams">
@@ -173,8 +173,10 @@
     <Parameter Name="iseGirisTarihi" Type="datetime" Mode="In" />
   </Function>
   <Function Name="sp_PersonelListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_PersonelListele2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="sp_PersonelSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="personelID" Type="int" Mode="In" />
+    <Parameter Name="urunID" Type="int" Mode="In" />
   </Function>
   <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />

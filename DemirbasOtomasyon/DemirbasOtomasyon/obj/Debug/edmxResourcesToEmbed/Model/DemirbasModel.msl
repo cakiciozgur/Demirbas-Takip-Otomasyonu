@@ -185,5 +185,17 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_PersonelGuncelle" FunctionName="DemirbasTakipModel.Store.sp_PersonelGuncelle" />
     <FunctionImportMapping FunctionImportName="sp_PersonelSil" FunctionName="DemirbasTakipModel.Store.sp_PersonelSil" />
+    <FunctionImportMapping FunctionImportName="sp_PersonelListele2" FunctionName="DemirbasTakipModel.Store.sp_PersonelListele2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_PersonelListele2_Result">
+          <ScalarProperty Name="Personel_ID" ColumnName="Personel ID" />
+          <ScalarProperty Name="Adı" ColumnName="Adı" />
+          <ScalarProperty Name="Soyadı" ColumnName="Soyadı" />
+          <ScalarProperty Name="Cep_Telefonu" ColumnName="Cep Telefonu" />
+          <ScalarProperty Name="Departman" ColumnName="Departman" />
+          <ScalarProperty Name="İşe_Giriş_Tarihi" ColumnName="İşe Giriş Tarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -331,5 +331,10 @@ namespace DemirbasOtomasyon.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_PersonelSil", personelIDParameter);
         }
+    
+        public virtual ObjectResult<sp_PersonelListele2_Result> sp_PersonelListele2()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PersonelListele2_Result>("sp_PersonelListele2");
+        }
     }
 }
