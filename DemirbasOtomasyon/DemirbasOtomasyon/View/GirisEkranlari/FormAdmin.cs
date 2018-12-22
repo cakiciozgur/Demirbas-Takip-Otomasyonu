@@ -17,5 +17,7 @@ namespace DemirbasOtomasyon.View
         {
             InitializeComponent();
         }
+
+       
     }
 }

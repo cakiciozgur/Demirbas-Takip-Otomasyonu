@@ -112,10 +112,10 @@
     <Compile Include="Model\UrunViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\FormAdmin.cs">
+    <Compile Include="View\GirisEkranlari\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormAdmin.Designer.cs">
+    <Compile Include="View\GirisEkranlari\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Giris\FormAdminGiris.cs">
@@ -124,10 +124,10 @@
     <Compile Include="View\Giris\FormAdminGiris.Designer.cs">
       <DependentUpon>FormAdminGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormBirimYetkilisi.cs">
+    <Compile Include="View\GirisEkranlari\FormBirimYetkilisi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormBirimYetkilisi.Designer.cs">
+    <Compile Include="View\GirisEkranlari\FormBirimYetkilisi.Designer.cs">
       <DependentUpon>FormBirimYetkilisi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Giris\FormBYGiris.cs">
@@ -148,10 +148,10 @@
     <Compile Include="View\Giris\FormSAGiris.Designer.cs">
       <DependentUpon>FormSAGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormSatınAlmaBirimi.cs">
+    <Compile Include="View\GirisEkranlari\FormSatınAlmaBirimi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormSatınAlmaBirimi.Designer.cs">
+    <Compile Include="View\GirisEkranlari\FormSatınAlmaBirimi.Designer.cs">
       <DependentUpon>FormSatınAlmaBirimi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Personel\FormPersonelEkleme.cs">
@@ -251,13 +251,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\FormAdmin.resx">
+    <EmbeddedResource Include="View\GirisEkranlari\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Giris\FormAdminGiris.resx">
       <DependentUpon>FormAdminGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormBirimYetkilisi.resx">
+    <EmbeddedResource Include="View\GirisEkranlari\FormBirimYetkilisi.resx">
       <DependentUpon>FormBirimYetkilisi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Giris\FormBYGiris.resx">
@@ -269,7 +269,7 @@
     <EmbeddedResource Include="View\Giris\FormSAGiris.resx">
       <DependentUpon>FormSAGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormSatınAlmaBirimi.resx">
+    <EmbeddedResource Include="View\GirisEkranlari\FormSatınAlmaBirimi.resx">
       <DependentUpon>FormSatınAlmaBirimi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Personel\FormPersonelEkleme.resx">
