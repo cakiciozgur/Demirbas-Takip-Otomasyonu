@@ -38,10 +38,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.grbZimmetIslemleri = new System.Windows.Forms.GroupBox();
+            this.cmbDepartmanSec = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtCepTelefonu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbDepartmanSec = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl2.CalendarTimeProperties)).BeginInit();
             this.grbZimmetIslemleri.SuspendLayout();
@@ -60,11 +60,11 @@
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(403, 21);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(352, 21);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(314, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(431, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "PERSONEL İŞLEMLERİ";
+            this.pnlUrunGrs.Text = "PERSONEL EKLEME İŞLEMLERİ";
             // 
             // txtPersonelSoyad
             // 
@@ -98,7 +98,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl2.Location = new System.Drawing.Point(149, 222);
             this.calendarControl2.Name = "calendarControl2";
-            this.calendarControl2.Size = new System.Drawing.Size(260, 261);
+            this.calendarControl2.Size = new System.Drawing.Size(246, 261);
             this.calendarControl2.TabIndex = 15;
             // 
             // btnPersonelEkle
@@ -163,6 +163,24 @@
             this.grbZimmetIslemleri.TabStop = false;
             this.grbZimmetIslemleri.Text = "Personel Bilgileri";
             // 
+            // cmbDepartmanSec
+            // 
+            this.cmbDepartmanSec.FormattingEnabled = true;
+            this.cmbDepartmanSec.Location = new System.Drawing.Point(149, 174);
+            this.cmbDepartmanSec.Name = "cmbDepartmanSec";
+            this.cmbDepartmanSec.Size = new System.Drawing.Size(200, 30);
+            this.cmbDepartmanSec.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(37, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 21);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Departman:";
+            // 
             // txtCepTelefonu
             // 
             this.txtCepTelefonu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -181,24 +199,6 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Personel Soyadı:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(37, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 21);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Departman:";
-            // 
-            // cmbDepartmanSec
-            // 
-            this.cmbDepartmanSec.FormattingEnabled = true;
-            this.cmbDepartmanSec.Location = new System.Drawing.Point(149, 174);
-            this.cmbDepartmanSec.Name = "cmbDepartmanSec";
-            this.cmbDepartmanSec.Size = new System.Drawing.Size(200, 30);
-            this.cmbDepartmanSec.TabIndex = 20;
-            // 
             // FormPersonelEkleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -208,7 +208,6 @@
             this.Controls.Add(this.grbZimmetIslemleri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormPersonelEkleme";
-            this.Text = "Personel Ekleme";
             this.Load += new System.EventHandler(this.FormPersonelEkleme_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

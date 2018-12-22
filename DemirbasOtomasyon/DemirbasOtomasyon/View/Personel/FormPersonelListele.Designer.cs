@@ -63,11 +63,11 @@
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(443, 23);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(418, 20);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(217, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(271, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "PERSONELLER";
+            this.pnlUrunGrs.Text = "PERSONEL LİSTESİ";
             // 
             // panel1
             // 
@@ -138,6 +138,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormPersonelListele";
+            this.Load += new System.EventHandler(this.FormPersonelListele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

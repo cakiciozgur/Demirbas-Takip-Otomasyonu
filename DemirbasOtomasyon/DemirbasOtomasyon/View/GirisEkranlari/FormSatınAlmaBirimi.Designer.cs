@@ -29,55 +29,55 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSatınAlmaBirimi));
-            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUrunListele = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUrunEkle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUrunGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // simpleButton9
+            // btnUrunListele
             // 
-            this.simpleButton9.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton9.Appearance.Options.UseFont = true;
-            this.simpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
-            this.simpleButton9.Location = new System.Drawing.Point(13, 33);
-            this.simpleButton9.Name = "simpleButton9";
-            this.simpleButton9.Size = new System.Drawing.Size(200, 180);
-            this.simpleButton9.TabIndex = 6;
-            this.simpleButton9.Text = "Ürün Listele";
-            this.simpleButton9.Click += new System.EventHandler(this.simpleButton9_Click);
+            this.btnUrunListele.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunListele.Appearance.Options.UseFont = true;
+            this.btnUrunListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
+            this.btnUrunListele.Location = new System.Drawing.Point(13, 33);
+            this.btnUrunListele.Name = "btnUrunListele";
+            this.btnUrunListele.Size = new System.Drawing.Size(200, 180);
+            this.btnUrunListele.TabIndex = 6;
+            this.btnUrunListele.Text = "Ürün Listele";
+            this.btnUrunListele.Click += new System.EventHandler(this.BtnUrunListele_Click);
             // 
-            // simpleButton8
+            // btnUrunEkle
             // 
-            this.simpleButton8.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton8.Appearance.Options.UseFont = true;
-            this.simpleButton8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
-            this.simpleButton8.Location = new System.Drawing.Point(219, 33);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(200, 85);
-            this.simpleButton8.TabIndex = 7;
-            this.simpleButton8.Text = "Ürün Ekle";
-            this.simpleButton8.Click += new System.EventHandler(this.simpleButton8_Click);
+            this.btnUrunEkle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunEkle.Appearance.Options.UseFont = true;
+            this.btnUrunEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
+            this.btnUrunEkle.Location = new System.Drawing.Point(219, 33);
+            this.btnUrunEkle.Name = "btnUrunEkle";
+            this.btnUrunEkle.Size = new System.Drawing.Size(200, 85);
+            this.btnUrunEkle.TabIndex = 7;
+            this.btnUrunEkle.Text = "Ürün Ekle";
+            this.btnUrunEkle.Click += new System.EventHandler(this.BtnUrunEkle_Click);
             // 
-            // simpleButton7
+            // btnUrunGuncelle
             // 
-            this.simpleButton7.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.simpleButton7.Appearance.Options.UseFont = true;
-            this.simpleButton7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
-            this.simpleButton7.Location = new System.Drawing.Point(219, 128);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(200, 85);
-            this.simpleButton7.TabIndex = 8;
-            this.simpleButton7.Text = "Ürün Düzenle";
-            this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
+            this.btnUrunGuncelle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunGuncelle.Appearance.Options.UseFont = true;
+            this.btnUrunGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
+            this.btnUrunGuncelle.Location = new System.Drawing.Point(219, 128);
+            this.btnUrunGuncelle.Name = "btnUrunGuncelle";
+            this.btnUrunGuncelle.Size = new System.Drawing.Size(200, 85);
+            this.btnUrunGuncelle.TabIndex = 8;
+            this.btnUrunGuncelle.Text = "Ürün Düzenle";
+            this.btnUrunGuncelle.Click += new System.EventHandler(this.BtnUrunGuncelle_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
-            this.groupBox1.Controls.Add(this.simpleButton9);
-            this.groupBox1.Controls.Add(this.simpleButton8);
-            this.groupBox1.Controls.Add(this.simpleButton7);
+            this.groupBox1.Controls.Add(this.btnUrunListele);
+            this.groupBox1.Controls.Add(this.btnUrunEkle);
+            this.groupBox1.Controls.Add(this.btnUrunGuncelle);
             this.groupBox1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(238, 147);
             this.groupBox1.Name = "groupBox1";
@@ -85,7 +85,6 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün-Stok İşlemleri";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // FormSatınAlmaBirimi
             // 
@@ -97,16 +96,15 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormSatınAlmaBirimi";
-            this.Load += new System.EventHandler(this.FormSatınAlmaBirimi_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.SimpleButton simpleButton9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.SimpleButton btnUrunListele;
+        private DevExpress.XtraEditors.SimpleButton btnUrunEkle;
+        private DevExpress.XtraEditors.SimpleButton btnUrunGuncelle;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }

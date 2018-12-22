@@ -135,7 +135,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl1.Location = new System.Drawing.Point(108, 186);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(260, 261);
+            this.calendarControl1.Size = new System.Drawing.Size(246, 261);
             this.calendarControl1.TabIndex = 14;
             // 
             // btnEkle
@@ -171,11 +171,11 @@
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(435, 21);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(394, 22);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(249, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(366, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "ÜRÜN İŞLEMLERİ";
+            this.pnlUrunGrs.Text = "ÜRÜN EKLEME İŞLEMLERİ";
             // 
             // FormUrunEkleme
             // 
@@ -189,7 +189,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "FormUrunEkleme";
-            this.Text = "Ürün Ekleme";
             this.grbUrunIslemleri.ResumeLayout(false);
             this.grbUrunIslemleri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).EndInit();

@@ -19,7 +19,7 @@ namespace DemirbasOtomasyon.View
         {
             InitializeComponent();
         }
-        private void UrunListele()
+        private void ZimmetListele()
         {
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
             var data = db.sp_ZimmetListele2();
@@ -34,19 +34,9 @@ namespace DemirbasOtomasyon.View
                 {
                     Application.DoEvents();
                     DataGridViewCellStyle rowColor = new DataGridViewCellStyle();
-                    if ((dgwZimmetListele.Rows[i].Cells[5].Value.ToString()) == "YAZILIM")
+                    if (Convert.ToInt32(dgwZimmetListele.Rows[i].Cells[0].Value) >= 1)
                     {
-                        rowColor.BackColor = Color.LightSteelBlue;
-                        rowColor.ForeColor = Color.Black;
-                    }
-                    else if ((dgwZimmetListele.Rows[i].Cells[5].Value.ToString()) == "TEKNIK SERVIS")
-                    {
-                        rowColor.BackColor = Color.LightCoral;
-                        rowColor.ForeColor = Color.Black;
-                    }
-                    else if ((dgwZimmetListele.Rows[i].Cells[5].Value.ToString()) == "MUHASEBE")
-                    {
-                        rowColor.BackColor = Color.LightCyan;
+                        rowColor.BackColor = Color.LightSkyBlue;
                         rowColor.ForeColor = Color.Black;
                     }
                     dgwZimmetListele.Rows[i].DefaultCellStyle = rowColor;
@@ -59,7 +49,7 @@ namespace DemirbasOtomasyon.View
         }
         private void FormZimmetListele_Load(object sender, EventArgs e)
         {
-            UrunListele();
+            ZimmetListele();
         }
     }
 }

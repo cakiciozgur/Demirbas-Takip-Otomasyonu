@@ -54,8 +54,8 @@ namespace DemirbasOtomasyon.View
         }
         private void FormZimmetEkle_Load(object sender, EventArgs e)
         {
-            Araclar.comboBoxKullaniciGetir(cmbKullanici);
-            Araclar.comboBoxPersonelGetir(cmbPersonel);
+            Araclar.ComboBoxKullaniciGetir(cmbKullanici);
+            Araclar.ComboBoxPersonelGetir(cmbPersonel);
             ZimmetUrunListele();
             cmbPersonel.SelectedItem = null;
             cmbPersonel.SelectedText = "Personel Seçiniz...";

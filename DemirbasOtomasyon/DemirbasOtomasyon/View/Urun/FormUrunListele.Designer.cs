@@ -54,14 +54,15 @@
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(483, 23);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(432, 21);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(152, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(258, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "ÜRÜNLER";
+            this.pnlUrunGrs.Text = "ÜRÜNLER LİSTESİ";
             // 
             // dgwUrunListesi
             // 
+            this.dgwUrunListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
@@ -71,10 +72,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgwUrunListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwUrunListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwUrunListesi.Location = new System.Drawing.Point(58, 213);
+            this.dgwUrunListesi.Location = new System.Drawing.Point(33, 213);
             this.dgwUrunListesi.Name = "dgwUrunListesi";
             this.dgwUrunListesi.RowTemplate.Height = 24;
-            this.dgwUrunListesi.Size = new System.Drawing.Size(1017, 412);
+            this.dgwUrunListesi.Size = new System.Drawing.Size(1081, 412);
             this.dgwUrunListesi.TabIndex = 17;
             // 
             // label3
@@ -102,12 +103,11 @@
             this.grbUrunAramaIslemleri.Controls.Add(this.label3);
             this.grbUrunAramaIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbUrunAramaIslemleri.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grbUrunAramaIslemleri.Location = new System.Drawing.Point(58, 97);
+            this.grbUrunAramaIslemleri.Location = new System.Drawing.Point(33, 97);
             this.grbUrunAramaIslemleri.Name = "grbUrunAramaIslemleri";
-            this.grbUrunAramaIslemleri.Size = new System.Drawing.Size(1017, 110);
+            this.grbUrunAramaIslemleri.Size = new System.Drawing.Size(1081, 110);
             this.grbUrunAramaIslemleri.TabIndex = 18;
             this.grbUrunAramaIslemleri.TabStop = false;
-            this.grbUrunAramaIslemleri.Enter += new System.EventHandler(this.grbUrunIslemleri_Enter);
             // 
             // btnUrunBul
             // 
@@ -140,6 +140,7 @@
             this.Controls.Add(this.dgwUrunListesi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormUrunListele";
+            this.Load += new System.EventHandler(this.FormUrunListele_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunListesi)).EndInit();

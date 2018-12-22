@@ -18,89 +18,22 @@ namespace DemirbasOtomasyon.View
             InitializeComponent();
         }
 
-        private void FormSatınAlmaBirimi_Load(object sender, EventArgs e)
+        private void BtnUrunListele_Click(object sender, EventArgs e)
         {
-
+            FormUrunListele ful = new FormUrunListele();
+            ful.ShowDialog();
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void BtnUrunEkle_Click(object sender, EventArgs e)
         {
-
+            FormUrunEkleme fue = new FormUrunEkleme();
+            fue.ShowDialog();
         }
 
-        private void simpleButton3_Click(object sender, EventArgs e)
+        private void BtnUrunGuncelle_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void simpleButton6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grbZimmet_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grbPersonel_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
+            FormUrunGuncelle fug = new FormUrunGuncelle();
+            fug.ShowDialog();
         }
     }
 }

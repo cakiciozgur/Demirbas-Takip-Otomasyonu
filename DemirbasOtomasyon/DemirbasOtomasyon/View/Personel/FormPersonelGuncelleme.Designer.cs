@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
-            this.dgwPersonelListele = new System.Windows.Forms.DataGridView();
+            this.dgwPersonelListesi = new System.Windows.Forms.DataGridView();
             this.grbZimmetIslemleri = new System.Windows.Forms.GroupBox();
             this.cmbDepartmanGuncelle = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListesi)).BeginInit();
             this.grbZimmetIslemleri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
@@ -65,22 +65,22 @@
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(435, 15);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(407, 18);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(314, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(508, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "PERSONEL İŞLEMLERİ";
+            this.pnlUrunGrs.Text = "PERSONEL GÜNCELLEME İŞLEMLERİ";
             // 
-            // dgwPersonelListele
+            // dgwPersonelListesi
             // 
-            this.dgwPersonelListele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgwPersonelListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwPersonelListele.Location = new System.Drawing.Point(433, 96);
-            this.dgwPersonelListele.Name = "dgwPersonelListele";
-            this.dgwPersonelListele.RowTemplate.Height = 24;
-            this.dgwPersonelListele.Size = new System.Drawing.Size(885, 601);
-            this.dgwPersonelListele.TabIndex = 19;
-            this.dgwPersonelListele.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwPersonelListele_CellMouseDoubleClick);
+            this.dgwPersonelListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgwPersonelListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwPersonelListesi.Location = new System.Drawing.Point(433, 96);
+            this.dgwPersonelListesi.Name = "dgwPersonelListesi";
+            this.dgwPersonelListesi.RowTemplate.Height = 24;
+            this.dgwPersonelListesi.Size = new System.Drawing.Size(885, 601);
+            this.dgwPersonelListesi.TabIndex = 19;
+            this.dgwPersonelListesi.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgwPersonelListele_CellMouseDoubleClick);
             // 
             // grbZimmetIslemleri
             // 
@@ -143,7 +143,7 @@
             this.btnPersonelSil.TabIndex = 26;
             this.btnPersonelSil.Text = "PERSONEL SİL";
             this.btnPersonelSil.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
-            this.btnPersonelSil.Click += new System.EventHandler(this.btnPersonelSil_Click);
+            this.btnPersonelSil.Click += new System.EventHandler(this.BtnPersonelSil_Click);
             // 
             // txtTelefon
             // 
@@ -216,7 +216,7 @@
             this.btnPersonelGuncelle.TabIndex = 12;
             this.btnPersonelGuncelle.Text = "GÜNCELLE";
             this.btnPersonelGuncelle.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
-            this.btnPersonelGuncelle.Click += new System.EventHandler(this.btnPersonelGuncelle_Click);
+            this.btnPersonelGuncelle.Click += new System.EventHandler(this.BtnPersonelGuncelle_Click);
             // 
             // txtPersonelID
             // 
@@ -264,14 +264,13 @@
             this.ClientSize = new System.Drawing.Size(1336, 714);
             this.Controls.Add(this.grbZimmetIslemleri);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgwPersonelListele);
+            this.Controls.Add(this.dgwPersonelListesi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormPersonelGuncelleme";
-            this.Text = "Personel Güncelleme";
             this.Load += new System.EventHandler(this.FormPersonelGuncelleme_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListesi)).EndInit();
             this.grbZimmetIslemleri.ResumeLayout(false);
             this.grbZimmetIslemleri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl.CalendarTimeProperties)).EndInit();
@@ -283,7 +282,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
-        private System.Windows.Forms.DataGridView dgwPersonelListele;
+        private System.Windows.Forms.DataGridView dgwPersonelListesi;
         private System.Windows.Forms.GroupBox grbZimmetIslemleri;
         private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.Label label5;

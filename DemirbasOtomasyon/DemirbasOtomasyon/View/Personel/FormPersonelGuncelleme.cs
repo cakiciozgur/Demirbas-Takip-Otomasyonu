@@ -22,28 +22,17 @@ namespace DemirbasOtomasyon.View
         private void PersonelRenklendir()
         {
             try
-
             {
-                for (int i = 0; i < dgwPersonelListele.Rows.Count; i++)
+                for (int i = 0; i < dgwPersonelListesi.Rows.Count; i++)
                 {
                     Application.DoEvents();
                     DataGridViewCellStyle rowColor = new DataGridViewCellStyle();
-                    if (Convert.ToInt32(dgwPersonelListele.Rows[i].Cells[2].Value) >= 6)
-                    {
-                        rowColor.BackColor = Color.LightGreen;
-                        rowColor.ForeColor = Color.Black;
-                    }
-                    else if (Convert.ToInt32(dgwPersonelListele.Rows[i].Cells[2].Value) >= 3 && Convert.ToInt32(dgwPersonelListele.Rows[i].Cells[2].Value) <= 5)
+                    if (Convert.ToInt32(dgwPersonelListesi.Rows[i].Cells[0].Value) >= 1)
                     {
                         rowColor.BackColor = Color.LightSkyBlue;
                         rowColor.ForeColor = Color.Black;
-                    }
-                    else if (Convert.ToInt32(dgwPersonelListele.Rows[i].Cells[2].Value) < 3)
-                    {
-                        rowColor.BackColor = Color.LightCoral;
-                        rowColor.ForeColor = Color.Black;
-                    }
-                    dgwPersonelListele.Rows[i].DefaultCellStyle = rowColor;
+                    }                 
+                    dgwPersonelListesi.Rows[i].DefaultCellStyle = rowColor;
                 }
             }
             catch (Exception ex)
@@ -55,18 +44,19 @@ namespace DemirbasOtomasyon.View
         {
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
             var data = db.sp_PersonelListele2();
-            dgwPersonelListele.DataSource = data.ToList();
+            dgwPersonelListesi.DataSource = data.ToList();
+            PersonelRenklendir();
         }
 
         private void FormPersonelGuncelleme_Load(object sender, EventArgs e)
         {
-            Araclar.comboBoxDepartmanGetir(cmbDepartmanGuncelle);
+            Araclar.ComboBoxDepartmanGetir(cmbDepartmanGuncelle);
             cmbDepartmanGuncelle.SelectedItem = null;
             cmbDepartmanGuncelle.SelectedText = "Departman Seçiniz...";
             PersonelListele();
         }
 
-        private void btnPersonelGuncelle_Click(object sender, EventArgs e)
+        private void BtnPersonelGuncelle_Click(object sender, EventArgs e)
         {
             PersonelGuncelle();
         }
@@ -103,17 +93,17 @@ namespace DemirbasOtomasyon.View
             }
         }
 
-        private void dgwPersonelListele_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DgwPersonelListele_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            txtPersonelID.Text = dgwPersonelListele.CurrentRow.Cells[0].Value.ToString();
-            txtAdi.Text = dgwPersonelListele.CurrentRow.Cells[1].Value.ToString();
-            txtSoyadi.Text = dgwPersonelListele.CurrentRow.Cells[2].Value.ToString();
-            txtTelefon.Text = dgwPersonelListele.CurrentRow.Cells[3].Value.ToString();
-            cmbDepartmanGuncelle.Text = dgwPersonelListele.CurrentRow.Cells[4].Value.ToString();
-            calendarControl.EditValue = dgwPersonelListele.CurrentRow.Cells[5].Value;
+            txtPersonelID.Text = dgwPersonelListesi.CurrentRow.Cells[0].Value.ToString();
+            txtAdi.Text = dgwPersonelListesi.CurrentRow.Cells[1].Value.ToString();
+            txtSoyadi.Text = dgwPersonelListesi.CurrentRow.Cells[2].Value.ToString();
+            txtTelefon.Text = dgwPersonelListesi.CurrentRow.Cells[3].Value.ToString();
+            cmbDepartmanGuncelle.Text = dgwPersonelListesi.CurrentRow.Cells[4].Value.ToString();
+            calendarControl.EditValue = dgwPersonelListesi.CurrentRow.Cells[5].Value;
         }
 
-        private void btnPersonelSil_Click(object sender, EventArgs e)
+        private void BtnPersonelSil_Click(object sender, EventArgs e)
         {
             //List<Urunler> urunler = new List<Urunler>();
             //urunler=UrunController.UrunleriGetir();

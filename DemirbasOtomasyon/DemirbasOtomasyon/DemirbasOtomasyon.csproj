@@ -87,7 +87,7 @@
     <Compile Include="Model\Departmanlar.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\EDeleted.cs" />
+    <Compile Include="Model\eCalismaDurumu.cs" />
     <Compile Include="Model\eRoles.cs" />
     <Compile Include="Model\FN_UrunIDGetir_Result.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>

@@ -54,11 +54,11 @@
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(483, 22);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(421, 26);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(179, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(285, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "ZİMMETLER";
+            this.pnlUrunGrs.Text = "ZİMMETLER LİSTESİ";
             // 
             // dgwZimmetListele
             // 

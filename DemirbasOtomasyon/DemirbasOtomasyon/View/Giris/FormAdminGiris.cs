@@ -43,6 +43,7 @@ namespace DemirbasOtomasyon.View
                 var result = KullaniciController.AdminGiris(kullanici);
                 FormKullaniciSecim._session = eRoles.Admin.ToString();
                 FormKullaniciSecim._userIdSession = result.kullaniciID;
+                
                 FormAdmin fa = new FormAdmin();
                 fa.Show();
                 this.Hide();

@@ -32,18 +32,18 @@
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.dgwUrunListele = new System.Windows.Forms.DataGridView();
             this.grbUrunIslemleri = new System.Windows.Forms.GroupBox();
+            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.calendarControl1 = new DevExpress.XtraEditors.Controls.CalendarControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.txtUrunID = new System.Windows.Forms.TextBox();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.txtAdet = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtFiyat = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUrunID = new System.Windows.Forms.TextBox();
-            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunListele)).BeginInit();
             this.grbUrunIslemleri.SuspendLayout();
@@ -63,11 +63,11 @@
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(435, 15);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(425, 22);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(249, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(443, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "ÜRÜN İŞLEMLERİ";
+            this.pnlUrunGrs.Text = "ÜRÜN GÜNCELLEME İŞLEMLERİ";
             // 
             // dgwUrunListele
             // 
@@ -103,13 +103,33 @@
             this.grbUrunIslemleri.TabStop = false;
             this.grbUrunIslemleri.Text = "Ürün Detayları";
             // 
+            // btnSil
+            // 
+            this.btnSil.Appearance.BackColor = System.Drawing.Color.White;
+            this.btnSil.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.btnSil.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnSil.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnSil.Appearance.Options.UseBackColor = true;
+            this.btnSil.Appearance.Options.UseBorderColor = true;
+            this.btnSil.Appearance.Options.UseFont = true;
+            this.btnSil.Appearance.Options.UseForeColor = true;
+            this.btnSil.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnSil.Location = new System.Drawing.Point(20, 479);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(161, 41);
+            this.btnSil.TabIndex = 15;
+            this.btnSil.Text = "SİL";
+            this.btnSil.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.btnSil.Click += new System.EventHandler(this.BtnSil_Click);
+            // 
             // calendarControl1
             // 
             this.calendarControl1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl1.Location = new System.Drawing.Point(108, 195);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(261, 261);
+            this.calendarControl1.Size = new System.Drawing.Size(246, 261);
             this.calendarControl1.TabIndex = 14;
             // 
             // btnGuncelle
@@ -131,6 +151,15 @@
             this.btnGuncelle.Text = "GÜNCELLE";
             this.btnGuncelle.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
             this.btnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
+            // 
+            // txtUrunID
+            // 
+            this.txtUrunID.Enabled = false;
+            this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunID.Location = new System.Drawing.Point(108, 41);
+            this.txtUrunID.Name = "txtUrunID";
+            this.txtUrunID.Size = new System.Drawing.Size(200, 28);
+            this.txtUrunID.TabIndex = 2;
             // 
             // txtUrunAd
             // 
@@ -166,6 +195,16 @@
             this.txtFiyat.Size = new System.Drawing.Size(200, 28);
             this.txtFiyat.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(22, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Ürün ID:";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -196,45 +235,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Fiyat:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(22, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Ürün ID:";
-            // 
-            // txtUrunID
-            // 
-            this.txtUrunID.Enabled = false;
-            this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunID.Location = new System.Drawing.Point(108, 41);
-            this.txtUrunID.Name = "txtUrunID";
-            this.txtUrunID.Size = new System.Drawing.Size(200, 28);
-            this.txtUrunID.TabIndex = 2;
-            // 
-            // btnSil
-            // 
-            this.btnSil.Appearance.BackColor = System.Drawing.Color.White;
-            this.btnSil.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.btnSil.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnSil.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnSil.Appearance.Options.UseBackColor = true;
-            this.btnSil.Appearance.Options.UseBorderColor = true;
-            this.btnSil.Appearance.Options.UseFont = true;
-            this.btnSil.Appearance.Options.UseForeColor = true;
-            this.btnSil.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnSil.Location = new System.Drawing.Point(20, 479);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(161, 41);
-            this.btnSil.TabIndex = 15;
-            this.btnSil.Text = "SİL";
-            this.btnSil.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
-            this.btnSil.Click += new System.EventHandler(this.BtnSil_Click);
-            // 
             // FormUrunGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -246,7 +246,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "FormUrunGuncelle";
-            this.Text = "Ürün İşlemleri";
             this.Load += new System.EventHandler(this.FormUrunGuncelle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

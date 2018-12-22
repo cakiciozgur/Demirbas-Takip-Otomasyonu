@@ -61,8 +61,8 @@ namespace DemirbasOtomasyon.View
             
           private void FormZimmetGuncelleme_Load(object sender, EventArgs e)
         {
-            Araclar.comboBoxKullaniciGetir(cmbKullaniciGuncelle);
-            Araclar.comboBoxPersonelGetir(cmbPersonelGuncelle);
+            Araclar.ComboBoxKullaniciGetir(cmbKullaniciGuncelle);
+            Araclar.ComboBoxPersonelGetir(cmbPersonelGuncelle);
             cmbPersonelGuncelle.SelectedItem = null;
             cmbPersonelGuncelle.SelectedText = "Personel Seçiniz...";
             cmbKullaniciGuncelle.SelectedItem = null;

@@ -22,7 +22,7 @@ namespace DemirbasOtomasyon.View
 
         private void FormPersonelEkleme_Load(object sender, EventArgs e)
         {
-            Araclar.comboBoxDepartmanGetir(cmbDepartmanSec);
+            Araclar.ComboBoxDepartmanGetir(cmbDepartmanSec);
             cmbDepartmanSec.SelectedItem = null;
             cmbDepartmanSec.SelectedText = "Departman Seçiniz...";
         }

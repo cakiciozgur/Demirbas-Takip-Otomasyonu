@@ -63,11 +63,11 @@
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(435, 14);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(406, 20);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
-            this.pnlUrunGrs.Size = new System.Drawing.Size(276, 37);
+            this.pnlUrunGrs.Size = new System.Drawing.Size(470, 37);
             this.pnlUrunGrs.TabIndex = 0;
-            this.pnlUrunGrs.Text = "ZİMMET İŞLEMLERİ";
+            this.pnlUrunGrs.Text = "ZİMMET GÜNCELLEME İŞLEMLERİ";
             // 
             // grbUrunIslemleri
             // 
@@ -245,7 +245,6 @@
             this.Controls.Add(this.dgwZimmetGuncellemeListele);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormZimmetGuncelleme";
-            this.Text = "Zimmet Güncelle";
             this.Load += new System.EventHandler(this.FormZimmetGuncelleme_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
