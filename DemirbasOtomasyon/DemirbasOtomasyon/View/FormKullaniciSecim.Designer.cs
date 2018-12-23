@@ -47,9 +47,9 @@
             this.btnSatinAlmaBirimi.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btnSatinAlmaBirimi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSatinAlmaBirimi.ImageOptions.Image")));
             this.btnSatinAlmaBirimi.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnSatinAlmaBirimi.Location = new System.Drawing.Point(657, 113);
+            this.btnSatinAlmaBirimi.Location = new System.Drawing.Point(326, 113);
             this.btnSatinAlmaBirimi.Name = "btnSatinAlmaBirimi";
-            this.btnSatinAlmaBirimi.Size = new System.Drawing.Size(291, 375);
+            this.btnSatinAlmaBirimi.Size = new System.Drawing.Size(310, 375);
             this.btnSatinAlmaBirimi.TabIndex = 2;
             this.btnSatinAlmaBirimi.Text = "SATIN ALMA BİRİMİ GİRİŞ";
             this.btnSatinAlmaBirimi.Click += new System.EventHandler(this.BtnSatinAlmaBirimi_Click);
@@ -65,9 +65,9 @@
             this.btnBirimYetkilisi.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.btnBirimYetkilisi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBirimYetkilisi.ImageOptions.Image")));
             this.btnBirimYetkilisi.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnBirimYetkilisi.Location = new System.Drawing.Point(328, 113);
+            this.btnBirimYetkilisi.Location = new System.Drawing.Point(652, 113);
             this.btnBirimYetkilisi.Name = "btnBirimYetkilisi";
-            this.btnBirimYetkilisi.Size = new System.Drawing.Size(310, 375);
+            this.btnBirimYetkilisi.Size = new System.Drawing.Size(296, 375);
             this.btnBirimYetkilisi.TabIndex = 3;
             this.btnBirimYetkilisi.Text = "BİRİM YETKİLİSİ GİRİŞİ";
             this.btnBirimYetkilisi.Click += new System.EventHandler(this.BtnBirimYetkilisi_Click);

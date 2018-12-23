@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DemirbasOtomasyon.Controller;
 using DemirbasOtomasyon.Model;
-
+using DevExpress.XtraReports.UI;
 namespace DemirbasOtomasyon.View
 {
     public partial class FormZimmetListele : DevExpress.XtraEditors.XtraForm
@@ -49,7 +49,43 @@ namespace DemirbasOtomasyon.View
         }
         private void FormZimmetListele_Load(object sender, EventArgs e)
         {
+            Araclar.ComboBoxDepartmanGetir(cmbDepartmanTip);
+            cmbDepartmanTip.SelectedItem = null;
+            cmbDepartmanTip.SelectedText = "Departman Seçiniz...";
             ZimmetListele();
+        }
+
+        private void BtnZimmetBul_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtZimmetID.Text))
+            {
+               MessageBox.Show("Zimmet ID Giriniz !");
+            }
+            else
+            {
+                DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
+                var data = db.sp_ZimmetBul(int.Parse(txtZimmetID.Text));
+                dgwZimmetListele.DataSource = data.ToList();
+                ZimmetRenklendir();
+            }
+        }
+
+        private void BtnTumZimmetler_Click(object sender, EventArgs e)
+        {
+            ZimmetListele();
+        }
+        private void cmbDepartmanTip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
+            var data = db.sp_ZimmetListeleDepartmanaGore(Convert.ToInt32(cmbDepartmanTip.SelectedIndex + 1));
+            dgwZimmetListele.DataSource = data.ToList();
+            ZimmetRenklendir();
+        }
+
+        private void BtnRapor_Click(object sender, EventArgs e)
+        {
+            ZimmetRapor zr = new ZimmetRapor();
+            zr.ShowPreviewDialog();
         }
     }
 }

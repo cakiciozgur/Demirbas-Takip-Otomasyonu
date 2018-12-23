@@ -79,7 +79,6 @@
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(281, 36);
             this.txtKullaniciAdi.TabIndex = 19;
-            this.txtKullaniciAdi.Text = "Haci";
             // 
             // lblGiris
             // 

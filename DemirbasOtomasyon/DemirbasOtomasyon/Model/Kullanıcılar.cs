@@ -23,8 +23,10 @@ namespace DemirbasOtomasyon.Model
         public string kullaniciAdi { get; set; }
         public Nullable<int> kullaniciSifre { get; set; }
         public Nullable<int> rolID { get; set; }
+        public Nullable<int> departmanID { get; set; }
     
         public virtual Roller Roller { get; set; }
         public virtual ICollection<Zimmetler> Zimmetler { get; set; }
+        public virtual Departmanlar Departmanlar { get; set; }
     }
 }

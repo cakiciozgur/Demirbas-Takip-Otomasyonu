@@ -26,9 +26,9 @@ namespace DemirbasOtomasyon.View
             fks.Show();
             this.Hide();
         }
-
+        
         private void BtnGiris_Click(object sender, EventArgs e)
-        {
+        {      
             try
             {
                 Kullanıcılar kullanici = new Kullanıcılar

@@ -17,11 +17,13 @@ namespace DemirbasOtomasyon.Model
         public Departmanlar()
         {
             this.Personeller = new HashSet<Personeller>();
+            this.Kullanıcılar = new HashSet<Kullanıcılar>();
         }
     
         public int departmanID { get; set; }
         public string departmanAdi { get; set; }
     
         public virtual ICollection<Personeller> Personeller { get; set; }
+        public virtual ICollection<Kullanıcılar> Kullanıcılar { get; set; }
     }
 }

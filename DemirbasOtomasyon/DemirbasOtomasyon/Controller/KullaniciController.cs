@@ -21,20 +21,21 @@ namespace DemirbasOtomasyon.Controller
         {
             if (string.IsNullOrEmpty(kullanici.kullaniciAdi) && string.IsNullOrEmpty(kullanici.kullaniciSifre.ToString()))
             {
-                throw new Exception("Kullanici Verileri Boş Geçilemez !");
+                throw new Exception("Kullanici Bilgileri Boş Geçilemez !");
             }
             using (var context = new DemirbasTakipEntitiess())
             {
                 var result = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciAdi == kullanici.kullaniciAdi && x.kullaniciSifre == kullanici.kullaniciSifre);
-
+                
                 //if (result == null || result.Silindi == Convert.ToBoolean(EDeleted.silindi))
                 //{
                 //    throw new AuthenticationException("Kullanıcı Girişi Başarısız !");
                 //}
+
                 var roleResult = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciID == result.kullaniciID);
                 if (roleResult.rolID != (int)eRoles.Admin)
                 {
-                    throw new Exception("Kullanıcı Bilgileriniz Bu Sayfayı Açmak İçin Yeterli Değil ! \n Lütfen Standart Kullanıcı Biriminden Giriş Yapınız !");
+                    throw new Exception("Kullanıcı Bilgileriniz Bu Sayfayı Açmak İçin Yeterli Değil !");
                 }
                 return result;
             }
@@ -43,12 +44,11 @@ namespace DemirbasOtomasyon.Controller
         {
             if (string.IsNullOrEmpty(kullanici.kullaniciAdi) && string.IsNullOrEmpty(kullanici.kullaniciSifre.ToString()))
             {
-                throw new Exception("Kullanici Verileri Boş Geçilemez !");
+                throw new Exception("Kullanici Bilgileri Boş Geçilemez !");
             }
             using (var context = new DemirbasTakipEntitiess())
             {
                 var result = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciAdi == kullanici.kullaniciAdi && x.kullaniciSifre == kullanici.kullaniciSifre);
-
                 //if (result == null || result.Silindi == Convert.ToBoolean(EDeleted.silindi))
                 //{
                 //    throw new AuthenticationException("Kullanıcı Girişi Başarısız !");
@@ -56,7 +56,7 @@ namespace DemirbasOtomasyon.Controller
                 var roleResult = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciID == result.kullaniciID);
                 if (roleResult.rolID != (int)eRoles.BirimYetkilisi)
                 {
-                    throw new Exception("Kullanıcı Bilgileriniz Bu Sayfayı Açmak İçin Yeterli Değil ! \n Lütfen Standart Kullanıcı Biriminden Giriş Yapınız !");
+                    throw new Exception("Kullanıcı Bilgileriniz Bu Sayfayı Açmak İçin Yeterli Değil !");
                 }
                 return result;
             }
@@ -65,7 +65,7 @@ namespace DemirbasOtomasyon.Controller
         {
             if (string.IsNullOrEmpty(kullanici.kullaniciAdi) && string.IsNullOrEmpty(kullanici.kullaniciSifre.ToString()))
             {
-                throw new Exception("Kullanici Verileri Boş Geçilemez !");
+                throw new Exception("Kullanici Bilgileri Boş Geçilemez !");
             }
             using (var context = new DemirbasTakipEntitiess())
             {
@@ -78,7 +78,7 @@ namespace DemirbasOtomasyon.Controller
                 var roleResult = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciID == result.kullaniciID);
                 if (roleResult.rolID != (int)eRoles.SatinAlmaBirimi)
                 {
-                    throw new Exception("Kullanıcı Bilgileriniz Bu Sayfayı Açmak İçin Yeterli Değil ! \n Lütfen Standart Kullanıcı Biriminden Giriş Yapınız !");
+                    throw new Exception("Kullanıcı Bilgileriniz Bu Sayfayı Açmak İçin Yeterli Değil !");
                 }
                 return result;
             }

@@ -385,5 +385,41 @@ namespace DemirbasOtomasyon.Model
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetListeleGuncelleme_Result>("sp_ZimmetListeleGuncelleme");
         }
+    
+        public virtual ObjectResult<sp_ZimmetBul2_Result> sp_ZimmetBul2(Nullable<int> zimmetID)
+        {
+            var zimmetIDParameter = zimmetID.HasValue ?
+                new ObjectParameter("zimmetID", zimmetID) :
+                new ObjectParameter("zimmetID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetBul2_Result>("sp_ZimmetBul2", zimmetIDParameter);
+        }
+    
+        public virtual ObjectResult<sp_UrunBul_Result> sp_UrunBul(Nullable<int> urunID)
+        {
+            var urunIDParameter = urunID.HasValue ?
+                new ObjectParameter("urunID", urunID) :
+                new ObjectParameter("urunID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_UrunBul_Result>("sp_UrunBul", urunIDParameter);
+        }
+    
+        public virtual ObjectResult<sp_DepartmanaGoreListele_Result> sp_DepartmanaGoreListele(Nullable<int> departmanID)
+        {
+            var departmanIDParameter = departmanID.HasValue ?
+                new ObjectParameter("departmanID", departmanID) :
+                new ObjectParameter("departmanID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_DepartmanaGoreListele_Result>("sp_DepartmanaGoreListele", departmanIDParameter);
+        }
+    
+        public virtual ObjectResult<sp_ZimmetListeleDepartmanaGore_Result> sp_ZimmetListeleDepartmanaGore(Nullable<int> departmanID)
+        {
+            var departmanIDParameter = departmanID.HasValue ?
+                new ObjectParameter("departmanID", departmanID) :
+                new ObjectParameter("departmanID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetListeleDepartmanaGore_Result>("sp_ZimmetListeleDepartmanaGore", departmanIDParameter);
+        }
     }
 }

@@ -62,5 +62,18 @@ namespace DemirbasOtomasyon.View
                 MessageBox.Show("Hata: " + ex);
             }
         }
+        
+        private void BtnUrunBul_Click(object sender, EventArgs e)
+        {
+            DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
+            var data = db.sp_UrunBul(int.Parse(txtUrunID.Text));
+            dgwUrunListesi.DataSource = data.ToList();
+            UrunRenklendir();
+        }
+
+        private void BtnTumUrunler_Click(object sender, EventArgs e)
+        {
+            UrunListele();
+        }
     }
 }

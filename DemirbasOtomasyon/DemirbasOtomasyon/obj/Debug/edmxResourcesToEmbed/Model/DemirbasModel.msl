@@ -12,6 +12,7 @@
     <EntitySetMapping Name="Kullanıcılar">
       <EntityTypeMapping TypeName="DemirbasTakipModel.Kullanıcılar">
         <MappingFragment StoreEntitySet="Kullanıcılar">
+          <ScalarProperty Name="departmanID" ColumnName="departmanID" />
           <ScalarProperty Name="kullaniciID" ColumnName="kullaniciID" />
           <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
           <ScalarProperty Name="kullaniciSifre" ColumnName="kullaniciSifre" />
@@ -111,17 +112,6 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_PersonelEkle" FunctionName="DemirbasTakipModel.Store.sp_PersonelEkle" />
-    <FunctionImportMapping FunctionImportName="sp_PersonelListele" FunctionName="DemirbasTakipModel.Store.sp_PersonelListele">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_PersonelListele_Result">
-          <ScalarProperty Name="personelID" ColumnName="personelID" />
-          <ScalarProperty Name="adi" ColumnName="adi" />
-          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
-          <ScalarProperty Name="cepTelefonu" ColumnName="cepTelefonu" />
-          <ScalarProperty Name="departmanAdi" ColumnName="departmanAdi" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DemirbasTakipModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DemirbasTakipModel.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="sp_UrunEkle" FunctionName="DemirbasTakipModel.Store.sp_UrunEkle" />
@@ -207,14 +197,41 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_ZimmetGuncelle" FunctionName="DemirbasTakipModel.Store.sp_ZimmetGuncelle" />
-    <FunctionImportMapping FunctionImportName="sp_ZimmetListeleGuncelleme" FunctionName="DemirbasTakipModel.Store.sp_ZimmetListeleGuncelleme">
+    <FunctionImportMapping FunctionImportName="sp_UrunBul" FunctionName="DemirbasTakipModel.Store.sp_UrunBul">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_ZimmetListeleGuncelleme_Result">
+        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_UrunBul_Result">
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="stokMiktari" ColumnName="stokMiktari" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="satınAlınmaTarihi" ColumnName="satınAlınmaTarihi" />
+          <ScalarProperty Name="stokDurum" ColumnName="stokDurum" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_DepartmanaGoreListele" FunctionName="DemirbasTakipModel.Store.sp_DepartmanaGoreListele">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_DepartmanaGoreListele_Result">
+          <ScalarProperty Name="Personel_ID" ColumnName="Personel ID" />
+          <ScalarProperty Name="Adı" ColumnName="Adı" />
+          <ScalarProperty Name="Soyadı" ColumnName="Soyadı" />
+          <ScalarProperty Name="Cep_Telefonu" ColumnName="Cep Telefonu" />
+          <ScalarProperty Name="Departman" ColumnName="Departman" />
+          <ScalarProperty Name="İşe_Giriş_Tarihi" ColumnName="İşe Giriş Tarihi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ZimmetListeleDepartmanaGore" FunctionName="DemirbasTakipModel.Store.sp_ZimmetListeleDepartmanaGore">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_ZimmetListeleDepartmanaGore_Result">
+          <ScalarProperty Name="Ürün_ID" ColumnName="Ürün ID" />
           <ScalarProperty Name="Zimmet_ID" ColumnName="Zimmet ID" />
           <ScalarProperty Name="Zimmet_Adet" ColumnName="Zimmet Adet" />
+          <ScalarProperty Name="Ürün_Adı" ColumnName="Ürün Adı" />
           <ScalarProperty Name="Personel_Adı" ColumnName="Personel Adı" />
-          <ScalarProperty Name="Kullanıcı_Adı" ColumnName="Kullanıcı Adı" />
+          <ScalarProperty Name="Departman" ColumnName="Departman" />
           <ScalarProperty Name="Zimmet_Tarihi" ColumnName="Zimmet Tarihi" />
+          <ScalarProperty Name="Kullanıcı_Adı" ColumnName="Kullanıcı Adı" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

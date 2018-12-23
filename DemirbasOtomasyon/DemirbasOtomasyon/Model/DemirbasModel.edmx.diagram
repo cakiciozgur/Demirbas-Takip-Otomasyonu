@@ -17,6 +17,7 @@
         <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_Kullanıcılar" ManuallyRouted="false" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_Personeller" ManuallyRouted="false" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="DemirbasTakipModel.FK_Kullanıcılar_Departmanlar" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

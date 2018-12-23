@@ -49,7 +49,38 @@ namespace DemirbasOtomasyon.View
         }
         private void FormPersonelListele_Load(object sender, EventArgs e)
         {
+            Araclar.ComboBoxDepartmanGetir(cmbDepartmanTip);
+            cmbDepartmanTip.SelectedItem = null;
+            cmbDepartmanTip.SelectedText = "Departman Seçiniz...";
+            PersonelListele();   
+        }
+
+        private void BtnPersonelBul_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPersonelID.Text))
+            {
+               MessageBox.Show("Personel ID Giriniz !");
+            }
+            else
+            {
+                DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
+                var data = db.sp_PersonelBul(int.Parse(txtPersonelID.Text));
+                dgwPersonelListele.DataSource = data.ToList();
+                PersonelRenklendir();
+            }
+            
+        }
+
+        private void BtnTumPersonel_Click(object sender, EventArgs e)
+        {
             PersonelListele();
+        }
+        private void cmbDepartmanTip_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
+            var data = db.sp_DepartmanaGoreListele(Convert.ToInt32(cmbDepartmanTip.SelectedIndex + 1));
+            dgwPersonelListele.DataSource = data.ToList();
+            PersonelRenklendir();
         }
     }
 }

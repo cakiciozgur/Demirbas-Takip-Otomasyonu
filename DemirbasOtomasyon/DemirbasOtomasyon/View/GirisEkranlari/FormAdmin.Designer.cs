@@ -57,7 +57,7 @@
             this.btnPersonelListele.Appearance.Options.UseBorderColor = true;
             this.btnPersonelListele.Appearance.Options.UseFont = true;
             this.btnPersonelListele.Appearance.Options.UseForeColor = true;
-            this.btnPersonelListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnPersonelListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonelListele.ImageOptions.Image")));
             this.btnPersonelListele.Location = new System.Drawing.Point(16, 30);
             this.btnPersonelListele.Name = "btnPersonelListele";
             this.btnPersonelListele.Size = new System.Drawing.Size(200, 180);
@@ -69,7 +69,7 @@
             // 
             this.btnPersonelEkle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPersonelEkle.Appearance.Options.UseFont = true;
-            this.btnPersonelEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnPersonelEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonelEkle.ImageOptions.Image")));
             this.btnPersonelEkle.Location = new System.Drawing.Point(222, 30);
             this.btnPersonelEkle.Name = "btnPersonelEkle";
             this.btnPersonelEkle.Size = new System.Drawing.Size(200, 85);
@@ -81,7 +81,6 @@
             // 
             this.btnPersonelGuncelle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPersonelGuncelle.Appearance.Options.UseFont = true;
-            this.btnPersonelGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
             this.btnPersonelGuncelle.Location = new System.Drawing.Point(222, 125);
             this.btnPersonelGuncelle.Name = "btnPersonelGuncelle";
             this.btnPersonelGuncelle.Size = new System.Drawing.Size(200, 85);
@@ -93,7 +92,7 @@
             // 
             this.btnZimmetGuncelle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnZimmetGuncelle.Appearance.Options.UseFont = true;
-            this.btnZimmetGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.btnZimmetGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnZimmetGuncelle.ImageOptions.Image")));
             this.btnZimmetGuncelle.Location = new System.Drawing.Point(221, 128);
             this.btnZimmetGuncelle.Name = "btnZimmetGuncelle";
             this.btnZimmetGuncelle.Size = new System.Drawing.Size(200, 85);
@@ -105,7 +104,7 @@
             // 
             this.btnZimmetEkle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnZimmetEkle.Appearance.Options.UseFont = true;
-            this.btnZimmetEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.btnZimmetEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnZimmetEkle.ImageOptions.Image")));
             this.btnZimmetEkle.Location = new System.Drawing.Point(221, 33);
             this.btnZimmetEkle.Name = "btnZimmetEkle";
             this.btnZimmetEkle.Size = new System.Drawing.Size(200, 85);
@@ -117,7 +116,7 @@
             // 
             this.btnZimmetListele.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnZimmetListele.Appearance.Options.UseFont = true;
-            this.btnZimmetListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.btnZimmetListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnZimmetListele.ImageOptions.Image")));
             this.btnZimmetListele.Location = new System.Drawing.Point(15, 33);
             this.btnZimmetListele.Name = "btnZimmetListele";
             this.btnZimmetListele.Size = new System.Drawing.Size(200, 180);
@@ -129,7 +128,7 @@
             // 
             this.btnUrunGuncelle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunGuncelle.Appearance.Options.UseFont = true;
-            this.btnUrunGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
+            this.btnUrunGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUrunGuncelle.ImageOptions.Image")));
             this.btnUrunGuncelle.Location = new System.Drawing.Point(220, 128);
             this.btnUrunGuncelle.Name = "btnUrunGuncelle";
             this.btnUrunGuncelle.Size = new System.Drawing.Size(200, 85);
@@ -141,7 +140,7 @@
             // 
             this.btnUrunEkle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunEkle.Appearance.Options.UseFont = true;
-            this.btnUrunEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
+            this.btnUrunEkle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUrunEkle.ImageOptions.Image")));
             this.btnUrunEkle.Location = new System.Drawing.Point(220, 33);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(200, 85);
@@ -153,7 +152,7 @@
             // 
             this.btnUrunListele.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUrunListele.Appearance.Options.UseFont = true;
-            this.btnUrunListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
+            this.btnUrunListele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUrunListele.ImageOptions.Image")));
             this.btnUrunListele.Location = new System.Drawing.Point(14, 33);
             this.btnUrunListele.Name = "btnUrunListele";
             this.btnUrunListele.Size = new System.Drawing.Size(200, 180);

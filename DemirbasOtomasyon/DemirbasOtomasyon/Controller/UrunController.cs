@@ -33,5 +33,12 @@ namespace DemirbasOtomasyon.Controller
                 context.sp_UrunSil(urunID);
             }
         }
+        public static void UrunBul(int urunID)
+        {
+            using (var context = new DemirbasTakipEntitiess())
+            {
+                context.sp_UrunBul(urunID);
+            }
+        }
     }
 }

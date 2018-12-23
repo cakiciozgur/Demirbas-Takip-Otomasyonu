@@ -42,6 +42,7 @@ namespace DemirbasOtomasyon.Controller
                 context.sp_PersonelSil(personelID);
             }
         }
+
     }
 
 }

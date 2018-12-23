@@ -33,9 +33,12 @@
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grbUrunAramaIslemleri = new System.Windows.Forms.GroupBox();
-            this.btnUrunBul = new DevExpress.XtraEditors.SimpleButton();
-            this.txtUrunAd = new System.Windows.Forms.TextBox();
+            this.cmbDepartmanTip = new System.Windows.Forms.ComboBox();
+            this.BtnTumPersonel = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnPersonelBul = new DevExpress.XtraEditors.SimpleButton();
+            this.txtPersonelID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.BtnRapor = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).BeginInit();
             this.panel1.SuspendLayout();
             this.grbUrunAramaIslemleri.SuspendLayout();
@@ -80,8 +83,11 @@
             // 
             // grbUrunAramaIslemleri
             // 
-            this.grbUrunAramaIslemleri.Controls.Add(this.btnUrunBul);
-            this.grbUrunAramaIslemleri.Controls.Add(this.txtUrunAd);
+            this.grbUrunAramaIslemleri.Controls.Add(this.BtnRapor);
+            this.grbUrunAramaIslemleri.Controls.Add(this.cmbDepartmanTip);
+            this.grbUrunAramaIslemleri.Controls.Add(this.BtnTumPersonel);
+            this.grbUrunAramaIslemleri.Controls.Add(this.BtnPersonelBul);
+            this.grbUrunAramaIslemleri.Controls.Add(this.txtPersonelID);
             this.grbUrunAramaIslemleri.Controls.Add(this.label3);
             this.grbUrunAramaIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbUrunAramaIslemleri.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -91,32 +97,62 @@
             this.grbUrunAramaIslemleri.TabIndex = 25;
             this.grbUrunAramaIslemleri.TabStop = false;
             // 
-            // btnUrunBul
+            // cmbDepartmanTip
             // 
-            this.btnUrunBul.Appearance.BackColor = System.Drawing.Color.White;
-            this.btnUrunBul.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.btnUrunBul.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnUrunBul.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunBul.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnUrunBul.Appearance.Options.UseBackColor = true;
-            this.btnUrunBul.Appearance.Options.UseBorderColor = true;
-            this.btnUrunBul.Appearance.Options.UseFont = true;
-            this.btnUrunBul.Appearance.Options.UseForeColor = true;
-            this.btnUrunBul.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnUrunBul.Location = new System.Drawing.Point(382, 39);
-            this.btnUrunBul.Name = "btnUrunBul";
-            this.btnUrunBul.Size = new System.Drawing.Size(161, 41);
-            this.btnUrunBul.TabIndex = 12;
-            this.btnUrunBul.Text = "ARA";
-            this.btnUrunBul.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.cmbDepartmanTip.FormattingEnabled = true;
+            this.cmbDepartmanTip.Location = new System.Drawing.Point(638, 47);
+            this.cmbDepartmanTip.Name = "cmbDepartmanTip";
+            this.cmbDepartmanTip.Size = new System.Drawing.Size(212, 30);
+            this.cmbDepartmanTip.TabIndex = 14;
+            this.cmbDepartmanTip.SelectedIndexChanged += new System.EventHandler(this.cmbDepartmanTip_SelectedIndexChanged);
             // 
-            // txtUrunAd
+            // BtnTumPersonel
             // 
-            this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAd.Location = new System.Drawing.Point(118, 47);
-            this.txtUrunAd.Name = "txtUrunAd";
-            this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
-            this.txtUrunAd.TabIndex = 2;
+            this.BtnTumPersonel.Appearance.BackColor = System.Drawing.Color.White;
+            this.BtnTumPersonel.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.BtnTumPersonel.Appearance.BorderColor = System.Drawing.Color.White;
+            this.BtnTumPersonel.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnTumPersonel.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BtnTumPersonel.Appearance.Options.UseBackColor = true;
+            this.BtnTumPersonel.Appearance.Options.UseBorderColor = true;
+            this.BtnTumPersonel.Appearance.Options.UseFont = true;
+            this.BtnTumPersonel.Appearance.Options.UseForeColor = true;
+            this.BtnTumPersonel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.BtnTumPersonel.Location = new System.Drawing.Point(888, 63);
+            this.BtnTumPersonel.Name = "BtnTumPersonel";
+            this.BtnTumPersonel.Size = new System.Drawing.Size(161, 41);
+            this.BtnTumPersonel.TabIndex = 13;
+            this.BtnTumPersonel.Text = "TÜM PERSONEL";
+            this.BtnTumPersonel.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.BtnTumPersonel.Click += new System.EventHandler(this.BtnTumPersonel_Click);
+            // 
+            // BtnPersonelBul
+            // 
+            this.BtnPersonelBul.Appearance.BackColor = System.Drawing.Color.White;
+            this.BtnPersonelBul.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.BtnPersonelBul.Appearance.BorderColor = System.Drawing.Color.White;
+            this.BtnPersonelBul.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnPersonelBul.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BtnPersonelBul.Appearance.Options.UseBackColor = true;
+            this.BtnPersonelBul.Appearance.Options.UseBorderColor = true;
+            this.BtnPersonelBul.Appearance.Options.UseFont = true;
+            this.BtnPersonelBul.Appearance.Options.UseForeColor = true;
+            this.BtnPersonelBul.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.BtnPersonelBul.Location = new System.Drawing.Point(340, 39);
+            this.BtnPersonelBul.Name = "BtnPersonelBul";
+            this.BtnPersonelBul.Size = new System.Drawing.Size(161, 41);
+            this.BtnPersonelBul.TabIndex = 12;
+            this.BtnPersonelBul.Text = "ARA";
+            this.BtnPersonelBul.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.BtnPersonelBul.Click += new System.EventHandler(this.BtnPersonelBul_Click);
+            // 
+            // txtPersonelID
+            // 
+            this.txtPersonelID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtPersonelID.Location = new System.Drawing.Point(118, 47);
+            this.txtPersonelID.Name = "txtPersonelID";
+            this.txtPersonelID.Size = new System.Drawing.Size(200, 28);
+            this.txtPersonelID.TabIndex = 2;
             // 
             // label3
             // 
@@ -127,6 +163,25 @@
             this.label3.Size = new System.Drawing.Size(102, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Personel ID:";
+            // 
+            // BtnRapor
+            // 
+            this.BtnRapor.Appearance.BackColor = System.Drawing.Color.White;
+            this.BtnRapor.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.BtnRapor.Appearance.BorderColor = System.Drawing.Color.White;
+            this.BtnRapor.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnRapor.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BtnRapor.Appearance.Options.UseBackColor = true;
+            this.BtnRapor.Appearance.Options.UseBorderColor = true;
+            this.BtnRapor.Appearance.Options.UseFont = true;
+            this.BtnRapor.Appearance.Options.UseForeColor = true;
+            this.BtnRapor.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.BtnRapor.Location = new System.Drawing.Point(888, 16);
+            this.BtnRapor.Name = "BtnRapor";
+            this.BtnRapor.Size = new System.Drawing.Size(161, 41);
+            this.BtnRapor.TabIndex = 26;
+            this.BtnRapor.Text = "RAPORLA";
+            this.BtnRapor.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
             // 
             // FormPersonelListele
             // 
@@ -154,8 +209,11 @@
         private System.Windows.Forms.Label pnlUrunGrs;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox grbUrunAramaIslemleri;
-        private DevExpress.XtraEditors.SimpleButton btnUrunBul;
-        private System.Windows.Forms.TextBox txtUrunAd;
+        private DevExpress.XtraEditors.SimpleButton BtnPersonelBul;
+        private System.Windows.Forms.TextBox txtPersonelID;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.SimpleButton BtnTumPersonel;
+        private System.Windows.Forms.ComboBox cmbDepartmanTip;
+        private DevExpress.XtraEditors.SimpleButton BtnRapor;
     }
 }
