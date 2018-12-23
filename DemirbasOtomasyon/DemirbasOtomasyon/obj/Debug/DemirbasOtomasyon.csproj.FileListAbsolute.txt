@@ -217,6 +217,3 @@ C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtom
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\es\DevExpress.Diagram.v17.2.Core.resources.dll
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\ja\DevExpress.Diagram.v17.2.Core.resources.dll
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\bin\Debug\ru\DevExpress.Diagram.v17.2.Core.resources.dll
-C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.PersonelRapor.resources
-C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.UrunlerRapor.resources
-C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.ZimmetRapor.resources

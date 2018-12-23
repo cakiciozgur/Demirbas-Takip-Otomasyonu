@@ -186,7 +186,7 @@
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
         </Function>
-        <Function Name="sp_PersonelBul" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="sp_PersonelBul2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="personelID" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_PersonelEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -206,9 +206,6 @@
         </Function>
         <Function Name="sp_PersonelListele2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_PersonelSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="personelID" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_PersonelSil2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="personelID" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -258,7 +255,6 @@
         <Function Name="sp_ZimmetKaldir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="zimmetID" Type="int" Mode="In" />
         </Function>
-        <Function Name="sp_ZimmetListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_ZimmetListele2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_ZimmetListeleDepartmanaGore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="departmanID" Type="int" Mode="In" />
@@ -584,7 +580,10 @@
           <Parameter Name="departmanID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ZimmetListeleDepartmanaGore" ReturnType="Collection(DemirbasTakipModel.sp_ZimmetListeleDepartmanaGore_Result)">
-            <Parameter Name="departmanID" Mode="In" Type="Int32" />
+          <Parameter Name="departmanID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_PersonelBul2" ReturnType="Collection(DemirbasTakipModel.sp_PersonelBul2_Result)">
+          <Parameter Name="personelID" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -717,6 +716,14 @@
           <Property Type="DateTime" Name="Zimmet_Tarihi" Nullable="true" Precision="23" />
           <Property Type="String" Name="Kullanıcı_Adı" Nullable="true" MaxLength="8" />
         </ComplexType>
+        <ComplexType Name="sp_PersonelBul2_Result">
+          <Property Type="Int32" Name="personelID" Nullable="false" />
+          <Property Type="String" Name="adi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="soyadi" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="cepTelefonu" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="departmanAdi" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="iseGirisTarihi" Nullable="true" Precision="23" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -822,17 +829,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_PersonelBul" FunctionName="DemirbasTakipModel.Store.sp_PersonelBul">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_PersonelBul_Result">
-                <ScalarProperty Name="personelID" ColumnName="personelID" />
-                <ScalarProperty Name="adi" ColumnName="adi" />
-                <ScalarProperty Name="soyadi" ColumnName="soyadi" />
-                <ScalarProperty Name="cepTelefonu" ColumnName="cepTelefonu" />
-                <ScalarProperty Name="departmanAdi" ColumnName="departmanAdi" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_PersonelEkle" FunctionName="DemirbasTakipModel.Store.sp_PersonelEkle" />
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DemirbasTakipModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DemirbasTakipModel.Store.sp_upgraddiagrams" />
@@ -866,20 +862,6 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_ZimmetEkle" FunctionName="DemirbasTakipModel.Store.sp_ZimmetEkle" />
           <FunctionImportMapping FunctionImportName="sp_ZimmetKaldir" FunctionName="DemirbasTakipModel.Store.sp_ZimmetKaldir" />
-          <FunctionImportMapping FunctionImportName="sp_ZimmetListele" FunctionName="DemirbasTakipModel.Store.sp_ZimmetListele">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_ZimmetListele_Result">
-                <ScalarProperty Name="zimmetID" ColumnName="zimmetID" />
-                <ScalarProperty Name="urunID" ColumnName="urunID" />
-                <ScalarProperty Name="urunAd" ColumnName="urunAd" />
-                <ScalarProperty Name="personelID" ColumnName="personelID" />
-                <ScalarProperty Name="adi" ColumnName="adi" />
-                <ScalarProperty Name="departmanAdi" ColumnName="departmanAdi" />
-                <ScalarProperty Name="zimmetTarihi" ColumnName="zimmetTarihi" />
-                <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_UrunSil" FunctionName="DemirbasTakipModel.Store.sp_UrunSil" />
           <FunctionImportMapping FunctionImportName="sp_ZimmetListele2" FunctionName="DemirbasTakipModel.Store.sp_ZimmetListele2">
             <ResultMapping>
@@ -909,7 +891,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_PersonelSil2" FunctionName="DemirbasTakipModel.Store.sp_PersonelSil2" />
           <FunctionImportMapping FunctionImportName="FN_UrunIDGetir" FunctionName="DemirbasTakipModel.Store.FN_UrunIDGetir">
             <ResultMapping>
               <ComplexTypeMapping TypeName="DemirbasTakipModel.FN_UrunIDGetir_Result">
@@ -954,6 +935,18 @@
                 <ScalarProperty Name="Departman" ColumnName="Departman" />
                 <ScalarProperty Name="Zimmet_Tarihi" ColumnName="Zimmet Tarihi" />
                 <ScalarProperty Name="Kullanıcı_Adı" ColumnName="Kullanıcı Adı" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_PersonelBul2" FunctionName="DemirbasTakipModel.Store.sp_PersonelBul2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_PersonelBul2_Result">
+                <ScalarProperty Name="personelID" ColumnName="personelID" />
+                <ScalarProperty Name="adi" ColumnName="adi" />
+                <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+                <ScalarProperty Name="cepTelefonu" ColumnName="cepTelefonu" />
+                <ScalarProperty Name="departmanAdi" ColumnName="departmanAdi" />
+                <ScalarProperty Name="iseGirisTarihi" ColumnName="iseGirisTarihi" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

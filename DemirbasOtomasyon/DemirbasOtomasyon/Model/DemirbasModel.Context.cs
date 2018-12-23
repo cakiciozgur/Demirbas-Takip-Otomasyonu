@@ -421,5 +421,14 @@ namespace DemirbasOtomasyon.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ZimmetListeleDepartmanaGore_Result>("sp_ZimmetListeleDepartmanaGore", departmanIDParameter);
         }
+    
+        public virtual ObjectResult<sp_PersonelBul2_Result> sp_PersonelBul2(Nullable<int> personelID)
+        {
+            var personelIDParameter = personelID.HasValue ?
+                new ObjectParameter("personelID", personelID) :
+                new ObjectParameter("personelID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PersonelBul2_Result>("sp_PersonelBul2", personelIDParameter);
+        }
     }
 }

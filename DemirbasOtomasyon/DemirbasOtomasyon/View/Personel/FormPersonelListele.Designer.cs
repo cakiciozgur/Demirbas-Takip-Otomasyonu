@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPersonelListele));
             this.dgwPersonelListele = new System.Windows.Forms.DataGridView();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grbUrunAramaIslemleri = new System.Windows.Forms.GroupBox();
+            this.BtnRapor = new DevExpress.XtraEditors.SimpleButton();
             this.cmbDepartmanTip = new System.Windows.Forms.ComboBox();
             this.BtnTumPersonel = new DevExpress.XtraEditors.SimpleButton();
             this.BtnPersonelBul = new DevExpress.XtraEditors.SimpleButton();
             this.txtPersonelID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.BtnRapor = new DevExpress.XtraEditors.SimpleButton();
+            this.ppdDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.pdYazici = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).BeginInit();
             this.panel1.SuspendLayout();
             this.grbUrunAramaIslemleri.SuspendLayout();
@@ -96,6 +99,26 @@
             this.grbUrunAramaIslemleri.Size = new System.Drawing.Size(1082, 110);
             this.grbUrunAramaIslemleri.TabIndex = 25;
             this.grbUrunAramaIslemleri.TabStop = false;
+            // 
+            // BtnRapor
+            // 
+            this.BtnRapor.Appearance.BackColor = System.Drawing.Color.White;
+            this.BtnRapor.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
+            this.BtnRapor.Appearance.BorderColor = System.Drawing.Color.White;
+            this.BtnRapor.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnRapor.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.BtnRapor.Appearance.Options.UseBackColor = true;
+            this.BtnRapor.Appearance.Options.UseBorderColor = true;
+            this.BtnRapor.Appearance.Options.UseFont = true;
+            this.BtnRapor.Appearance.Options.UseForeColor = true;
+            this.BtnRapor.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.BtnRapor.Location = new System.Drawing.Point(888, 16);
+            this.BtnRapor.Name = "BtnRapor";
+            this.BtnRapor.Size = new System.Drawing.Size(161, 41);
+            this.BtnRapor.TabIndex = 26;
+            this.BtnRapor.Text = "RAPORLA";
+            this.BtnRapor.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.BtnRapor.Click += new System.EventHandler(this.BtnRapor_Click);
             // 
             // cmbDepartmanTip
             // 
@@ -164,24 +187,20 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Personel ID:";
             // 
-            // BtnRapor
+            // ppdDialog
             // 
-            this.BtnRapor.Appearance.BackColor = System.Drawing.Color.White;
-            this.BtnRapor.Appearance.BackColor2 = System.Drawing.Color.DodgerBlue;
-            this.BtnRapor.Appearance.BorderColor = System.Drawing.Color.White;
-            this.BtnRapor.Appearance.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnRapor.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.BtnRapor.Appearance.Options.UseBackColor = true;
-            this.BtnRapor.Appearance.Options.UseBorderColor = true;
-            this.BtnRapor.Appearance.Options.UseFont = true;
-            this.BtnRapor.Appearance.Options.UseForeColor = true;
-            this.BtnRapor.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.BtnRapor.Location = new System.Drawing.Point(888, 16);
-            this.BtnRapor.Name = "BtnRapor";
-            this.BtnRapor.Size = new System.Drawing.Size(161, 41);
-            this.BtnRapor.TabIndex = 26;
-            this.BtnRapor.Text = "RAPORLA";
-            this.BtnRapor.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
+            this.ppdDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.ppdDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.ppdDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.ppdDialog.Document = this.pdYazici;
+            this.ppdDialog.Enabled = true;
+            this.ppdDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdDialog.Icon")));
+            this.ppdDialog.Name = "ppdDialog";
+            this.ppdDialog.Visible = false;
+            // 
+            // pdYazici
+            // 
+            this.pdYazici.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdYazici_PrintPage);
             // 
             // FormPersonelListele
             // 
@@ -215,5 +234,7 @@
         private DevExpress.XtraEditors.SimpleButton BtnTumPersonel;
         private System.Windows.Forms.ComboBox cmbDepartmanTip;
         private DevExpress.XtraEditors.SimpleButton BtnRapor;
+        private System.Windows.Forms.PrintPreviewDialog ppdDialog;
+        private System.Drawing.Printing.PrintDocument pdYazici;
     }
 }

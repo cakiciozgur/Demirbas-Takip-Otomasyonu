@@ -64,7 +64,7 @@ namespace DemirbasOtomasyon.View
             else
             {
                 DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
-                var data = db.sp_PersonelBul(int.Parse(txtPersonelID.Text));
+                var data = db.sp_PersonelBul2(int.Parse(txtPersonelID.Text));
                 dgwPersonelListele.DataSource = data.ToList();
                 PersonelRenklendir();
             }
@@ -81,6 +81,37 @@ namespace DemirbasOtomasyon.View
             var data = db.sp_DepartmanaGoreListele(Convert.ToInt32(cmbDepartmanTip.SelectedIndex + 1));
             dgwPersonelListele.DataSource = data.ToList();
             PersonelRenklendir();
+        }
+        private void BtnRapor_Click(object sender, EventArgs e)
+        {
+            ppdDialog.ShowDialog();
+        }
+        Font Baslik = new Font("Corbel", 18, FontStyle.Bold);
+        Font Govde = new Font("Corbel", 12);
+        SolidBrush sb = new SolidBrush(Color.Black);
+
+        private void pdYazici_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            StringFormat Format = new StringFormat();
+            Format.Alignment = StringAlignment.Near;
+            e.Graphics.DrawString("ÜRÜNLER RAPORU", Baslik, sb, 310, 200);
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 230);
+            e.Graphics.DrawString("PERSONEL ID        ADI                SOYADI               CEP TELEFONU               DEPARTMAN                   İŞE GİRİŞ TARİHİ            ", Govde, sb, 50, 300);
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 320);
+            int i;
+            for (i = 0; i < dgwPersonelListele.Rows.Count; i++)
+            {
+                e.Graphics.DrawString(dgwPersonelListele.Rows[i].Cells[0].Value.ToString(), Govde, sb, 80, 340 + (i * 30));
+                e.Graphics.DrawString(dgwPersonelListele.Rows[i].Cells[1].Value.ToString(), Govde, sb, 170, 340 + (i * 30));
+                e.Graphics.DrawString(dgwPersonelListele.Rows[i].Cells[2].Value.ToString(), Govde, sb, 260, 340 + (i * 30));
+                e.Graphics.DrawString(dgwPersonelListele.Rows[i].Cells[3].Value.ToString(), Govde, sb, 370, 340 + (i * 30));
+                e.Graphics.DrawString(dgwPersonelListele.Rows[i].Cells[4].Value.ToString(), Govde, sb, 525, 340 + (i * 30));
+                e.Graphics.DrawString(dgwPersonelListele.Rows[i].Cells[5].Value.ToString(), Govde, sb, 680, 340 + (i * 30));
+
+            }
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 350 + (i * 30));
+            e.Graphics.DrawString("TOPLAM PERSONEL :  "+i, Govde, sb, 600, 370 + (i * 30));
+            e.Graphics.DrawString("ÇAKAN LTD.ŞTİ - 2018", Govde, sb, 600, 1000);
         }
     }
 }

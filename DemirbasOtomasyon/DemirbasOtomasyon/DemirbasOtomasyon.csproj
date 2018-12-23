@@ -78,6 +78,7 @@
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -87,6 +88,7 @@
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -137,6 +139,9 @@
     <Compile Include="Model\sp_DepartmanaGoreListele_Result.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\sp_PersonelBul2_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\sp_PersonelListele2_Result.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
@@ -156,20 +161,8 @@
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\UrunViewModel.cs" />
-    <Compile Include="PersonelRapor.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PersonelRapor.Designer.cs">
-      <DependentUpon>PersonelRapor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UrunlerRapor.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="UrunlerRapor.Designer.cs">
-      <DependentUpon>UrunlerRapor.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\GirisEkranlari\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,15 +292,6 @@
     <Compile Include="View\Zimmet\FormZimmetListele.Designer.cs">
       <DependentUpon>FormZimmetListele.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZimmetRapor.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ZimmetRapor.Designer.cs">
-      <DependentUpon>ZimmetRapor.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="PersonelRapor.resx">
-      <DependentUpon>PersonelRapor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -318,9 +302,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UrunlerRapor.resx">
-      <DependentUpon>UrunlerRapor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\GirisEkranlari\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,9 +349,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Zimmet\FormZimmetListele.resx">
       <DependentUpon>FormZimmetListele.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZimmetRapor.resx">
-      <DependentUpon>ZimmetRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\DemirbasModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

@@ -47,6 +47,7 @@ namespace DemirbasOtomasyon.View
                 MessageBox.Show("Hata: " + ex);
             }
         }
+        
         private void FormZimmetListele_Load(object sender, EventArgs e)
         {
             Araclar.ComboBoxDepartmanGetir(cmbDepartmanTip);
@@ -84,8 +85,35 @@ namespace DemirbasOtomasyon.View
 
         private void BtnRapor_Click(object sender, EventArgs e)
         {
-            ZimmetRapor zr = new ZimmetRapor();
-            zr.ShowPreviewDialog();
+            ppdDialog.ShowDialog();
+        }
+        Font Baslik = new Font("Corbel",18, FontStyle.Bold);
+        Font Govde = new Font("Corbel", 12);
+        SolidBrush sb = new SolidBrush(Color.Black);
+        private void pdYazici_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            decimal ToplamZimmet = 0;
+            int i;
+            StringFormat Format = new StringFormat();
+            Format.Alignment = StringAlignment.Near;
+            e.Graphics.DrawString("ZİMMETLER RAPORU", Baslik, sb, 310, 200);
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 230);
+            e.Graphics.DrawString("ZİMMET ID          ADET         ÜRÜN ADI          PERSONEL         DEPARTMAN               TARİH                           KULLANICI", Govde, sb, 50, 300);
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 320);
+            for (i = 0; i < dgwZimmetListele.Rows.Count; i++)
+            {
+                e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[1].Value.ToString(), Govde, sb, 70, 340 + (i * 30));
+                e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[2].Value.ToString(), Govde, sb, 170, 340 + (i * 30));
+                e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[3].Value.ToString(), Govde, sb, 240, 340 + (i * 30));
+                e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[4].Value.ToString(), Govde, sb, 350, 340 + (i * 30));
+                e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[5].Value.ToString(), Govde, sb, 450, 340 + (i * 30));
+                e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[6].Value.ToString(), Govde, sb, 590, 340 + (i * 30));
+                e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[7].Value.ToString(), Govde, sb, 750, 340 + (i * 30));
+                ToplamZimmet += Convert.ToDecimal(dgwZimmetListele.Rows[i].Cells[1].Value);
+            }
+            e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 355+(i*30));
+            e.Graphics.DrawString("TOPLAM ZİMMETLİ ÜRÜN : "+ToplamZimmet, Govde, sb, 525, 375 + (i * 30));
+            e.Graphics.DrawString("ÇAKAN LTD.ŞTİ - 2018", Govde, sb, 600, 1000);
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormZimmetListele));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.dgwZimmetListele = new System.Windows.Forms.DataGridView();
@@ -39,6 +40,8 @@
             this.BtnZimmetBul = new DevExpress.XtraEditors.SimpleButton();
             this.txtZimmetID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.ppdDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.pdYazici = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwZimmetListele)).BeginInit();
             this.grbUrunAramaIslemleri.SuspendLayout();
@@ -184,6 +187,21 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Zimmet ID:";
             // 
+            // ppdDialog
+            // 
+            this.ppdDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.ppdDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.ppdDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.ppdDialog.Document = this.pdYazici;
+            this.ppdDialog.Enabled = true;
+            this.ppdDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdDialog.Icon")));
+            this.ppdDialog.Name = "ppdDialog";
+            this.ppdDialog.Visible = false;
+            // 
+            // pdYazici
+            // 
+            this.pdYazici.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdYazici_PrintPage);
+            // 
             // FormZimmetListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -216,5 +234,7 @@
         private DevExpress.XtraEditors.SimpleButton BtnTumZimmetler;
         private System.Windows.Forms.ComboBox cmbDepartmanTip;
         private DevExpress.XtraEditors.SimpleButton BtnRapor;
+        private System.Windows.Forms.PrintPreviewDialog ppdDialog;
+        private System.Drawing.Printing.PrintDocument pdYazici;
     }
 }
