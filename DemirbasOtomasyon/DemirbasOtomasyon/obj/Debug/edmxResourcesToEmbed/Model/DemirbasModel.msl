@@ -221,5 +221,26 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="Atıklar">
+      <EntityTypeMapping TypeName="DemirbasTakipModel.Atıklar">
+        <MappingFragment StoreEntitySet="Atıklar">
+          <ScalarProperty Name="zimmetID" ColumnName="zimmetID" />
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="stokMiktari" ColumnName="stokMiktari" />
+          <ScalarProperty Name="atikID" ColumnName="atikID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_AtikBul" FunctionName="DemirbasTakipModel.Store.sp_AtikBul" />
+    <FunctionImportMapping FunctionImportName="sp_AtikEkle" FunctionName="DemirbasTakipModel.Store.sp_AtikEkle" />
+    <FunctionImportMapping FunctionImportName="sp_AtikGeriDondur" FunctionName="DemirbasTakipModel.Store.sp_AtikGeriDondur" />
+    <FunctionImportMapping FunctionImportName="sp_AtikListele" FunctionName="DemirbasTakipModel.Store.sp_AtikListele">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_AtikListele_Result">
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="stokMiktari" ColumnName="stokMiktari" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

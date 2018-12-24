@@ -34,6 +34,7 @@ namespace DemirbasOtomasyon.Model
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Urunler> Urunler { get; set; }
         public virtual DbSet<Zimmetler> Zimmetler { get; set; }
+        public virtual DbSet<Atıklar> Atıklar { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -429,6 +430,42 @@ namespace DemirbasOtomasyon.Model
                 new ObjectParameter("personelID", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PersonelBul2_Result>("sp_PersonelBul2", personelIDParameter);
+        }
+    
+        public virtual int sp_AtikBul(Nullable<int> atikID)
+        {
+            var atikIDParameter = atikID.HasValue ?
+                new ObjectParameter("atikID", atikID) :
+                new ObjectParameter("atikID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AtikBul", atikIDParameter);
+        }
+    
+        public virtual int sp_AtikEkle(Nullable<int> zimmetID)
+        {
+            var zimmetIDParameter = zimmetID.HasValue ?
+                new ObjectParameter("zimmetID", zimmetID) :
+                new ObjectParameter("zimmetID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AtikEkle", zimmetIDParameter);
+        }
+    
+        public virtual int sp_AtikGeriDondur(Nullable<int> urunID, Nullable<int> stokMiktari)
+        {
+            var urunIDParameter = urunID.HasValue ?
+                new ObjectParameter("urunID", urunID) :
+                new ObjectParameter("urunID", typeof(int));
+    
+            var stokMiktariParameter = stokMiktari.HasValue ?
+                new ObjectParameter("stokMiktari", stokMiktari) :
+                new ObjectParameter("stokMiktari", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AtikGeriDondur", urunIDParameter, stokMiktariParameter);
+        }
+    
+        public virtual ObjectResult<sp_AtikListele_Result> sp_AtikListele()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_AtikListele_Result>("sp_AtikListele");
         }
     }
 }

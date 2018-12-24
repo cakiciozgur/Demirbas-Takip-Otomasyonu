@@ -100,11 +100,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Araclar.cs" />
+    <Compile Include="Controller\AtikController.cs" />
     <Compile Include="Controller\DepartmanController.cs" />
     <Compile Include="Controller\KullaniciController.cs" />
     <Compile Include="Controller\PersonelController.cs" />
     <Compile Include="Controller\UrunController.cs" />
     <Compile Include="Controller\ZimmetController.cs" />
+    <Compile Include="Model\Atıklar.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\DemirbasModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +140,9 @@
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PersonelViewModel.cs" />
+    <Compile Include="Model\sp_AtikListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\sp_DepartmanaGoreListele_Result.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>

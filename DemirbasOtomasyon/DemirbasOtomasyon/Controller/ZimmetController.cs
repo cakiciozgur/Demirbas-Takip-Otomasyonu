@@ -37,5 +37,13 @@ namespace DemirbasOtomasyon.Controller
                 context.SaveChanges();
             }
         }
+        public static List<Zimmetler>ZimmetListele()
+        {
+            using (var context = new DemirbasTakipEntitiess())
+            {
+                var result = context.Zimmetler.ToList();
+                return result.ToList();
+            }
+        }
     }
 }

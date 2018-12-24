@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DemirbasTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Atıklar">
+    <Key>
+      <PropertyRef Name="atikID" />
+    </Key>
+    <Property Name="atikID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="stokMiktari" Type="int" />
+    <Property Name="urunID" Type="int" />
+    <Property Name="zimmetID" Type="int" />
+  </EntityType>
   <EntityType Name="Departmanlar">
     <Key>
       <PropertyRef Name="departmanID" />
@@ -70,6 +79,18 @@
     <Property Name="kullaniciID" Type="int" />
     <Property Name="urunID" Type="int" />
   </EntityType>
+  <Association Name="FK_Atıklar_Zimmetler">
+    <End Role="Zimmetler" Type="Self.Zimmetler" Multiplicity="0..1" />
+    <End Role="Atıklar" Type="Self.Atıklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zimmetler">
+        <PropertyRef Name="zimmetID" />
+      </Principal>
+      <Dependent Role="Atıklar">
+        <PropertyRef Name="zimmetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Kullanıcılar_Departmanlar">
     <End Role="Departmanlar" Type="Self.Departmanlar" Multiplicity="0..1" />
     <End Role="Kullanıcılar" Type="Self.Kullanıcılar" Multiplicity="*" />
@@ -160,6 +181,17 @@
     <Parameter Name="version" Type="int" Mode="In" />
     <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
   </Function>
+  <Function Name="sp_AtikBul" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="atikID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_AtikEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="zimmetID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_AtikGeriDondur" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="urunID" Type="int" Mode="In" />
+    <Parameter Name="stokMiktari" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_AtikListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
     <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -255,6 +287,7 @@
     <Parameter Name="departmanID" Type="int" Mode="In" />
   </Function>
   <EntityContainer Name="DemirbasTakipModelStoreContainer">
+    <EntitySet Name="Atıklar" EntityType="Self.Atıklar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Departmanlar" EntityType="Self.Departmanlar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Kullanıcılar" EntityType="Self.Kullanıcılar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
@@ -262,6 +295,10 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Zimmetler" EntityType="Self.Zimmetler" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Atıklar_Zimmetler" Association="Self.FK_Atıklar_Zimmetler">
+      <End Role="Zimmetler" EntitySet="Zimmetler" />
+      <End Role="Atıklar" EntitySet="Atıklar" />
+    </AssociationSet>
     <AssociationSet Name="FK_Kullanıcılar_Departmanlar" Association="Self.FK_Kullanıcılar_Departmanlar">
       <End Role="Departmanlar" EntitySet="Departmanlar" />
       <End Role="Kullanıcılar" EntitySet="Kullanıcılar" />

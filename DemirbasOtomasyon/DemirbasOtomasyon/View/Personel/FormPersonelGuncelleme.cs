@@ -102,7 +102,7 @@ namespace DemirbasOtomasyon.View
             cmbDepartmanGuncelle.Text = dgwPersonelListesi.CurrentRow.Cells[4].Value.ToString();
             calendarControl.EditValue = dgwPersonelListesi.CurrentRow.Cells[5].Value;
         }
-
+        
         private void BtnPersonelSil_Click(object sender, EventArgs e)
         {
             DialogResult sonuc = MessageBox.Show(txtAdi.Text + " İsimli Personel Silinsin Mi ?", "Karar ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -111,6 +111,15 @@ namespace DemirbasOtomasyon.View
                 PersonelController.PersonelSil(int.Parse(txtPersonelID.Text));
                 MessageBox.Show(txtAdi.Text +" "+ txtSoyadi.Text + " İsimli Personel Silindi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 PersonelListele();
+            }
+            List<Zimmetler> zimmetler;
+            zimmetler=ZimmetController.ZimmetListele();
+            foreach (Zimmetler z in zimmetler)
+            {
+                if(z.personelID==int.Parse(txtPersonelID.Text))
+                {
+                    AtikController.AtikEkle(z.zimmetID);
+                }
             }
         }
     }

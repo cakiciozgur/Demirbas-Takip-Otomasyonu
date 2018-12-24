@@ -94,7 +94,7 @@ namespace DemirbasOtomasyon.View
         {
             StringFormat Format = new StringFormat();
             Format.Alignment = StringAlignment.Near;
-            e.Graphics.DrawString("ÜRÜNLER RAPORU", Baslik, sb, 310, 200);
+            e.Graphics.DrawString("PERSONEL RAPORU", Baslik, sb, 310, 200);
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 230);
             e.Graphics.DrawString("PERSONEL ID        ADI                SOYADI               CEP TELEFONU               DEPARTMAN                   İŞE GİRİŞ TARİHİ            ", Govde, sb, 50, 300);
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 320);
@@ -111,7 +111,7 @@ namespace DemirbasOtomasyon.View
             }
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 350 + (i * 30));
             e.Graphics.DrawString("TOPLAM PERSONEL :  "+i, Govde, sb, 600, 370 + (i * 30));
-            e.Graphics.DrawString("ÇAKAN LTD.ŞTİ - 2018", Govde, sb, 600, 1000);
+            e.Graphics.DrawString("ÇAKAN LTD.ŞTİ - 2018", Govde, sb, 600, 850 + (i * 30));
         }
     }
 }

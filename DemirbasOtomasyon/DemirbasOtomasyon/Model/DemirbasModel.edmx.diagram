@@ -18,6 +18,8 @@
         <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_Personeller" ManuallyRouted="false" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Zimmetler_Urunler" ManuallyRouted="false" />
         <AssociationConnector Association="DemirbasTakipModel.FK_Kullanıcılar_Departmanlar" />
+        <EntityTypeShape EntityType="DemirbasTakipModel.Atıklar" Width="1.5" PointX="7.5" PointY="1.625" />
+        <AssociationConnector Association="DemirbasTakipModel.FK_Atıklar_Zimmetler" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

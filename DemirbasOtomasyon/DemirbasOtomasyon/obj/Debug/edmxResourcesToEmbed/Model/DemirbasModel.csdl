@@ -81,6 +81,7 @@
     <NavigationProperty Name="Personeller" Relationship="Self.FK_Zimmetler_Personeller" FromRole="Zimmetler" ToRole="Personeller" />
     <NavigationProperty Name="Urunler" Relationship="Self.FK_Zimmetler_Urunler" FromRole="Zimmetler" ToRole="Urunler" />
     <Property Name="zimmetAdet" Type="Int32" />
+    <NavigationProperty Name="Atıklar" Relationship="DemirbasTakipModel.FK_Atıklar_Zimmetler" FromRole="Zimmetler" ToRole="Atıklar" />
   </EntityType>
   <Association Name="FK_Personeller_Departmanlar">
     <End Role="Departmanlar" Type="Self.Departmanlar" Multiplicity="0..1" />
@@ -289,6 +290,22 @@
     <FunctionImport Name="sp_PersonelBul2" ReturnType="Collection(DemirbasTakipModel.sp_PersonelBul2_Result)">
       <Parameter Name="personelID" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="Atıklar" EntityType="DemirbasTakipModel.Atıklar" />
+    <AssociationSet Name="FK_Atıklar_Zimmetler" Association="DemirbasTakipModel.FK_Atıklar_Zimmetler">
+      <End Role="Zimmetler" EntitySet="Zimmetler" />
+      <End Role="Atıklar" EntitySet="Atıklar" />
+    </AssociationSet>
+    <FunctionImport Name="sp_AtikBul">
+      <Parameter Name="atikID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AtikEkle">
+      <Parameter Name="zimmetID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AtikGeriDondur">
+      <Parameter Name="urunID" Mode="In" Type="Int32" />
+      <Parameter Name="stokMiktari" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_AtikListele" ReturnType="Collection(DemirbasTakipModel.sp_AtikListele_Result)" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -427,5 +444,31 @@
     <Property Type="String" Name="cepTelefonu" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="departmanAdi" Nullable="true" MaxLength="20" />
     <Property Type="DateTime" Name="iseGirisTarihi" Nullable="true" Precision="23" />
+  </ComplexType>
+  <EntityType Name="Atıklar">
+    <Key>
+      <PropertyRef Name="atikID" />
+    </Key>
+    <Property Name="atikID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stokMiktari" Type="Int32" />
+    <Property Name="urunID" Type="Int32" />
+    <Property Name="zimmetID" Type="Int32" />
+    <NavigationProperty Name="Zimmetler" Relationship="DemirbasTakipModel.FK_Atıklar_Zimmetler" FromRole="Atıklar" ToRole="Zimmetler" />
+  </EntityType>
+  <Association Name="FK_Atıklar_Zimmetler">
+    <End Type="DemirbasTakipModel.Zimmetler" Role="Zimmetler" Multiplicity="0..1" />
+    <End Type="DemirbasTakipModel.Atıklar" Role="Atıklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zimmetler">
+        <PropertyRef Name="zimmetID" />
+      </Principal>
+      <Dependent Role="Atıklar">
+        <PropertyRef Name="zimmetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_AtikListele_Result">
+    <Property Type="Int32" Name="urunID" Nullable="true" />
+    <Property Type="Int32" Name="stokMiktari" Nullable="true" />
   </ComplexType>
 </Schema>

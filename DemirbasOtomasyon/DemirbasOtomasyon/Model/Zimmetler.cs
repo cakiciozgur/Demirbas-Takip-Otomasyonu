@@ -14,6 +14,11 @@ namespace DemirbasOtomasyon.Model
     
     public partial class Zimmetler
     {
+        public Zimmetler()
+        {
+            this.Atıklar = new HashSet<Atıklar>();
+        }
+    
         public int zimmetID { get; set; }
         public Nullable<System.DateTime> zimmetTarihi { get; set; }
         public Nullable<bool> zimmetDurum { get; set; }
@@ -25,5 +30,6 @@ namespace DemirbasOtomasyon.Model
         public virtual Kullanıcılar Kullanıcılar { get; set; }
         public virtual Personeller Personeller { get; set; }
         public virtual Urunler Urunler { get; set; }
+        public virtual ICollection<Atıklar> Atıklar { get; set; }
     }
 }

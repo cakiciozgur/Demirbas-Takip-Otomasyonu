@@ -128,6 +128,7 @@ namespace DemirbasOtomasyon.View
                 MessageBox.Show(txtZimmetID.Text + " ID'li Zimmet Silindi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GuncelleZimmetUrunListele();
             }
+            AtikController.AtikEkle(int.Parse(txtZimmetID.Text));
         }
     }
 }
