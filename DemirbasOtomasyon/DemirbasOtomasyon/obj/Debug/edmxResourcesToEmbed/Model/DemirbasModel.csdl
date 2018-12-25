@@ -296,7 +296,7 @@
       <End Role="Atıklar" EntitySet="Atıklar" />
     </AssociationSet>
     <FunctionImport Name="sp_AtikBul">
-      <Parameter Name="atikID" Mode="In" Type="Int32" />
+      <Parameter Name="urunID" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_AtikEkle">
       <Parameter Name="zimmetID" Mode="In" Type="Int32" />

@@ -432,13 +432,13 @@ namespace DemirbasOtomasyon.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_PersonelBul2_Result>("sp_PersonelBul2", personelIDParameter);
         }
     
-        public virtual int sp_AtikBul(Nullable<int> atikID)
+        public virtual int sp_AtikBul(Nullable<int> urunID)
         {
-            var atikIDParameter = atikID.HasValue ?
-                new ObjectParameter("atikID", atikID) :
-                new ObjectParameter("atikID", typeof(int));
+            var urunIDParameter = urunID.HasValue ?
+                new ObjectParameter("urunID", urunID) :
+                new ObjectParameter("urunID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AtikBul", atikIDParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_AtikBul", urunIDParameter);
         }
     
         public virtual int sp_AtikEkle(Nullable<int> zimmetID)

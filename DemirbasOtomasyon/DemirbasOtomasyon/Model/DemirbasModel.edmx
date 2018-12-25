@@ -187,7 +187,7 @@
           <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
         </Function>
         <Function Name="sp_AtikBul" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="atikID" Type="int" Mode="In" />
+          <Parameter Name="urunID" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_AtikEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="zimmetID" Type="int" Mode="In" />
@@ -629,10 +629,10 @@
             <End Role="Atıklar" EntitySet="Atıklar" />
           </AssociationSet>
           <FunctionImport Name="sp_AtikBul">
-            <Parameter Name="atikID" Mode="In" Type="Int32" />
+          <Parameter Name="urunID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_AtikEkle">
-            <Parameter Name="zimmetID" Mode="In" Type="Int32" />
+          <Parameter Name="zimmetID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_AtikGeriDondur">
             <Parameter Name="urunID" Mode="In" Type="Int32" />
