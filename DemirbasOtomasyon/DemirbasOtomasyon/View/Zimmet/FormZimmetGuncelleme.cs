@@ -77,7 +77,7 @@ namespace DemirbasOtomasyon.View
                 DateTime selectedDate = Convert.ToDateTime(calendarControl1.SelectionStart.ToShortDateString());
                 if (string.IsNullOrEmpty(txtAdet.Text) || string.IsNullOrEmpty(txtAdet.Text))
                 {
-                    throw new Exception("Zimmet Bilgileri Boş Geçilemez !");
+                    MessageBox.Show("Zimmet Bilgileri Boş Geçilemez !");
                 }
                 try
                 {
@@ -96,7 +96,7 @@ namespace DemirbasOtomasyon.View
                 }
                 if (selectedDate > DateTime.Now)
                 {
-                    throw new Exception("Zimmet tarihi bugünden daha sonraki bir tarih olamaz!");
+                    MessageBox.Show("Zimmet tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
 
                 Zimmetler zimmet = new Zimmetler

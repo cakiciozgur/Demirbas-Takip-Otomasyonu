@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
-using DemirbasOtomasyon.Test;
 using DemirbasOtomasyon.Model;
 using DemirbasOtomasyon.Controller;
 

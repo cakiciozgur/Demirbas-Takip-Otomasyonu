@@ -84,12 +84,12 @@ namespace DemirbasOtomasyon.View
                 DateTime selectedDate = Convert.ToDateTime(calendarControl.SelectionStart.ToShortDateString());
                 if (string.IsNullOrEmpty(cmbKullanici.SelectedValue.ToString()))
                 {
-                    throw new Exception("Lütfen Kullanıcı Bilgilerini Kontrol Ediniz !");
+                    MessageBox.Show("Lütfen Kullanıcı Bilgilerini Kontrol Ediniz !");
 
                 }
                 if (string.IsNullOrEmpty(cmbKullanici.Text))
                 {
-                    throw new Exception("Lütfen Kullanıcı Seçiniz !");
+                    MessageBox.Show("Lütfen Kullanıcı Seçiniz !");
                 }
                 try
                 {
@@ -108,11 +108,11 @@ namespace DemirbasOtomasyon.View
                 }
                 if (short.Parse(txtAdet.Text) > Convert.ToInt16(dgwZimmetListesi.CurrentRow.Cells[2].Value))
                 {
-                    throw new Exception("Stok Miktarındakinden Fazla Ürün Zimmete Eklenemez ! !");
+                    MessageBox.Show("Stok Miktarındakinden Fazla Ürün Zimmete Eklenemez !");
                 }
                 if (selectedDate > DateTime.Now)
                 {
-                    throw new Exception("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
+                    MessageBox.Show("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
 
                 Zimmetler zimmet = new Zimmetler

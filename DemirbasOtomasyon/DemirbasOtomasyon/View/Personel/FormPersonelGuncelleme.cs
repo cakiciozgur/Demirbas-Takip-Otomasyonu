@@ -69,11 +69,11 @@ namespace DemirbasOtomasyon.View
                 DateTime selectedDate = Convert.ToDateTime(calendarControl.SelectionStart.ToShortDateString());
                 if (string.IsNullOrEmpty(txtAdi.Text) || string.IsNullOrEmpty(txtSoyadi.Text) || string.IsNullOrEmpty(txtTelefon.Text))
                 {
-                    throw new Exception("Personel Bilgileri Boş Geçilemez !");
+                    MessageBox.Show("Personel Bilgileri Boş Geçilemez !");
                 }
                 if (selectedDate > DateTime.Now)
                 {
-                    throw new Exception("İşe giriş  tarihi bugünden daha sonraki bir tarih olamaz!");
+                    MessageBox.Show("İşe giriş  tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
 
                 Personeller personel = new Personeller
@@ -86,7 +86,7 @@ namespace DemirbasOtomasyon.View
                     iseGirisTarihi = selectedDate                   
                 };
                 PersonelController.PersonelGuncelle(personel);
-                MessageBox.Show("Ürün Başarıyla Düzenlendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Personel Başarıyla Güncellendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 PersonelListele();
             }
             catch (Exception ex)

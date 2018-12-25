@@ -35,24 +35,24 @@ namespace DemirbasOtomasyon.View
                 DateTime selectedDate = Convert.ToDateTime(calendarControl2.SelectionStart.ToShortDateString());
                 if (string.IsNullOrEmpty(cmbDepartmanSec.SelectedValue.ToString()))
                 {
-                    throw new Exception("Lütfen Departman Bilgilerini Kontrol Ediniz !");
+                    MessageBox.Show("Lütfen Departman Bilgilerini Kontrol Ediniz !");
 
                 }
                 if (string.IsNullOrEmpty(cmbDepartmanSec.Text))
                 {
-                    throw new Exception("Lütfen Departman Seçiniz !");
+                    MessageBox.Show("Lütfen Departman Seçiniz !");
                 }
                 if (string.IsNullOrEmpty(txtPersonelAd.Text))
                 {
-                    throw new Exception("Lütfen Ad Bilgisini Kontrol Ediniz !");
+                    MessageBox.Show("Lütfen Ad Bilgisini Kontrol Ediniz !");
                 }
                 if (string.IsNullOrEmpty(txtPersonelSoyad.Text))
                 {
-                    throw new Exception("Lütfen Soyad Bilgisini Kontrol Ediniz !");
+                    MessageBox.Show("Lütfen Soyad Bilgisini Kontrol Ediniz !");
                 }
                 if (selectedDate > DateTime.Now)
                 {
-                    throw new Exception("İşe giriş tarihi bugünden daha sonraki bir tarih olamaz!");
+                    MessageBox.Show("İşe giriş tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
 
                 Personeller personel = new Personeller

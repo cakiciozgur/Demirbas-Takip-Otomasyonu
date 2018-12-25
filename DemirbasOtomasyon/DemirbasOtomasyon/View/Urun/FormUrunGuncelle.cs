@@ -86,7 +86,7 @@ namespace DemirbasOtomasyon.View
                 DateTime selectedDate = Convert.ToDateTime(calendarControl1.SelectionStart.ToShortDateString());
                 if (string.IsNullOrEmpty(txtUrunAd.Text) || string.IsNullOrEmpty(txtFiyat.Text) || string.IsNullOrEmpty(txtAdet.Text))
                 {
-                    throw new Exception("Ürün Bilgileri Boş Geçilemez !");
+                    MessageBox.Show("Ürün Bilgileri Boş Geçilemez !");
                 }
                 try
                 {
@@ -120,7 +120,7 @@ namespace DemirbasOtomasyon.View
                 }
                 if (selectedDate > DateTime.Now)
                 {
-                    throw new Exception("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
+                    MessageBox.Show("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
 
                 Urunler urun = new Urunler
