@@ -133,5 +133,10 @@ namespace DemirbasOtomasyon.View
             e.Graphics.DrawString("TOPLAM ZİMMETLİ ÜRÜN : "+ToplamZimmet, Govde, sb, 525, 375 + (i * 30));
             e.Graphics.DrawString("ÇAKAN LTD.ŞTİ - 2018", Govde, sb, 600, 1000);
         }
+
+        private void txtZimmetID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

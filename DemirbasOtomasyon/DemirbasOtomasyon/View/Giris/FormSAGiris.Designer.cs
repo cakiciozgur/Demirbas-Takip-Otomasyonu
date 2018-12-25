@@ -67,6 +67,7 @@
             this.txtSifre.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
             this.txtSifre.Location = new System.Drawing.Point(97, 182);
+            this.txtSifre.MaxLength = 8;
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(281, 36);
@@ -77,6 +78,7 @@
             this.txtKullaniciAdi.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Black;
             this.txtKullaniciAdi.Location = new System.Drawing.Point(97, 114);
+            this.txtKullaniciAdi.MaxLength = 10;
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(281, 36);
             this.txtKullaniciAdi.TabIndex = 19;

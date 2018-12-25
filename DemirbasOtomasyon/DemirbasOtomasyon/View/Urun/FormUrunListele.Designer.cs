@@ -102,6 +102,7 @@
             this.txtUrunID.Name = "txtUrunID";
             this.txtUrunID.Size = new System.Drawing.Size(200, 28);
             this.txtUrunID.TabIndex = 2;
+            this.txtUrunID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrunID_KeyPress);
             // 
             // grbUrunAramaIslemleri
             // 

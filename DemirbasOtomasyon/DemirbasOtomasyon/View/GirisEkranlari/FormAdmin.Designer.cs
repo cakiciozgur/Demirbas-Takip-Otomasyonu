@@ -42,6 +42,7 @@
             this.grbZimmet = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnCikis = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnAtiklar = new DevExpress.XtraEditors.SimpleButton();
             this.grbPersonel.SuspendLayout();
             this.grbZimmet.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -82,6 +83,7 @@
             // 
             this.btnPersonelGuncelle.Appearance.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPersonelGuncelle.Appearance.Options.UseFont = true;
+            this.btnPersonelGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonelGuncelle.ImageOptions.Image")));
             this.btnPersonelGuncelle.Location = new System.Drawing.Point(222, 125);
             this.btnPersonelGuncelle.Name = "btnPersonelGuncelle";
             this.btnPersonelGuncelle.Size = new System.Drawing.Size(200, 85);
@@ -208,13 +210,25 @@
             // 
             this.BtnCikis.Appearance.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnCikis.Appearance.Options.UseFont = true;
-            this.BtnCikis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.BtnCikis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnCikis.ImageOptions.SvgImage")));
             this.BtnCikis.Location = new System.Drawing.Point(742, 12);
             this.BtnCikis.Name = "BtnCikis";
             this.BtnCikis.Size = new System.Drawing.Size(166, 49);
             this.BtnCikis.TabIndex = 14;
             this.BtnCikis.Text = "ÇIKIŞ YAP";
             this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
+            // 
+            // BtnAtiklar
+            // 
+            this.BtnAtiklar.Appearance.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAtiklar.Appearance.Options.UseFont = true;
+            this.BtnAtiklar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAtiklar.ImageOptions.Image")));
+            this.BtnAtiklar.Location = new System.Drawing.Point(28, 12);
+            this.BtnAtiklar.Name = "BtnAtiklar";
+            this.BtnAtiklar.Size = new System.Drawing.Size(157, 52);
+            this.BtnAtiklar.TabIndex = 15;
+            this.BtnAtiklar.Text = "ATIKLAR";
+            this.BtnAtiklar.Click += new System.EventHandler(this.BtnAtiklar_Click);
             // 
             // FormAdmin
             // 
@@ -223,6 +237,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 503);
+            this.Controls.Add(this.BtnAtiklar);
             this.Controls.Add(this.BtnCikis);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbZimmet);
@@ -254,5 +269,6 @@
         private System.Windows.Forms.GroupBox grbZimmet;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.SimpleButton BtnCikis;
+        private DevExpress.XtraEditors.SimpleButton BtnAtiklar;
     }
 }

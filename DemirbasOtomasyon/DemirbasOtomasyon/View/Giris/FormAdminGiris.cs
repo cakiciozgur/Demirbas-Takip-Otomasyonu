@@ -40,6 +40,7 @@ namespace DemirbasOtomasyon.View
                 {
                     throw new Exception("Kullanıcı Adı ve Şifre Boş Geçilemez !");
                 }
+
                 var result = KullaniciController.AdminGiris(kullanici);
                 FormKullaniciSecim._session = eRoles.Admin.ToString();
                 FormKullaniciSecim._userIdSession = result.kullaniciID;

@@ -26,12 +26,6 @@ namespace DemirbasOtomasyon.Controller
             using (var context = new DemirbasTakipEntitiess())
             {
                 var result = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciAdi == kullanici.kullaniciAdi && x.kullaniciSifre == kullanici.kullaniciSifre);
-                
-                //if (result == null || result.Silindi == Convert.ToBoolean(EDeleted.silindi))
-                //{
-                //    throw new AuthenticationException("Kullanıcı Girişi Başarısız !");
-                //}
-
                 var roleResult = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciID == result.kullaniciID);
                 if (roleResult.rolID != (int)eRoles.Admin)
                 {
@@ -49,10 +43,6 @@ namespace DemirbasOtomasyon.Controller
             using (var context = new DemirbasTakipEntitiess())
             {
                 var result = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciAdi == kullanici.kullaniciAdi && x.kullaniciSifre == kullanici.kullaniciSifre);
-                //if (result == null || result.Silindi == Convert.ToBoolean(EDeleted.silindi))
-                //{
-                //    throw new AuthenticationException("Kullanıcı Girişi Başarısız !");
-                //}
                 var roleResult = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciID == result.kullaniciID);
                 if (roleResult.rolID != (int)eRoles.BirimYetkilisi)
                 {
@@ -70,11 +60,6 @@ namespace DemirbasOtomasyon.Controller
             using (var context = new DemirbasTakipEntitiess())
             {
                 var result = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciAdi == kullanici.kullaniciAdi && x.kullaniciSifre == kullanici.kullaniciSifre);
-
-                //if (result == null || result.Silindi == Convert.ToBoolean(EDeleted.silindi))
-                //{
-                //    throw new AuthenticationException("Kullanıcı Girişi Başarısız !");
-                //}
                 var roleResult = context.Kullanıcılar.FirstOrDefault(x => x.kullaniciID == result.kullaniciID);
                 if (roleResult.rolID != (int)eRoles.SatinAlmaBirimi)
                 {

@@ -38,6 +38,7 @@
             this.btnZimmetEkle = new DevExpress.XtraEditors.SimpleButton();
             this.btnZimmetGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnCikis = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnAtiklar = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             this.grbZimmet.SuspendLayout();
             this.SuspendLayout();
@@ -146,13 +147,25 @@
             // 
             this.BtnCikis.Appearance.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnCikis.Appearance.Options.UseFont = true;
-            this.BtnCikis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.BtnCikis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnCikis.ImageOptions.SvgImage")));
             this.BtnCikis.Location = new System.Drawing.Point(742, 12);
             this.BtnCikis.Name = "BtnCikis";
             this.BtnCikis.Size = new System.Drawing.Size(166, 49);
             this.BtnCikis.TabIndex = 13;
             this.BtnCikis.Text = "ÇIKIŞ YAP";
             this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
+            // 
+            // BtnAtiklar
+            // 
+            this.BtnAtiklar.Appearance.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnAtiklar.Appearance.Options.UseFont = true;
+            this.BtnAtiklar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAtiklar.ImageOptions.Image")));
+            this.BtnAtiklar.Location = new System.Drawing.Point(24, 12);
+            this.BtnAtiklar.Name = "BtnAtiklar";
+            this.BtnAtiklar.Size = new System.Drawing.Size(157, 52);
+            this.BtnAtiklar.TabIndex = 16;
+            this.BtnAtiklar.Text = "ATIKLAR";
+            this.BtnAtiklar.Click += new System.EventHandler(this.BtnAtiklar_Click);
             // 
             // FormSatınAlmaBirimi
             // 
@@ -161,6 +174,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 503);
+            this.Controls.Add(this.BtnAtiklar);
             this.Controls.Add(this.BtnCikis);
             this.Controls.Add(this.grbZimmet);
             this.Controls.Add(this.groupBox1);
@@ -185,5 +199,6 @@
         private DevExpress.XtraEditors.SimpleButton btnZimmetEkle;
         private DevExpress.XtraEditors.SimpleButton btnZimmetGuncelle;
         private DevExpress.XtraEditors.SimpleButton BtnCikis;
+        private DevExpress.XtraEditors.SimpleButton BtnAtiklar;
     }
 }

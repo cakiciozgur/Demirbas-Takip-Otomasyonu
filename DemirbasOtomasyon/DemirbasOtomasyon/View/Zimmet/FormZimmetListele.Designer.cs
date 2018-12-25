@@ -182,6 +182,7 @@
             this.txtZimmetID.Name = "txtZimmetID";
             this.txtZimmetID.Size = new System.Drawing.Size(200, 28);
             this.txtZimmetID.TabIndex = 2;
+            this.txtZimmetID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtZimmetID_KeyPress);
             // 
             // label3
             // 

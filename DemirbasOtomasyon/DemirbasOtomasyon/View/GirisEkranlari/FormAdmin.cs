@@ -83,5 +83,11 @@ namespace DemirbasOtomasyon.View
             fks.Show();
             this.Close();
         }
+
+        private void BtnAtiklar_Click(object sender, EventArgs e)
+        {
+            FormAtiklar fa = new FormAtiklar();
+            fa.ShowDialog();
+        }
     }
 }

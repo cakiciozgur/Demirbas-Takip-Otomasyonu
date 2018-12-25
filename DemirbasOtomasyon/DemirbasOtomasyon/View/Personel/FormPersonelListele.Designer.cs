@@ -182,6 +182,7 @@
             this.txtPersonelID.Name = "txtPersonelID";
             this.txtPersonelID.Size = new System.Drawing.Size(200, 28);
             this.txtPersonelID.TabIndex = 2;
+            this.txtPersonelID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPersonelID_KeyPress);
             // 
             // label3
             // 
