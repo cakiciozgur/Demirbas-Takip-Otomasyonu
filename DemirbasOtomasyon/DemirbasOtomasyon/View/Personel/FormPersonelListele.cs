@@ -57,9 +57,24 @@ namespace DemirbasOtomasyon.View
 
         private void BtnPersonelBul_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if ((Convert.ToInt32(txtPersonelID.Text) < 0 || Convert.ToInt32(txtPersonelID.Text) > 1000000000))
+                {
+                    MessageBox.Show("Geçerli bir ID Giriniz ! ");
+                    txtPersonelID.Text = "";
+                    txtPersonelID.Focus();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Geçerli bir değer girin");
+                txtPersonelID.Text = "";
+                txtPersonelID.Focus();
+            }
             if (string.IsNullOrEmpty(txtPersonelID.Text))
             {
-               MessageBox.Show("Personel ID Giriniz !");
+                txtPersonelID.Text = "";
             }
             else
             {

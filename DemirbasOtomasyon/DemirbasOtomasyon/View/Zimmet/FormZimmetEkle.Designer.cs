@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtUrunID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -129,6 +129,7 @@
             // 
             this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAdet.Location = new System.Drawing.Point(142, 110);
+            this.txtAdet.MaxLength = 3;
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
             this.txtAdet.TabIndex = 22;
@@ -146,27 +147,28 @@
             // 
             // cmbKullanici
             // 
+            this.cmbKullanici.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullanici.FormattingEnabled = true;
             this.cmbKullanici.Location = new System.Drawing.Point(142, 183);
             this.cmbKullanici.Name = "cmbKullanici";
             this.cmbKullanici.Size = new System.Drawing.Size(200, 30);
             this.cmbKullanici.TabIndex = 21;
-            this.cmbKullanici.Text = "Kullanıcı Seçiniz...";
             // 
             // cmbPersonel
             // 
+            this.cmbPersonel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPersonel.FormattingEnabled = true;
             this.cmbPersonel.Location = new System.Drawing.Point(142, 144);
             this.cmbPersonel.Name = "cmbPersonel";
             this.cmbPersonel.Size = new System.Drawing.Size(200, 30);
             this.cmbPersonel.TabIndex = 20;
-            this.cmbPersonel.Text = "Personel Seçiniz...";
             // 
             // txtUrunAd
             // 
             this.txtUrunAd.Enabled = false;
             this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUrunAd.Location = new System.Drawing.Point(142, 75);
+            this.txtUrunAd.MaxLength = 50;
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
             this.txtUrunAd.TabIndex = 16;
@@ -187,7 +189,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl.Location = new System.Drawing.Point(89, 232);
             this.calendarControl.Name = "calendarControl";
-            this.calendarControl.Size = new System.Drawing.Size(246, 261);
+            this.calendarControl.Size = new System.Drawing.Size(278, 270);
             this.calendarControl.TabIndex = 15;
             // 
             // btnZimemetKaydet
@@ -231,17 +233,18 @@
             // 
             // dgwZimmetListesi
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwZimmetListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwZimmetListesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgwZimmetListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwZimmetListesi.Location = new System.Drawing.Point(399, 98);
             this.dgwZimmetListesi.Name = "dgwZimmetListesi";
+            this.dgwZimmetListesi.ReadOnly = true;
             this.dgwZimmetListesi.RowTemplate.Height = 24;
             this.dgwZimmetListesi.Size = new System.Drawing.Size(735, 570);
             this.dgwZimmetListesi.TabIndex = 14;

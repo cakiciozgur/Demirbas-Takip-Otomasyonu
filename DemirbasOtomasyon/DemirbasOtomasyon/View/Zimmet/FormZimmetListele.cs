@@ -58,9 +58,24 @@ namespace DemirbasOtomasyon.View
 
         private void BtnZimmetBul_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if ((Convert.ToInt32(txtZimmetID.Text) < 0 || Convert.ToInt32(txtZimmetID.Text) > 1000000000))
+                {
+                    MessageBox.Show("Geçerli bir ID Giriniz ! ");
+                    txtZimmetID.Text = "";
+                    txtZimmetID.Focus();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Geçerli bir değer girin");
+                txtZimmetID.Text = "";
+                txtZimmetID.Focus();
+            }
             if (string.IsNullOrEmpty(txtZimmetID.Text))
             {
-               MessageBox.Show("Zimmet ID Giriniz !");
+                txtZimmetID.Text = "";
             }
             else
             {
@@ -69,7 +84,9 @@ namespace DemirbasOtomasyon.View
                 dgwZimmetListele.DataSource = data.ToList();
                 ZimmetRenklendir();
             }
-        }
+
+
+    }
 
         private void BtnTumZimmetler_Click(object sender, EventArgs e)
         {
@@ -96,7 +113,7 @@ namespace DemirbasOtomasyon.View
             int i;
             StringFormat Format = new StringFormat();
             Format.Alignment = StringAlignment.Near;
-            e.Graphics.DrawString("ZİMMETLER RAPORU", Baslik, sb, 310, 200);
+            e.Graphics.DrawString("ZİMMET RAPORU", Baslik, sb, 310, 200);
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 230);
             e.Graphics.DrawString("ZİMMET ID          ADET         ÜRÜN ADI          PERSONEL         DEPARTMAN               TARİH                           KULLANICI", Govde, sb, 50, 300);
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 320);
@@ -109,7 +126,7 @@ namespace DemirbasOtomasyon.View
                 e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[5].Value.ToString(), Govde, sb, 450, 340 + (i * 30));
                 e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[6].Value.ToString(), Govde, sb, 590, 340 + (i * 30));
                 e.Graphics.DrawString(dgwZimmetListele.Rows[i].Cells[7].Value.ToString(), Govde, sb, 750, 340 + (i * 30));
-                ToplamZimmet += Convert.ToDecimal(dgwZimmetListele.Rows[i].Cells[1].Value);
+                ToplamZimmet += Convert.ToDecimal(dgwZimmetListele.Rows[i].Cells[2].Value);
             }
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 355+(i*30));
             e.Graphics.DrawString("TOPLAM ZİMMETLİ ÜRÜN : "+ToplamZimmet, Govde, sb, 525, 375 + (i * 30));

@@ -61,6 +61,7 @@
             this.dgwPersonelListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwPersonelListele.Location = new System.Drawing.Point(32, 221);
             this.dgwPersonelListele.Name = "dgwPersonelListele";
+            this.dgwPersonelListele.ReadOnly = true;
             this.dgwPersonelListele.RowTemplate.Height = 24;
             this.dgwPersonelListele.Size = new System.Drawing.Size(1082, 402);
             this.dgwPersonelListele.TabIndex = 23;
@@ -112,9 +113,10 @@
             this.BtnRapor.Appearance.Options.UseFont = true;
             this.BtnRapor.Appearance.Options.UseForeColor = true;
             this.BtnRapor.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.BtnRapor.Location = new System.Drawing.Point(888, 16);
+            this.BtnRapor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnRapor.ImageOptions.SvgImage")));
+            this.BtnRapor.Location = new System.Drawing.Point(825, 16);
             this.BtnRapor.Name = "BtnRapor";
-            this.BtnRapor.Size = new System.Drawing.Size(161, 41);
+            this.BtnRapor.Size = new System.Drawing.Size(224, 41);
             this.BtnRapor.TabIndex = 26;
             this.BtnRapor.Text = "RAPORLA";
             this.BtnRapor.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
@@ -122,8 +124,9 @@
             // 
             // cmbDepartmanTip
             // 
+            this.cmbDepartmanTip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartmanTip.FormattingEnabled = true;
-            this.cmbDepartmanTip.Location = new System.Drawing.Point(638, 47);
+            this.cmbDepartmanTip.Location = new System.Drawing.Point(567, 47);
             this.cmbDepartmanTip.Name = "cmbDepartmanTip";
             this.cmbDepartmanTip.Size = new System.Drawing.Size(212, 30);
             this.cmbDepartmanTip.TabIndex = 14;
@@ -141,9 +144,10 @@
             this.BtnTumPersonel.Appearance.Options.UseFont = true;
             this.BtnTumPersonel.Appearance.Options.UseForeColor = true;
             this.BtnTumPersonel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.BtnTumPersonel.Location = new System.Drawing.Point(888, 63);
+            this.BtnTumPersonel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTumPersonel.ImageOptions.SvgImage")));
+            this.BtnTumPersonel.Location = new System.Drawing.Point(825, 63);
             this.BtnTumPersonel.Name = "BtnTumPersonel";
-            this.BtnTumPersonel.Size = new System.Drawing.Size(161, 41);
+            this.BtnTumPersonel.Size = new System.Drawing.Size(224, 41);
             this.BtnTumPersonel.TabIndex = 13;
             this.BtnTumPersonel.Text = "TÜM PERSONEL";
             this.BtnTumPersonel.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
@@ -161,6 +165,7 @@
             this.BtnPersonelBul.Appearance.Options.UseFont = true;
             this.BtnPersonelBul.Appearance.Options.UseForeColor = true;
             this.BtnPersonelBul.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.BtnPersonelBul.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnPersonelBul.ImageOptions.SvgImage")));
             this.BtnPersonelBul.Location = new System.Drawing.Point(340, 39);
             this.BtnPersonelBul.Name = "BtnPersonelBul";
             this.BtnPersonelBul.Size = new System.Drawing.Size(161, 41);
@@ -173,6 +178,7 @@
             // 
             this.txtPersonelID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPersonelID.Location = new System.Drawing.Point(118, 47);
+            this.txtPersonelID.MaxLength = 10;
             this.txtPersonelID.Name = "txtPersonelID";
             this.txtPersonelID.Size = new System.Drawing.Size(200, 28);
             this.txtPersonelID.TabIndex = 2;

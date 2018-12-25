@@ -65,10 +65,32 @@ namespace DemirbasOtomasyon.View
         
         private void BtnUrunBul_Click(object sender, EventArgs e)
         {
-            DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
-            var data = db.sp_UrunBul(int.Parse(txtUrunID.Text));
-            dgwUrunListesi.DataSource = data.ToList();
-            UrunRenklendir();
+            try
+            {
+                if ((Convert.ToInt32(txtUrunID.Text) < 0 || Convert.ToInt32(txtUrunID.Text) > 1000000000))
+                {
+                    MessageBox.Show("Geçerli bir ID Giriniz ! ");
+                    txtUrunID.Text = "";
+                    txtUrunID.Focus();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Geçerli bir değer girin");
+                txtUrunID.Text = "";
+                txtUrunID.Focus();
+            }
+            if (string.IsNullOrEmpty(txtUrunID.Text))
+            {
+                txtUrunID.Text = "";
+            }
+            else
+            {
+                DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
+                var data = db.sp_UrunBul(int.Parse(txtUrunID.Text));
+                dgwUrunListesi.DataSource = data.ToList();
+                UrunRenklendir();
+            }
         }
 
         private void BtnTumUrunler_Click(object sender, EventArgs e)

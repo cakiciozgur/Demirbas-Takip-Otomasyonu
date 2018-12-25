@@ -90,14 +90,25 @@ namespace DemirbasOtomasyon.View
                 {
                     throw new Exception("Lütfen Kullanıcı Seçiniz !");
                 }
-                if (string.IsNullOrEmpty(txtAdet.Text) || short.Parse(txtAdet.Text) == 0 || short.Parse(txtAdet.Text) < 0)
+                try
                 {
-                    throw new Exception("Lütfen Adet Bilgisini Kontrol Ediniz !");
+                    if (string.IsNullOrEmpty(txtAdet.Text) || (short.Parse(txtAdet.Text) <= 0))
+                    {
+                        MessageBox.Show("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
+                        txtAdet.Text = "";
+                        txtAdet.Focus();
+                    }
                 }
-                /*if (short.Parse(txtAdet.Text) > int.Parse(adet))
+                catch
+                {
+                    MessageBox.Show("Adet için geçerli bir değer girin");
+                    txtAdet.Text = "";
+                    txtAdet.Focus();
+                }
+                if (short.Parse(txtAdet.Text) > Convert.ToInt16(dgwZimmetListesi.CurrentRow.Cells[2].Value))
                 {
                     throw new Exception("Stok Miktarındakinden Fazla Ürün Zimmete Eklenemez ! !");
-                }*/
+                }
                 if (selectedDate > DateTime.Now)
                 {
                     throw new Exception("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");

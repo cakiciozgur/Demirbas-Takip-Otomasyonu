@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormZimmetListele));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
@@ -69,17 +69,18 @@
             // dgwZimmetListele
             // 
             this.dgwZimmetListele.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwZimmetListele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwZimmetListele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgwZimmetListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwZimmetListele.Location = new System.Drawing.Point(33, 221);
             this.dgwZimmetListele.Name = "dgwZimmetListele";
+            this.dgwZimmetListele.ReadOnly = true;
             this.dgwZimmetListele.RowTemplate.Height = 24;
             this.dgwZimmetListele.Size = new System.Drawing.Size(1082, 402);
             this.dgwZimmetListele.TabIndex = 20;
@@ -112,9 +113,10 @@
             this.BtnRapor.Appearance.Options.UseFont = true;
             this.BtnRapor.Appearance.Options.UseForeColor = true;
             this.BtnRapor.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.BtnRapor.Location = new System.Drawing.Point(879, 16);
+            this.BtnRapor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnRapor.ImageOptions.SvgImage")));
+            this.BtnRapor.Location = new System.Drawing.Point(826, 16);
             this.BtnRapor.Name = "BtnRapor";
-            this.BtnRapor.Size = new System.Drawing.Size(161, 41);
+            this.BtnRapor.Size = new System.Drawing.Size(214, 41);
             this.BtnRapor.TabIndex = 25;
             this.BtnRapor.Text = "RAPORLA";
             this.BtnRapor.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
@@ -122,6 +124,7 @@
             // 
             // cmbDepartmanTip
             // 
+            this.cmbDepartmanTip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartmanTip.FormattingEnabled = true;
             this.cmbDepartmanTip.Location = new System.Drawing.Point(617, 50);
             this.cmbDepartmanTip.Name = "cmbDepartmanTip";
@@ -141,9 +144,10 @@
             this.BtnTumZimmetler.Appearance.Options.UseFont = true;
             this.BtnTumZimmetler.Appearance.Options.UseForeColor = true;
             this.BtnTumZimmetler.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.BtnTumZimmetler.Location = new System.Drawing.Point(879, 63);
+            this.BtnTumZimmetler.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTumZimmetler.ImageOptions.SvgImage")));
+            this.BtnTumZimmetler.Location = new System.Drawing.Point(826, 63);
             this.BtnTumZimmetler.Name = "BtnTumZimmetler";
-            this.BtnTumZimmetler.Size = new System.Drawing.Size(161, 41);
+            this.BtnTumZimmetler.Size = new System.Drawing.Size(214, 41);
             this.BtnTumZimmetler.TabIndex = 13;
             this.BtnTumZimmetler.Text = "TÜM ZİMMETLER";
             this.BtnTumZimmetler.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
@@ -161,6 +165,7 @@
             this.BtnZimmetBul.Appearance.Options.UseFont = true;
             this.BtnZimmetBul.Appearance.Options.UseForeColor = true;
             this.BtnZimmetBul.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.BtnZimmetBul.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnZimmetBul.ImageOptions.SvgImage")));
             this.BtnZimmetBul.Location = new System.Drawing.Point(379, 42);
             this.BtnZimmetBul.Name = "BtnZimmetBul";
             this.BtnZimmetBul.Size = new System.Drawing.Size(161, 41);
@@ -173,6 +178,7 @@
             // 
             this.txtZimmetID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtZimmetID.Location = new System.Drawing.Point(112, 50);
+            this.txtZimmetID.MaxLength = 10;
             this.txtZimmetID.Name = "txtZimmetID";
             this.txtZimmetID.Size = new System.Drawing.Size(200, 28);
             this.txtZimmetID.TabIndex = 2;

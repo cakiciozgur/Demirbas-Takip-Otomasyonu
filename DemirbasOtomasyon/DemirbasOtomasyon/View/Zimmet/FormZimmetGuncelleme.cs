@@ -78,9 +78,20 @@ namespace DemirbasOtomasyon.View
                 {
                     throw new Exception("Zimmet Bilgileri Boş Geçilemez !");
                 }
-                if (int.Parse(txtAdet.Text) <= 0)
+                try
                 {
-                    throw new Exception("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
+                    if ((Convert.ToInt32(txtAdet.Text) <=0))
+                    {
+                        MessageBox.Show("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
+                        txtAdet.Text = "";
+                        txtAdet.Focus();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Geçerli bir değer girin");
+                    txtAdet.Text = "";
+                    txtAdet.Focus();
                 }
                 if (selectedDate > DateTime.Now)
                 {
@@ -96,7 +107,7 @@ namespace DemirbasOtomasyon.View
                     kullaniciID = Convert.ToInt32(cmbKullaniciGuncelle.SelectedValue)
                 };
                 ZimmetController.ZimmetGuncelle(zimmet);
-                MessageBox.Show("Ürün Başarıyla Düzenlendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Zimmet Başarıyla Düzenlendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

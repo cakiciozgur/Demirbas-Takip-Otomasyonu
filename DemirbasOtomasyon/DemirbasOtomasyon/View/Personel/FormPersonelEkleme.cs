@@ -72,5 +72,21 @@ namespace DemirbasOtomasyon.View
             }
         }
 
+        private void txtPersonelAd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void txtPersonelSoyad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void txtCepTelefonu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

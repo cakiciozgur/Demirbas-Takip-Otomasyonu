@@ -75,6 +75,7 @@
             this.dgwUrunListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwUrunListele.Location = new System.Drawing.Point(431, 99);
             this.dgwUrunListele.Name = "dgwUrunListele";
+            this.dgwUrunListele.ReadOnly = true;
             this.dgwUrunListele.RowTemplate.Height = 24;
             this.dgwUrunListele.Size = new System.Drawing.Size(821, 526);
             this.dgwUrunListele.TabIndex = 16;
@@ -129,7 +130,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl1.Location = new System.Drawing.Point(108, 195);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(246, 261);
+            this.calendarControl1.Size = new System.Drawing.Size(278, 270);
             this.calendarControl1.TabIndex = 14;
             // 
             // btnGuncelle
@@ -157,6 +158,7 @@
             this.txtUrunID.Enabled = false;
             this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUrunID.Location = new System.Drawing.Point(108, 41);
+            this.txtUrunID.MaxLength = 10;
             this.txtUrunID.Name = "txtUrunID";
             this.txtUrunID.Size = new System.Drawing.Size(200, 28);
             this.txtUrunID.TabIndex = 2;
@@ -165,6 +167,7 @@
             // 
             this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUrunAd.Location = new System.Drawing.Point(108, 81);
+            this.txtUrunAd.MaxLength = 50;
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
             this.txtUrunAd.TabIndex = 2;
@@ -173,6 +176,7 @@
             // 
             this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAdet.Location = new System.Drawing.Point(108, 122);
+            this.txtAdet.MaxLength = 3;
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
             this.txtAdet.TabIndex = 3;
@@ -191,6 +195,7 @@
             // 
             this.txtFiyat.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFiyat.Location = new System.Drawing.Point(108, 161);
+            this.txtFiyat.MaxLength = 20;
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.Size = new System.Drawing.Size(200, 28);
             this.txtFiyat.TabIndex = 4;

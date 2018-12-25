@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1DD47DA-A0A7-4977-A112-DB0D67588E07}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DemirbasOtomasyon</RootNamespace>
+    <AssemblyName>DemirbasOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v17.2.UI, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.2.UI, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.Extensions, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.2.Wizard, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Araclar.cs" />
+    <Compile Include="Controller\AtikController.cs" />
+    <Compile Include="Controller\DepartmanController.cs" />
+    <Compile Include="Controller\KullaniciController.cs" />
+    <Compile Include="Controller\PersonelController.cs" />
+    <Compile Include="Controller\UrunController.cs" />
+    <Compile Include="Controller\ZimmetController.cs" />
+    <Compile Include="Model\Atıklar.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DemirbasModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemirbasModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DemirbasModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DemirbasModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemirbasModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Departmanlar.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\eCalismaDurumu.cs" />
+    <Compile Include="Model\eRoles.cs" />
+    <Compile Include="Model\FN_UrunIDGetir_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\KullaniciViewModel.cs" />
+    <Compile Include="Model\Kullanıcılar.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Personeller.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PersonelViewModel.cs" />
+    <Compile Include="Model\sp_AtikListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_DepartmanaGoreListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_PersonelBul2_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_PersonelListele2_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_UrunBul_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetBul2_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetListele2_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetListeleDepartmanaGore_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetListeleGuncelleme_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UrunViewModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\GirisEkranlari\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GirisEkranlari\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Giris\FormAdminGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Giris\FormAdminGiris.Designer.cs">
+      <DependentUpon>FormAdminGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GirisEkranlari\FormBirimYetkilisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GirisEkranlari\FormBirimYetkilisi.Designer.cs">
+      <DependentUpon>FormBirimYetkilisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Giris\FormBYGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Giris\FormBYGiris.Designer.cs">
+      <DependentUpon>FormBYGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormKullaniciSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormKullaniciSecim.Designer.cs">
+      <DependentUpon>FormKullaniciSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Giris\FormSAGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Giris\FormSAGiris.Designer.cs">
+      <DependentUpon>FormSAGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GirisEkranlari\FormSatınAlmaBirimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GirisEkranlari\FormSatınAlmaBirimi.Designer.cs">
+      <DependentUpon>FormSatınAlmaBirimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Personel\FormPersonelEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Personel\FormPersonelEkleme.Designer.cs">
+      <DependentUpon>FormPersonelEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Personel\FormPersonelGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Personel\FormPersonelGuncelleme.Designer.cs">
+      <DependentUpon>FormPersonelGuncelleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Personel\FormPersonelListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Personel\FormPersonelListele.Designer.cs">
+      <DependentUpon>FormPersonelListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Urun\FormUrunEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Urun\FormUrunEkleme.Designer.cs">
+      <DependentUpon>FormUrunEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Urun\FormUrunGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Urun\FormUrunGuncelle.Designer.cs">
+      <DependentUpon>FormUrunGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Urun\FormUrunListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Urun\FormUrunListele.Designer.cs">
+      <DependentUpon>FormUrunListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Zimmet\FormZimmetEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Zimmet\FormZimmetEkle.Designer.cs">
+      <DependentUpon>FormZimmetEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Roller.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_helpdiagrams_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_PersonelBul_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_PersonelListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_UrunListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetBul_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_ZimmetListele_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Urunler.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Zimmetler.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\Zimmet\FormZimmetGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Zimmet\FormZimmetGuncelleme.Designer.cs">
+      <DependentUpon>FormZimmetGuncelleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Zimmet\FormZimmetListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Zimmet\FormZimmetListele.Designer.cs">
+      <DependentUpon>FormZimmetListele.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\GirisEkranlari\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Giris\FormAdminGiris.resx">
+      <DependentUpon>FormAdminGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GirisEkranlari\FormBirimYetkilisi.resx">
+      <DependentUpon>FormBirimYetkilisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Giris\FormBYGiris.resx">
+      <DependentUpon>FormBYGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormKullaniciSecim.resx">
+      <DependentUpon>FormKullaniciSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Giris\FormSAGiris.resx">
+      <DependentUpon>FormSAGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GirisEkranlari\FormSatınAlmaBirimi.resx">
+      <DependentUpon>FormSatınAlmaBirimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Personel\FormPersonelEkleme.resx">
+      <DependentUpon>FormPersonelEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Personel\FormPersonelGuncelleme.resx">
+      <DependentUpon>FormPersonelGuncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Personel\FormPersonelListele.resx">
+      <DependentUpon>FormPersonelListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Urun\FormUrunEkleme.resx">
+      <DependentUpon>FormUrunEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Urun\FormUrunGuncelle.resx">
+      <DependentUpon>FormUrunGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Urun\FormUrunListele.resx">
+      <DependentUpon>FormUrunListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Zimmet\FormZimmetEkle.resx">
+      <DependentUpon>FormZimmetEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Zimmet\FormZimmetGuncelleme.resx">
+      <DependentUpon>FormZimmetGuncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Zimmet\FormZimmetListele.resx">
+      <DependentUpon>FormZimmetListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\DemirbasModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DemirbasModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\DemirbasModel.edmx.diagram">
+      <DependentUpon>DemirbasModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\DemirbasModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DemirbasModel.edmx</DependentUpon>
+      <LastGenOutput>DemirbasModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\DemirbasModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DemirbasModel.edmx</DependentUpon>
+      <LastGenOutput>DemirbasModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -28,9 +28,35 @@ namespace DemirbasOtomasyon.View
                 {
                     throw new Exception("Ürün Bilgileri Boş Geçilemez !");
                 }
-                if (int.Parse(txtAdet.Text) <= 0)
+                try
                 {
-                    throw new Exception("Stok Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
+                    if (int.Parse(txtAdet.Text) <= 0)
+                    {
+                        MessageBox.Show("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
+                        txtAdet.Text = "";
+                        txtAdet.Focus();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Adet için geçerli bir değer girin");
+                    txtAdet.Text = "";
+                    txtAdet.Focus();
+                }
+                try
+                {
+                    if (decimal.Parse(txtFiyat.Text) <= 0)
+                    {
+                        MessageBox.Show("Fiyat Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
+                        txtFiyat.Text = "";
+                        txtFiyat.Focus();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Fiyat için geçerli bir değer girin");
+                    txtFiyat.Text = "";
+                    txtFiyat.Focus();
                 }
                 if (selectedDate > DateTime.Now)
                 {

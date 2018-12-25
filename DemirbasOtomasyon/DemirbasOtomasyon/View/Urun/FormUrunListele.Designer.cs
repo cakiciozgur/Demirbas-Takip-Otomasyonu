@@ -79,6 +79,7 @@
             this.dgwUrunListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwUrunListesi.Location = new System.Drawing.Point(33, 213);
             this.dgwUrunListesi.Name = "dgwUrunListesi";
+            this.dgwUrunListesi.ReadOnly = true;
             this.dgwUrunListesi.RowTemplate.Height = 24;
             this.dgwUrunListesi.Size = new System.Drawing.Size(1081, 412);
             this.dgwUrunListesi.TabIndex = 17;
@@ -97,6 +98,7 @@
             // 
             this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUrunID.Location = new System.Drawing.Point(103, 47);
+            this.txtUrunID.MaxLength = 10;
             this.txtUrunID.Name = "txtUrunID";
             this.txtUrunID.Size = new System.Drawing.Size(200, 28);
             this.txtUrunID.TabIndex = 2;
@@ -128,9 +130,10 @@
             this.BtnRapor.Appearance.Options.UseFont = true;
             this.BtnRapor.Appearance.Options.UseForeColor = true;
             this.BtnRapor.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.BtnRapor.Location = new System.Drawing.Point(880, 16);
+            this.BtnRapor.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnRapor.ImageOptions.SvgImage")));
+            this.BtnRapor.Location = new System.Drawing.Point(837, 16);
             this.BtnRapor.Name = "BtnRapor";
-            this.BtnRapor.Size = new System.Drawing.Size(161, 41);
+            this.BtnRapor.Size = new System.Drawing.Size(204, 41);
             this.BtnRapor.TabIndex = 26;
             this.BtnRapor.Text = "RAPORLA";
             this.BtnRapor.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
@@ -148,9 +151,10 @@
             this.BtnTumUrunler.Appearance.Options.UseFont = true;
             this.BtnTumUrunler.Appearance.Options.UseForeColor = true;
             this.BtnTumUrunler.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.BtnTumUrunler.Location = new System.Drawing.Point(880, 63);
+            this.BtnTumUrunler.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnTumUrunler.ImageOptions.SvgImage")));
+            this.BtnTumUrunler.Location = new System.Drawing.Point(837, 63);
             this.BtnTumUrunler.Name = "BtnTumUrunler";
-            this.BtnTumUrunler.Size = new System.Drawing.Size(161, 41);
+            this.BtnTumUrunler.Size = new System.Drawing.Size(204, 41);
             this.BtnTumUrunler.TabIndex = 13;
             this.BtnTumUrunler.Text = "TÜM ÜRÜNLER";
             this.BtnTumUrunler.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
@@ -168,6 +172,7 @@
             this.BtnUrunBul.Appearance.Options.UseFont = true;
             this.BtnUrunBul.Appearance.Options.UseForeColor = true;
             this.BtnUrunBul.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.BtnUrunBul.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnUrunBul.ImageOptions.SvgImage")));
             this.BtnUrunBul.Location = new System.Drawing.Point(376, 39);
             this.BtnUrunBul.Name = "BtnUrunBul";
             this.BtnUrunBul.Size = new System.Drawing.Size(161, 41);

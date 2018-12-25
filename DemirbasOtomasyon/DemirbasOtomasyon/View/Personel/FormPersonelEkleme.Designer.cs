@@ -70,9 +70,11 @@
             // 
             this.txtPersonelSoyad.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPersonelSoyad.Location = new System.Drawing.Point(149, 82);
+            this.txtPersonelSoyad.MaxLength = 50;
             this.txtPersonelSoyad.Name = "txtPersonelSoyad";
             this.txtPersonelSoyad.Size = new System.Drawing.Size(200, 28);
             this.txtPersonelSoyad.TabIndex = 22;
+            this.txtPersonelSoyad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPersonelSoyad_KeyPress);
             // 
             // label2
             // 
@@ -88,9 +90,11 @@
             // 
             this.txtPersonelAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPersonelAd.Location = new System.Drawing.Point(149, 37);
+            this.txtPersonelAd.MaxLength = 50;
             this.txtPersonelAd.Name = "txtPersonelAd";
             this.txtPersonelAd.Size = new System.Drawing.Size(200, 28);
             this.txtPersonelAd.TabIndex = 16;
+            this.txtPersonelAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPersonelAd_KeyPress);
             // 
             // calendarControl2
             // 
@@ -98,7 +102,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl2.Location = new System.Drawing.Point(149, 222);
             this.calendarControl2.Name = "calendarControl2";
-            this.calendarControl2.Size = new System.Drawing.Size(246, 261);
+            this.calendarControl2.Size = new System.Drawing.Size(278, 270);
             this.calendarControl2.TabIndex = 15;
             // 
             // btnPersonelEkle
@@ -165,6 +169,7 @@
             // 
             // cmbDepartmanSec
             // 
+            this.cmbDepartmanSec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartmanSec.FormattingEnabled = true;
             this.cmbDepartmanSec.Location = new System.Drawing.Point(149, 174);
             this.cmbDepartmanSec.Name = "cmbDepartmanSec";
@@ -185,9 +190,11 @@
             // 
             this.txtCepTelefonu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCepTelefonu.Location = new System.Drawing.Point(149, 128);
+            this.txtCepTelefonu.MaxLength = 50;
             this.txtCepTelefonu.Name = "txtCepTelefonu";
             this.txtCepTelefonu.Size = new System.Drawing.Size(200, 28);
             this.txtCepTelefonu.TabIndex = 25;
+            this.txtCepTelefonu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCepTelefonu_KeyPress);
             // 
             // label5
             // 

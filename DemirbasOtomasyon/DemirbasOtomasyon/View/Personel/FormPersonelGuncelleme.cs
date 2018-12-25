@@ -58,6 +58,7 @@ namespace DemirbasOtomasyon.View
 
         private void BtnPersonelGuncelle_Click(object sender, EventArgs e)
         {
+
             PersonelGuncelle();
         }
         private void PersonelGuncelle()
@@ -121,6 +122,23 @@ namespace DemirbasOtomasyon.View
                     AtikController.AtikEkle(z.zimmetID);
                 }
             }
+        }
+
+        private void txtAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void txtTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtSoyadi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
         }
     }
 }

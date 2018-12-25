@@ -68,6 +68,7 @@
             this.txtSifre.ForeColor = System.Drawing.Color.Black;
             this.txtSifre.Location = new System.Drawing.Point(96, 182);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(281, 36);
             this.txtSifre.TabIndex = 20;
             // 

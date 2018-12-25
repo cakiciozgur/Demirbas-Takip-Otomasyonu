@@ -94,6 +94,7 @@
             // 
             // cmbKullaniciGuncelle
             // 
+            this.cmbKullaniciGuncelle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKullaniciGuncelle.FormattingEnabled = true;
             this.cmbKullaniciGuncelle.Location = new System.Drawing.Point(139, 162);
             this.cmbKullaniciGuncelle.Name = "cmbKullaniciGuncelle";
@@ -102,6 +103,7 @@
             // 
             // cmbPersonelGuncelle
             // 
+            this.cmbPersonelGuncelle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPersonelGuncelle.FormattingEnabled = true;
             this.cmbPersonelGuncelle.Location = new System.Drawing.Point(139, 121);
             this.cmbPersonelGuncelle.Name = "cmbPersonelGuncelle";
@@ -134,7 +136,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl1.Location = new System.Drawing.Point(142, 207);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(246, 261);
+            this.calendarControl1.Size = new System.Drawing.Size(278, 270);
             this.calendarControl1.TabIndex = 14;
             // 
             // btnGuncelle
@@ -170,6 +172,7 @@
             // 
             this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAdet.Location = new System.Drawing.Point(139, 81);
+            this.txtAdet.MaxLength = 3;
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
             this.txtAdet.TabIndex = 2;
@@ -230,6 +233,7 @@
             this.dgwZimmetGuncellemeListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwZimmetGuncellemeListele.Location = new System.Drawing.Point(432, 100);
             this.dgwZimmetGuncellemeListele.Name = "dgwZimmetGuncellemeListele";
+            this.dgwZimmetGuncellemeListele.ReadOnly = true;
             this.dgwZimmetGuncellemeListele.RowTemplate.Height = 24;
             this.dgwZimmetGuncellemeListele.Size = new System.Drawing.Size(821, 541);
             this.dgwZimmetGuncellemeListele.TabIndex = 19;

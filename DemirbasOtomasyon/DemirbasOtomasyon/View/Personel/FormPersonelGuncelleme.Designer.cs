@@ -77,6 +77,7 @@
             this.dgwPersonelListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwPersonelListesi.Location = new System.Drawing.Point(433, 96);
             this.dgwPersonelListesi.Name = "dgwPersonelListesi";
+            this.dgwPersonelListesi.ReadOnly = true;
             this.dgwPersonelListesi.RowTemplate.Height = 24;
             this.dgwPersonelListesi.Size = new System.Drawing.Size(885, 601);
             this.dgwPersonelListesi.TabIndex = 19;
@@ -109,6 +110,7 @@
             // 
             // cmbDepartmanGuncelle
             // 
+            this.cmbDepartmanGuncelle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartmanGuncelle.FormattingEnabled = true;
             this.cmbDepartmanGuncelle.Location = new System.Drawing.Point(149, 213);
             this.cmbDepartmanGuncelle.Name = "cmbDepartmanGuncelle";
@@ -149,9 +151,11 @@
             // 
             this.txtTelefon.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtTelefon.Location = new System.Drawing.Point(149, 173);
+            this.txtTelefon.MaxLength = 11;
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(200, 28);
             this.txtTelefon.TabIndex = 25;
+            this.txtTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefon_KeyPress);
             // 
             // label5
             // 
@@ -167,9 +171,11 @@
             // 
             this.txtSoyadi.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSoyadi.Location = new System.Drawing.Point(149, 130);
+            this.txtSoyadi.MaxLength = 50;
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(200, 28);
             this.txtSoyadi.TabIndex = 22;
+            this.txtSoyadi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyadi_KeyPress);
             // 
             // label2
             // 
@@ -185,9 +191,11 @@
             // 
             this.txtAdi.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAdi.Location = new System.Drawing.Point(149, 85);
+            this.txtAdi.MaxLength = 50;
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(200, 28);
             this.txtAdi.TabIndex = 16;
+            this.txtAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdi_KeyPress);
             // 
             // calendarControl
             // 
@@ -195,7 +203,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.calendarControl.Location = new System.Drawing.Point(103, 285);
             this.calendarControl.Name = "calendarControl";
-            this.calendarControl.Size = new System.Drawing.Size(246, 261);
+            this.calendarControl.Size = new System.Drawing.Size(278, 270);
             this.calendarControl.TabIndex = 15;
             // 
             // btnPersonelGuncelle
@@ -223,6 +231,7 @@
             this.txtPersonelID.Enabled = false;
             this.txtPersonelID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPersonelID.Location = new System.Drawing.Point(149, 39);
+            this.txtPersonelID.MaxLength = 10;
             this.txtPersonelID.Name = "txtPersonelID";
             this.txtPersonelID.Size = new System.Drawing.Size(200, 28);
             this.txtPersonelID.TabIndex = 2;
