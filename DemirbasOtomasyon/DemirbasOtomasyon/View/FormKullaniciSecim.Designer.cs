@@ -33,7 +33,6 @@
             this.btnBirimYetkilisi = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdmin = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblGiris = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +93,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel1.Controls.Add(this.lblGiris);
             this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.btnBirimYetkilisi);
             this.panel1.Controls.Add(this.btnSatinAlmaBirimi);
@@ -103,30 +101,18 @@
             this.panel1.Size = new System.Drawing.Size(960, 611);
             this.panel1.TabIndex = 17;
             // 
-            // lblGiris
-            // 
-            this.lblGiris.AutoSize = true;
-            this.lblGiris.Font = new System.Drawing.Font("Corbel", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblGiris.ForeColor = System.Drawing.Color.Black;
-            this.lblGiris.Location = new System.Drawing.Point(302, 31);
-            this.lblGiris.Name = "lblGiris";
-            this.lblGiris.Size = new System.Drawing.Size(350, 46);
-            this.lblGiris.TabIndex = 5;
-            this.lblGiris.Text = "KULLANICI SEÇİNİZ";
-            // 
             // FormKullaniciSecim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 607);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FormKullaniciSecim";
             this.Text = "Kullanıcı Seçimi";
             this.Load += new System.EventHandler(this.FormKullaniciSecim_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -137,6 +123,5 @@
         private DevExpress.XtraEditors.SimpleButton btnBirimYetkilisi;
         private DevExpress.XtraEditors.SimpleButton btnAdmin;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblGiris;
     }
 }
