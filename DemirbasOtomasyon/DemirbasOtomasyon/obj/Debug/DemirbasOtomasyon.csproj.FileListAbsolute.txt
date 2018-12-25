@@ -217,3 +217,4 @@ C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtom
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.csproj.CopyComplete
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.exe
 C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.pdb
+C:\Users\Lenovo\Documents\GitHub\YazilimTestProje\DemirbasOtomasyon\DemirbasOtomasyon\obj\Debug\DemirbasOtomasyon.View.FormAtiklar.resources

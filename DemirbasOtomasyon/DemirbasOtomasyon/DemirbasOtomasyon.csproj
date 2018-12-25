@@ -171,6 +171,12 @@
     <Compile Include="Model\UrunViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FormAtiklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAtiklar.Designer.cs">
+      <DependentUpon>FormAtiklar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\GirisEkranlari\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\FormAtiklar.resx">
+      <DependentUpon>FormAtiklar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\GirisEkranlari\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
