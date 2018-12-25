@@ -161,8 +161,10 @@
             this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.pnlGiris2);
             this.Controls.Add(this.pnlGiris1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "FormAdminGiris";
+            this.Load += new System.EventHandler(this.FormAdminGiris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             this.pnlGiris2.ResumeLayout(false);

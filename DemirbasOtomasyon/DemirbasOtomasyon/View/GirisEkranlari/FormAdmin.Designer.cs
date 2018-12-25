@@ -41,6 +41,7 @@
             this.grbPersonel = new System.Windows.Forms.GroupBox();
             this.grbZimmet = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnCikis = new DevExpress.XtraEditors.SimpleButton();
             this.grbPersonel.SuspendLayout();
             this.grbZimmet.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -203,6 +204,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün-Stok İşlemleri";
             // 
+            // BtnCikis
+            // 
+            this.BtnCikis.Appearance.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnCikis.Appearance.Options.UseFont = true;
+            this.BtnCikis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.BtnCikis.Location = new System.Drawing.Point(742, 12);
+            this.BtnCikis.Name = "BtnCikis";
+            this.BtnCikis.Size = new System.Drawing.Size(166, 49);
+            this.BtnCikis.TabIndex = 14;
+            this.BtnCikis.Text = "ÇIKIŞ YAP";
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
+            // 
             // FormAdmin
             // 
             this.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
@@ -210,11 +223,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 503);
+            this.Controls.Add(this.BtnCikis);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grbZimmet);
             this.Controls.Add(this.grbPersonel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormAdmin";
+            this.Text = "Admin Paneli";
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.grbPersonel.ResumeLayout(false);
             this.grbZimmet.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -236,5 +253,6 @@
         private System.Windows.Forms.GroupBox grbPersonel;
         private System.Windows.Forms.GroupBox grbZimmet;
         private System.Windows.Forms.GroupBox groupBox1;
+        private DevExpress.XtraEditors.SimpleButton BtnCikis;
     }
 }

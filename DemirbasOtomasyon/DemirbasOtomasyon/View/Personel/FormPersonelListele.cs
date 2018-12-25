@@ -49,6 +49,7 @@ namespace DemirbasOtomasyon.View
         }
         private void FormPersonelListele_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(50, 100);
             Araclar.ComboBoxDepartmanGetir(cmbDepartmanTip);
             cmbDepartmanTip.SelectedItem = null;
             cmbDepartmanTip.SelectedText = "Departman Seçiniz...";

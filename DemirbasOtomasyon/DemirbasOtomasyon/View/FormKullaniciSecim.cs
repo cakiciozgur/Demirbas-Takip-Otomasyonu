@@ -40,5 +40,11 @@ namespace DemirbasOtomasyon.View
             fsag.Show();
             this.Hide();
         }
+
+        private void FormKullaniciSecim_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(50, 100);
+
+        }
     }
 }

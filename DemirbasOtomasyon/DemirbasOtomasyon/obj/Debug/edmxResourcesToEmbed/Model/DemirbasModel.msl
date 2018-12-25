@@ -231,13 +231,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="sp_AtikBul" FunctionName="DemirbasTakipModel.Store.sp_AtikBul" />
     <FunctionImportMapping FunctionImportName="sp_AtikEkle" FunctionName="DemirbasTakipModel.Store.sp_AtikEkle" />
-    <FunctionImportMapping FunctionImportName="sp_AtikGeriDondur" FunctionName="DemirbasTakipModel.Store.sp_AtikGeriDondur" />
-    <FunctionImportMapping FunctionImportName="sp_AtikListele" FunctionName="DemirbasTakipModel.Store.sp_AtikListele">
+    <FunctionImportMapping FunctionImportName="sp_AtikListeleme" FunctionName="DemirbasTakipModel.Store.sp_AtikListeleme">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_AtikListele_Result">
+        <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_AtikListeleme_Result">
           <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
           <ScalarProperty Name="stokMiktari" ColumnName="stokMiktari" />
         </ComplexTypeMapping>
       </ResultMapping>

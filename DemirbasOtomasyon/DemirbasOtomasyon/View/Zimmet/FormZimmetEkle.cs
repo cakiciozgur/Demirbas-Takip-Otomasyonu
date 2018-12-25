@@ -54,6 +54,7 @@ namespace DemirbasOtomasyon.View
         }
         private void FormZimmetEkle_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(50, 100);
             Araclar.ComboBoxKullaniciGetir(cmbKullanici);
             Araclar.ComboBoxPersonelGetir(cmbPersonel);
             ZimmetUrunListele();

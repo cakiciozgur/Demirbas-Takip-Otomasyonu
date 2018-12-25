@@ -34,6 +34,7 @@ namespace DemirbasOtomasyon.View
         }
         private void FormUrunGuncelle_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(50, 100);
             UrunListele();
             UrunGuncelleRenklendir();
         }

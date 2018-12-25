@@ -186,17 +186,10 @@
           <Parameter Name="version" Type="int" Mode="In" />
           <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
         </Function>
-        <Function Name="sp_AtikBul" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="urunID" Type="int" Mode="In" />
-        </Function>
         <Function Name="sp_AtikEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="zimmetID" Type="int" Mode="In" />
         </Function>
-        <Function Name="sp_AtikGeriDondur" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="urunID" Type="int" Mode="In" />
-          <Parameter Name="stokMiktari" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_AtikListele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_AtikListeleme" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -639,6 +632,8 @@
             <Parameter Name="stokMiktari" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_AtikListele" ReturnType="Collection(DemirbasTakipModel.sp_AtikListele_Result)" />
+          <FunctionImport Name="sp_AtikListele1" ReturnType="Collection(DemirbasTakipModel.sp_AtikListele1_Result)" />
+          <FunctionImport Name="sp_AtikListeleme" ReturnType="Collection(DemirbasTakipModel.sp_AtikListeleme_Result)" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -802,6 +797,16 @@
         </Association>
         <ComplexType Name="sp_AtikListele_Result">
           <Property Type="Int32" Name="urunID" Nullable="true" />
+          <Property Type="Int32" Name="stokMiktari" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_AtikListele1_Result">
+          <Property Type="Int32" Name="urunID" Nullable="true" />
+          <Property Type="String" Name="urunAd" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="stokMiktari" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_AtikListeleme_Result">
+          <Property Type="Int32" Name="urunID" Nullable="true" />
+          <Property Type="String" Name="urunAd" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="stokMiktari" Nullable="true" />
         </ComplexType>
       </Schema>
@@ -1040,13 +1045,12 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_AtikBul" FunctionName="DemirbasTakipModel.Store.sp_AtikBul" />
           <FunctionImportMapping FunctionImportName="sp_AtikEkle" FunctionName="DemirbasTakipModel.Store.sp_AtikEkle" />
-          <FunctionImportMapping FunctionImportName="sp_AtikGeriDondur" FunctionName="DemirbasTakipModel.Store.sp_AtikGeriDondur" />
-          <FunctionImportMapping FunctionImportName="sp_AtikListele" FunctionName="DemirbasTakipModel.Store.sp_AtikListele">
+          <FunctionImportMapping FunctionImportName="sp_AtikListeleme" FunctionName="DemirbasTakipModel.Store.sp_AtikListeleme">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_AtikListele_Result">
+              <ComplexTypeMapping TypeName="DemirbasTakipModel.sp_AtikListeleme_Result">
                 <ScalarProperty Name="urunID" ColumnName="urunID" />
+                <ScalarProperty Name="urunAd" ColumnName="urunAd" />
                 <ScalarProperty Name="stokMiktari" ColumnName="stokMiktari" />
               </ComplexTypeMapping>
             </ResultMapping>

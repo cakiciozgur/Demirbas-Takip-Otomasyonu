@@ -53,5 +53,10 @@ namespace DemirbasOtomasyon.View
                 MessageBox.Show(ex.Message, "Hata Meydana Geldi !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void FormAdminGiris_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(200, 150);
+        }
     }
 }

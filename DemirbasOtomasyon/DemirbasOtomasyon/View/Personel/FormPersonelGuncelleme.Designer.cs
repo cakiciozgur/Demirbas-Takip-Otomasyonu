@@ -275,6 +275,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgwPersonelListesi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormPersonelGuncelleme";
             this.Load += new System.EventHandler(this.FormPersonelGuncelleme_Load);
             this.panel1.ResumeLayout(false);

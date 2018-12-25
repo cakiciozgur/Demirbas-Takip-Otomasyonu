@@ -306,6 +306,8 @@
       <Parameter Name="stokMiktari" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_AtikListele" ReturnType="Collection(DemirbasTakipModel.sp_AtikListele_Result)" />
+    <FunctionImport Name="sp_AtikListele1" ReturnType="Collection(DemirbasTakipModel.sp_AtikListele1_Result)" />
+    <FunctionImport Name="sp_AtikListeleme" ReturnType="Collection(DemirbasTakipModel.sp_AtikListeleme_Result)" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -469,6 +471,16 @@
   </Association>
   <ComplexType Name="sp_AtikListele_Result">
     <Property Type="Int32" Name="urunID" Nullable="true" />
+    <Property Type="Int32" Name="stokMiktari" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_AtikListele1_Result">
+    <Property Type="Int32" Name="urunID" Nullable="true" />
+    <Property Type="String" Name="urunAd" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="stokMiktari" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_AtikListeleme_Result">
+    <Property Type="Int32" Name="urunID" Nullable="true" />
+    <Property Type="String" Name="urunAd" Nullable="true" MaxLength="50" />
     <Property Type="Int32" Name="stokMiktari" Nullable="true" />
   </ComplexType>
 </Schema>

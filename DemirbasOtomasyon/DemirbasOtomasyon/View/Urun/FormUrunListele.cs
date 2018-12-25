@@ -28,6 +28,7 @@ namespace DemirbasOtomasyon.View
 
         private void FormUrunListele_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(50, 100);
             UrunListele();
         }
         private void UrunRenklendir()

@@ -217,6 +217,7 @@
             this.Controls.Add(this.dgwPersonelListele);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormPersonelListele";
             this.Load += new System.EventHandler(this.FormPersonelListele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwPersonelListele)).EndInit();

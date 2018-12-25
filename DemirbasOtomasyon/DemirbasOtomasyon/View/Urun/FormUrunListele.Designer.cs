@@ -207,6 +207,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgwUrunListesi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormUrunListele";
             this.Load += new System.EventHandler(this.FormUrunListele_Load);
             this.panel1.ResumeLayout(false);

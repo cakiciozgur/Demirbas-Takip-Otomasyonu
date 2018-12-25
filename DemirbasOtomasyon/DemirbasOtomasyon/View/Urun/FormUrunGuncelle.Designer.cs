@@ -250,6 +250,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.MaximizeBox = false;
             this.Name = "FormUrunGuncelle";
             this.Load += new System.EventHandler(this.FormUrunGuncelle_Load);
             this.panel1.ResumeLayout(false);

@@ -467,5 +467,15 @@ namespace DemirbasOtomasyon.Model
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_AtikListele_Result>("sp_AtikListele");
         }
+    
+        public virtual ObjectResult<sp_AtikListele1_Result> sp_AtikListele1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_AtikListele1_Result>("sp_AtikListele1");
+        }
+    
+        public virtual ObjectResult<sp_AtikListeleme_Result> sp_AtikListeleme()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_AtikListeleme_Result>("sp_AtikListeleme");
+        }
     }
 }

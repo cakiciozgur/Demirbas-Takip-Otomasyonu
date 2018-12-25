@@ -141,6 +141,12 @@
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\PersonelViewModel.cs" />
+    <Compile Include="Model\sp_AtikListele1_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\sp_AtikListeleme_Result.cs">
+      <DependentUpon>DemirbasModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\sp_AtikListele_Result.cs">
       <DependentUpon>DemirbasModel.tt</DependentUpon>
     </Compile>

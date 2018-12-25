@@ -27,5 +27,17 @@ namespace DemirbasOtomasyon.View
             FormZimmetListele fzl = new FormZimmetListele();
             fzl.ShowDialog();
         }
+
+        private void FormBirimYetkilisi_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(50, 100);
+        }
+
+        private void BtnCikis_Click(object sender, EventArgs e)
+        {
+            FormKullaniciSecim fks = new FormKullaniciSecim();
+            fks.Show();
+            this.Close();
+        }
     }
 }

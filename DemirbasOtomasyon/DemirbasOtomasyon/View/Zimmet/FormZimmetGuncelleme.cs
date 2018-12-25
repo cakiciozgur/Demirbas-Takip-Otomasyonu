@@ -61,6 +61,7 @@ namespace DemirbasOtomasyon.View
             
           private void FormZimmetGuncelleme_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(50, 100);
             Araclar.ComboBoxKullaniciGetir(cmbKullaniciGuncelle);
             Araclar.ComboBoxPersonelGetir(cmbPersonelGuncelle);
             cmbPersonelGuncelle.SelectedItem = null;

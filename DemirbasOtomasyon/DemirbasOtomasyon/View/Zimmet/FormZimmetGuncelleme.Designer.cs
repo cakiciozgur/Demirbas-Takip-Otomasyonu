@@ -250,6 +250,7 @@
             this.Controls.Add(this.grbUrunIslemleri);
             this.Controls.Add(this.dgwZimmetGuncellemeListele);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormZimmetGuncelleme";
             this.Load += new System.EventHandler(this.FormZimmetGuncelleme_Load);
             this.panel1.ResumeLayout(false);

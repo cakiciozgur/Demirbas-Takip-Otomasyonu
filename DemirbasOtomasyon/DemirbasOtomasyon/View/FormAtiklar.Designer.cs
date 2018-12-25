@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAtiklar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.dgwAtikListele = new System.Windows.Forms.DataGridView();
-            this.ppdDialog = new System.Windows.Forms.PrintPreviewDialog();
-            this.pdYazici = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwAtikListele)).BeginInit();
             this.SuspendLayout();
@@ -45,14 +42,14 @@
             this.panel1.Controls.Add(this.pnlUrunGrs);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1147, 78);
+            this.panel1.Size = new System.Drawing.Size(765, 78);
             this.panel1.TabIndex = 25;
             // 
             // pnlUrunGrs
             // 
             this.pnlUrunGrs.AutoSize = true;
             this.pnlUrunGrs.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlUrunGrs.Location = new System.Drawing.Point(418, 25);
+            this.pnlUrunGrs.Location = new System.Drawing.Point(256, 23);
             this.pnlUrunGrs.Name = "pnlUrunGrs";
             this.pnlUrunGrs.Size = new System.Drawing.Size(240, 37);
             this.pnlUrunGrs.TabIndex = 0;
@@ -70,33 +67,24 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgwAtikListele.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwAtikListele.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwAtikListele.Location = new System.Drawing.Point(34, 105);
+            this.dgwAtikListele.Location = new System.Drawing.Point(12, 95);
             this.dgwAtikListele.Name = "dgwAtikListele";
             this.dgwAtikListele.ReadOnly = true;
             this.dgwAtikListele.RowTemplate.Height = 24;
-            this.dgwAtikListele.Size = new System.Drawing.Size(1082, 518);
+            this.dgwAtikListele.Size = new System.Drawing.Size(734, 331);
             this.dgwAtikListele.TabIndex = 24;
-            // 
-            // ppdDialog
-            // 
-            this.ppdDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.ppdDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.ppdDialog.ClientSize = new System.Drawing.Size(400, 300);
-            this.ppdDialog.Document = this.pdYazici;
-            this.ppdDialog.Enabled = true;
-            this.ppdDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdDialog.Icon")));
-            this.ppdDialog.Name = "ppdDialog";
-            this.ppdDialog.Visible = false;
             // 
             // FormAtiklar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 638);
+            this.ClientSize = new System.Drawing.Size(762, 439);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgwAtikListele);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormAtiklar";
+            this.Load += new System.EventHandler(this.FormAtiklar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwAtikListele)).EndInit();
@@ -109,7 +97,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
         private System.Windows.Forms.DataGridView dgwAtikListele;
-        private System.Windows.Forms.PrintPreviewDialog ppdDialog;
-        private System.Drawing.Printing.PrintDocument pdYazici;
     }
 }

@@ -50,6 +50,7 @@ namespace DemirbasOtomasyon.View
 
         private void FormPersonelGuncelleme_Load(object sender, EventArgs e)
         {
+            this.Location = new Point(50, 100);
             Araclar.ComboBoxDepartmanGetir(cmbDepartmanGuncelle);
             cmbDepartmanGuncelle.SelectedItem = null;
             cmbDepartmanGuncelle.SelectedText = "Departman Seçiniz...";

@@ -32,6 +32,7 @@
             this.btnPersonelListele = new DevExpress.XtraEditors.SimpleButton();
             this.grbZimmet = new System.Windows.Forms.GroupBox();
             this.btnZimmetListele = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnCikis = new DevExpress.XtraEditors.SimpleButton();
             this.grbZimmet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +80,18 @@
             this.btnZimmetListele.Text = "Zimmet Listele";
             this.btnZimmetListele.Click += new System.EventHandler(this.BtnZimmetListele_Click_1);
             // 
+            // BtnCikis
+            // 
+            this.BtnCikis.Appearance.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnCikis.Appearance.Options.UseFont = true;
+            this.BtnCikis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.BtnCikis.Location = new System.Drawing.Point(742, 12);
+            this.BtnCikis.Name = "BtnCikis";
+            this.BtnCikis.Size = new System.Drawing.Size(166, 49);
+            this.BtnCikis.TabIndex = 14;
+            this.BtnCikis.Text = "ÇIKIŞ YAP";
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
+            // 
             // FormBirimYetkilisi
             // 
             this.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
@@ -86,9 +99,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 503);
+            this.Controls.Add(this.BtnCikis);
             this.Controls.Add(this.grbZimmet);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormBirimYetkilisi";
+            this.Text = "Birim Yetkili Paneli";
+            this.Load += new System.EventHandler(this.FormBirimYetkilisi_Load);
             this.grbZimmet.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -99,5 +116,6 @@
         private DevExpress.XtraEditors.SimpleButton btnPersonelListele;
         private System.Windows.Forms.GroupBox grbZimmet;
         private DevExpress.XtraEditors.SimpleButton btnZimmetListele;
+        private DevExpress.XtraEditors.SimpleButton BtnCikis;
     }
 }

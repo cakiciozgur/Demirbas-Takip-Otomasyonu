@@ -191,7 +191,9 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.MaximizeBox = false;
             this.Name = "FormUrunEkleme";
+            this.Load += new System.EventHandler(this.FormUrunEkleme_Load);
             this.grbUrunIslemleri.ResumeLayout(false);
             this.grbUrunIslemleri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarControl1.CalendarTimeProperties)).EndInit();

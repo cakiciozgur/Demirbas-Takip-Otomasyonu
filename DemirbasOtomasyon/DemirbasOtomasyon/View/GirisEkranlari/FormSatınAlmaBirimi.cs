@@ -52,5 +52,17 @@ namespace DemirbasOtomasyon.View
             FormZimmetGuncelleme fzg = new FormZimmetGuncelleme();
             fzg.ShowDialog();
         }
+
+        private void FormSatınAlmaBirimi_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(50, 100);
+        }
+
+        private void BtnCikis_Click(object sender, EventArgs e)
+        {
+            FormKullaniciSecim fks = new FormKullaniciSecim();
+            fks.Show();
+            this.Close();
+        }
     }
 }
