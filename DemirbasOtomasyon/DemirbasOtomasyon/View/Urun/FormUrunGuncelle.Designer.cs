@@ -269,17 +269,17 @@
         private System.Windows.Forms.Label pnlUrunGrs;
         private System.Windows.Forms.DataGridView dgwUrunListele;
         private System.Windows.Forms.GroupBox grbUrunIslemleri;
-        private DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
-        private DevExpress.XtraEditors.SimpleButton btnGuncelle;
-        private System.Windows.Forms.TextBox txtUrunAd;
-        private System.Windows.Forms.TextBox txtAdet;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtFiyat;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtUrunID;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnSil;
+        public DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
+        public DevExpress.XtraEditors.SimpleButton btnGuncelle;
+        public System.Windows.Forms.TextBox txtUrunAd;
+        public System.Windows.Forms.TextBox txtAdet;
+        public System.Windows.Forms.TextBox txtFiyat;
+        public System.Windows.Forms.TextBox txtUrunID;
     }
 }

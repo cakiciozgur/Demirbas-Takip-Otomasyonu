@@ -230,17 +230,17 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
-        private System.Windows.Forms.TextBox txtPersonelSoyad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPersonelAd;
-        private DevExpress.XtraEditors.Controls.CalendarControl calendarControl2;
-        private DevExpress.XtraEditors.SimpleButton btnPersonelEkle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox grbZimmetIslemleri;
-        private System.Windows.Forms.TextBox txtCepTelefonu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbDepartmanSec;
+        public System.Windows.Forms.TextBox txtPersonelSoyad;
+        public System.Windows.Forms.TextBox txtPersonelAd;
+        public DevExpress.XtraEditors.Controls.CalendarControl calendarControl2;
+        public DevExpress.XtraEditors.SimpleButton btnPersonelEkle;
+        public System.Windows.Forms.TextBox txtCepTelefonu;
+        public System.Windows.Forms.ComboBox cmbDepartmanSec;
     }
 }

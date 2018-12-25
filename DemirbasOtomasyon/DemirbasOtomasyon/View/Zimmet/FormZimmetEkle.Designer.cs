@@ -282,16 +282,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox grbZimmetIslemleri;
-        private DevExpress.XtraEditors.SimpleButton btnZimemetKaydet;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
         private System.Windows.Forms.DataGridView dgwZimmetListesi;
-        private DevExpress.XtraEditors.Controls.CalendarControl calendarControl;
-        private System.Windows.Forms.TextBox txtUrunAd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbPersonel;
-        private System.Windows.Forms.ComboBox cmbKullanici;
-        private System.Windows.Forms.TextBox txtAdet;
         private System.Windows.Forms.Label label2;
+        public DevExpress.XtraEditors.SimpleButton btnZimemetKaydet;
+        public DevExpress.XtraEditors.Controls.CalendarControl calendarControl;
+        public System.Windows.Forms.TextBox txtUrunAd;
+        public System.Windows.Forms.ComboBox cmbPersonel;
+        public System.Windows.Forms.ComboBox cmbKullanici;
+        public System.Windows.Forms.TextBox txtAdet;
     }
 }

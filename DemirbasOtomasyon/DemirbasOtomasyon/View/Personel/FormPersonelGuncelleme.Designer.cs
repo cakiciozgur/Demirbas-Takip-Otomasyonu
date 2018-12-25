@@ -294,19 +294,19 @@
         private System.Windows.Forms.Label pnlUrunGrs;
         private System.Windows.Forms.DataGridView dgwPersonelListesi;
         private System.Windows.Forms.GroupBox grbZimmetIslemleri;
-        private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSoyadi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtAdi;
-        private DevExpress.XtraEditors.Controls.CalendarControl calendarControl;
         private DevExpress.XtraEditors.SimpleButton btnPersonelGuncelle;
-        private System.Windows.Forms.TextBox txtPersonelID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.SimpleButton btnPersonelSil;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbDepartmanGuncelle;
+        public System.Windows.Forms.TextBox txtTelefon;
+        public System.Windows.Forms.TextBox txtSoyadi;
+        public System.Windows.Forms.TextBox txtAdi;
+        public DevExpress.XtraEditors.Controls.CalendarControl calendarControl;
+        public System.Windows.Forms.TextBox txtPersonelID;
+        public DevExpress.XtraEditors.SimpleButton btnPersonelSil;
+        public System.Windows.Forms.ComboBox cmbDepartmanGuncelle;
     }
 }

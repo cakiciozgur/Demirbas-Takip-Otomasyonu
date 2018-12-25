@@ -153,7 +153,7 @@
             this.btnEkle.Appearance.Options.UseFont = true;
             this.btnEkle.Appearance.Options.UseForeColor = true;
             this.btnEkle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnEkle.Location = new System.Drawing.Point(208, 479);
+            this.btnEkle.Location = new System.Drawing.Point(204, 479);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(161, 41);
             this.btnEkle.TabIndex = 12;
@@ -204,18 +204,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtUrunAd;
-        private System.Windows.Forms.TextBox txtAdet;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtFiyat;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox grbUrunIslemleri;
-        private DevExpress.XtraEditors.SimpleButton btnEkle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label pnlUrunGrs;
-        private DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
+        public System.Windows.Forms.TextBox txtUrunAd;
+        public System.Windows.Forms.TextBox txtAdet;
+        public System.Windows.Forms.TextBox txtFiyat;
+        public DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
+        public DevExpress.XtraEditors.SimpleButton btnEkle;
     }
 }

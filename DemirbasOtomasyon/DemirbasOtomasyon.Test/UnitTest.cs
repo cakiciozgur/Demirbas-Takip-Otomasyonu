@@ -3,48 +3,84 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 using DemirbasOtomasyon.Model;
 using DemirbasOtomasyon.Controller;
+using DemirbasOtomasyon.View;
 
 namespace DemirbasOtomasyon.Test
 {
     [TestClass]
     public class TestHesapla
     {
+        //[TestMethod]
+        //public void UrunEkleme()
+        //{
+        //    Urunler urun = new Urunler
+        //    {
+        //        urunAd = "Kulaklık",
+        //        stokMiktari = 4,
+        //        fiyat = 30,
+        //        satınAlınmaTarihi = Convert.ToDateTime("2018/03/05")
+        //    };
+        //    UrunController.UrunEkle(urun);
+        //}
         [TestMethod]
         public void UrunEkleme()
         {
-            Urunler urun = new Urunler
-            {
-                urunAd = "Kulaklık",
-                stokMiktari = 4,
-                fiyat = 30,
-                satınAlınmaTarihi = Convert.ToDateTime("2018/03/05")
-            };
-            UrunController.UrunEkle(urun);
+            FormUrunEkleme u = new FormUrunEkleme();
+
+            u.txtUrunAd.Text = "Kulaklık";
+            u.txtAdet.Text = "4";
+            u.txtFiyat.Text = "30";
+            u.calendarControl1.Text = "2018/03/05";
+            u.btnEkle.PerformClick();
+
         }
+
         [TestMethod]
         public void PersonelEkleme()
         {
-            Personeller per = new Personeller
-            {
-                adi = "Ahmet",
-                soyadi = "Hamdi Tanpınar",
-                cepTelefonu = "05426336958",
-                departmanID = 2,
-                iseGirisTarihi = Convert.ToDateTime("2015-03-03")
-            };
-            PersonelController.PersonelEkle(per);
+            FormPersonelEkleme p = new FormPersonelEkleme();
+
+            p.txtPersonelAd.Text = "Sait Faik";
+            p.txtPersonelSoyad.Text = "Abasıyanık";
+            p.txtCepTelefonu.Text = "05892544896";
+            p.cmbDepartmanSec.Text = "2";
+            p.calendarControl2.Text = "2018/09/05";
+            p.btnPersonelEkle.PerformClick();
         }
         [TestMethod]
         public void ZimmetEkleme()
         {
-            Zimmetler z = new Zimmetler
-            {
-                urunID = 1,
-                personelID = 1,
-                kullaniciID = 2,
-                zimmetTarihi = Convert.ToDateTime("2018-12-22")
-            };
-            ZimmetController.ZimmetEkle(z,1);
+            FormZimmetEkle z = new FormZimmetEkle();
+
+            z.txtUrunAd.Text = "Klavye";
+            z.txtAdet.Text = "2";
+            z.cmbPersonel.Text = "İbrahim";
+            z.cmbKullanici.Text = "Haci";
+            z.calendarControl.Text = "2018/11/26";
+            z.btnZimemetKaydet.PerformClick();
+        }
+        [TestMethod]
+        public void UrunGuncelle()
+        {
+            FormUrunGuncelle z = new FormUrunGuncelle();
+
+            z.txtUrunAd.Text = "Klavye";
+            z.txtAdet.Text = "2";
+            z.txtFiyat.Text = "5000";
+            z.calendarControl1.Text = "2018/10/26";
+            z.btnGuncelle.PerformClick();
+        }
+        [TestMethod]
+        public void PersonelSil()
+        {
+            FormPersonelGuncelleme p = new FormPersonelGuncelleme();
+
+            p.txtAdi.Text = "Emin";
+            p.txtSoyadi.Text = "Borandağ";
+            p.txtTelefon.Text = "05536987000";
+            p.cmbDepartmanGuncelle.Text = "3";
+            p.calendarControl.Text = "2018/8/16";
+            p.btnPersonelSil.PerformClick();
         }
     }
 }
