@@ -38,7 +38,7 @@ namespace DemirbasOtomasyon.View
                 };
                 if (string.IsNullOrEmpty(kullanici.kullaniciAdi) || string.IsNullOrEmpty(kullanici.kullaniciSifre.ToString()))
                 {
-                    throw new Exception("Kullanıcı Adı ve Şifre Boş Geçilemez !");
+                    MessageBox.Show("Kullanıcı Adı ve Şifre Boş Geçilemez !");
                 }
 
                 var result = KullaniciController.AdminGiris(kullanici);

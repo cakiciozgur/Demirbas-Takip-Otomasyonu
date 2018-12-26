@@ -127,7 +127,7 @@ namespace DemirbasOtomasyon.View
             }
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 350 + (i * 30));
             e.Graphics.DrawString("TOPLAM PERSONEL :  "+i, Govde, sb, 600, 370 + (i * 30));
-            e.Graphics.DrawString("ÇAKAN LTD.ŞTİ - 2018", Govde, sb, 600, 850 + (i * 30));
+            e.Graphics.DrawString("GROUPBY LTD.ŞTİ - 2018", Govde, sb, 600, 650 + (i * 30));
         }
 
         private void txtPersonelID_KeyPress(object sender, KeyPressEventArgs e)

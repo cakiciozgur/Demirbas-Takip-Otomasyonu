@@ -33,6 +33,7 @@
             this.btnBirimYetkilisi = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdmin = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnCikis = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +94,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.BtnCikis);
             this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.btnBirimYetkilisi);
             this.panel1.Controls.Add(this.btnSatinAlmaBirimi);
@@ -101,13 +103,25 @@
             this.panel1.Size = new System.Drawing.Size(960, 611);
             this.panel1.TabIndex = 17;
             // 
+            // BtnCikis
+            // 
+            this.BtnCikis.Appearance.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnCikis.Appearance.Options.UseFont = true;
+            this.BtnCikis.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnCikis.ImageOptions.SvgImage")));
+            this.BtnCikis.Location = new System.Drawing.Point(782, 25);
+            this.BtnCikis.Name = "BtnCikis";
+            this.BtnCikis.Size = new System.Drawing.Size(166, 49);
+            this.BtnCikis.TabIndex = 18;
+            this.BtnCikis.Text = "ÇIKIŞ YAP";
+            this.BtnCikis.Click += new System.EventHandler(this.BtnCikis_Click);
+            // 
             // FormKullaniciSecim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 607);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FormKullaniciSecim";
             this.Text = "Kullanıcı Seçimi";
@@ -123,5 +137,6 @@
         private DevExpress.XtraEditors.SimpleButton btnBirimYetkilisi;
         private DevExpress.XtraEditors.SimpleButton btnAdmin;
         private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.SimpleButton BtnCikis;
     }
 }

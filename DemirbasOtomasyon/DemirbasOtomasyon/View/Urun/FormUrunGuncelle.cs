@@ -31,6 +31,7 @@ namespace DemirbasOtomasyon.View
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
             var data = (from d in db.sp_UrunListele() select new { d.urunID,d.urunAd,d.stokMiktari,d.fiyat,d.satınAlınmaTarihi,d.stokDurum} );
             dgwUrunListele.DataSource = data.ToList();
+            UrunGuncelleRenklendir();
         }
         private void FormUrunGuncelle_Load(object sender, EventArgs e)
         {
@@ -49,7 +50,7 @@ namespace DemirbasOtomasyon.View
                     DataGridViewCellStyle rowColor = new DataGridViewCellStyle();
                     if (Convert.ToInt32(dgwUrunListele.Rows[i].Cells[2].Value) >= 6)
                     {
-                        rowColor.BackColor = Color.LightCoral;
+                        rowColor.BackColor = Color.LightGreen;
                         rowColor.ForeColor = Color.Black;
                     }
                     else if (Convert.ToInt32(dgwUrunListele.Rows[i].Cells[2].Value) >= 3 && Convert.ToInt32(dgwUrunListele.Rows[i].Cells[2].Value) <= 5)
@@ -59,7 +60,7 @@ namespace DemirbasOtomasyon.View
                     }
                     else if (Convert.ToInt32(dgwUrunListele.Rows[i].Cells[2].Value) < 3)
                     {
-                        rowColor.BackColor = Color.LightSteelBlue;
+                        rowColor.BackColor = Color.LightCoral;
                         rowColor.ForeColor = Color.Black;
                     }
                     dgwUrunListele.Rows[i].DefaultCellStyle = rowColor;

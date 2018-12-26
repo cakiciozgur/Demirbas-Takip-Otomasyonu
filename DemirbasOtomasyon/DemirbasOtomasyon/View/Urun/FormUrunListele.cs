@@ -126,7 +126,7 @@ namespace DemirbasOtomasyon.View
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 350 + (i * 30));
             e.Graphics.DrawString("STOKTAKİ TOPLAM ÜRÜN :  "+ToplamStok, Govde, sb, 525, 375 + (i * 30));
             e.Graphics.DrawString("TOPLAM ÜRÜN GİDERLERİ : "+ToplamGider, Govde, sb, 525, 395 + (i * 30));
-            e.Graphics.DrawString("ÇAKAN LTD.ŞTİ - 2018", Govde, sb, 600, 1000);
+            e.Graphics.DrawString("GROUPBY LTD.ŞTİ - 2018", Govde, sb, 600, 650 + (i * 30));
         }
 
         private void BtnRapor_Click(object sender, EventArgs e)

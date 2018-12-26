@@ -162,14 +162,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="FN_UrunIDGetir" FunctionName="DemirbasTakipModel.Store.FN_UrunIDGetir">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="DemirbasTakipModel.FN_UrunIDGetir_Result">
-          <ScalarProperty Name="urunID" ColumnName="urunID" />
-          <ScalarProperty Name="personelID" ColumnName="personelID" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_ZimmetGuncelle" FunctionName="DemirbasTakipModel.Store.sp_ZimmetGuncelle" />
     <FunctionImportMapping FunctionImportName="sp_UrunBul" FunctionName="DemirbasTakipModel.Store.sp_UrunBul">
       <ResultMapping>

@@ -22,7 +22,7 @@ namespace DemirbasOtomasyon.View
         private void GuncelleZimmetUrunListele()
         {
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
-            var data = from z in db.sp_ZimmetListele2() select new { z.Zimmet_ID,z.Zimmet_Adet,z.Personel_Adı,z.Kullanıcı_Adı,z.Zimmet_Tarihi};
+            var data = from z in db.sp_ZimmetListele2() select new { z.Zimmet_ID,z.Ürün_Adı,z.Zimmet_Adet,z.Personel_Adı,z.Departman,z.Zimmet_Tarihi,z.Kullanıcı_Adı};
             dgwZimmetGuncellemeListele.DataSource = data.ToList();
             ZimmetGuncelleRenklendir();
         }
@@ -35,17 +35,17 @@ namespace DemirbasOtomasyon.View
                 {
                     Application.DoEvents();
                     DataGridViewCellStyle rowColor = new DataGridViewCellStyle();
-                    if (Convert.ToInt32(dgwZimmetGuncellemeListele.Rows[i].Cells[1].Value) >= 6)
+                    if (Convert.ToInt32(dgwZimmetGuncellemeListele.Rows[i].Cells[2].Value) >= 6)
                     {
                         rowColor.BackColor = Color.LightGreen;
                         rowColor.ForeColor = Color.Black;
                     }
-                    else if (Convert.ToInt32(dgwZimmetGuncellemeListele.Rows[i].Cells[1].Value) >= 3 && Convert.ToInt32(dgwZimmetGuncellemeListele.Rows[i].Cells[1].Value) <= 5)
+                    else if (Convert.ToInt32(dgwZimmetGuncellemeListele.Rows[i].Cells[2].Value) >= 3 && Convert.ToInt32(dgwZimmetGuncellemeListele.Rows[i].Cells[2].Value) <= 5)
                     {
                         rowColor.BackColor = Color.LightSkyBlue;
                         rowColor.ForeColor = Color.Black;
                     }
-                    else if (Convert.ToInt32(dgwZimmetGuncellemeListele.Rows[i].Cells[1].Value) < 3)
+                    else if (Convert.ToInt32(dgwZimmetGuncellemeListele.Rows[i].Cells[2].Value) < 3)
                     {
                         rowColor.BackColor = Color.LightCoral;
                         rowColor.ForeColor = Color.Black;

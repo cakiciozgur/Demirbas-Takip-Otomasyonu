@@ -131,7 +131,7 @@ namespace DemirbasOtomasyon.View
             }
             e.Graphics.DrawString("--------------------------------------------------------------------------------------------------------------------------------------", Govde, sb, 50, 355+(i*30));
             e.Graphics.DrawString("TOPLAM ZİMMETLİ ÜRÜN : "+ToplamZimmet, Govde, sb, 525, 375 + (i * 30));
-            e.Graphics.DrawString("ÇAKAN LTD.ŞTİ - 2018", Govde, sb, 600, 1000);
+            e.Graphics.DrawString("GROUPBY LTD.ŞTİ - 2018", Govde, sb, 600, 650 + (i * 30));
         }
 
         private void txtZimmetID_KeyPress(object sender, KeyPressEventArgs e)

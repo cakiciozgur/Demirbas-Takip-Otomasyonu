@@ -13,11 +13,11 @@ namespace DemirbasOtomasyon.Controller
 {
     public static class ZimmetController
     {
-        public static void ZimmetEkle(Zimmetler zimmet,int adet)
+        public static void ZimmetEkle(Zimmetler zimmet)
         {
             using (var context = new DemirbasTakipEntitiess())
             {
-                context.sp_ZimmetEkle(zimmet.urunID, zimmet.zimmetTarihi, zimmet.zimmetAdet, zimmet.personelID, zimmet.kullaniciID,adet);
+                context.sp_ZimmetEkle(zimmet.urunID, zimmet.zimmetTarihi, zimmet.zimmetAdet, zimmet.personelID, zimmet.kullaniciID);
                 context.SaveChanges();
             }
         }

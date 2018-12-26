@@ -46,5 +46,10 @@ namespace DemirbasOtomasyon.View
             this.Location = new Point(50, 100);
 
         }
+
+        private void BtnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

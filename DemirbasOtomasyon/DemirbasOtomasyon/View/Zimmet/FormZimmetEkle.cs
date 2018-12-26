@@ -93,7 +93,7 @@ namespace DemirbasOtomasyon.View
                 }
                 try
                 {
-                    if (string.IsNullOrEmpty(txtAdet.Text) || (short.Parse(txtAdet.Text) <= 0))
+                    if (string.IsNullOrEmpty(txtAdet.Text) || (short.Parse(txtAdet.Text) <= 0) || (int.Parse(txtAdet.Text) > Convert.ToInt16(dgwZimmetListesi.CurrentRow.Cells[2].Value)))
                     {
                         MessageBox.Show("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
                         txtAdet.Text = "";
@@ -105,10 +105,6 @@ namespace DemirbasOtomasyon.View
                     MessageBox.Show("Adet için geçerli bir değer girin");
                     txtAdet.Text = "";
                     txtAdet.Focus();
-                }
-                if (short.Parse(txtAdet.Text) > Convert.ToInt16(dgwZimmetListesi.CurrentRow.Cells[2].Value))
-                {
-                    MessageBox.Show("Stok Miktarındakinden Fazla Ürün Zimmete Eklenemez !");
                 }
                 if (selectedDate > DateTime.Now)
                 {
@@ -124,7 +120,7 @@ namespace DemirbasOtomasyon.View
                     zimmetTarihi = selectedDate
                 };
 
-                ZimmetController.ZimmetEkle(zimmet, int.Parse(txtAdet.Text));
+                ZimmetController.ZimmetEkle(zimmet);
                 MessageBox.Show("Zimmet Başarıyla Eklendi !", "Zimmet Eklendi !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ZimmetUrunListele();
             }
