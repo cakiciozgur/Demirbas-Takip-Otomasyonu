@@ -142,5 +142,10 @@ namespace DemirbasOtomasyon.View
             }
             AtikController.AtikEkle(int.Parse(txtZimmetID.Text));
         }
+
+        private void txtAdet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

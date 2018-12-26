@@ -72,6 +72,7 @@
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(281, 36);
             this.txtSifre.TabIndex = 14;
+            this.txtSifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSifre_KeyPress);
             // 
             // txtKullaniciAdi
             // 
@@ -83,6 +84,7 @@
             this.txtKullaniciAdi.Size = new System.Drawing.Size(281, 36);
             this.txtKullaniciAdi.TabIndex = 13;
             this.txtKullaniciAdi.Text = "Admin";
+            this.txtKullaniciAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKullaniciAdi_KeyPress);
             // 
             // lblGiris
             // 

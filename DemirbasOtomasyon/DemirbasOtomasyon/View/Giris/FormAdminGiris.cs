@@ -59,5 +59,21 @@ namespace DemirbasOtomasyon.View
         {
             this.Location = new Point(200, 150);
         }
+
+        private void txtSifre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != '.' && e.KeyChar != '_')
+            {
+                if (char.IsPunctuation(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void txtKullaniciAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Char.IsPunctuation(e.KeyChar);
+        }
     }
 }

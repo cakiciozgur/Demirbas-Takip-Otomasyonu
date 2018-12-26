@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Text;
@@ -82,52 +83,40 @@ namespace DemirbasOtomasyon.View
             try
             {
                 DateTime selectedDate = Convert.ToDateTime(calendarControl.SelectionStart.ToShortDateString());
-                if (string.IsNullOrEmpty(cmbKullanici.SelectedValue.ToString()))
+                if (string.IsNullOrEmpty(cmbKullanici.Text) || string.IsNullOrEmpty(txtAdet.Text) || string.IsNullOrEmpty(cmbPersonel.Text))
                 {
-                    MessageBox.Show("Lütfen Kullanıcı Bilgilerini Kontrol Ediniz !");
+                    throw new ValidationException("Lütfen Bilgileri Kontrol Ediniz !");
 
                 }
-                if (string.IsNullOrEmpty(cmbKullanici.Text))
+                if ((short.Parse(txtAdet.Text) <= 0) || (int.Parse(txtAdet.Text) > Convert.ToInt16(dgwZimmetListesi.CurrentRow.Cells[2].Value)))
                 {
-                    MessageBox.Show("Lütfen Kullanıcı Seçiniz !");
-                }
-                try
-                {
-                    if (string.IsNullOrEmpty(txtAdet.Text) || (short.Parse(txtAdet.Text) <= 0) || (int.Parse(txtAdet.Text) > Convert.ToInt16(dgwZimmetListesi.CurrentRow.Cells[2].Value)))
-                    {
-                        MessageBox.Show("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
-                        txtAdet.Text = "";
-                        txtAdet.Focus();
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Adet için geçerli bir değer girin");
-                    txtAdet.Text = "";
-                    txtAdet.Focus();
+                    throw new ValidationException("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
                 }
                 if (selectedDate > DateTime.Now)
                 {
-                    MessageBox.Show("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
+                    throw new ValidationException("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
-
-                Zimmetler zimmet = new Zimmetler
-                {
-                    urunID = int.Parse(txtUrunID.Text),
-                    zimmetAdet = int.Parse(txtAdet.Text),
-                    personelID = Convert.ToInt32(cmbPersonel.SelectedValue),
-                    kullaniciID = Convert.ToInt32(cmbKullanici.SelectedValue),
-                    zimmetTarihi = selectedDate
-                };
-
-                ZimmetController.ZimmetEkle(zimmet);
-                MessageBox.Show("Zimmet Başarıyla Eklendi !", "Zimmet Eklendi !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ZimmetUrunListele();
+                    Zimmetler zimmet = new Zimmetler
+                    {
+                        urunID = int.Parse(txtUrunID.Text),
+                        zimmetAdet = int.Parse(txtAdet.Text),
+                        personelID = Convert.ToInt32(cmbPersonel.SelectedValue),
+                        kullaniciID = Convert.ToInt32(cmbKullanici.SelectedValue),
+                        zimmetTarihi = selectedDate
+                    };
+                    ZimmetController.ZimmetEkle(zimmet);
+                    MessageBox.Show("Zimmet Başarıyla Eklendi !", "Zimmet Eklendi !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ZimmetUrunListele();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Dikkat !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void txtAdet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

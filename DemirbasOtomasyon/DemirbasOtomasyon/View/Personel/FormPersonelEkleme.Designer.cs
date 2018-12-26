@@ -190,7 +190,7 @@
             // 
             this.txtCepTelefonu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCepTelefonu.Location = new System.Drawing.Point(149, 128);
-            this.txtCepTelefonu.MaxLength = 50;
+            this.txtCepTelefonu.MaxLength = 11;
             this.txtCepTelefonu.Name = "txtCepTelefonu";
             this.txtCepTelefonu.Size = new System.Drawing.Size(200, 28);
             this.txtCepTelefonu.TabIndex = 25;

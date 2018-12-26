@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Text;
@@ -26,50 +27,31 @@ namespace DemirbasOtomasyon.View
                 DateTime selectedDate = Convert.ToDateTime(calendarControl1.SelectionStart.ToShortDateString());
                 if (string.IsNullOrEmpty(txtUrunAd.Text) || string.IsNullOrEmpty(txtFiyat.Text) || string.IsNullOrEmpty(txtAdet.Text))
                 {
-                    MessageBox.Show("Ürün Bilgileri Boş Geçilemez !");
+                    throw new ValidationException("Ürün Bilgileri Boş Geçilemez !");
                 }
-                try
+                if (int.Parse(txtAdet.Text) <= 0)
                 {
-                    if (int.Parse(txtAdet.Text) <= 0)
-                    {
-                        MessageBox.Show("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
-                        txtAdet.Text = "";
-                        txtAdet.Focus();
-                    }
+                    throw new ValidationException("Adet Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
                 }
-                catch
+
+                if (decimal.Parse(txtFiyat.Text) <= 0)
                 {
-                    MessageBox.Show("Adet için geçerli bir değer girin");
-                    txtAdet.Text = "";
-                    txtAdet.Focus();
-                }
-                try
-                {
-                    if (decimal.Parse(txtFiyat.Text) <= 0)
-                    {
-                        MessageBox.Show("Fiyat Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
-                        txtFiyat.Text = "";
-                        txtFiyat.Focus();
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Fiyat için geçerli bir değer girin");
-                    txtFiyat.Text = "";
-                    txtFiyat.Focus();
+                    throw new ValidationException("Fiyat Değeri Sıfır veya Daha Düşük Değerler Olamaz !");
                 }
                 if (selectedDate > DateTime.Now)
                 {
-                    MessageBox.Show("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
+                    throw new ValidationException("Satın alma tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
 
-                Urunler urun = new Urunler();
-                urun.urunAd = txtUrunAd.Text;
-                urun.fiyat = decimal.Parse(txtFiyat.Text);
-                urun.stokMiktari=int.Parse(txtAdet.Text);
-                urun.satınAlınmaTarihi = selectedDate;
+                Urunler urun = new Urunler
+                {
+                    urunAd = txtUrunAd.Text,
+                    fiyat = decimal.Parse(txtFiyat.Text),
+                    stokMiktari = int.Parse(txtAdet.Text),
+                    satınAlınmaTarihi = selectedDate
+                };
                 UrunController.UrunEkle(urun);
-                MessageBox.Show("Ürün Başarıyla Stok'a Eklendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ürün Başarıyla Stok'a Eklendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -80,6 +62,16 @@ namespace DemirbasOtomasyon.View
         private void FormUrunEkleme_Load(object sender, EventArgs e)
         {
             this.Location = new Point(50, 100);
+        }
+
+        private void txtAdet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtFiyat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

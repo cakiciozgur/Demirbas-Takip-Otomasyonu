@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Text;
@@ -35,41 +36,43 @@ namespace DemirbasOtomasyon.View
                 DateTime selectedDate = Convert.ToDateTime(calendarControl2.SelectionStart.ToShortDateString());
                 if (string.IsNullOrEmpty(cmbDepartmanSec.SelectedValue.ToString()))
                 {
-                    MessageBox.Show("Lütfen Departman Bilgilerini Kontrol Ediniz !");
+                    throw new ValidationException("Lütfen Departman Bilgilerini Kontrol Ediniz !");
 
                 }
                 if (string.IsNullOrEmpty(cmbDepartmanSec.Text))
                 {
-                    MessageBox.Show("Lütfen Departman Seçiniz !");
+                    throw new ValidationException("Lütfen Departman Seçiniz !");
                 }
                 if (string.IsNullOrEmpty(txtPersonelAd.Text))
                 {
-                    MessageBox.Show("Lütfen Ad Bilgisini Kontrol Ediniz !");
+                    throw new ValidationException("Lütfen Ad Bilgisini Kontrol Ediniz !");
                 }
                 if (string.IsNullOrEmpty(txtPersonelSoyad.Text))
                 {
-                    MessageBox.Show("Lütfen Soyad Bilgisini Kontrol Ediniz !");
+                    throw new ValidationException("Lütfen Soyad Bilgisini Kontrol Ediniz !");
+                }
+                if (string.IsNullOrEmpty(txtCepTelefonu.Text))
+                {
+                     throw new ValidationException("Lütfen Cep Telefonu Bilgisini Kontrol Ediniz !");
                 }
                 if (selectedDate > DateTime.Now)
                 {
-                    MessageBox.Show("İşe giriş tarihi bugünden daha sonraki bir tarih olamaz!");
+                    throw new ValidationException("İşe giriş tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
-
-                Personeller personel = new Personeller
-                {
-                    adi = txtPersonelAd.Text,
-                    soyadi = txtPersonelSoyad.Text,
-                    cepTelefonu = txtCepTelefonu.Text,
-                    departmanID= Convert.ToInt32(cmbDepartmanSec.SelectedValue),
-                    iseGirisTarihi = selectedDate
-                };
-
-                PersonelController.PersonelEkle(personel);
-                MessageBox.Show("Personel Başarıyla Eklendi !", "Personel Eklendi !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Personeller personel = new Personeller
+                    {
+                        adi = txtPersonelAd.Text,
+                        soyadi = txtPersonelSoyad.Text,
+                        cepTelefonu = txtCepTelefonu.Text,
+                        departmanID = Convert.ToInt32(cmbDepartmanSec.SelectedValue),
+                        iseGirisTarihi = selectedDate
+                    };
+                    PersonelController.PersonelEkle(personel);
+                    MessageBox.Show("Personel Başarıyla Eklendi !", "Personel Eklendi !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Dikkat !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Giriş Bilgilerini Kontrol Ediniz !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

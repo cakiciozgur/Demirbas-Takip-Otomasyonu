@@ -134,6 +134,7 @@
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
             this.txtAdet.TabIndex = 22;
             this.txtAdet.Text = "1";
+            this.txtAdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdet_KeyPress);
             // 
             // label2
             // 

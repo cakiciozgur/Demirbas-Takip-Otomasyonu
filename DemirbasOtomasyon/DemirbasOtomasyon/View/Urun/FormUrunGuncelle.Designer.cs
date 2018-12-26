@@ -180,6 +180,7 @@
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
             this.txtAdet.TabIndex = 3;
+            this.txtAdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdet_KeyPress);
             // 
             // label6
             // 
@@ -199,6 +200,7 @@
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.Size = new System.Drawing.Size(200, 28);
             this.txtFiyat.TabIndex = 4;
+            this.txtFiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiyat_KeyPress);
             // 
             // label1
             // 
