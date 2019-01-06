@@ -31,18 +31,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUrunGrs = new System.Windows.Forms.Label();
             this.grbUrunIslemleri = new System.Windows.Forms.GroupBox();
-            this.cmbKullaniciGuncelle = new System.Windows.Forms.ComboBox();
             this.cmbPersonelGuncelle = new System.Windows.Forms.ComboBox();
             this.btnKaldır = new DevExpress.XtraEditors.SimpleButton();
             this.calendarControl1 = new DevExpress.XtraEditors.Controls.CalendarControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.txtZimmetID = new System.Windows.Forms.TextBox();
             this.txtAdet = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.dgwZimmetGuncellemeListele = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.grbUrunIslemleri.SuspendLayout();
@@ -71,18 +67,14 @@
             // 
             // grbUrunIslemleri
             // 
-            this.grbUrunIslemleri.Controls.Add(this.cmbKullaniciGuncelle);
             this.grbUrunIslemleri.Controls.Add(this.cmbPersonelGuncelle);
             this.grbUrunIslemleri.Controls.Add(this.btnKaldır);
             this.grbUrunIslemleri.Controls.Add(this.calendarControl1);
             this.grbUrunIslemleri.Controls.Add(this.btnGuncelle);
-            this.grbUrunIslemleri.Controls.Add(this.txtZimmetID);
             this.grbUrunIslemleri.Controls.Add(this.txtAdet);
             this.grbUrunIslemleri.Controls.Add(this.label6);
-            this.grbUrunIslemleri.Controls.Add(this.label1);
             this.grbUrunIslemleri.Controls.Add(this.label4);
             this.grbUrunIslemleri.Controls.Add(this.label3);
-            this.grbUrunIslemleri.Controls.Add(this.label7);
             this.grbUrunIslemleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grbUrunIslemleri.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grbUrunIslemleri.Location = new System.Drawing.Point(13, 90);
@@ -92,20 +84,11 @@
             this.grbUrunIslemleri.TabStop = false;
             this.grbUrunIslemleri.Text = "Zimmet Detayları";
             // 
-            // cmbKullaniciGuncelle
-            // 
-            this.cmbKullaniciGuncelle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKullaniciGuncelle.FormattingEnabled = true;
-            this.cmbKullaniciGuncelle.Location = new System.Drawing.Point(139, 162);
-            this.cmbKullaniciGuncelle.Name = "cmbKullaniciGuncelle";
-            this.cmbKullaniciGuncelle.Size = new System.Drawing.Size(200, 30);
-            this.cmbKullaniciGuncelle.TabIndex = 22;
-            // 
             // cmbPersonelGuncelle
             // 
             this.cmbPersonelGuncelle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPersonelGuncelle.FormattingEnabled = true;
-            this.cmbPersonelGuncelle.Location = new System.Drawing.Point(139, 121);
+            this.cmbPersonelGuncelle.Location = new System.Drawing.Point(139, 94);
             this.cmbPersonelGuncelle.Name = "cmbPersonelGuncelle";
             this.cmbPersonelGuncelle.Size = new System.Drawing.Size(200, 30);
             this.cmbPersonelGuncelle.TabIndex = 21;
@@ -122,7 +105,7 @@
             this.btnKaldır.Appearance.Options.UseFont = true;
             this.btnKaldır.Appearance.Options.UseForeColor = true;
             this.btnKaldır.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnKaldır.Location = new System.Drawing.Point(31, 495);
+            this.btnKaldır.Location = new System.Drawing.Point(31, 476);
             this.btnKaldır.Name = "btnKaldır";
             this.btnKaldır.Size = new System.Drawing.Size(161, 41);
             this.btnKaldır.TabIndex = 15;
@@ -134,7 +117,7 @@
             // 
             this.calendarControl1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calendarControl1.Location = new System.Drawing.Point(142, 207);
+            this.calendarControl1.Location = new System.Drawing.Point(139, 173);
             this.calendarControl1.Name = "calendarControl1";
             this.calendarControl1.Size = new System.Drawing.Size(278, 270);
             this.calendarControl1.TabIndex = 14;
@@ -151,7 +134,7 @@
             this.btnGuncelle.Appearance.Options.UseFont = true;
             this.btnGuncelle.Appearance.Options.UseForeColor = true;
             this.btnGuncelle.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnGuncelle.Location = new System.Drawing.Point(227, 495);
+            this.btnGuncelle.Location = new System.Drawing.Point(228, 476);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(161, 41);
             this.btnGuncelle.TabIndex = 12;
@@ -159,19 +142,10 @@
             this.btnGuncelle.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
             this.btnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
-            // txtZimmetID
-            // 
-            this.txtZimmetID.Enabled = false;
-            this.txtZimmetID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtZimmetID.Location = new System.Drawing.Point(139, 44);
-            this.txtZimmetID.Name = "txtZimmetID";
-            this.txtZimmetID.Size = new System.Drawing.Size(200, 28);
-            this.txtZimmetID.TabIndex = 2;
-            // 
             // txtAdet
             // 
             this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdet.Location = new System.Drawing.Point(139, 81);
+            this.txtAdet.Location = new System.Drawing.Point(139, 41);
             this.txtAdet.MaxLength = 3;
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
@@ -182,27 +156,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(13, 207);
+            this.label6.Location = new System.Drawing.Point(13, 189);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 21);
             this.label6.TabIndex = 7;
             this.label6.Text = "Zimmet Tarihi:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(37, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Zimmet ID:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(56, 123);
+            this.label4.Location = new System.Drawing.Point(56, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 21);
             this.label4.TabIndex = 7;
@@ -212,21 +176,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(82, 83);
+            this.label3.Location = new System.Drawing.Point(82, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "Adet:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(56, 165);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Kullanıcı:";
             // 
             // dgwZimmetGuncellemeListele
             // 
@@ -272,15 +226,11 @@
         private DevExpress.XtraEditors.SimpleButton btnKaldır;
         private DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
         private DevExpress.XtraEditors.SimpleButton btnGuncelle;
-        private System.Windows.Forms.TextBox txtZimmetID;
         private System.Windows.Forms.TextBox txtAdet;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgwZimmetGuncellemeListele;
-        private System.Windows.Forms.ComboBox cmbKullaniciGuncelle;
         private System.Windows.Forms.ComboBox cmbPersonelGuncelle;
     }
 }

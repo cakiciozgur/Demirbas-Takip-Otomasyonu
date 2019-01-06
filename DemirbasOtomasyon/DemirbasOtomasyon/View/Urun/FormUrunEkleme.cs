@@ -73,5 +73,10 @@ namespace DemirbasOtomasyon.View
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void txtUrunAd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Char.IsPunctuation(e.KeyChar);
+        }
     }
 }

@@ -19,10 +19,13 @@ namespace DemirbasOtomasyon.View
         {
             InitializeComponent();
         }
+        int _zimmetID = 0;
+        int _urunID = 0;
+        int _stokAdet = 0;
         private void GuncelleZimmetUrunListele()
         {
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
-            var data = from z in db.sp_ZimmetListele2() select new { z.Zimmet_ID,z.Ürün_Adı,z.Zimmet_Adet,z.Personel_Adı,z.Departman,z.Zimmet_Tarihi,z.Kullanıcı_Adı};
+            var data = db.sp_ZimmetListele2();
             dgwZimmetGuncellemeListele.DataSource = data.ToList();
             ZimmetGuncelleRenklendir();
         }
@@ -62,12 +65,9 @@ namespace DemirbasOtomasyon.View
           private void FormZimmetGuncelleme_Load(object sender, EventArgs e)
         {
             this.Location = new Point(50, 100);
-            Araclar.ComboBoxKullaniciGetir(cmbKullaniciGuncelle);
             Araclar.ComboBoxPersonelGetir(cmbPersonelGuncelle);
             cmbPersonelGuncelle.SelectedItem = null;
             cmbPersonelGuncelle.SelectedText = "Personel Seçiniz...";
-            cmbKullaniciGuncelle.SelectedItem = null;
-            cmbKullaniciGuncelle.SelectedText = "Kullanıcı Seçiniz...";
             GuncelleZimmetUrunListele();
         }
         private void ZimmetGuncelle()
@@ -99,13 +99,30 @@ namespace DemirbasOtomasyon.View
                     MessageBox.Show("Zimmet tarihi bugünden daha sonraki bir tarih olamaz!");
                 }
 
+                DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
+                var urunler = db.sp_UrunListele();
+
+                foreach (var urun in urunler)
+                {
+                    if (urun.urunID == _urunID)
+                    {
+                        _stokAdet = Convert.ToInt32(urun.stokMiktari);
+                    }
+                }
+                if ((Convert.ToInt32(txtAdet.Text) > _stokAdet + (Convert.ToInt32(txtAdet.Text))))
+                {
+                    MessageBox.Show("Stok Yetersiz!");
+                    txtAdet.Text = "";
+                    txtAdet.Focus();
+                }
                 Zimmetler zimmet = new Zimmetler
                 {
-                    zimmetID = int.Parse(txtZimmetID.Text),
+                    zimmetID = _zimmetID,
+                    urunID = _urunID,
                     zimmetAdet = int.Parse(txtAdet.Text),
                     zimmetTarihi = selectedDate,
                     personelID = Convert.ToInt32(cmbPersonelGuncelle.SelectedValue),
-                    kullaniciID = Convert.ToInt32(cmbKullaniciGuncelle.SelectedValue)
+                    kullaniciID = FormKullaniciSecim._userIdSession
                 };
                 ZimmetController.ZimmetGuncelle(zimmet);
                 MessageBox.Show("Zimmet Başarıyla Düzenlendi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -118,11 +135,11 @@ namespace DemirbasOtomasyon.View
 
         private void DgwZimmetGuncellemeListele_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            txtZimmetID.Text = dgwZimmetGuncellemeListele.CurrentRow.Cells[0].Value.ToString();
-            txtAdet.Text = dgwZimmetGuncellemeListele.CurrentRow.Cells[1].Value.ToString();
-            cmbPersonelGuncelle.Text = dgwZimmetGuncellemeListele.CurrentRow.Cells[2].Value.ToString();
-            cmbKullaniciGuncelle.Text = dgwZimmetGuncellemeListele.CurrentRow.Cells[3].Value.ToString();
-            calendarControl1.EditValue = dgwZimmetGuncellemeListele.CurrentRow.Cells[4].Value;
+            _urunID = Convert.ToInt32(dgwZimmetGuncellemeListele.CurrentRow.Cells[0].Value);
+            _zimmetID = Convert.ToInt32(dgwZimmetGuncellemeListele.CurrentRow.Cells[1].Value);
+            txtAdet.Text = dgwZimmetGuncellemeListele.CurrentRow.Cells[2].Value.ToString();
+            cmbPersonelGuncelle.Text = dgwZimmetGuncellemeListele.CurrentRow.Cells[4].Value.ToString();
+            calendarControl1.EditValue = dgwZimmetGuncellemeListele.CurrentRow.Cells[6].Value;
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
@@ -133,14 +150,14 @@ namespace DemirbasOtomasyon.View
 
         private void BtnKaldır_Click(object sender, EventArgs e)
         {
-            DialogResult sonuc = MessageBox.Show(txtZimmetID.Text + " ID'li Zimmet Silinsin Mi ?", "Karar ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult sonuc = MessageBox.Show(_zimmetID + " ID'li Zimmet Silinsin Mi ?", "Karar ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (sonuc == DialogResult.Yes)
             {
-                ZimmetController.ZimmetSil(int.Parse(txtZimmetID.Text));
-                MessageBox.Show(txtZimmetID.Text + " ID'li Zimmet Silindi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ZimmetController.ZimmetSil(_zimmetID);
+                MessageBox.Show(_zimmetID + " ID'li Zimmet Silindi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GuncelleZimmetUrunListele();
             }
-            AtikController.AtikEkle(int.Parse(txtZimmetID.Text));
+            AtikController.AtikEkle(_zimmetID);
         }
 
         private void txtAdet_KeyPress(object sender, KeyPressEventArgs e)

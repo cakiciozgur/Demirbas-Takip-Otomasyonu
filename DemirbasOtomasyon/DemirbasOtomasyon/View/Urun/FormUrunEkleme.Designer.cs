@@ -53,6 +53,7 @@
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
             this.txtUrunAd.TabIndex = 2;
+            this.txtUrunAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrunAd_KeyPress);
             // 
             // txtAdet
             // 

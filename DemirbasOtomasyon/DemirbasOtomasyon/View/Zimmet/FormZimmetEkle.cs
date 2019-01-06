@@ -21,6 +21,8 @@ namespace DemirbasOtomasyon.View
         {
             InitializeComponent();
         }
+        int urunID = 0;
+        ComboBox cmbKullanicilar = new ComboBox();
         private void ZimmetEkleRenklendir()
         {
             try
@@ -56,13 +58,12 @@ namespace DemirbasOtomasyon.View
         private void FormZimmetEkle_Load(object sender, EventArgs e)
         {
             this.Location = new Point(50, 100);
-            Araclar.ComboBoxKullaniciGetir(cmbKullanici);
+            Araclar.ComboBoxKullaniciGetir(cmbKullanicilar);
             Araclar.ComboBoxPersonelGetir(cmbPersonel);
             ZimmetUrunListele();
             cmbPersonel.SelectedItem = null;
             cmbPersonel.SelectedText = "Personel Seçiniz...";
-            cmbKullanici.SelectedItem = null;
-            cmbKullanici.SelectedText = "Kullanıcı Seçiniz...";
+
         }
         private void ZimmetUrunListele()
         {
@@ -74,8 +75,9 @@ namespace DemirbasOtomasyon.View
 
         private void DgwZimmetListesi_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            txtUrunID.Text = dgwZimmetListesi.CurrentRow.Cells[0].Value.ToString();
+            urunID = Convert.ToInt32(dgwZimmetListesi.CurrentRow.Cells[0].Value);
             txtUrunAd.Text = dgwZimmetListesi.CurrentRow.Cells[1].Value.ToString();
+            calendarControl.EditValue = dgwZimmetListesi.CurrentRow.Cells[4].Value;
         }
 
         private void BtnZimemetKaydet_Click(object sender, EventArgs e)
@@ -83,7 +85,7 @@ namespace DemirbasOtomasyon.View
             try
             {
                 DateTime selectedDate = Convert.ToDateTime(calendarControl.SelectionStart.ToShortDateString());
-                if (string.IsNullOrEmpty(cmbKullanici.Text) || string.IsNullOrEmpty(txtAdet.Text) || string.IsNullOrEmpty(cmbPersonel.Text))
+                if (string.IsNullOrEmpty(txtAdet.Text) || string.IsNullOrEmpty(cmbPersonel.Text))
                 {
                     throw new ValidationException("Lütfen Bilgileri Kontrol Ediniz !");
 
@@ -98,10 +100,10 @@ namespace DemirbasOtomasyon.View
                 }
                     Zimmetler zimmet = new Zimmetler
                     {
-                        urunID = int.Parse(txtUrunID.Text),
+                        urunID = urunID,
                         zimmetAdet = int.Parse(txtAdet.Text),
                         personelID = Convert.ToInt32(cmbPersonel.SelectedValue),
-                        kullaniciID = Convert.ToInt32(cmbKullanici.SelectedValue),
+                        kullaniciID = FormKullaniciSecim._userIdSession,
                         zimmetTarihi = selectedDate
                     };
                     ZimmetController.ZimmetEkle(zimmet);

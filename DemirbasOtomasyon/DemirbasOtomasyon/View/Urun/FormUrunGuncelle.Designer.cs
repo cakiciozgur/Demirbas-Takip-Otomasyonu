@@ -35,12 +35,10 @@
             this.btnSil = new DevExpress.XtraEditors.SimpleButton();
             this.calendarControl1 = new DevExpress.XtraEditors.Controls.CalendarControl();
             this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.txtUrunID = new System.Windows.Forms.TextBox();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.txtAdet = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtFiyat = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -86,12 +84,10 @@
             this.grbUrunIslemleri.Controls.Add(this.btnSil);
             this.grbUrunIslemleri.Controls.Add(this.calendarControl1);
             this.grbUrunIslemleri.Controls.Add(this.btnGuncelle);
-            this.grbUrunIslemleri.Controls.Add(this.txtUrunID);
             this.grbUrunIslemleri.Controls.Add(this.txtUrunAd);
             this.grbUrunIslemleri.Controls.Add(this.txtAdet);
             this.grbUrunIslemleri.Controls.Add(this.label6);
             this.grbUrunIslemleri.Controls.Add(this.txtFiyat);
-            this.grbUrunIslemleri.Controls.Add(this.label1);
             this.grbUrunIslemleri.Controls.Add(this.label4);
             this.grbUrunIslemleri.Controls.Add(this.label3);
             this.grbUrunIslemleri.Controls.Add(this.label7);
@@ -153,29 +149,20 @@
             this.btnGuncelle.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
             this.btnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
-            // txtUrunID
-            // 
-            this.txtUrunID.Enabled = false;
-            this.txtUrunID.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunID.Location = new System.Drawing.Point(108, 41);
-            this.txtUrunID.MaxLength = 10;
-            this.txtUrunID.Name = "txtUrunID";
-            this.txtUrunID.Size = new System.Drawing.Size(200, 28);
-            this.txtUrunID.TabIndex = 2;
-            // 
             // txtUrunAd
             // 
             this.txtUrunAd.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAd.Location = new System.Drawing.Point(108, 81);
+            this.txtUrunAd.Location = new System.Drawing.Point(108, 48);
             this.txtUrunAd.MaxLength = 50;
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Size = new System.Drawing.Size(200, 28);
             this.txtUrunAd.TabIndex = 2;
+            this.txtUrunAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrunAd_KeyPress);
             // 
             // txtAdet
             // 
             this.txtAdet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdet.Location = new System.Drawing.Point(108, 122);
+            this.txtAdet.Location = new System.Drawing.Point(108, 95);
             this.txtAdet.MaxLength = 3;
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(200, 28);
@@ -186,7 +173,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(42, 205);
+            this.label6.Location = new System.Drawing.Point(42, 207);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 21);
             this.label6.TabIndex = 7;
@@ -195,28 +182,18 @@
             // txtFiyat
             // 
             this.txtFiyat.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtFiyat.Location = new System.Drawing.Point(108, 161);
+            this.txtFiyat.Location = new System.Drawing.Point(108, 148);
             this.txtFiyat.MaxLength = 20;
             this.txtFiyat.Name = "txtFiyat";
             this.txtFiyat.Size = new System.Drawing.Size(200, 28);
             this.txtFiyat.TabIndex = 4;
             this.txtFiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiyat_KeyPress);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(22, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Ürün ID:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(44, 127);
+            this.label4.Location = new System.Drawing.Point(45, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 21);
             this.label4.TabIndex = 7;
@@ -226,7 +203,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(16, 88);
+            this.label3.Location = new System.Drawing.Point(16, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 21);
             this.label3.TabIndex = 6;
@@ -236,7 +213,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(44, 164);
+            this.label7.Location = new System.Drawing.Point(44, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 21);
             this.label7.TabIndex = 6;
@@ -275,13 +252,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnSil;
         public DevExpress.XtraEditors.Controls.CalendarControl calendarControl1;
         public DevExpress.XtraEditors.SimpleButton btnGuncelle;
         public System.Windows.Forms.TextBox txtUrunAd;
         public System.Windows.Forms.TextBox txtAdet;
         public System.Windows.Forms.TextBox txtFiyat;
-        public System.Windows.Forms.TextBox txtUrunID;
     }
 }

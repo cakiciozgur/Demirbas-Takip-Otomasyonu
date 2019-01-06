@@ -257,6 +257,7 @@
           <Parameter Name="zimmetAdet" Type="int" Mode="In" />
           <Parameter Name="personelID" Type="int" Mode="In" />
           <Parameter Name="kullaniciID" Type="int" Mode="In" />
+          <Parameter Name="adet" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_ZimmetGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="zimmetID" Type="int" Mode="In" />
@@ -549,6 +550,7 @@
             <Parameter Name="zimmetAdet" Mode="In" Type="Int32" />
             <Parameter Name="personelID" Mode="In" Type="Int32" />
             <Parameter Name="kullaniciID" Mode="In" Type="Int32" />
+            <Parameter Name="adet" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ZimmetKaldir">
           <Parameter Name="zimmetID" Mode="In" Type="Int32" />

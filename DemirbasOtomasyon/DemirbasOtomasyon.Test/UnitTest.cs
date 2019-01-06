@@ -10,18 +10,6 @@ namespace DemirbasOtomasyon.Test
     [TestClass]
     public class TestHesapla
     {
-        //[TestMethod]
-        //public void UrunEkleme()
-        //{
-        //    Urunler urun = new Urunler
-        //    {
-        //        urunAd = "Kulaklık",
-        //        stokMiktari = 4,
-        //        fiyat = 30,
-        //        satınAlınmaTarihi = Convert.ToDateTime("2018/03/05")
-        //    };
-        //    UrunController.UrunEkle(urun);
-        //}
         [TestMethod]
         public void UrunEkleme()
         {

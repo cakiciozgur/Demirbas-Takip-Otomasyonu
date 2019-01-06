@@ -26,6 +26,7 @@ namespace DemirbasOtomasyon.View
         {
             InitializeComponent();
         }
+        int urunID = 0;
         private void UrunListele()
         {
             DemirbasTakipEntitiess db = new DemirbasTakipEntitiess();
@@ -74,7 +75,7 @@ namespace DemirbasOtomasyon.View
 
         private void DgwUrunListele_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            txtUrunID.Text = dgwUrunListele.CurrentRow.Cells[0].Value.ToString();
+            urunID = Convert.ToInt32(dgwUrunListele.CurrentRow.Cells[0].Value);
             txtUrunAd.Text = dgwUrunListele.CurrentRow.Cells[1].Value.ToString();
             txtAdet.Text = dgwUrunListele.CurrentRow.Cells[2].Value.ToString();
             txtFiyat.Text = dgwUrunListele.CurrentRow.Cells[3].Value.ToString();
@@ -126,7 +127,7 @@ namespace DemirbasOtomasyon.View
 
                 Urunler urun = new Urunler
                 {
-                    urunID = int.Parse(txtUrunID.Text),
+                    urunID = urunID,
                     urunAd = txtUrunAd.Text,
                     fiyat = decimal.Parse(txtFiyat.Text),
                     stokMiktari = int.Parse(txtAdet.Text),
@@ -152,7 +153,7 @@ namespace DemirbasOtomasyon.View
             DialogResult sonuc = MessageBox.Show(txtUrunAd.Text + " İsimli Ürün Silinsin Mi ?", "Karar ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (sonuc == DialogResult.Yes)
             {
-                UrunController.UrunSil(int.Parse(txtUrunID.Text));
+                UrunController.UrunSil(urunID);
                 MessageBox.Show(txtUrunAd.Text + " İsimli Ürün Silindi !", "İşlem Başarılı !", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Thread.Sleep(500);
                 UrunListele();
@@ -167,6 +168,11 @@ namespace DemirbasOtomasyon.View
         private void txtFiyat_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtUrunAd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Char.IsPunctuation(e.KeyChar);
         }
     }
 }
