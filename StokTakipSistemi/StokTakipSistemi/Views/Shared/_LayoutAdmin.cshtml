@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/customstyle.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/admin/css/sb-admin.css" rel="stylesheet" />
+    <link href="~/Content/admin/css/sb-admin.min.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Admin Page</title>
+    <script>
+        <script type="text/javascript" src="http://www.datejs.com/build/date.js"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+    @using System.Web.Optimization
+    @Scripts.Render("~/BBundles/Script")
+    @Styles.Render("~/BBundles/Style")
+    @RenderSection("scripts", false)
+    </script>
+</head>
+<body id="page-top" class="adminlayout">
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+        <a class="navbar-brand mr-1" href="/AdminStok/Index">Admin Sayfası</a>
+        <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"></div>
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown no-arrow mx-1" />
+            <li class="nav-item dropdown no-arrow mx-1"><a class="btn btn-danger" id="btnLog" href="/Security/Logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div id="wrapper">
+        <ul class="sidebar navbar-nav dropdown">
+            <li class="nav-item active">
+                <a class="nav-link" href="/AdminStok/Index">
+                    <i class="fa fa-archive"></i>
+                    <span>Stok</span>
+                </a>
+            </li>
+            <li class="nav-item ">
+            <li class="nav-item active">
+                <a class="nav-link" href="/AdminPersonel/Index">
+                    <i class="fa fa-user"></i>
+                    <span>Personeller</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/AdminDepartman/Index">
+                    <i class="fas fa-folder-minus"></i>
+                    <span>Departmanlar</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/AdminKullanicilar/Index">
+                    <i class="fa fa-users"></i>
+                    <span>Kullanıcılar</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/AdminRapor/Index">
+                    <i class="fa fa-clone"></i>
+                    <span>Raporlar</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/AdminAtik/Index">
+                    <i class="	fa fa-trash"></i>
+                    <span>Atık Depo</span>
+                </a>
+            </li>
+        </ul>
+        <div id="content-wrapper" class="container">
+            @RenderBody()
+        </div>
+    </div>
+    <a class="scroll-to-top rounded">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/Security/Logout">Logoutassssssssssssssssssssssss</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Content/admin/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="~/Content/admin/vendor/chart.js/Chart.bundle.js"></script>
+    <script src="~/Content/admin/vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="~/Content/admin/vendor/chart.js/Chart.js"></script>
+    <script src="~/Content/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Content/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/admin/vendor/jquery/jquery.slim.js"></script>
+    <script src="~/Content/admin/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/Content/admin/vendor/datatables/dataTables.bootstrap4.js"></script>
+    <script src="~/Content/admin/vendor/chart.js/Chart.min.js"></script>
+    <script src="~/Content/admin/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="~/Content/admin/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Content/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/admin/js/sb-admin.min.js"></script>
+    <script src="~/Content/admin/js/sb-admin.js"></script>
+    <script src="~/Content/admin/js/demo/chart-area-demo.js"></script>
+    <script src="~/Content/admin/js/demo/chart-bar-demo.js"></script>
+    <script src="~/Content/admin/js/demo/chart-pie-demo.js"></script>
+    <script src="~/Content/admin/js/demo/datatables-demo.js"></script>
+</body>
+</html>
+
+

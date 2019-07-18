@@ -1,0 +1,60 @@
+﻿@model List<StokTakipSistemi.Models.tblPersonel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .AdminsearchPers {
+        margin-left: 860px;
+        margin-top:10px;
+        width: 170px;
+        border: 1px solid blue;
+        border-width: thin;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div class="adminrender">
+        <input type="text" name="arama" class="AdminsearchPers " placeholder="Ara..." />
+        <table class="table table-hover AdminPersTable">
+            <tr>
+                <th>Personel Adı</th>
+                <th>Personel Soyadı</th>
+                <th>Personel Aktifliği</th>
+                <th>Departmanı</th>
+                <th>SGKNO</th>
+                <th></th>
+            </tr>
+            @foreach (var personel in Model)
+            {
+                <tr>
+                    <td>@personel.personelAd</td>
+                    <td>@personel.personelSoyad</td>
+                    <td>@personel.Aktiflik</td>
+                    <td>@personel.tblDepartman.departmanAd</td>
+                    @if (personel.tblZimmet.Count != 0)
+                    {
+                        <td>@personel.SGKNO</td>
+                        <td>
+                            @Ajax.ActionLink("Urunler", "Urunler", "AdminPersonel",
+                                          new { personelid = personel.personelId }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "urunliste" },
+                                          new { @class = "btn btn-danger" })
+                            <a href="/AdminPersonel/Guncelle/@personel.personelId" class="btn btn-primary">Güncelle</a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>@personel.SGKNO</td>
+                        <td>
+                            <a href="/AdminPersonel/Guncelle/@personel.personelId" class="btn btn-primary">Güncelle</a>
+                        </td>
+                    }
+                </tr>
+            }
+        </table>
+
+        <div id="urunliste">
+        </div>
+        </div>
+</body>

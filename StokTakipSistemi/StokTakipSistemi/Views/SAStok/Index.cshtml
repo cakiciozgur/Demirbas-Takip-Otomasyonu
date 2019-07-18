@@ -1,0 +1,77 @@
+﻿@model List<StokTakipSistemi.Models.tblStok>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .searchStok {
+            margin-left: 900px;
+            margin-bottom:10px;
+            width: 170px;
+            height:30px;
+            border: 1px solid blue;
+            border-width: thin;
+            border-radius: 10px;
+        }
+        
+        .StokDiv{
+            background-image: url("../Content/Fotolar/sastok.jpg");
+            background-repeat: no-repeat;
+           // background-color:snow;
+            opacity:0.8;
+          }
+    </style>
+</head>
+<body >
+    <div class="StokDiv">
+        @if (Model != null)
+    {
+        <a href="/SAStok/YeniUrun" class="btn btn-success">Yeni Ürün Al</a>
+        <input type="text" name="arama" class="searchStok" placeholder="Ara.." />
+
+        <table class="table table-hover tableStok">
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Satın Alma Tarihi</th>
+                <th>Birim Fiyatı</th>
+                <th>Toplam Fiyatı</th>
+                <th>Parça tipi</th>
+                <th>Ürün Adeti</th>
+                <th>Satın Alınan Kurum</th>
+                <th></th>
+            </tr>
+            @foreach (var stok in Model)
+        {
+            <tr>
+                <td>@stok.tblUrunGenel.urunAd</td>
+                <td>@stok.tblUrunGenel.urunSatinAlmaTarih</td>
+                <td>@stok.tblUrunGenel.urunFiyat<span class="simge-tl"> &#8378;</span></td>
+                <td>@stok.tblUrunGenel.urunToplamFİyat<span class="simge-tl"> &#8378;</span></td>
+                <td>@stok.tblUrunGenel.tblParcaTipi.parcaTipi</td>
+                <td>@stok.tblUrunGenel.urunAdet</td>
+                <td>@stok.tblUrunGenel.satinAlinanKurum</td>
+                <td>
+                 <a class="btn btn-primary"  href="/SAStok/Zimmet/@stok.tblUrunGenel.urunGenelId">Zimmetle</a> 
+                      
+
+                </td>
+            </tr>
+                    }
+        </table>
+}
+else
+{<table class="table table-hover">
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Satın Alma Tarihi</th>
+            <th>Toplam Fiyatı</th>
+            <th>Parça tipi</th>
+            <th>Ürün Adeti</th>
+            <th>Satın Alınan Kurum</th>
+            <th></th>
+        </tr>
+    </table>
+}
+    </div>
+</body>

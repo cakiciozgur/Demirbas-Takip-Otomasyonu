@@ -1,0 +1,39 @@
+﻿@model StokTakipSistemi.ViewModels.UrunParca
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "AdminStok", FormMethod.Post))
+{<div class="adminrender">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Urun.urunAd)
+            @Html.TextBoxFor(m => m.Urun.urunAd, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Urun.urunAd)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Urun.urunFiyat)
+            @Html.TextBoxFor(m => m.Urun.urunFiyat, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Urun.urunFiyat)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Urun.urunParcaId)
+            @Html.DropDownListFor(m => m.Urun.urunParcaId, new SelectList(Model.ParcaTipleri, "urunParcaId", "parcaTipi"), new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Urun.urunParcaId)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Urun.urunAdet)
+            @Html.TextBoxFor(m => m.Urun.urunAdet, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Urun.urunAdet)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Urun.satinAlinanKurum)
+            @Html.TextBoxFor(m => m.Urun.satinAlinanKurum, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Urun.satinAlinanKurum)
+        </div>
+
+        @Html.HiddenFor(m => m.Urun.urunGenelId)
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-default">Güncelle</button>
+</div>
+}

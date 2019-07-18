@@ -1,0 +1,50 @@
+﻿@model StokTakipSistemi.ViewModels.KullaniciRole
+@{
+    ViewBag.Title = "YeniKullanici";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using (Html.BeginForm("Ekle", "AdminKullanicilar", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{<div class="adminrender">
+         @if (ViewBag.Data != null)
+         {
+             <span><font face="Tahamo" color="red">@ViewBag.Data</font></span>
+         }
+        <div class="form-group">
+            
+            @Html.LabelFor(m => m.Kullanici.username)
+            @Html.TextBoxFor(m => m.Kullanici.username, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Kullanici.username)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m=>m.Kullanici.email)
+            @Html.TextBoxFor(m=>m.Kullanici.email, new {@class="form-control"})
+            @Html.ValidationMessageFor(m=>m.Kullanici.email)
+        </div>
+    
+        <div class="form-group">
+            @Html.LabelFor(m => m.Kullanici.password)
+            @Html.TextBoxFor(m => m.Kullanici.password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Kullanici.password)
+        </div>
+        <div class="form-group">
+            <label>Kulanıcı Rolü</label>
+            <select name="roleid">
+                @foreach (var role in Model.Roller)
+                {
+                    if (role.roleAd == "Birim Yetkilisi")
+                    {
+                        <option value=@role.roleId>@role.tblDepartman.departmanAd @role.roleAd</option>
+                    }
+                    else
+                    {
+                        <option value=@role.roleId>@role.roleAd</option>
+
+                    }
+                }
+            </select>
+
+        </div>
+               @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-default">Kullanıcı Ekle</button>
+</div> 
+}

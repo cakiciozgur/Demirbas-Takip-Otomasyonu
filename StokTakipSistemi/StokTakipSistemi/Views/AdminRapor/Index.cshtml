@@ -1,0 +1,54 @@
+﻿@model StokTakipSistemi.ViewModels.PersonellerDepartmanlar
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .AdminsearchRapor {
+        width: 170px;
+        border: 1px solid blue;
+        border-width: thin;
+        border-radius: 10px;
+    }
+
+    .aramadiv {
+        margin-left: 900px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+</style>
+<div class="adminrender">
+    <div class="form-group">
+        <label>Kişi Zimmet Dökümü</label>
+        <select class="personeller form-control">
+            <option value="selected" selected>Personel Seçiniz</option>
+            @foreach (var per in Model.Personeller)
+            {
+                <option value=@per.personelId>@per.personelAd  @per.personelSoyad    @per.SGKNO      @per.tblDepartman.departmanAd</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label> Departman Zimmet Dökümü</label>
+        <select class="departmanlar form-control">
+            <option value="selected" selected>Departman Seçiniz</option>
+            @foreach (var dep in Model.Departmalar)
+            {
+                <option value=@dep.departmanId>@dep.departmanAd</option>
+            }
+        </select>
+    </div>
+    <div class="aramadiv">
+        <input type="text" name="arama" class="AdminsearchRapor " placeholder="Ara..." />
+    </div>
+    <table class="table table-hover zimtable AdminRaporTable">
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Satın Alma Tarihi</th>
+            <th>Ürün Fiyatı</th>
+            <th>Parça Tipi</th>
+            <th>Satın Alınan Kurum</th>
+            <th></th>
+        </tr>
+    </table>
+    </div>

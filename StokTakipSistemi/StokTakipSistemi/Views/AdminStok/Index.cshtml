@@ -1,0 +1,72 @@
+﻿@model List<StokTakipSistemi.Models.tblStok>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<head>
+    <style>
+        .search {
+            margin-left: 880px;
+            width: 170px;
+            border: 1px  solid blue;
+            border-width: thin;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body >
+    <div class="adminrender">
+        @if (Model != null)
+    {<a class="btn btn-success" href="/AdminStok/UrunAl">Ürün Al</a>
+        <input type="text" name="arama" class="search " placeholder="Ara..." />
+
+
+        <table class="adminrender table table-hover stoktable">
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Satın Alma Tarihi</th>
+                <th>Birim Fiyatı</th>
+                <th>Toplam Fiyatı</th>
+                <th>Parça tipi</th>
+                <th>Ürün Adeti</th>
+                <th>Satın Alınan Kurum</th>
+                <th></th>
+            </tr>
+            @foreach (var stok in Model)
+        {
+            <tr>
+                <td>@stok.tblUrunGenel.urunAd</td>
+                <td>@stok.tblUrunGenel.urunSatinAlmaTarih</td>
+                <td>@stok.tblUrunGenel.urunFiyat<span class="simge-tl"> &#8378;</span></td>
+                <td>@stok.tblUrunGenel.urunToplamFİyat<span class="simge-tl"> &#8378;</span></td>
+                <td>@stok.tblUrunGenel.tblParcaTipi.parcaTipi</td>
+                <td>@stok.tblUrunGenel.urunAdet</td>
+                <td>@stok.tblUrunGenel.satinAlinanKurum</td>
+                <td>
+                    <a href="/AdminStok/Guncelle/@stok.urunGenelId" class="btn btn-primary">Güncelle</a>
+                    <a href="/AdminStok/Zimmetle/@stok.urunGenelId" class="btn btn-primary">Zimmetle</a>
+                </td>
+            </tr>
+    }
+
+        </table>
+
+}
+else
+{
+    <table class="table table-hover">
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Satın Alma Tarihi</th>
+            <th>Toplam Fiyatı</th>
+            <th>Parça tipi</th>
+            <th>Ürün Adeti</th>
+            <th>Satın Alınan Kurum</th>
+            <th></th>
+        </tr>
+    </table>
+}
+    </div>
+</body>
+

@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StokTakipSistemiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAtikKontrol">
+    <Key>
+      <PropertyRef Name="atikKontrolId" />
+    </Key>
+    <Property Name="atikKontrolId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunId" Type="int" />
+    <Property Name="atikurunAdet" Type="int" />
+  </EntityType>
+  <EntityType Name="tblDepartman">
+    <Key>
+      <PropertyRef Name="departmanId" />
+    </Key>
+    <Property Name="departmanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="departmanAd" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblKullanıcı">
+    <Key>
+      <PropertyRef Name="kullanıcıId" />
+    </Key>
+    <Property Name="kullanıcıId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="100" />
+    <Property Name="roleId" Type="int" />
+    <Property Name="sonGirisTarihi" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblParcaTipi">
+    <Key>
+      <PropertyRef Name="urunParcaId" />
+    </Key>
+    <Property Name="urunParcaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="parcaTipi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblPersonel">
+    <Key>
+      <PropertyRef Name="personelId" />
+    </Key>
+    <Property Name="personelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="personelAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="personelSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aktiflik" Type="bit" />
+    <Property Name="departmanId" Type="int" />
+    <Property Name="SGKNO" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblRole">
+    <Key>
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="roleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="roleAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="departmanId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblStok">
+    <Key>
+      <PropertyRef Name="stokId" />
+    </Key>
+    <Property Name="stokId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunGenelId" Type="int" />
+  </EntityType>
+  <EntityType Name="tblUrun">
+    <Key>
+      <PropertyRef Name="urunId" />
+    </Key>
+    <Property Name="urunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="urunSatinAlmaTarih" Type="datetime" />
+    <Property Name="urunFiyat" Type="money" />
+    <Property Name="urunParcaId" Type="int" />
+    <Property Name="Aktiflik" Type="bit" />
+    <Property Name="satinAlinanKurum" Type="nvarchar" MaxLength="50" />
+    <Property Name="zimmetDurumu" Type="bit" />
+    <Property Name="urunGenelId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUrunGenel">
+    <Key>
+      <PropertyRef Name="urunGenelId" />
+    </Key>
+    <Property Name="urunGenelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="urunSatinAlmaTarih" Type="datetime" />
+    <Property Name="urunFiyat" Type="money" />
+    <Property Name="urunToplamFİyat" Type="money" />
+    <Property Name="urunParcaId" Type="int" />
+    <Property Name="Aktiflik" Type="bit" />
+    <Property Name="urunAdet" Type="int" />
+    <Property Name="satinAlinanKurum" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblZimmet">
+    <Key>
+      <PropertyRef Name="zimmetId" />
+    </Key>
+    <Property Name="zimmetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="personelId" Type="int" />
+    <Property Name="urunId" Type="int" />
+  </EntityType>
+  <Association Name="FK_tblAtikKontrol_tblUrun1">
+    <End Role="tblUrun" Type="Self.tblUrun" Multiplicity="0..1" />
+    <End Role="tblAtikKontrol" Type="Self.tblAtikKontrol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUrun">
+        <PropertyRef Name="urunId" />
+      </Principal>
+      <Dependent Role="tblAtikKontrol">
+        <PropertyRef Name="urunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblKullanıcı_tblRole">
+    <End Role="tblRole" Type="Self.tblRole" Multiplicity="0..1" />
+    <End Role="tblKullanıcı" Type="Self.tblKullanıcı" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRole">
+        <PropertyRef Name="roleId" />
+      </Principal>
+      <Dependent Role="tblKullanıcı">
+        <PropertyRef Name="roleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPersonel_tblDepartman">
+    <End Role="tblDepartman" Type="Self.tblDepartman" Multiplicity="0..1" />
+    <End Role="tblPersonel" Type="Self.tblPersonel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartman">
+        <PropertyRef Name="departmanId" />
+      </Principal>
+      <Dependent Role="tblPersonel">
+        <PropertyRef Name="departmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblRole_tblDepartman">
+    <End Role="tblDepartman" Type="Self.tblDepartman" Multiplicity="0..1" />
+    <End Role="tblRole" Type="Self.tblRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartman">
+        <PropertyRef Name="departmanId" />
+      </Principal>
+      <Dependent Role="tblRole">
+        <PropertyRef Name="departmanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblStok_tblUrunGenel">
+    <End Role="tblUrunGenel" Type="Self.tblUrunGenel" Multiplicity="0..1" />
+    <End Role="tblStok" Type="Self.tblStok" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUrunGenel">
+        <PropertyRef Name="urunGenelId" />
+      </Principal>
+      <Dependent Role="tblStok">
+        <PropertyRef Name="urunGenelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUrun_tblUrunGenel">
+    <End Role="tblUrunGenel" Type="Self.tblUrunGenel" Multiplicity="1" />
+    <End Role="tblUrun" Type="Self.tblUrun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUrunGenel">
+        <PropertyRef Name="urunGenelId" />
+      </Principal>
+      <Dependent Role="tblUrun">
+        <PropertyRef Name="urunGenelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUrunGenel_tblParcaTipi">
+    <End Role="tblParcaTipi" Type="Self.tblParcaTipi" Multiplicity="0..1" />
+    <End Role="tblUrunGenel" Type="Self.tblUrunGenel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParcaTipi">
+        <PropertyRef Name="urunParcaId" />
+      </Principal>
+      <Dependent Role="tblUrunGenel">
+        <PropertyRef Name="urunParcaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblZimmet_tblPersonel">
+    <End Role="tblPersonel" Type="Self.tblPersonel" Multiplicity="0..1" />
+    <End Role="tblZimmet" Type="Self.tblZimmet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPersonel">
+        <PropertyRef Name="personelId" />
+      </Principal>
+      <Dependent Role="tblZimmet">
+        <PropertyRef Name="personelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblZimmet_tblUrun">
+    <End Role="tblUrun" Type="Self.tblUrun" Multiplicity="0..1" />
+    <End Role="tblZimmet" Type="Self.tblZimmet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUrun">
+        <PropertyRef Name="urunId" />
+      </Principal>
+      <Dependent Role="tblZimmet">
+        <PropertyRef Name="urunId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StokTakipSistemiDBModelStoreContainer">
+    <EntitySet Name="tblAtikKontrol" EntityType="Self.tblAtikKontrol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDepartman" EntityType="Self.tblDepartman" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblKullanıcı" EntityType="Self.tblKullanıcı" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblParcaTipi" EntityType="Self.tblParcaTipi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPersonel" EntityType="Self.tblPersonel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRole" EntityType="Self.tblRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStok" EntityType="Self.tblStok" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUrun" EntityType="Self.tblUrun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUrunGenel" EntityType="Self.tblUrunGenel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblZimmet" EntityType="Self.tblZimmet" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tblAtikKontrol_tblUrun1" Association="Self.FK_tblAtikKontrol_tblUrun1">
+      <End Role="tblUrun" EntitySet="tblUrun" />
+      <End Role="tblAtikKontrol" EntitySet="tblAtikKontrol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblKullanıcı_tblRole" Association="Self.FK_tblKullanıcı_tblRole">
+      <End Role="tblRole" EntitySet="tblRole" />
+      <End Role="tblKullanıcı" EntitySet="tblKullanıcı" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPersonel_tblDepartman" Association="Self.FK_tblPersonel_tblDepartman">
+      <End Role="tblDepartman" EntitySet="tblDepartman" />
+      <End Role="tblPersonel" EntitySet="tblPersonel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRole_tblDepartman" Association="Self.FK_tblRole_tblDepartman">
+      <End Role="tblDepartman" EntitySet="tblDepartman" />
+      <End Role="tblRole" EntitySet="tblRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblStok_tblUrunGenel" Association="Self.FK_tblStok_tblUrunGenel">
+      <End Role="tblUrunGenel" EntitySet="tblUrunGenel" />
+      <End Role="tblStok" EntitySet="tblStok" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUrun_tblUrunGenel" Association="Self.FK_tblUrun_tblUrunGenel">
+      <End Role="tblUrunGenel" EntitySet="tblUrunGenel" />
+      <End Role="tblUrun" EntitySet="tblUrun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUrunGenel_tblParcaTipi" Association="Self.FK_tblUrunGenel_tblParcaTipi">
+      <End Role="tblParcaTipi" EntitySet="tblParcaTipi" />
+      <End Role="tblUrunGenel" EntitySet="tblUrunGenel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblZimmet_tblPersonel" Association="Self.FK_tblZimmet_tblPersonel">
+      <End Role="tblPersonel" EntitySet="tblPersonel" />
+      <End Role="tblZimmet" EntitySet="tblZimmet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblZimmet_tblUrun" Association="Self.FK_tblZimmet_tblUrun">
+      <End Role="tblUrun" EntitySet="tblUrun" />
+      <End Role="tblZimmet" EntitySet="tblZimmet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

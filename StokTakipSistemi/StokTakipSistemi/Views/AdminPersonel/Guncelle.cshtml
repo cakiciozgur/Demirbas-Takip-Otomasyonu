@@ -1,0 +1,40 @@
+﻿@model StokTakipSistemi.ViewModels.PersonelDepartman
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "AdminPersonel", FormMethod.Post))
+{<div class="adminrender">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personel.personelAd)
+            @Html.TextBoxFor(m => m.Personel.personelAd, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Personel.personelAd)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personel.personelSoyad)
+            @Html.TextBoxFor(m => m.Personel.personelSoyad, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Personel.personelSoyad)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personel.Aktiflik)
+            @Html.TextBoxFor(m => m.Personel.Aktiflik, new { @class = "form-control", @readonly = "true" })
+            @Html.ValidationMessageFor(m => m.Personel.Aktiflik)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personel.departmanId)
+            @Html.DropDownListFor(m => m.Personel.departmanId, new SelectList(Model.Departmanlar, "departmanId", "departmanAd"), new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Personel.departmanId)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personel.SGKNO)
+            @Html.TextBoxFor(m => m.Personel.SGKNO, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Personel.SGKNO)
+        </div>
+        
+        @Html.HiddenFor(m => m.Personel.personelId)
+       @Html.AntiForgeryToken() 
+       <button type="submit" class="btn btn-default">Güncelle</button>
+</div>
+}

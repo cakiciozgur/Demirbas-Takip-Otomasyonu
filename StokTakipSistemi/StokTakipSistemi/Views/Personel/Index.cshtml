@@ -1,0 +1,55 @@
+﻿@model List<StokTakipSistemi.Models.tblPersonel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .PersonelArama {
+            margin-left: 900px;
+            width: 170px;
+            height: 30px;
+            border: 1px solid blue;
+            border-width: thin;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+@if (Model.Count != 0)
+{
+    <h1>@Model[0].tblDepartman.departmanAd Departmanı</h1>
+    <input type="text" name="arama" class="PersonelArama" placeholder="Ara.." />
+    <table class="table table-hover PersonelTablo">
+        <tr>
+            <th>Personel Adı</th>
+            <th>Personel Soyadı</th>
+            <th>Personel Aktifliği</th>
+            <th>Personel Departmanı</th>
+            <th>SGKNO</th>
+        </tr>
+        @foreach (var personel in Model)
+        {
+            <tr>
+                <td>@personel.personelAd</td>
+                <td>@personel.personelSoyad</td>
+                <td>@personel.Aktiflik</td>
+                <td>@personel.tblDepartman.departmanAd</td>
+                <td>@personel.SGKNO</td>
+            </tr>
+        }
+
+
+    </table>
+}
+else
+{
+    <table class="table table-hover">
+        <tr>
+            <th>Personel Adı</th>
+            <th>Personel Soyadı</th>
+            <th>Personel Aktifliği</th>
+            <th>Personel Departmanı</th>
+        </tr>
+    </table>
+}

@@ -1,0 +1,60 @@
+﻿@model List<StokTakipSistemi.Models.tblKullanıcı>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .AdminsearchKullanici {
+        margin-left: 900px;
+        margin-top:10px;
+        width: 170px;
+        border: 1px solid blue;
+        border-width: thin;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+</style>
+<div class="adminrender">
+    @if (Model != null)
+    {<a class="btn btn-success" href="/AdminKullanicilar/YeniKullanici">Yeni Kullanıcı Ekle</a>
+        <input type="text" name="arama" class="AdminsearchKullanici " placeholder="Ara..." />
+        <table class="table table-hover AdminKullaniciTable">
+            <tr>
+                <th>Kullanıcı Adı</th>
+                <th>Kullanıcı E-Mail</th>
+                <th>Kullanıcı Rolü</th>
+                <th>Departmanı</th>
+                <th>Son Giriş Tarihi ve Saati</th>
+            </tr>
+            @foreach (var kul in Model)
+            {
+            <tr>
+                <td>@kul.username</td>
+                <td>@kul.email</td>
+                <td>@kul.tblRole.roleAd</td>
+                @if (kul.tblRole.departmanId != null)
+                {
+                     <td>@kul.tblRole.tblDepartman.departmanAd</td>
+                     <td>@kul.sonGirisTarihi</td>
+
+                    }
+                    else
+                    {
+                        <td ></td>
+                        <td>@kul.sonGirisTarihi </td>
+                    }
+            </tr>
+            }
+
+        </table>
+    }
+    else
+    {
+        <table>
+            <tr>
+                <th>Kullanıcı Username</th>
+                <th>Kullanıcı Rolü</th>
+            </tr>
+        </table>
+    }
+    </div>

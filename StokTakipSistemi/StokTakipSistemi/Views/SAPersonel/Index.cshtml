@@ -1,0 +1,60 @@
+﻿@model List<StokTakipSistemi.Models.tblPersonel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .SAsearchPer {
+            margin-left: 900px;
+            width: 170px;
+            height: 30px;
+            border: 1px solid blue;
+            border-width: thin;
+            border-radius: 10px;
+        }
+     
+    </style>
+</head>
+ 
+<body >
+    <div class="SAPersonelFoto">
+        <input type="text" name="arama" class="SAsearchPer" placeholder="Ara.." />
+        <table class="table table-hover SATablePer">
+            <tr>
+                <th>Personel Adı</th>
+                <th>Personel Soyadı</th>
+                <th>Personel Aktifliği</th>
+                <th>Departmanı</th>
+                <th>SGKNO</th>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var personel in Model)
+        {
+            <tr>
+                <td>@personel.personelAd</td>
+                <td>@personel.personelSoyad</td>
+                <td>@personel.Aktiflik</td>
+                <td>@personel.tblDepartman.departmanAd</td>
+                @if (personel.tblZimmet.Count != 0)
+            {
+                <td>@personel.SGKNO</td>
+                <td>
+                    @Ajax.ActionLink("Zimmetli Ürunler", "Urunler", "SAPersonel",
+                                new { personelid = personel.personelId }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "urunlistesi" },
+                                new { @class = "btn btn-danger" })
+                </td>
+        }
+        else
+        {
+            <td>@personel.SGKNO</td>
+    }
+            </tr>
+    }
+
+        </table>
+        <div id="urunlistesi">
+        </div>
+    </div>
+</body>

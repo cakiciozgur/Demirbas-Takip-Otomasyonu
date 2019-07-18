@@ -1,0 +1,46 @@
+﻿@model List<StokTakipSistemi.Models.tblDepartman>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .AdminsearchDepartman {
+        margin-left: 900px;
+        width: 170px;
+        border: 1px solid blue;
+        border-width: thin;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+</style>
+<div class="adminrender">
+    @if (Model != null)
+    {<a href="/AdminDepartman/YeniDepartman" class="btn btn-success">Yeni Departman</a>
+        <input type="text" name="arama" class="AdminsearchDepartman " placeholder="Ara..." />
+        <table class="table table-hover AdminDepartmanTable">
+            <tr>
+                <th>Departman Adı</th>
+                <th></th>
+            </tr>
+            @foreach (var departman in Model)
+            {
+                <tr>
+                    <td>@departman.departmanAd</td>
+                    <td>
+                        <a href="/AdminDepartman/Guncelle/@departman.departmanId" class="btn btn-warning">Güncelle</a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    }
+    else
+    { <table class="table table-hover">
+            <tr>
+                <th>Departman Adı</th>
+                <th></th>
+            </tr>
+        </table>
+    }
+    </div>

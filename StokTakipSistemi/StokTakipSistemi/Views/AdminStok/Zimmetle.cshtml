@@ -1,0 +1,61 @@
+﻿@model StokTakipSistemi.ViewModels.UrunDepartman
+@{
+    ViewBag.Title = "Zimmetle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm("Zimmetle", "AdminStok", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{<div class="adminrender">
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.urunAd)
+        @Html.TextBoxFor(m => m.Urun.urunAd, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.urunAd)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.urunSatinAlmaTarih)
+        @Html.TextBoxFor(m => m.Urun.urunSatinAlmaTarih, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.urunSatinAlmaTarih)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.urunFiyat)
+        @Html.TextBoxFor(m => m.Urun.urunFiyat, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.urunFiyat)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.tblParcaTipi.parcaTipi)
+        @Html.TextBoxFor(m => m.Urun.tblParcaTipi.parcaTipi, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.tblParcaTipi)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.satinAlinanKurum)
+        @Html.TextBoxFor(m => m.Urun.satinAlinanKurum, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.satinAlinanKurum)
+    </div>
+    <div class="form-group">
+        <select class="admindep form-control">
+            @foreach (var departman in Model.Departmanlar)
+            {
+                <option value="@departman.departmanId">@departman.departmanAd</option>
+            }
+        </select>
+    </div>
+    <div class="form-group persbox">
+        <select class="adminpers form-control" name="persid">
+            @foreach (var per in Model.Departmanlar.First().tblPersonel)
+            {
+                <option value="@per.personelId">@per.personelAd   @per.personelSoyad  @per.SGKNO</option>
+            }
+
+        </select>
+        <label id="valid"></label>
+    </div>
+     @Html.HiddenFor(m => m.Urun.urunGenelId)
+    @Html.HiddenFor(m => m.Urun.urunParcaId)
+    @Html.HiddenFor(m => m.Urun.urunAdet)
+
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-default AdminzimmetleBtn">ZİMMETLE</button>
+   </div>
+}
+
+

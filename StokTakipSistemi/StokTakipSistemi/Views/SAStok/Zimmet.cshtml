@@ -1,0 +1,63 @@
+﻿@model StokTakipSistemi.ViewModels.UrunDepartman
+@{
+    ViewBag.Title = "Zimmet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("ZimmetTamamla", "SAStok", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.urunAd)
+        @Html.TextBoxFor(m => m.Urun.urunAd, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m=>m.Urun.urunAd)
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.urunSatinAlmaTarih)
+        @Html.TextBoxFor(m => m.Urun.urunSatinAlmaTarih, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.urunSatinAlmaTarih)
+        @if (ViewBag.Mesaj != null || ViewBag.Mesaj != "")
+    {
+        <span><font face="Trebuchet MS" color="red" size="3">@ViewBag.Mesaj</font></span>
+}
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.urunFiyat)
+        @Html.TextBoxFor(m => m.Urun.urunFiyat, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.urunFiyat)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.tblParcaTipi.parcaTipi)
+        @Html.TextBoxFor(m => m.Urun.tblParcaTipi.parcaTipi, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.urunParcaId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Urun.satinAlinanKurum)
+        @Html.TextBoxFor(m => m.Urun.satinAlinanKurum, new { @class = "form-control", @readonly = "true" })
+        @Html.ValidationMessageFor(m => m.Urun.satinAlinanKurum)
+    </div>
+    <div class="form-group">
+        <select class="dep form-control">
+            @foreach (var departman in Model.Departmanlar)
+            {
+                <option value="@departman.departmanId">@departman.departmanAd</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <select class="pers form-control" name="persid">
+            @foreach (var per in Model.Departmanlar.First().tblPersonel)
+            {
+                <option value="@per.personelId">@per.personelAd  @per.personelSoyad  @per.SGKNO</option>
+            }
+        </select>
+        <label id="zimpervalid"></label>
+    </div>
+    @Html.HiddenFor(m => m.Urun.urunGenelId,new {@readonly="true"})
+    @Html.HiddenFor(m => m.Urun.urunParcaId, new { @readonly= "true"})
+    @Html.HiddenFor(m => m.Urun.urunAdet, new { @readonly = "true" })
+
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-default btnZimmet">ZİMMETLE</button>
+
+}

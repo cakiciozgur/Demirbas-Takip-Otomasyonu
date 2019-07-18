@@ -1,0 +1,29 @@
+﻿@model List<StokTakipSistemi.Models.tblUrun>
+@{
+    Layout =null;
+}
+<table class="table table-hover">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Satın Alma Tarihi</th>
+        <th>Ürün Fiyatı</th>
+        <th>Parça tipi</th>
+        <th>Satın Alınan Kurum</th>
+        <th></th>
+    </tr>
+    @foreach(var urun in Model)
+    {
+        <tr>
+            <td>@urun.urunAd</td>
+            <td>@urun.urunSatinAlmaTarih</td>
+            <td>@urun.urunFiyat<span class="simge-tl"> &#8378;</span></td>
+            <td>@urun.tblUrunGenel.tblParcaTipi.parcaTipi</td>
+            <td>@urun.satinAlinanKurum</td>
+            <td>
+                
+               <a href="/SAPersonel/ZimmetKaldir/@urun.urunId" class="btn btn-warning">Zimmeti Kaldır</a>
+            </td>
+        </tr>
+    }
+
+</table>

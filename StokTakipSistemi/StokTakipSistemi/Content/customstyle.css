@@ -1,0 +1,22 @@
+﻿.field-validation-error {
+    font-family: Tahoma;
+    color: red;
+}
+.Layoutbackground {
+    background-image: url("../Content/Fotolar/layout.jpeg");
+    background-repeat:no-repeat;
+    
+}
+.icerikbackground{
+    background-color:ghostwhite;
+    opacity:0.9;
+
+}
+.adminlayout {
+    background-image: url("../Content/Fotolar/adminlayout.jpeg");
+    background-repeat: no-repeat;
+}
+.adminrender {
+    background-color:white;
+    opacity: 0.8;
+}

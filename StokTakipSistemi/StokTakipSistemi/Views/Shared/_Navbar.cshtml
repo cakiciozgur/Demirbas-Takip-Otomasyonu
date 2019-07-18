@@ -1,0 +1,44 @@
+﻿
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            @if (Session["departmanid"] == null)
+            {
+            <a class="navbar-brand" style="background-color:black;" href="/SAStok/Index">Stok Yönetim Sistemi</a>
+            }
+            else
+            {
+            <a class="navbar-brand" style="background-color:black;" href="/Stok/Index">Stok Yönetim Sistemi</a>
+            }
+
+        </div>
+        <ul class="nav navbar-nav">
+            @if (Session["departmanid"] == null)
+            { // bu kişi satın alma yetkilisidir
+                <li><a href="/SAStok/Index">Stok</a></li>
+                <li><a href="/SAPersonel/Index">Personeller</a></li>
+                <li><a href="/AtıkDepo/Index">Atık Ürünler</a></li>
+            }
+            else
+            {
+                <li><a href="/Stok/Index">Stok</a></li>
+                <li><a href="/Personel/Index">Personeller</a></li>
+                <li><a href="/AtıkDepo/Index">Atık Ürünler</a></li>
+
+            }
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            @if (Session["Departman"] != null && Session["username"] != null)
+            {
+        <li style="margin-top:13px;"><font face="Trebuchet" color="red" size="4"><b>@Session["username"]    @Session["Departman"] Birim Yetkilisi</b></font></li>
+            }
+            else if (@Session["username"] != null)
+            {
+            <li style="margin-top:13px;"><font face="Trebuchet" color="red" size="4"><b>@Session["username"]   Satın Alma Yetkilisi</b></font></li>
+
+            }
+
+            <li><a href="/Security/Logout"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>

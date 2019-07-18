@@ -1,0 +1,19 @@
+﻿@model StokTakipSistemi.Models.tblDepartman
+@{
+                /**/
+                ViewBag.Title = "Guncelle";
+                Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using (Html.BeginForm("Guncelle", "AdminDepartman", FormMethod.Post))
+    
+{<div class="adminrender">
+    <div class="form-group">
+        @Html.LabelFor(m => m.departmanAd)
+        @Html.TextBoxFor(m => m.departmanAd, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.departmanAd)
+    </div>
+    @Html.HiddenFor(m => m.departmanId)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-default">Güncelle</button>
+</div>
+}

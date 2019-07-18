@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/customstyle.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/giris/css/main.css" rel="stylesheet" />
+    <link href="~/Content/giris/css/util.css" rel="stylesheet" />
+</head>
+@using System.Web.Optimization
+@Scripts.Render("~/BundlesLayout/Script")
+@Styles.Render("~/BundlesLayout/Style")
+@RenderSection("scripts", false)
+<body class="Layoutbackground">
+    @Html.Partial("_Navbar")
+    <div class="container  icerikbackground">
+        @RenderBody()
+    </div>
+    <script src="~/Content/giris/js/main.js"></script>
+</body>
+</html>

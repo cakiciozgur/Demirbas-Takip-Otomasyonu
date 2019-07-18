@@ -1,0 +1,45 @@
+﻿@model List<StokTakipSistemi.Models.tblAtikKontrol>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .AtıkArama {
+            margin-left: 900px;
+            margin-bottom:10px;
+            width: 170px;
+            height: 30px;
+            border: 1px solid blue;
+            border-width: thin;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<input type="text" name="arama" class="AtıkArama" placeholder="Ara.." />
+<table class="table table-hover AtıkTable">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Satın Alma Tarihi</th>
+        <th>Parça tipi</th>
+        <th>Ürün Adeti</th>
+        <th>Ürün Aktifliği</th>
+        <th>Satın Alınan Kurum</th>
+
+    </tr>
+    @foreach (var atik in Model)
+    {
+        <tr>
+            <td>@atik.tblUrun.urunAd</td>
+            <td>@atik.tblUrun.urunSatinAlmaTarih</td>
+            <td>@atik.tblUrun.tblUrunGenel.tblParcaTipi.parcaTipi</td>
+            <td>@atik.atikurunAdet</td>
+            <td>@atik.tblUrun.Aktiflik</td>
+            <td>@atik.tblUrun.satinAlinanKurum</td>
+        </tr>
+
+
+    }
+
+
+</table>

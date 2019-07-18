@@ -1,0 +1,45 @@
+﻿@model List<StokTakipSistemi.Models.tblStok>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        .StokArama {
+            margin-left: 900px;
+            width: 170px;
+            height: 30px;
+            border: 1px solid blue;
+            border-width: thin;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<input type="text" name="arama" class="StokArama" placeholder="Ara.." />
+<table class="table table-hover StokAramaTable">
+    <tr>
+        <th>Ürün Adı</th>
+        <th>Satın Alma Tarihi</th>
+        <th>Birim Fiyatı</th>
+        <th>Toplam Fiyatı</th>
+        <th>Parça tipi</th>
+        <th>Ürün Adeti</th>
+        <th>Satın Alınan Kurum</th>
+    </tr>
+    @foreach (var stok in Model)
+    {
+        <tr>
+            <td>@stok.tblUrunGenel.urunAd</td>
+            <td>@stok.tblUrunGenel.urunSatinAlmaTarih</td>
+            <td>@stok.tblUrunGenel.urunFiyat <span class="simge-tl"> &#8378;</span></td>
+            <td>@stok.tblUrunGenel.urunToplamFİyat <span class="simge-tl"> &#8378;</span></td>
+            <td>@stok.tblUrunGenel.tblParcaTipi.parcaTipi</td>
+            <td>@stok.tblUrunGenel.urunAdet</td>
+            <td>@stok.tblUrunGenel.satinAlinanKurum</td>
+        </tr>
+    }
+</table>
+
+
+

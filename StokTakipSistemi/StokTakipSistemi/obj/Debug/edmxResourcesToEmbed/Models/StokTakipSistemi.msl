@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StokTakipSistemiDBModelStoreContainer" CdmEntityContainer="StokTakipSistemiDBEntities">
+    <EntitySetMapping Name="tblAtikKontrol">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblAtikKontrol">
+        <MappingFragment StoreEntitySet="tblAtikKontrol">
+          <ScalarProperty Name="atikKontrolId" ColumnName="atikKontrolId" />
+          <ScalarProperty Name="urunId" ColumnName="urunId" />
+          <ScalarProperty Name="atikurunAdet" ColumnName="atikurunAdet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDepartman">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblDepartman">
+        <MappingFragment StoreEntitySet="tblDepartman">
+          <ScalarProperty Name="departmanId" ColumnName="departmanId" />
+          <ScalarProperty Name="departmanAd" ColumnName="departmanAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblKullanıcı">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblKullanıcı">
+        <MappingFragment StoreEntitySet="tblKullanıcı">
+          <ScalarProperty Name="kullanıcıId" ColumnName="kullanıcıId" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="sonGirisTarihi" ColumnName="sonGirisTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblParcaTipi">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblParcaTipi">
+        <MappingFragment StoreEntitySet="tblParcaTipi">
+          <ScalarProperty Name="urunParcaId" ColumnName="urunParcaId" />
+          <ScalarProperty Name="parcaTipi" ColumnName="parcaTipi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPersonel">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblPersonel">
+        <MappingFragment StoreEntitySet="tblPersonel">
+          <ScalarProperty Name="personelId" ColumnName="personelId" />
+          <ScalarProperty Name="personelAd" ColumnName="personelAd" />
+          <ScalarProperty Name="personelSoyad" ColumnName="personelSoyad" />
+          <ScalarProperty Name="Aktiflik" ColumnName="Aktiflik" />
+          <ScalarProperty Name="departmanId" ColumnName="departmanId" />
+          <ScalarProperty Name="SGKNO" ColumnName="SGKNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRole">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblRole">
+        <MappingFragment StoreEntitySet="tblRole">
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="roleAd" ColumnName="roleAd" />
+          <ScalarProperty Name="departmanId" ColumnName="departmanId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStok">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblStok">
+        <MappingFragment StoreEntitySet="tblStok">
+          <ScalarProperty Name="stokId" ColumnName="stokId" />
+          <ScalarProperty Name="urunGenelId" ColumnName="urunGenelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUrun">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblUrun">
+        <MappingFragment StoreEntitySet="tblUrun">
+          <ScalarProperty Name="urunId" ColumnName="urunId" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunSatinAlmaTarih" ColumnName="urunSatinAlmaTarih" />
+          <ScalarProperty Name="urunFiyat" ColumnName="urunFiyat" />
+          <ScalarProperty Name="urunParcaId" ColumnName="urunParcaId" />
+          <ScalarProperty Name="Aktiflik" ColumnName="Aktiflik" />
+          <ScalarProperty Name="satinAlinanKurum" ColumnName="satinAlinanKurum" />
+          <ScalarProperty Name="zimmetDurumu" ColumnName="zimmetDurumu" />
+          <ScalarProperty Name="urunGenelId" ColumnName="urunGenelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUrunGenel">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblUrunGenel">
+        <MappingFragment StoreEntitySet="tblUrunGenel">
+          <ScalarProperty Name="urunGenelId" ColumnName="urunGenelId" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunSatinAlmaTarih" ColumnName="urunSatinAlmaTarih" />
+          <ScalarProperty Name="urunFiyat" ColumnName="urunFiyat" />
+          <ScalarProperty Name="urunToplamFİyat" ColumnName="urunToplamFİyat" />
+          <ScalarProperty Name="urunParcaId" ColumnName="urunParcaId" />
+          <ScalarProperty Name="Aktiflik" ColumnName="Aktiflik" />
+          <ScalarProperty Name="urunAdet" ColumnName="urunAdet" />
+          <ScalarProperty Name="satinAlinanKurum" ColumnName="satinAlinanKurum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblZimmet">
+      <EntityTypeMapping TypeName="StokTakipSistemiDBModel.tblZimmet">
+        <MappingFragment StoreEntitySet="tblZimmet">
+          <ScalarProperty Name="zimmetId" ColumnName="zimmetId" />
+          <ScalarProperty Name="personelId" ColumnName="personelId" />
+          <ScalarProperty Name="urunId" ColumnName="urunId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

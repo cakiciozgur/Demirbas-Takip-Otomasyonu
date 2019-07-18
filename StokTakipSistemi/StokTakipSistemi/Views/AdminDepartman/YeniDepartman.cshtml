@@ -1,0 +1,17 @@
+﻿@model StokTakipSistemi.Models.tblDepartman
+@{
+    ViewBag.Title = "YeniDepartman";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm("Ekle", "AdminDepartman", FormMethod.Post))
+{<div class="adminrender">
+        <div class="form-group">
+            @Html.LabelFor(m => m.departmanAd)
+            @Html.TextBoxFor(m => m.departmanAd, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.departmanAd)
+        </div>
+     @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-default">Departman Ekle</button>
+</div>
+}
